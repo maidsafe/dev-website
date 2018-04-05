@@ -21,6 +21,7 @@
     "eslint-config-react-tools": "1.x.x",
     "extract-text-webpack-plugin": "^3.0.2",
     "gulp": "^3.9.1",
+    "img-loader": "^2.0.1",
     "node-sass": "^4.7.2",
     "safe_ux_guidelines": "https://github.com/maidsafe/safe_ux_guidelines.git",
     "sass-loader": "^6.0.6",

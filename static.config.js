@@ -67,6 +67,12 @@ export default {
           defaultLoaders.fileLoader,
         ],
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'img-loader'
+        ]
+      },
     ]
     return config
   },
