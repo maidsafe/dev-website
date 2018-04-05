@@ -62,16 +62,22 @@ export default {
                   ],
                 }),
           },
+          // TODO: Possibly conflicting with default loader. Research
+          // {
+          //   test: /\.(jpe?g|png|gif|svg)$/i,
+          //   use: [
+          //     'url-loader?limit=10000',
+          //     'img-loader',
+          //   ],
+          // },
+          {
+            test: /\.json$/,
+            use: [{ loader: 'json-loader' }],
+          },
           defaultLoaders.cssLoader,
           defaultLoaders.jsLoader,
           defaultLoaders.fileLoader,
         ],
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          'img-loader'
-        ]
       },
     ]
     return config
