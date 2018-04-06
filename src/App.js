@@ -8,6 +8,8 @@ import store from './connectors/redux'
 
 import './scss/app.scss'
 
+const i18n = store.getState().userPreference.acceptLanguage
+
 const App = () => (
   <Provider store={store}>
     <Router>
@@ -16,6 +18,9 @@ const App = () => (
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/blog">Blog</Link>
+          <Link to={{
+             pathname: `/${i18n}/node-js-api-tut`,
+          }}>Node JS API Tutorial</Link>
         </nav>
         <div className="content">
           <Routes />
