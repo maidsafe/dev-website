@@ -60,6 +60,8 @@ typings/
 # production
 /dist
 /tmp
+/src/assets
+/src/scss
 
 # misc
 .DS_Store

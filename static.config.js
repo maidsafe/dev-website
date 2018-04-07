@@ -11,6 +11,25 @@ export default {
   getRoutes: async () => {
     const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
     const locales = fs.readdirSync('./src/locales')
+    const i18nApiVersionRoutesArray = []
+    locales.forEach(lang => {
+      const platforms = fs.readdirSync(`./src/locales/${lang}/platforms`)
+      platforms.forEach(platform => {
+        const versions = fs.readdirSync(`./src/locales/${lang}/platforms/${platform}/versions`)
+        versions.forEach(version => {
+          let path = `/${lang}/api/${platform}/${version}`
+          path = path.replace('.md', '')
+          i18nApiVersionRoutesArray.push({
+            path,
+            component: 'src/containers/Markdown',
+            getData: () => ({
+              markdown: markdown.toHTML(fs.readFileSync(`./src/locales/${lang}/platforms/${platform}/versions/${version}`, 'utf-8')),
+            }),
+          })
+        })
+      })
+    })
+
     return [
       {
         path: '/',
@@ -45,6 +64,7 @@ export default {
         markdown: markdown.toHTML(fs.readFileSync(`./src/locales/${lang}/site_content/safe_desktop_app_tutorial.md`, 'utf-8')),
       }),
     })))
+      .concat(i18nApiVersionRoutesArray)
   },
   webpack: (config, { defaultLoaders, stage }) => {
     const renderer = new marked.Renderer()

@@ -3,7 +3,7 @@ import { SET_LANGUAGE, SET_API_VERSION } from '../actions'
 const initialState = {
   acceptLanguage: 'en-GB',
   apiDocument: {
-    platform: 'browser',
+    platform: 'web',
     version: '0.5.2',
   },
 }

@@ -9,6 +9,8 @@ import store from './connectors/redux'
 import './scss/app.scss'
 
 const i18n = store.getState().userPreference.acceptLanguage
+const platform = store.getState().userPreference.apiDocument.platform
+const platformVersion = store.getState().userPreference.apiDocument.version
 
 const App = () => (
   <Provider store={store}>
@@ -21,6 +23,9 @@ const App = () => (
           <Link to={{
              pathname: `/${i18n}/node-js-api-tut`,
           }}>Node JS API Tutorial</Link>
+          <Link to={{
+             pathname: `/${i18n}/api/${platform}/${platformVersion}`,
+          }}>SAFE WEB API 0.5.2</Link>
         </nav>
         <div className="content">
           <Routes />

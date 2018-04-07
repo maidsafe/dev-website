@@ -10,4 +10,9 @@ gulp.task("safe-ux", () => {
     './node_modules/safe_ux_guidelines/scss/**/*',
   ])
   .pipe(gulp.dest('./src/scss'));
+
+  gulp.src([
+    './src/app.scss' ,
+  ])
+  .pipe(gulp.dest('./src/scss'));
 });
