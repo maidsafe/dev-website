@@ -1,0 +1,38 @@
+{
+  "name": "react-static-example-basic",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "serve": "serve dist -p 3000",
+    "postinstall": "gulp safe-ux"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "html-loader": "^0.5.5",
+    "json-loader": "^0.5.7",
+    "markdown": "^0.5.0",
+    "markdown-loader": "^2.0.2",
+    "marked": "^0.3.19",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-static": "^5.7.1",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "eslint-config-react-tools": "^1.2.5",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "gulp": "^3.9.1",
+    "img-loader": "^2.0.1",
+    "node-sass": "^4.7.2",
+    "safe_ux_guidelines": "https://github.com/maidsafe/safe_ux_guidelines.git",
+    "sass-loader": "^6.0.6",
+    "serve": "^6.1.0",
+    "url-loader": "^1.0.1"
+  }
+}

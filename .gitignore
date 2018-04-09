@@ -57,3 +57,15 @@ typings/
 # dotenv environment variables file
 .env
 
+# production
+/dist
+/tmp
+/src/assets
+/src/scss
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
