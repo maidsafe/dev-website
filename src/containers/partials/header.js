@@ -32,7 +32,7 @@ export default class Header extends React.Component {
     return (
       <header className={headerClasses}>
         <div className="brand-logo">
-          <Link to="/en-gb" onClick={() => {this.hideMenu()}}>
+          <Link to="/" onClick={() => {this.hideMenu()}}>
             <span className="images"></span>
             <span className="split"></span>
             <span className="desc">Dev<span className="extend">eloper</span></span>
