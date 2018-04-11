@@ -28,29 +28,29 @@ const getLocalContent = (local, page) => {
 
 export default [
   {
-    path: '/en-gb',
+    path: '/',
     component: 'src/containers/home',
     getData: () => ({
       data: getLocalContent(CONST.locals.EN_GB, PAGES.HOME)
     })
   },
   {
-    path: '/en-gb/app_developer',
+    path: '/app_developer',
     component: 'src/containers/app_developer',
   },
   {
-    path: '/en-gb/core_developer',
+    path: '/core_developer',
     component: 'src/containers/core_developer',
     getData: () => ({
       data: getLocalContent(CONST.locals.EN_GB, PAGES.CORE_DEV)
     })
   },
   {
-    path: '/en-gb/discover',
+    path: '/discover',
     component: 'src/containers/discover',
   },
   {
-    path: '/en-gb/platform/nodejs/v0_4_1',
+    path: '/platform/nodejs/v0_4_1',
     component: 'src/containers/platform_nodejs_v0_4_1',
     getData: () => ({
       data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_NODEJS_V0_4_1)

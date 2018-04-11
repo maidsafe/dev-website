@@ -42,9 +42,9 @@ export default class Header extends React.Component {
           this.setState({showMenu: !this.state.showMenu});
         }}></div>
         <nav className={navMenuClasses}>
-          <Link to="/en-gb/app_developer" onClick={() => {this.hideMenu()}}>App Dev</Link>
-          <Link to="/en-gb/core_developer" onClick={() => {this.hideMenu()}}>Core Dev</Link>
-          <Link to="/en-gb/discover" onClick={() => {this.hideMenu()}}>Discover</Link>
+          <Link to="/app_developer" onClick={() => {this.hideMenu()}}>App Dev</Link>
+          <Link to="/core_developer" onClick={() => {this.hideMenu()}}>Core Dev</Link>
+          <Link to="/discover" onClick={() => {this.hideMenu()}}>Discover</Link>
         </nav>
         <div className="opts">
           <div className="opt community"><a onClick={() => {this.hideMenu()}} href={CONST.externalLinks.header.devForum} target="_blank" /></div>
