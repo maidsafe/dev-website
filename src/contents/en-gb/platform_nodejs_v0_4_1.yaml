@@ -1,0 +1,41 @@
+pageNav:
+  nav1:
+    name: Installation
+    subNavs:
+      sub1:
+        name: Setup electron
+        href: '#test'
+  nav2:
+    name: Quick Sample
+    href: '#test1'
+pageTitle: Node Js
+installation:
+  title: Installation
+  para1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  para2: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+setupElectron:
+  title: 'Setup Electron'
+  para1:
+    chunk1: Lorem Ipsum is simply
+    highlight1: dummy
+    chunk2: text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+    highlight2: standard dummy
+    chunk3: text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  quote1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+  code1: |
+          import React from 'react';
+          import { Router, Link } from 'react-static';
+          import { hot } from 'react-hot-loader';
+          //
+          import Routes from 'react-static-routes';
+          import Header from './partials/header';
+          import Footer from './partials/footer';
+  list1:
+    list1_1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+    list1_2:
+      chunk1: Lorem Ipsum is simply dummy text of
+      link1:
+        name: the printing
+        href: http://sampl.com
+      chunk2: and typesetting industry. Lorem Ipsum has
+    list1_3: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has

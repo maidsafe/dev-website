@@ -1,0 +1,44 @@
+=text()
+  color: $colr-text
+
+=header-1()
+  +text()
+  font-size: 36px
+  line-height: 46px
+  font-weight: 600
+
+=header-2()
+  +text()
+  font-size: 24px
+  line-height: 32px
+  font-weight: 600
+
+=header-3()
+  +text()
+  font-size: 18px
+  line-height: 24px
+  font-weight: 600
+
+=para()
+  +text()
+  font-size: 18px
+  font-weight: normal
+  line-height: 28px
+  a
+    text-decoration: none
+    color: $colr-link-text
+    font-weight: 600
+    &:hover
+      text-decoration: underline
+  .highlight
+    background-color: #eeeeee
+    padding: 0 8px
+    border-radius: 3px
+    font-weight: 600
+
+=link()
+  text-decoration: none
+  color: $colr-link-text
+  font-weight: 600
+  &:hover
+    text-decoration: underline

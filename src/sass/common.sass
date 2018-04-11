@@ -1,0 +1,147 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Open Sans'
+
+.base
+  width: $base-width-lg
+  margin: 0 auto
+
+header
+  position: relative
+  height: $header-height
+  padding: 16px 24px
+  background-color: $bg-header-light
+  +clearfix()
+  &.light
+    background-color: #2482e2
+    .brand-logo
+      .images
+        background-image: url($logo-light)
+      .split
+        border-color: $colr-white
+      .desc
+        color: $colr-white
+    nav
+      a
+        color: $colr-white
+  .brand-logo
+    padding: 16px 24px
+    position: absolute
+    top: 0
+    left: 0
+    .images
+      width: $brand-logo-height
+      height: $brand-logo-height
+      display: block
+      float: left
+      background-image: url($logo-dark)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+    .split
+      width: 2px
+      height: 28px
+      display: block
+      border: 1px solid #606b7a
+      float: left
+      margin: 11px 10px
+    .desc
+      line-height: $brand-logo-height
+      display: block
+      float: left
+      font-size: 16px
+      font-weight: 600
+      color: #8b8b8b
+  nav
+    text-align: center
+    z-index: 999
+    a
+      color: $colr-header-nav-text
+      text-decoration: none
+      font-size: 16px
+      font-weight: 600
+      margin: 0 25px
+      line-height: $header-height - 32px
+  .opts
+    position: absolute
+    height: 100%
+    top: 0
+    right: 0
+    padding: 16px 24px
+    .opt
+      width: 30px
+      height: 30px
+      position: relative
+      top: 50%
+      transform: translate(0, -50%)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      float: left
+      margin-left: 16px
+      a
+        display: block
+        width: 100%
+        height: 30px
+      &.community
+        background-image: url('../../public/images/community_forum.svg')
+
+  .mob-menu
+    display: none
+    width: 50px
+    height: 50px
+    margin: 0 auto
+    background-image: url($menu-dark)
+    &.active
+      background-color: $colr-theme-dark
+      border-radius: 50%
+
+.header-fixed
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999
+  background-color: $colr-white
+  box-shadow: 0 1px 3px #00000073
+
+footer
+  width: 100%
+  .footer-b
+    border-top: 1px solid $colr-theme-dark
+    padding: 24px
+    +clearfix()
+    .maid-icon,
+    .git-icon
+      width: 36px
+      height: 36px
+      float: left
+      a
+        display: block
+        width: 100%
+        height: 100%
+        background-image: url($maidsafe-logo-link)
+        background-size: 30px
+        background-position: center
+        background-repeat: no-repeat
+    .footer-cntr
+      padding-left: 50px
+      float: left
+      .footer-cntr-i
+        display: inline-block
+        padding-right: 24px
+        line-height: 36px
+        a
+          +link()
+          font-size: 18px
+          font-weight: normal
+          color: $colr-text
+    .git-icon
+      float: right
+      a
+        background-image: url($github-logo-link)
+
