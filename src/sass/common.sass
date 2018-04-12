@@ -145,3 +145,39 @@ footer
       a
         background-image: url($github-logo-link)
 
+.dual-tone-text
+  +header-0()
+  text-transform: uppercase
+  .dark
+    display: block
+    color: $colr-blue-dark
+    font-weight: 600
+  .light
+    display: block
+    color: $colr-blue
+    font-weight: bold
+
+.layout4060
+  width: 100%
+  display: table
+  .lay-40
+    display: table-cell
+    width: 40%
+    height: 100%
+    vertical-align: top
+  .lay-60
+    display: table-cell
+    width: 60%
+    height: 100%
+    vertical-align: middle
+
+.layout5050
+  width: 100%
+  display: table
+  .lay-50
+    display: table-cell
+    width: 50%
+    height: 100%
+    vertical-align: middle
+    &.top-align
+      vertical-align: top
