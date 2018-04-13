@@ -37,6 +37,9 @@ export default [
   {
     path: '/app_developer',
     component: 'src/containers/app_developer',
+    getData: () => ({
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.APP_DEV)
+    })
   },
   {
     path: '/core_developer',

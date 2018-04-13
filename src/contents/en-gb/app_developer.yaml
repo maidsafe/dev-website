@@ -1,1 +1,79 @@
-- pageTitle: 'App developer'
+platformLinks:
+  - icon: nodejs
+    name: NodeJs
+    href: '/platform/nodejs/v0_4_1'
+  - icon: web
+    name: Web
+    href: '/platform/web/v0_2_1'
+  - icon: rust
+    name: Rust
+    href: '/platform/rust/v0_2_1'
+intro:
+  title:
+    dark: The
+    light: SAFE Network
+  subTitle: Make D-Apps the easy way
+  para1: The Safe Network is a scalable, distributed application platform, with baked-in security. It doesn’t rely on third party cloud services, and abstracts away security, encryption and user management to make building truly Decentralized Apps (D-Apps) a breeze.
+  para2: You are free to code and build your apps faster with zero infrastructure costs.
+  para3:
+    chunk: Find out more about
+    link:
+      name: the Safe Network here
+      href: https://maidsafe.net
+dapps:
+  title:
+    dark1: Decentralised
+    dark2: Apps are
+    light: the future
+  para: Desktop, Web, Mobile and IoT applications can be easily built on the SAFE Network. You can work with a number of languages to bring your ideas to the new, decentralised internet.
+  sampleApps:
+    title: Check out existing apps
+    apps:
+      - name: Web Hosting Manager
+        logo: WEB_HOSTING_MANAGER
+      - name: Email Application
+        logo: EMAIL_APP
+      - name: JAMS - Remote Music Storage
+        logo: JAMS
+      - name: SAFE CMS
+        logo: SAFE_CMS
+startDevelop:
+  title:
+    dark: Start
+    light: Developing
+  features:
+    - title: Contact Application
+      icon: contact-app
+      para:
+        chunk1: Storing vCard data in a MutableData. Compare it to a No SQL store/Firebase/Mongo/Redis etc
+        link:
+          name: Example
+          href: '#'
+    - title: File storage
+      icon: file-storage
+      para:
+        chunk1: Storing vCard data in a MutableData. Compare it to a No SQL store/Firebase/Mongo/Redis etc
+        link:
+          name: Example
+          href: '#'
+    - title: Sharing data between apps
+      icon: share-data
+      para:
+        chunk1: Contact created by contact app being shared to a chat application, so that it can make use of the existing contacts.
+        link:
+          name: Example
+          href: '#'
+accessingNetwork:
+  title:
+    dark: Accessing
+    light: the Network
+  para1: To access the SAFE Network, you simply need to download the browser [download image below] which includes the Authenticator component.
+  para2: The Authenticator is used by applications to request a user’s consent via a simple API, much like traditional Single Sign-On options. The Authenticator also handles user log on, and allows the user to grant/revoke permissions for each app as they want, putting users in control of their own data.
+  para3:
+    chunk: The user’s data is stored in ‘containers’ on the network. If you want to read more on network data structure and storage
+    link:
+      name: click here to Discover more
+      href: /discover
+platforms:
+  title: Platforms
+  desc: Currently we've SAFE Network API libraries built for NodeJs, Web, C Sharp, and we're working on expending this to support other platforms as soon as possible.
