@@ -1,13 +1,13 @@
 platformLinks:
   - icon: nodejs
     name: NodeJs
-    href: '/platform/nodejs/v0_4_1'
+    href: '/platform/nodejs'
   - icon: web
     name: Web
-    href: '/platform/web/v0_2_1'
+    href: '/platform/web'
   - icon: rust
     name: Rust
-    href: '/platform/rust/v0_2_1'
+    href: '/platform/rust'
 intro:
   title:
     dark: The

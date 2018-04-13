@@ -1,1 +1,5 @@
-- pageTitle: 'Discover'
+intro:
+ para1: The Authenticator is an important application that users need to create an account and get started on the SAFE Network.
+ para2: The SAFE Browser is used to surf safe:// websites and web applications, while the authenticator is used for creating the user account and managing the application authorisations. Applications must be authorised by the user to be able to connect to the SAFE Network on behalf of the user. The user can revoke the granted access at any time from the authenticator.
+ para3: Applications using the SAFE Network does not store its Users' data on any central server, rather the data is spread across many disks and devices owned and managed by many different users.
+

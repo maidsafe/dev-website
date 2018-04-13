@@ -7,8 +7,10 @@ const PAGES = {
   HOME: 'home',
   APP_DEV: 'app_developer',
   CORE_DEV: 'core_developer',
-  PLATFORM_NODEJS_V0_4_1: 'platform_nodejs_v0_4_1',
+  PLATFORM_NODEJS: 'platform_nodejs',
   DISCOVER: 'discover',
+  PLATFORM_WEB: 'platform_web',
+  PLATFORM_RUST: 'platform_rust',
 };
 
 const CONTENT_PATH = path.resolve('src', 'contents');
@@ -53,11 +55,25 @@ export default [
     component: 'src/containers/discover',
   },
   {
-    path: '/platform/nodejs/v0_4_1',
-    component: 'src/containers/platform_nodejs_v0_4_1',
+    path: '/platform/nodejs',
+    component: 'src/containers/platform_nodejs',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_NODEJS_V0_4_1)
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_NODEJS)
     })
+  },
+  {
+    path: '/platform/web',
+    component: 'src/containers/platform_web',
+    getData: () => ({
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_WEB),
+    }),
+  },
+  {
+    path: '/platform/rust',
+    component: 'src/containers/platform_rust',
+    getData: () => ({
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_RUST),
+    }),
   },
   {
     is404: true,

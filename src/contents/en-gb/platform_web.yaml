@@ -1,1 +1,383 @@
-- pageTitle: 'Platform Web'
+pageNav:
+  nav1:
+    name: SAFE Web App Tutorial
+    href: "#pageHeading"
+    subNavs:
+      sub1:
+        name: Pre-requisites
+        href: "#preReq"
+      sub2:
+        name: Install a SAFE Browser
+        href: "#installBrowser"
+      sub3:
+        name: Create basic skeleton
+        href: "#createSkeleton"
+      sub4:
+        name: Authorise application and connect to the SAFE Network
+        href: "#authAppConnect"
+      sub5:
+        name: Create a public MutableData
+        href: "#createMD"
+      sub6:
+        name: Read the MutableData entries
+        href: "#readEntries"
+      sub7:
+        name: Add more entries to our MutableData
+        href: "#addEntries"
+      sub8:
+        name: Update and remove entries
+        href: "#updateRemoveEntries"
+      sub9:
+        name: What now?
+        href: "#whatNow"
+pageTitle: SAFE Web App Tutorial
+safeWeb:
+  para1: In this tutorial we will create a SAFE Web application which uses the DOM API to interact with the SAFE Authenticator, and to connect with the SAFE Network.
+  para2:
+    chunk1: In this tutorial we use the
+    link1:
+      name: SAFE Web App quick start
+      href: https://github.com/bochaco/safe-web-app-quick-start
+    chunk2: boilerplate, which is single page webapp compiled via
+    link2: 
+      name: Node.js
+      href: https://nodejs.org/
+    chunk3: "."
+  para3:
+    chunk1: The boilerplate implements a simple single page application using
+    link1:
+      name: Vue.js
+      href: https://vuejs.org/
+    chunk2: for rendering the UI components and the data. The application implements a trip planner, showing the list of trips planned by the user, allowing him/her to add or remove trips from the list. In this tutorial we will be adding the implementation to store (and retrieve) the list of planned trips in the SAFE Network.
+preRequisites:
+  title: Pre-requisites
+  para1: "First you need to make sure you have the following tools installed to be able to work with this tutorial:"
+  list1:
+    list1_1:
+      link1:
+        name: git
+        href: https://git-scm.com/
+      chunk1: ": to be able to clone the boilerplate code"
+    list1_2:
+      link1:
+        name: Node.js
+        href: https://nodejs.org/en/download
+      chunk1: "(which comes with "
+      link2: 
+        name: npm
+        href: http://npmjs.com/
+      chunk2: ) to be able to run the application since it’s a Node.js application
+    list1_3:
+      chunk1: If you are using Ubuntu as OS,
+      highlight1: libpng-dev
+      chunk2: might be needed. Please install it with
+      link1:
+        name: Synaptic Package Mgr.
+        href: https://help.ubuntu.com/community/SynapticHowto
+      chunk3: ", or with"
+      highlight2: apt
+      chunk4: "from a shell console:"
+      highlight3: $ sudo apt-get install libpng-dev
+      chunk5: "."
+installBrowser:
+  title: Install a SAFE Browser
+  para1: Since this is a SAFE webapp, we first need to have an instance of the SAFE Browser installed to be able to load our application.
+  para2:
+    chunk1: You can find the links to download the SAFE Browser package from 
+    link1:
+      name: MaidSafe’s website
+      href: https://maidsafe.net/
+    chunk2: ", or directly from the"
+    link2: 
+      name: SAFE Browser GitHub releases repository
+      href: https://github.com/maidsafe/safe_browser/releases
+    chunk3: ". It’s recommended to always use the latest available version."
+  para3: "Note that there are packages for each of the supported platforms, i.e. Linux, Windows and OSX. Also note there are two type of packages for each of the supported platforms:"
+  list1:
+    list1_1:
+      highlight1: safe-browser-<version>-<platform>.zip
+      chunk1: ": SAFE Browser package built to use the live SAFE Network"
+    list1_2:
+      highlight1: safe-browser-mock-<version>-<platform>.zip
+      chunk1: ": SAFE Browser package built to use the mock routing. This will create a local temporary file and you won’t need to connect to the live network."
+  para4: In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, unzip the package in your PC, execute it, and please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
+  para5: After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
+createBasicSkeleton:
+  title: Create basic skeleton
+  para1:
+    chunk1: We first clone the boilerplate repo using
+    highlight1: git
+    chunk2: onto a local folder named
+    highlight2: hello-safe-network
+    chunk3: ":"
+  code1: |
+          $ git clone https://github.com/bochaco/safe-web-app-quick-start hello-safe-network
+  para2: "And then install its dependencies:"
+  code2: |
+          $ cd hello-safe-network
+          $ npm install
+  para3: "At this point we have a Node.js application ready to be launched, let’s run it:"
+  code3: |
+          $ npm start
+  para4:
+    chunk1: This will create a web server to serve the webapp, and you can load it with your SAFE Browser by loading
+    highlight1: localhost://p:5000
+    chunk2: on a new tab.
+  para5: You should see a “Hello SAFE Network!” message in our app’s page and an empty list of trips. We are now ready to start creating the code to be able to store the planned trips into the SAFE Network.
+authAppandConnect:
+  title: Authorise application and connect to the SAFE Network
+  para1: A SAFE application needs to get an authorisation from the user before being able to connect to the network, this is achieved by sending an authorisation request to the Authenticator.
+  para2:
+    chunk1: We first need to generate a
+    highlight1: SAFEApp
+    chunk2: instance by calling the
+    highlight2: safeApp.initialise
+    chunk3: "function of the DOM API, providing information about the application (this information is displayed to the user when requesting the authorisation):"
+  code1: |
+          let appInfo = {
+            name: 'Hello SAFE Network',
+            id: 'net.maidsafe.tutorials.web-app',
+            version: '0.1.0',
+            vendor: 'MaidSafe.net Ltd.'
+          };
+          let safeAppHandle = await window.safeApp.initialise(appInfo);
+  para3: 
+    chunk1: We are using
+    highlight1: await
+    chunk2: to call the
+    highlight2: safeApp.initialise
+    chunk3: function since it’s asynchronous as most of the functions exposed by the
+    highlight3: DOM API
+    chunk4: . You can also use JavaScript
+    highlight4: Promises
+    chunk5: if you prefer.
+  para4:
+    chunk1: Once the
+    highlight1: safeApp
+    chunk2: "instance is initialised and we received a handle for it, we can use it to generate the authorisation request and send it to the Authenticator:"
+  code2: |
+          const authUri = await window.safeApp.authorise(safeAppHandle, {});
+  para5: 
+    chunk1: Note that we are passing an empty object as the second argument to the
+    highlight1: safeApp.authorise
+    chunk2: function, this object can contain a list of permissions to access different containers, but for the sake of simplicity we are not doing it here with this application.
+  para6:
+    chunk1: We can now use the authorisation URI we received from the Authenticator to connect to the SAFE Network. In order to do this we simply call the
+    highlight1: safeApp.connectAuthorised
+    chunk2: "API function:"
+  code3: |
+          await window.safeApp.connectAuthorised(safeAppHandle, authUri);
+  para7: This function will decode the authorisation URI and create a connection with the SAFE Network using the credentials obtained from it.
+  para8: 
+    chunk1: Let’s make all the code for these steps to be the body of the function called
+    highlight1: authoriseAndConnect
+    chunk2: in the
+    highlight2: src/safenetwork.js
+    chunk3: "file, it should now look like this:"
+  code4: |
+          let safeAppHandle;
+
+          async function authoriseAndConnect() {
+            let appInfo = {
+              name: 'Hello SAFE Network',
+              id: 'net.maidsafe.tutorials.web-app',
+              version: '0.1.0',
+              vendor: 'MaidSafe.net Ltd.'
+            };
+            safeAppHandle = await window.safeApp.initialise(appInfo);
+            console.log('Authorising SAFE application...');
+            const authUri = await window.safeApp.authorise(safeAppHandle, {});
+            await window.safeApp.connectAuthorised(safeAppHandle, authUri);
+            console.log("Application connected to the network");
+          };
+  para9: 
+    chunk1: As you can see, we declare the
+    highlight1: safeAppHandle
+    chunk2: variable outside the function since we will be using this same
+    highlight2: SAFEApp
+    chunk3: instance to access the API from other functions.
+  para10:
+    chunk1: The
+    highlight1: authoriseAndConnect
+    chunk2: function is invoked when the application’s page is loaded, this is part of the code we inherited with the boilerplate. You can look at the code in
+    highlight2: src/App.vue
+    chunk3: if you are interested in it.
+  para11:
+    chunk1: We can now refresh our application page to verify that now it’s able to send the authorisation request to the Authenticator, and connect to the network once it received the authorisation. Make sure you log in using the Authenticator (see the 
+    link1:
+      name: pre-requisites
+      href: "#preReq"
+    chunk2: "section) before refreshing the application page:"
+  para12: You should have had the Authenticator to show a pop-up with the authorisation request, with the information of our web application, which you can can authorise so the application can connect to the network.
+createPublicMD:
+  title: Create a public MutableData
+  para1: 
+    chunk1: One of the native data types of the SAFE Network is the
+    highlight1: MutableData
+    chunk2: . A MutableData is a key-value store which can be created at either a specific address on the network, or just at a random address, and it can be publicly available (a public MutableData) or otherwise have all its content encrypted (private MutableData). It also has a type associated to it (type tag) which is a number that can be chosen at the moment of creating the MutableData.
+  para2: 
+    chunk1: We are not going to go into the other aspects of the MutableData here, we will just create MutableData in the network to store the data of our application. Please refer to the
+    link1: 
+      name: Discover page
+      href: /en-gb/discover
+    chunk2: to learn more about the MutableData type as well as the other types of data available in the SAFE Network.
+  para3:
+    chunk1: In this tutorial we are going to create a public MutableData at a random address. Each piece of data stored on the network has its own unique 256 bits address in the network (you can read more about XOR addresses of the SAFE Network in the
+    link1: 
+      name: MaidSafe’s blog
+      href: https://blog.maidsafe.net/2016/05/27/structuring-networks-with-xor
+    chunk2: "), we will request the API to generate a random address for our new public MutableData:"
+  code1: |
+          const typeTag = 15000;
+          const mdHandle = await window.safeMutableData.newRandomPublic(safeAppHandle, typeTag);
+  para4: The type tag we are choosing is just a random number here, although you must know there is a range of reserved numbers for the type tags, any MutableData stored with any of this reserved type tags will have a special treatment by the network.
+  para5: "At this point we have a MutableData object which was not committed to the network yet, so we can now request the API to send the corresponding request to the SAFE Network to store it:"
+  code2: |
+          const initialData = {
+            "random_key_1": JSON.stringify({
+                text: 'Scotland to try Scotch whisky',
+                made: false
+              }),
+            "random_key_2": JSON.stringify({
+                text: 'Patagonia before I\'m too old',
+                made: false
+              })
+          };
+          await window.safeMutableData.quickSetup(mdHandle, initialData);
+  para6:
+    chunk1: We use the
+    highlight1: safeMutableData.quickSetup
+    chunk2: function which allows us to (optionally) provide an initial set of key-value entries that the MutableData shall be populated with when storing it on the network.
+  para7:
+    chunk1: As you can see the key-value pairs we are storing as the initial set of data contain a “random” key, and a serialised object as the value. The application will use the key to identify each of the trips (e.g. when it needs to remove any of them), and it will also generate a random key for new trips added to the list. The value is expected to contain the information about the trip itself, we are storing the description of the trip (called
+    highlight1: text
+    chunk2: ) and a boolean value (called
+    highlight2: made
+    chunk3: ) which indicates if the trip has been made by the user. Since the entry’s value in a MutableData needs to be a string of bytes, we serialise with
+    highlight3: JSON.stringify
+    chunk4: before storing it.
+  para8: 
+    chunk1: Let’s put all the code for these steps inside the
+    highlight1: createMutableData
+    chunk2: function in the
+    highlight2: src/safenetwork.js
+    chunk3: "file:"
+  code3: |
+          let mdHandle;
+
+          async function createMutableData() {
+            const typeTag = 15000;
+            mdHandle = await window.safeMutableData.newRandomPublic(safeAppHandle, typeTag);
+
+            const initialData = {
+              "random_key_1": JSON.stringify({
+                  text: 'Scotland to try Scotch whisky',
+                  made: false
+                }),
+              "random_key_2": JSON.stringify({
+                  text: 'Patagonia before I\'m too old',
+                  made: false
+                })
+            };
+            await window.safeMutableData.quickSetup(mdHandle, initialData);
+          };
+  para9: 
+    chunk1: Here we are declaring the
+    highlight1: mdHandle
+    chunk2: variable outside the function so we can then access the same MutableData from other functions.
+  para10: If we refresh the application page again now, it should successfully connect to the network after an authorisation was given, and it will create a random MutableData with some initial data, although we won’t see it on the UI yet, so let’s now add the code to retrive the values from the MutableData to render it in the UI.
+readMDEntries:
+  title: Read the MutableData entries
+  para1:
+    chunk1: We now have our MutableData stored on the network with an initial set of key-value entries, thus we can now retrieve them using the
+    highlight1: mdHandle
+    chunk2: variable we kept. Let’s create the body for
+    highlight2: getItems
+    chunk3: function in our
+    highlight3: src/safenetwork.js
+    chunk4: "file:"
+  code1: |
+          async function getItems() {
+            const entriesHandle = await window.safeMutableData.getEntries(mdHandle);
+            let items = [];
+            await window.safeMutableDataEntries.forEach(entriesHandle, (key, value) => {
+              if (value.buf.length == 0) return;
+              const parsedValue = JSON.parse(value.buf);
+              items.push({ key: key, value: parsedValue, version: value.version });
+            });
+            return items;
+          };
+  para2:
+    chunk1: Note we are expecting the value of the entry to be a serialised JSON object, since that’s how we stored them when we called the
+    highlight1: quickSetup
+    chunk2: function before, so we need to de-serialise it with
+    highlight2: JSON.parse
+    chunk3: before returning it.
+  para3: We can now refresh our application page again and we should be able to see the list of trips we initially stored on the SAFE Network.
+addEntries:
+  title: Add more entries to our MutableData
+  para1: It’s time now to allow the user to add new trips to the list by entering them in the form on the UI.
+  para2: "The MutableData’s key-value entries can be mutated by creating a mutation transaction object where we set all the mutation actions we want to apply to the entries:"
+  code1: |
+          const mutationHandle = await window.safeMutableData.newMutation(safeAppHandle);
+  para3: "We can set three different type of mutation actions on the mutation transaction: insert, update, or remove. Let’s go ahead and add an “insert” action to add the new entry:"
+  code2: |
+          await window.safeMutableDataMutation.insert(mutationHandle, key, JSON.stringify(value));
+  para4:
+    chunk1: Note we are expecting the value argument to be a JSON object, so we serialise it with
+    highlight1: JSON.stringify
+    chunk2: before adding it to the mutation transaction.
+  para5:
+    chunk1: Now we just need to apply this mutation transaction to our MutableData by calling the
+    highlight1: safeMutableData.applyEntriesMutation
+    chunk2: function, let’s put all this code into the body of the
+    highlight2: insertItem
+    chunk3: function in the 
+    highlight3: src/safenetwork.js
+    chunk4: "file:"
+  code3: |
+          async function insertItem(key, value) {
+            const mutationHandle = await window.safeMutableData.newMutation(safeAppHandle);
+            await window.safeMutableDataMutation.insert(mutationHandle, key, JSON.stringify(value));
+            await window.safeMutableData.applyEntriesMutation(mdHandle, mutationHandle);
+          }
+  para6: Let’s now refresh our application page and try to add a new trip to the list, the application will insert it in the MutableData and the list will be automatically refreshed on the UI afterwards.
+  para7: Note that since we are creating a MutableData at a random location each time the application loads, any new items/trips the user inserts won’t be displayed after refreshing the application page. This can obviously be changed by storing the MutableData at a custom location that can be found each time the application loads. We are leaving this out of the scope of this tutorial for the sake of simplicity.
+updateRemoveEntries:
+  title: Update and remove entries
+  para1:
+    chunk1: As we saw above, to update or remove entries we just need to create a mutation transaction, with “update” and/or “remove” actions, and apply the mutations to the MutableData. Let’s fill up the body of the
+    highlight1: updateItem
+    chunk2: and
+    highlight2: removeItems
+    chunk3: functions in the
+    highlight3: src/safenetwork.js
+    chunk4: "to respectively perform these mutations on our MutableData:"
+  code1: |
+          async function updateItem(key, value, version) {
+            const mutationHandle = await window.safeMutableData.newMutation(safeAppHandle);
+            await window.safeMutableDataMutation.update(mutationHandle, key, JSON.stringify(value), version + 1);
+            await window.safeMutableData.applyEntriesMutation(mdHandle, mutationHandle);
+          };
+
+          async function removeItems(items) {
+            const mutationHandle = await window.safeMutableData.newMutation(safeAppHandle);
+            items.forEach(async (item) => {
+              await window.safeMutableDataMutation.remove(mutationHandle, item.key, item.version + 1);
+            });
+            await window.safeMutableData.applyEntriesMutation(mdHandle, mutationHandle);
+          };
+  para2:
+    chunk1: Note that there is a versioning involved in such mutations, as opposed to “insert” mutations which don’t have any. Each entry in a MutableData has a numeric version associated to it. When you insert a new entry it’s inserted with version
+    highlight1: 0
+    chunk2: ", and every time a mutation is performed you need to specify the subsequent version the entry is being bumped to. This is used by the network to ensure that only one mutation is applied when simultaneous mutations requests were received for the same version of an entry, making sure the state change of such an entry is effectively what the originator of a request was intending to do."
+  para3:
+    chunk1: The
+    highlight1: removeItems
+    chunk2: is invoked when the user selects some of the trips from the list and then clicks on “remove trips already made”. As you can see we receive a list of items to be removed and we are able to add a “remove” action for each of them into the mutation transaction before we actually send the mutation request to the network when invoking
+    highlight2: applyEntriesMutation
+    chunk3: . This is to reduce the network traffic needed to perform several mutations on a single MutableData.
+  para4: Note that the boilerplate code doesn’t have the implementation in the UI to be able to update trips, but we just added the implementation for updating the items on the MutableData entries, so go ahead and try to add the UI components to allow the user to do this ;)
+whatNow:
+  title: What now?
+  para1: "TODO: suggest next steps in learning more about the API"
