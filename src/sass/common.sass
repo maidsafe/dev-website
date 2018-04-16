@@ -181,3 +181,113 @@ footer
     vertical-align: middle
     &.top-align
       vertical-align: top
+
+.btn
+  text-transform: uppercase
+  padding: 8px 16px
+  line-height: 24px
+  border-radius: 3px
+  border: 0
+  outline: 0
+  background-color: $colr-theme-light
+  font-size: 16px
+  font-weight: 600
+  color: $colr-white
+  border: 1px solid $colr-theme-dark
+  background-color: transparent
+  cursor: pointer
+
+.tabs
+  padding-bottom: 80px
+  .tabs-b
+    .tab-nav
+      padding: 80px 0
+      .tab-nav-b
+        position: relative
+        height: 50px
+        overflow: hidden
+        .tab-nav-ib
+          position: absolute
+          top: 0
+          left: 0%
+          width: 100%
+          margin-left: 33.333%
+          +clearfix()
+          .tab-nav-i
+            +header-3()
+            width: 33.33%
+            float: left
+            text-align: center
+            line-height: 50px
+            color: $colr-blue
+            opacity: 0.5
+            &.active
+              font-size: 24px
+              opacity: 1
+        .tab-nav-opts
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          .tab-nav-opt
+            width: 33.33%
+            display: block
+            position: absolute
+            padding: 10px 0
+            button
+              width: 30px
+              height: 30px
+              background-color: transparent
+              border: 0
+              outline: 0
+              cursor: pointer
+            &.left
+              left: 0
+              text-align: right
+              &:hover
+                button
+                  background-image: url($left-hover-url)
+              button
+                background-image: url($left-url)
+            &.right
+              right: 0
+              text-align: left
+              &:hover
+                button
+                  background-image: url($right-hover-url)
+              button
+                background-image: url($right-url)
+    .tab-cntr
+      +clearfix()
+      display: none
+      background-color: $colr-theme-light
+      &.active
+        display: block
+      .tab-cntr-img
+        width: 50%
+        float: left
+        height: 300px
+      .tab-cntr-content
+        width: 50%
+        float: left
+        text-align: left
+        padding: 60px
+        background-color: $colr-blue
+        .tab-cntr-title
+          +header-2()
+          padding-bottom: 24px
+          color: $colr-white
+        .tab-cntr-para
+          +para()
+          padding-bottom: 20px
+          text-align: justify
+          color: $colr-white
+        .tab-cntr-opt
+          padding-top: 30px
+          text-align: center
+          .ghost-btn
+            &:hover
+              background-color: $colr-white
+              color: $colr-blue
+
+

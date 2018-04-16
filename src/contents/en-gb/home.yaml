@@ -1,3 +1,7 @@
+homeBanner:
+  link:
+    name: View Live Stream
+    href: '#'
 buildOnSafeNet:
   title:
     dark1: Why build on

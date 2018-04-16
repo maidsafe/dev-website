@@ -53,6 +53,9 @@ export default [
   {
     path: '/discover',
     component: 'src/containers/discover',
+    getData: () => ({
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.DISCOVER)
+    })
   },
   {
     path: '/platform/nodejs',

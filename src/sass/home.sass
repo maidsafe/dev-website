@@ -3,6 +3,48 @@
     width: 100%
     height: $home-banner-height
     background-color: $bg-home-banner
+    background-image: url($home-banner-bg-url)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    .home-banner-typo
+      width: $home-banner-typo-width
+      height: $home-banner-typo-height
+      background-image: url($home-banner-typo-url)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      position: absolute
+      top: $home-banner-typo-top
+      left: $home-banner-typo-left
+    .home-banner-link
+      position: absolute
+      bottom: 50px
+      right: 50px
+      width: 100%
+      text-align: right
+      a
+        +link()
+        font-size: 24px
+        color: $colr-utube-red
+        text-transform: uppercase
+        line-height: 30px
+        position: relative
+        padding-left: 40px
+        display: inline-block
+        &:before
+          content: ''
+          width: 40px
+          height: 30px
+          background-image: url($youtube-logo-url)
+          background-position: center
+          background-size: 30px
+          background-repeat: no-repeat
+          display: block
+          position: absolute
+          top: 0
+          left: 0
   .build-on-safe
     background-color: $colr-theme-light
     min-height: 300px

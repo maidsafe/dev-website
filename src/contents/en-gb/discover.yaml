@@ -2,4 +2,87 @@ intro:
  para1: The Authenticator is an important application that users need to create an account and get started on the SAFE Network.
  para2: The SAFE Browser is used to surf safe:// websites and web applications, while the authenticator is used for creating the user account and managing the application authorisations. Applications must be authorised by the user to be able to connect to the SAFE Network on behalf of the user. The user can revoke the granted access at any time from the authenticator.
  para3: Applications using the SAFE Network does not store its Users' data on any central server, rather the data is spread across many disks and devices owned and managed by many different users.
+authenticator:
+  title: Authenticator
+  desc: The Authenticator, which enables users to securely authenticate themselves onto the SAFE Network, while protecting their network login credentials from apps. Bundled with the SAFE Browser and registers a custom URL scheme safe-auth://. Similarly every app registers their own safe--prefixed url-scheme.
+  steps:
+    - title: App Requesting Access
+      desc: The application must authorise with the Authenticator with the needed access permissions. The application can create its own container, and request access to default containers or other applications' containers through the authorisation request.
+    - title: User Granting Access
+      desc: When the user approves the request, application specific encryption keys are generated. The application will be identified in the network using its keys. When the user grants or denies authorisation, the application will receive a URI.
+    - title: Application Connecting To Network
+      desc: Applications can connect to the SAFE Network on behalf of the user by using the URI received.
+networks:
+  title: Network Types
+  desc: Applications can be developed on SAFE Network using one of the three network types depending on development stages.
+  types:
+    - name: Mock Routing
+      id: mockRouting
+      para1: When the SAFE Browser, or another application, is built with mock-routing enabled, it’s not connecting to a live network, it’s interfacing with a local database that is created on your system to simulate network operations.
+      para2: This saves a great deal of time and provides a safe space for your application or website to initially test operations.
+      btnLink:
+        name: Know more
+        link: '#'
+    - name: Local Network
+      id: localNetwork
+      para1: When the SAFE Browser, or another application, is built with mock-routing enabled, it’s not connecting to a live network, it’s interfacing with a local database that is created on your system to simulate network operations.
+      para2: This saves a great deal of time and provides a safe space for your application or website to initially test operations.
+      btnLink:
+        name: Know more
+        link: '#'
+    - name: Actual Routing
+      id: actualRouting
+      para1: When the SAFE Browser, or another application, is built with mock-routing enabled, it’s not connecting to a live network, it’s interfacing with a local database that is created on your system to simulate network operations.
+      para2: This saves a great deal of time and provides a safe space for your application or website to initially test operations.
+      btnLink:
+        name: Know more
+        link: '#'
+vault:
+  title: Vault
+  desc: User uploads (or saves) a ﬁle to the network, via one of the SAFE Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the vaults of other SAFE Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
+  btnLink:
+    name: Develop
+    link: '#'
+containers:
+  title: Default Containers
+  desc: "The SAFE Network follows a similar pattern of providing default containers. Default containers can be shared by applications when the user grants the needed permission. The default containers are:"
+  quote: The data stored in the containers must be encrypted, except for the _public container.
+  list:
+    - title: _documents
+      desc: To store document related data
+      icon: document
+    - title: _downloads
+      desc: To store downloaded content
+      icon: download
+    - title: _music
+      desc: To store music files
+      icon: music
+    - title: _pictures
+      desc: To store images
+      icon: pictures
+    - title: _videos
+      desc: To store videos
+      icon: videos
+    - title: _public
+      desc: To store unencrypted data
+      icon: public
+    - title: _publicNames
+      desc: To store public name to looked up public information
+      icon: pubNames
+dataTypes:
+  title: Data Types
+  desc: The SAFE Network provides two data types to store and retrieve data. The amount of data that a user can store depends on their Safecoin balance. During test networks, the user account limits are regulated based on the number of mutation requests permitted for the account.
+  types:
+    - name: Mutable Data
+      features:
+        - title: About
+          para: MutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
+        - title: Flavours
+          para: MutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
+    - name: Immutable Data
+      features:
+        - title: About
+          para: ImmMutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
+        - title: Flavours
+          para: ImmMutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
 

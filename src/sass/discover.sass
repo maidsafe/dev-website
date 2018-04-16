@@ -1,0 +1,170 @@
+.discover
+  .intro
+    .ecosystem-banner
+      width: 100%
+      padding: 80px 0 60px
+      img
+        width: 100%
+    .para
+      +para()
+      margin-bottom: 16px
+  .authenticator
+    margin-top: 80px
+    background-color: $colr-theme-light
+    .authenticator-b
+      padding: 80px 0
+      .title
+        +header-1()
+        text-align: center
+        margin-bottom: 40px
+      .desc
+        +para()
+        text-align: justify
+        padding-bottom: 40px
+      .steps
+        .step
+          padding: 60px 0
+          .step-img
+            width: 200px
+            height: 200px
+            background-color: grey
+            margin: 0 auto 50px
+          .step-name
+            +header-2()
+            text-align: center
+            margin-bottom: 24px
+          .step-desc
+            +para()
+            width: 60%
+            margin: 0 auto
+            text-align: center
+  .network-type
+    margin-top: 80px
+    .network-type-b
+      .title
+        +header-1()
+        text-align: center
+        margin-bottom: 40px
+      .desc
+        +para()
+        width: 70%
+        text-align: center
+        padding-bottom: 40px
+        margin: 0 auto
+      .types
+        .types-b
+          display: block
+
+  .vault
+    background-color: $colr-vault-bg
+    margin-top: 80px
+    padding: 80px 0
+    .vault-b
+      .title
+        +header-1()
+        color: $colr-white
+        text-align: center
+        margin-bottom: 40px
+      .para
+        +para()
+        text-align: justify
+        color: $colr-white
+        padding-bottom: 40px
+      .vault-opt
+        text-align: center
+        .ghost-btn
+          &:hover
+            background-color: $colr-white
+            color: $colr-vault-bg
+  .def-cntrs
+    margin-top: 80px
+    padding: 80px 0
+    .def-cntrs-b
+      .def-cntrs-title
+        +header-1()
+        text-align: center
+        margin-bottom: 40px
+      .def-cntrs-desc
+        +para()
+        text-align: justify
+        padding-bottom: 40px
+      .def-cntr-quote
+        +header-3()
+        text-align: center
+        color: $colr-blue
+        padding: 40px 0
+      .def-cntrs-ls
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin-top: 60px
+        .def-cntrs-ls-i
+          width: 25%
+          display: inline-block
+          padding: 60px 16px
+          .def-cntrs-ls-i-icon
+            width: 40px
+            height: 40px
+            margin: 0 auto
+            margin-bottom: 24px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: 30px
+            &.document
+              background-image: url($cntr-document-url)
+            &.download
+              background-image: url($cntr-download-url)
+            &.music
+              background-image: url($cntr-music-url)
+            &.pictures
+              background-image: url($cntr-picture-url)
+            &.videos
+              background-image: url($cntr-video-url)
+            &.public
+              background-image: url($cntr-public-url)
+            &.pubNames
+              background-image: url($cntr-pub-name-url)
+          .def-cntrs-ls-i-title
+            +header-3()
+            text-align: center
+            margin-bottom: 12px
+          .def-cntrs-ls-i-desc
+            +para()
+            text-align: center
+  .data-types
+    margin-top: 80px
+    padding: 80px 0
+    background-color: $colr-theme-light
+    .data-types-b
+      .data-types-title
+        +header-1()
+        text-align: center
+        margin-bottom: 40px
+      .data-types-desc
+        +para()
+        text-align: justify
+        padding-bottom: 40px
+
+.wizard
+  .wizard-b
+    background-color: $colr-wizard-bg
+    padding: 40px
+    .wizard-top-nav
+      padding-bottom: 40px
+      .wizard-top-nav-i
+        width: 10px
+        height: 10px
+        // background-color: $colr-white
+        border: 2px solid $colr-white
+        border-radius: 50%
+        display: inline-block
+        margin-right: 8px
+        line-height: 30px
+        &.active
+          background-color: $colr-white
+    .wizard-cntr
+      .wizard-i
+        .wizard-feat-name
+          +header-3()
+          color: $colr-white
+

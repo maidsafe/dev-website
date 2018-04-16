@@ -11,11 +11,13 @@ class Home extends React.Component {
 
   render() {
     const { data } = this.props;
-    console.log('data', data)
     return (
       <section className="home">
         <div className="home-b">
-          <div className="home-banner"></div>
+          <div className="home-banner">
+            <div className="home-banner-typo"></div>
+            <div className="home-banner-link"><a href={data.homeBanner.link.href} target="_blank">{data.homeBanner.link.name}</a></div>
+          </div>
 
           <div className="build-on-safe">
             <div className="build-on-safe-b layout4060">

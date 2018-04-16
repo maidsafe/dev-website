@@ -7,4 +7,8 @@ export default {
   locals: {
     EN_GB: 'en-gb'
   },
+  tabTypes: {
+    WIZARD: 'wizard',
+    LAY_HALF: 'layout_half'
+  }
 };
