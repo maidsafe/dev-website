@@ -1,0 +1,214 @@
+.platform-i
+  display: inline-block
+  padding: 0 25px
+  min-width: 120px
+  text-align: center
+  a
+    +link()
+    color: $colr-text
+  .icn
+    width: 60px
+    height: 60px
+    background-color: $colr-blue
+    border-radius: 50%
+    margin: 0 auto
+    background-size: 30px
+    background-repeat: no-repeat
+    background-position: center
+    &.nodejs
+      background-image: url($platform-nodejs-url)
+    &.web
+      background-image: url($platform-web-url)
+    &.rust
+      background-image: url($platform-rust-url)
+  .name
+    margin-top: 12px
+    font-size: 18px
+
+.app-dev
+  .platform-links
+    background-color: $colr-theme-light
+    .platform-links-b
+      padding: 16px 0
+      text-align: center
+      .platform-link-i
+        @extend .platform-i
+  .intro
+    .intro-b
+      padding: 60px 0
+      .intro-sec-1
+        +clearfix()
+        .dual-tone-text
+          width: 60%
+          float: right
+          transform: translate(30px, 0)
+          .sub-title
+            +header-2()
+            text-transform: none
+            margin-bottom: 12px
+          p
+            +para()
+            text-transform: none
+      .intro-sec-2
+        +clearfix()
+        .intro-image
+          width: 60%
+          float: left
+          transform: translate(-30px, 0)
+  .dapps
+    .dapps-b
+      background-color: $colr-theme-light
+      .lay-40
+        padding-left: 80px
+        padding-top: 200px
+        background-color: $colr-theme-dark
+      .lay-60
+        padding: 80px 0
+        .dapps-cntr
+          transform: translate(-80px, 0)
+          .dapps-cntr-b
+            background-color: $colr-white
+            padding: 60px
+            .desc
+              +para()
+          .sample-apps
+            margin-top: 40px
+            h3
+              +header-2()
+            .sample-app-ls
+              margin-top: 40px
+              +clearfix()
+              .sample-app-i
+                width: 25%
+                text-align: center
+                float: left
+                a
+                  +link()
+                  color: $colr-text
+                .sample-app-logo
+                  width: 80px
+                  height: 80px
+                  margin: 0 auto
+                  img
+                    width: 100%
+                .sample-app-name
+                  width: 80%
+                  margin: 24px auto 0
+  .start-develop
+    .start-develop-b
+      width: 100%
+      .start-develop-sec-1
+        width: 100%
+        .start-develop-sec-1-b
+          width: 50%
+          margin-top: 200px
+          padding-right: 60px
+          +clearfix()
+        .dual-tone-text
+          float: right
+      .start-develop-sec-2
+        .start-develop-cntr
+          padding-bottom: 80px
+          .start-develop-cntr-b
+            width: 100%
+            .start-develop-i
+              width: 100%
+              min-height: 200px
+              margin-top: 60px
+              display: table
+              +clearfix()
+              position: relative
+              .start-develop-i-title
+                +header-2()
+                display: table-cell
+                width: 50%
+                text-align: right
+                padding-right: 60px
+                vertical-align: middle
+                position: relative
+                &:after
+                  content: ''
+                  width: 100px
+                  height: 5px
+                  border-radius: 3px
+                  background-color: $colr-theme-dark
+                  display: block
+                  position: absolute
+                  right: 60px
+                  top: 50%
+                  transform: translate(0, 48px)
+              .start-develop-i-icon
+                display: table-cell
+                width: 200px
+                height: 200px
+                background-color: $colr-theme-light
+                top: 0
+                right: 50%
+                border-radius: 50%
+                vertical-align: middle
+                background-size: 100px
+                background-repeat: no-repeat
+                background-position: center
+                &.contact-app
+                  background-image: url($contact-app-url)
+                &.file-storage
+                  background-image: url($file-storage-url)
+                &.share-data
+                  background-image: url($share-data-url)
+              .start-develop-i-desc
+                +para()
+                display: table-cell
+                vertical-align: middle
+                text-align: left
+                height: 200px
+                padding-left: 50px
+                padding-right: 80px
+  .access-net
+    background-color: $colr-theme-light
+    min-height: 300px
+    .access-net-b
+      padding-bottom: 80px
+      .lay-40
+        .dual-tone-text
+          padding-left: 80px
+          padding-top: 120px
+          p
+            +para()
+            text-transform: none
+            width: 90%
+            margin-top: 28px
+        &:after
+          content: ''
+          width: 50%
+          height: 5px
+          margin-top: 36px
+          margin-left: 80px
+          max-width: 200px
+          display: block
+          border-radius: 1.5px
+          background-color: $colr-green
+      .lay-60
+        padding: 80px
+        text-align: center
+        img
+          width: 100%
+          max-width: 500px
+  .platforms
+    padding: 120px 0
+    .platforms-b
+      .platform-sec-1
+        .dual-tone-text
+          width: 60%
+          float: right
+          display: inline-block
+          margin-right: 60px
+          p
+            +para()
+            text-transform: none
+            margin-top: 24px
+            text-align: justify
+
+      .platform-sec-2
+        .platform-cntr
+          .platform-i
+            @extend .platform-i

@@ -1,0 +1,24 @@
+@media screen and (min-width: 576px) and (max-width: 768px)
+  .platform
+    .content
+      width: $platform-content-width-sm
+      .content-b
+        width: $platform-content-base-width-sm
+    .nav
+      display: none
+      &.active
+        display: block
+        position: fixed
+        top: 80px
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: #ffffffed
+        padding-bottom: 120px
+        .nav-b
+          width: 30%
+          float: right
+    .page-title
+      padding-top: $platform-top-pad-sm
+    .mob-nav-menu-icon
+      display: block

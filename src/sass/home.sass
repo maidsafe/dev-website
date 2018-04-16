@@ -1,0 +1,171 @@
+.home
+  .home-banner
+    width: 100%
+    height: $home-banner-height
+    background-color: $bg-home-banner
+    background-image: url($home-banner-bg-url)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    .home-banner-typo
+      width: $home-banner-typo-width
+      height: $home-banner-typo-height
+      background-image: url($home-banner-typo-url)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      position: absolute
+      top: $home-banner-typo-top
+      left: $home-banner-typo-left
+    .home-banner-link
+      position: absolute
+      bottom: 50px
+      right: 50px
+      width: 100%
+      text-align: right
+      a
+        +link()
+        font-size: 24px
+        color: $colr-utube-red
+        text-transform: uppercase
+        line-height: 30px
+        position: relative
+        padding-left: 40px
+        display: inline-block
+        &:before
+          content: ''
+          width: 40px
+          height: 30px
+          background-image: url($youtube-logo-url)
+          background-position: center
+          background-size: 30px
+          background-repeat: no-repeat
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+  .build-on-safe
+    background-color: $colr-theme-light
+    min-height: 300px
+    .build-on-safe-b
+      width: 100%
+      .lay-40
+        background-color: $colr-theme-dark
+        padding-left: 80px
+        padding-top: 200px
+      .six-keys
+        margin: 80px 0 80px -80px
+        min-height: 400px
+        width: 100%
+        .six-keys-b
+          padding: 60px
+          background-color: $colr-white
+          +clearfix()
+          .six-key-i
+            width: 50%
+            float: left
+            padding-right: 16px
+            padding-bottom: 24px
+            .icn
+              width: 36px
+              height: 36px
+              margin-bottom: 16px
+              background-position: center
+              background-size: contain
+              background-repeat: no-repeat
+              &.privacy
+                background-image: url($key-feat-1-url)
+              &.infrastructure
+                background-image: url($key-feat-2-url)
+              &.anonymity
+                background-image: url($key-feat-3-url)
+              &.application
+                background-image: url($key-feat-4-url)
+              &.sign-on
+                background-image: url($key-feat-5-url)
+              &.collaborate
+                background-image: url($key-feat-6-url)
+            .title
+              +header-3()
+              margin-bottom: 12px
+            .desc
+              +para()
+              line-height: 24px
+  .contribute
+    .contribute-b
+      .contribute-sec-1
+      .contribute-sec-2
+        padding: 120px 80px 120px 0
+      .dual-tone-text
+        margin-top: 200px
+        position: relative
+        float: right
+        margin-right: 200px
+        z-index: 0
+        .contribute-img
+          position: absolute
+          top: 100%
+          right: 0
+          width: 250px
+          transform: translate(80px, -30px)
+          z-index: -1
+      .contribute-i
+        padding: 30px 0
+        h3
+          +header-2()
+          margin-bottom: 24px
+        p
+          +para()
+          margin-bottom: 24px
+        a
+          +link()
+          color: $colr-text()
+          font-size: 24px
+          padding-right: 60px
+          position: relative
+          &:after
+            content: ''
+            width: 36px
+            height: 36px
+            position: absolute
+            top: 0
+            right: 0
+            background-size: 24px
+            background-position: center
+            background-repeat: no-repeat
+        &.app
+          a
+            color: $colr-green-light
+            &:after
+              background-image: url($arrow-green-url)
+        &.core
+          a
+            color: $colr-blue
+            &:after
+              background-image: url($arrow-blue-url)
+  .roadmap
+    background-color: $colr-theme-light
+    min-height: 300px
+    .roadmap-b
+      .lay-40
+        .dual-tone-text
+          padding-left: 80px
+          padding-top: 120px
+          p
+            +para()
+            text-transform: none
+            width: 60%
+            margin-top: 28px
+            &:after
+              content: ''
+              width: 50%
+              height: 5px
+              margin-top: 36px
+              display: block
+              border-radius: 1.5px
+              background-color: $colr-green
+      .lay-60
+        padding: 80px
+        img
+          width: 100%

@@ -1,0 +1,121 @@
+.platform
+  background-color: $colr-theme-light
+  position: relative
+  +clearfix()
+  .content
+    width: $platform-content-width-lg
+    padding: 24px
+    float: left
+    background-color: $colr-white
+    height: 100%
+    position: relative
+    padding-bottom: 80px
+    .content-b
+      width: $platform-content-base-width-lg
+      margin: 0 auto
+  .mob-nav-menu-icon
+    width: 50px
+    height: 50px
+    background: $colr-white
+    border-radius: 50%
+    position: fixed
+    bottom: 50px
+    right: 24px
+    display: none
+    box-shadow: 0 1px 3px #00000070
+    z-index: 999
+    button
+      width: 100%
+      height: 100%
+      background-color: transparent
+      background-image: url($menu-2-light)
+      border: 0
+      outline: 0
+  .nav
+    width: $platform-nav-width-lg
+    padding: 24px
+    float: right
+    padding-top: $platform-top-pad-lg
+    .nav-i
+      font-size: 18px
+      .nav-i-head
+        line-height: 24px
+        padding: 8px 0
+        a
+          text-decoration: none
+          color: inherit
+          &.selected
+            color: #2e3742
+            font-weight: bold
+      .nav-i-links
+        margin-left: 24px
+        margin-bottom: 16px
+        font-weight: normal
+        a
+          line-height: 36px
+          text-decoration: none
+          color: inherit
+          &.selected
+            color: #2e3742
+            font-weight: bold
+    .ref-link
+      position: relative
+      height: 100%
+      display: inline-block
+      padding-right: 16px !important
+      &:after
+        content: ''
+        width: 24px
+        height: 24px
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        transform: translate(100%, 50%)
+        background-image: url($ref-link)
+        background-size: 18px
+        background-position: center
+        background-repeat: no-repeat
+
+  .page-title
+    font-size: 36px
+    font-weight: 600
+    margin-bottom: 40px
+    padding-top: $platform-top-pad-lg
+
+  .page-sub-title
+    font-size: 24px
+    font-weight: 600
+    padding-top: 20px
+    margin-bottom: 36px
+
+  .para
+    +para()
+    &.last
+      margin-bottom: 40px
+
+  .quote
+    font-size: 18px
+    color: #555555
+    font-weight: bold
+    font-style: italic
+    opacity: 0.6
+    padding: 16px
+    margin-bottom: 24px
+
+  .code-block
+    margin-bottom: 24px
+  .list-type-1
+    margin-bottom: 24px
+    ul
+      list-style: none
+      margin-left: 24px
+      li
+        padding: 8px 0
+        list-style: disc
+        a
+          text-decoration: none
+          font-weight: 600
+          color: inherit
+          &:hover
+            text-decoration: underline

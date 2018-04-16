@@ -1,0 +1,80 @@
+@media screen and (max-width: 576px)
+  .base
+    width: $base-width-xs
+    padding-left: 16px
+    padding-right: 16px
+
+  header
+    .brand-logo
+      padding: 16px
+      .split
+        height: 24px
+        margin: 13px 10px
+      .desc
+        .extend
+          display: none
+    .opts
+      padding: 16px
+    nav
+      display: none
+      width: 100%
+      position: absolute
+      top: 80px
+      left: 0
+      background-color: $colr-theme-light
+      border-bottom: 1px solid $colr-theme-dark
+      border-top: 1px solid $colr-theme-dark
+      a
+        margin: 0 16px
+      &.active
+        display: block
+    .mob-menu
+      display: block
+  footer
+    .footer-b
+      .maid-icon
+        width: 50%
+        padding-right: 8px
+        a
+          background-position: right
+      .footer-cntr
+        width: 100%
+        padding-left: 24px
+        padding-top: 24px
+        text-align: center
+      .git-icon
+        width: 50%
+        padding-left: 8px
+        a
+          background-position: left
+  .layout4060
+    width: 100%
+    display: block
+    .lay-40
+      display: block
+      width: 100%
+      height: 100%
+    .lay-60
+      display: block
+      width: 100%
+      height: 100%
+
+  .layout5050
+    width: 100%
+    display: block
+    .lay-50
+      display: block
+      width: 100%
+      height: 100%
+
+  .dual-tone-text
+    +header-1-1()
+    text-transform: uppercase
+    .dark
+      display: block
+      color: $colr-blue-dark
+      font-weight: 600
+    .light
+      display: block
+      color: $colr-blue
+      font-weight: bold

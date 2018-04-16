@@ -1,0 +1,113 @@
+.core-dev
+  padding-top: 80px
+  .content-intro
+    @extend .base
+    text-align: center
+    h1
+      +header-1()
+    p
+      +para()
+      text-align: justify
+      margin-top: 40px
+  .content-comp
+    @extend .base
+    padding-top: 80px
+    text-align: center
+    h1
+      +header-2()
+    & > p
+      +para()
+      text-align: justify
+      margin-top: 40px
+    .comp-i
+      padding-top: 60px
+      +clearfix()
+      .comp-i-head
+        width: 20%
+        padding-right: 24px
+        text-align: right
+        float: left
+        h3
+          +header-3()
+        .git-link
+          +para()
+          font-size: 16px
+          a
+            font-weight: normal !important
+      .comp-i-cntr
+        width: 80%
+        float: left
+        text-align: left
+        p
+          +para()
+  .rfcs
+    background-color: $colr-theme-light
+    margin-top: 80px
+    padding: 60px 0
+    .rfcs-b
+      @extend .base
+      display: block
+      h3
+        +header-2()
+        text-align: center
+      .rfcs-cntr
+        padding-top: 30px
+        .rfc-i
+          width: 33.33%
+          display: inline-block
+          padding: 30px 30px 30px 0
+          a
+            +link()
+            font-size: 18px
+            color: $colr-text
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-link-text
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($rfcs-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
+        .rfcs-url
+  .patents
+    @extend .base
+    margin-top: 80px
+    padding: 60px 0
+    .patents-b
+      @extend .base
+      display: block
+      h3
+        +header-2()
+        text-align: center
+    .patents-cntr
+      text-align: center
+      padding-top: 50px
+      .patent-i
+        padding-bottom: 30px
+        a
+          +link()
+          font-size: 18px
+          display: inline-block
+          padding-left: 46px
+          position: relative
+          &:hover
+            color: $colr-link-text
+          &:before
+            content: ''
+            width: 30px
+            height: 30px
+            position: absolute
+            top: 0
+            left: 0
+            background-image: url($patents-url)
+            background-size: 20px
+            background-repeat: no-repeat
+            background-position: center

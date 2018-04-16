@@ -1,0 +1,293 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Open Sans'
+
+.base
+  width: $base-width-lg
+  margin: 0 auto
+
+header
+  position: relative
+  height: $header-height
+  padding: 16px 24px
+  background-color: $bg-header-light
+  +clearfix()
+  &.light
+    background-color: #2482e2
+    .brand-logo
+      .images
+        background-image: url($logo-light)
+      .split
+        border-color: $colr-white
+      .desc
+        color: $colr-white
+    nav
+      a
+        color: $colr-white
+  .brand-logo
+    padding: 16px 24px
+    position: absolute
+    top: 0
+    left: 0
+    .images
+      width: $brand-logo-height
+      height: $brand-logo-height
+      display: block
+      float: left
+      background-image: url($logo-dark)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+    .split
+      width: 2px
+      height: 28px
+      display: block
+      border: 1px solid #606b7a
+      float: left
+      margin: 11px 10px
+    .desc
+      line-height: $brand-logo-height
+      display: block
+      float: left
+      font-size: 16px
+      font-weight: 600
+      color: #8b8b8b
+  nav
+    text-align: center
+    z-index: 999
+    a
+      color: $colr-header-nav-text
+      text-decoration: none
+      font-size: 16px
+      font-weight: 600
+      margin: 0 25px
+      line-height: $header-height - 32px
+  .opts
+    position: absolute
+    height: 100%
+    top: 0
+    right: 0
+    padding: 16px 24px
+    .opt
+      width: 30px
+      height: 30px
+      position: relative
+      top: 50%
+      transform: translate(0, -50%)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      float: left
+      margin-left: 16px
+      a
+        display: block
+        width: 100%
+        height: 30px
+      &.community
+        background-image: url('../../public/images/community_forum.svg')
+
+  .mob-menu
+    display: none
+    width: 50px
+    height: 50px
+    margin: 0 auto
+    background-image: url($menu-dark)
+    &.active
+      background-color: $colr-theme-dark
+      border-radius: 50%
+
+.header-fixed
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999
+  background-color: $colr-white
+  box-shadow: 0 1px 3px #00000073
+
+footer
+  width: 100%
+  .footer-b
+    border-top: 1px solid $colr-theme-dark
+    padding: 24px
+    +clearfix()
+    .maid-icon,
+    .git-icon
+      width: 36px
+      height: 36px
+      float: left
+      a
+        display: block
+        width: 100%
+        height: 100%
+        background-image: url($maidsafe-logo-link)
+        background-size: 30px
+        background-position: center
+        background-repeat: no-repeat
+    .footer-cntr
+      padding-left: 50px
+      float: left
+      .footer-cntr-i
+        display: inline-block
+        padding-right: 24px
+        line-height: 36px
+        a
+          +link()
+          font-size: 18px
+          font-weight: normal
+          color: $colr-text
+    .git-icon
+      float: right
+      a
+        background-image: url($github-logo-link)
+
+.dual-tone-text
+  +header-0()
+  text-transform: uppercase
+  .dark
+    display: block
+    color: $colr-blue-dark
+    font-weight: 600
+  .light
+    display: block
+    color: $colr-blue
+    font-weight: bold
+
+.layout4060
+  width: 100%
+  display: table
+  .lay-40
+    display: table-cell
+    width: 40%
+    height: 100%
+    vertical-align: top
+  .lay-60
+    display: table-cell
+    width: 60%
+    height: 100%
+    vertical-align: middle
+
+.layout5050
+  width: 100%
+  display: table
+  .lay-50
+    display: table-cell
+    width: 50%
+    height: 100%
+    vertical-align: middle
+    &.top-align
+      vertical-align: top
+
+.btn
+  text-transform: uppercase
+  padding: 8px 16px
+  line-height: 24px
+  border-radius: 3px
+  border: 0
+  outline: 0
+  background-color: $colr-theme-light
+  font-size: 16px
+  font-weight: 600
+  color: $colr-white
+  border: 1px solid $colr-theme-dark
+  background-color: transparent
+  cursor: pointer
+
+.tabs
+  padding-bottom: 80px
+  .tabs-b
+    .tab-nav
+      padding: 80px 0
+      .tab-nav-b
+        position: relative
+        height: 50px
+        overflow: hidden
+        .tab-nav-ib
+          position: absolute
+          top: 0
+          left: 0%
+          width: 100%
+          margin-left: 33.333%
+          +clearfix()
+          .tab-nav-i
+            +header-3()
+            width: 33.33%
+            float: left
+            text-align: center
+            line-height: 50px
+            color: $colr-blue
+            opacity: 0.5
+            &.active
+              font-size: 24px
+              opacity: 1
+        .tab-nav-opts
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          .tab-nav-opt
+            width: 33.33%
+            display: block
+            position: absolute
+            padding: 10px 0
+            button
+              width: 30px
+              height: 30px
+              background-color: transparent
+              border: 0
+              outline: 0
+              cursor: pointer
+            &.left
+              left: 0
+              text-align: right
+              &:hover
+                button
+                  background-image: url($left-hover-url)
+              button
+                background-image: url($left-url)
+            &.right
+              right: 0
+              text-align: left
+              &:hover
+                button
+                  background-image: url($right-hover-url)
+              button
+                background-image: url($right-url)
+    .tab-cntr
+      +clearfix()
+      display: none
+      background-color: $colr-theme-light
+      &.active
+        display: block
+      .tab-cntr-img
+        width: 50%
+        float: left
+        height: 300px
+      .tab-cntr-content
+        width: 50%
+        float: left
+        text-align: left
+        padding: 60px
+        background-color: $colr-blue
+        .tab-cntr-title
+          +header-2()
+          padding-bottom: 24px
+          color: $colr-white
+        .tab-cntr-para
+          +para()
+          padding-bottom: 20px
+          text-align: justify
+          color: $colr-white
+        .tab-cntr-opt
+          padding-top: 30px
+          text-align: center
+          .ghost-btn
+            &:hover
+              background-color: $colr-white
+              color: $colr-blue
+
+
