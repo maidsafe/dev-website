@@ -26,7 +26,7 @@ class App extends React.Component {
     });
   }
   render() {
-    const isScrolling = this.state.yPos > 10;
+    const isScrolling = !(this.state.yPos <= 10);
     return (
       <Router>
         <div className="root-b">

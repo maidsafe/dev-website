@@ -25,10 +25,10 @@
         .step
           padding: 60px 0
           .step-img
-            width: 200px
-            height: 200px
-            background-color: grey
+            width: 400px
             margin: 0 auto 50px
+            img
+              width: 100%
           .step-name
             +header-2()
             text-align: center
@@ -154,7 +154,6 @@
       .wizard-top-nav-i
         width: 10px
         height: 10px
-        // background-color: $colr-white
         border: 2px solid $colr-white
         border-radius: 50%
         display: inline-block
@@ -164,7 +163,55 @@
           background-color: $colr-white
     .wizard-cntr
       .wizard-i
+        display: none
+        &.active
+          display: block
         .wizard-feat-name
-          +header-3()
+          +header-2()
           color: $colr-white
-
+          margin-bottom: 24px
+        .wizard-feat-para
+          +para()
+          color: $colr-white
+          margin-bottom: 24px
+    .wizard-opts
+      padding: 20px 0
+      text-align: right
+      .wizard-opt
+        display: inline-block
+        color: $colr-white
+        &.hide
+          display: none
+        button
+          font-size: 18px
+          color: $colr-white
+          background-color: transparent
+          border: 0
+          outline: 0
+          position: relative
+          line-height: 30px
+          cursor: pointer
+          &:after
+            content: ""
+            background-repeat: no-repeat
+            display: block
+            width: 30px
+            height: 30px
+            position: absolute
+            top: 0
+            background-position: center
+            background-size: 24px
+        &.left
+          button
+            padding-left: 40px
+            padding-right: 20px
+            &:after
+              background-image: url($arrow-white-left-url)
+              left: 0
+        &.right
+          button
+            padding-right: 40px
+            padding-left: 20px
+            &:after
+              background-image: url($arrow-white-right-url)
+              right: 0

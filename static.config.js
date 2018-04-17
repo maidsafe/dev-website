@@ -1,3 +1,4 @@
+import React from 'react'
 import axios from 'axios'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 //
@@ -42,4 +43,14 @@ export default {
     ]
     return config
   },
+  Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
+    <Html lang="en-US">
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/icon" href="  images/favicon.ico" />
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
 }
