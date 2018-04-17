@@ -11,13 +11,18 @@ export default class Header extends React.Component {
     this.state = {
       showMenu: false
     };
+    this.routes = {
+      APP_DEV: '/app_developer',
+      CORE_DEV: '/core_developer',
+      DISCOVER: '/discover',
+    }
   }
 
   hideMenu() {
     if (!this.state.showMenu) {
       return;
     }
-    this.setState({showMenu: false});
+    this.setState({ showMenu: false });
   }
 
   render() {
@@ -29,25 +34,33 @@ export default class Header extends React.Component {
       'header-fixed': this.props.isScrolling
     });
 
+    const route = window.location.pathname;
+
     return (
       <header className={headerClasses}>
         <div className="brand-logo">
-          <Link to="/" onClick={() => {this.hideMenu()}}>
+          <Link to="/" onClick={() => { this.hideMenu() }}>
             <span className="images"></span>
             <span className="split"></span>
             <span className="desc">Dev<span className="extend">eloper</span></span>
           </Link>
         </div>
         <div className="mob-menu" onClick={(e) => {
-          this.setState({showMenu: !this.state.showMenu});
+          this.setState({ showMenu: !this.state.showMenu });
         }}></div>
         <nav className={navMenuClasses}>
-          <Link to="/app_developer" onClick={() => {this.hideMenu()}}>App Dev</Link>
-          <Link to="/core_developer" onClick={() => {this.hideMenu()}}>Core Dev</Link>
-          <Link to="/discover" onClick={() => {this.hideMenu()}}>Discover</Link>
+          <Link className={classNames({
+            active: route === this.routes.APP_DEV
+          })} to="/app_developer" onClick={() => { this.hideMenu() }}>App Dev</Link>
+          <Link className={classNames({
+            active: route === this.routes.CORE_DEV
+          })} to="/core_developer" onClick={() => { this.hideMenu() }}>Core Dev</Link>
+          <Link className={classNames({
+            active: route === this.routes.DISCOVER
+          })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
         </nav>
         <div className="opts">
-          <div className="opt community"><a onClick={() => {this.hideMenu()}} href={CONST.externalLinks.header.devForum} target="_blank" /></div>
+          <div className="opt community"><a onClick={() => { this.hideMenu() }} href={CONST.externalLinks.header.devForum} target="_blank" /></div>
         </div>
       </header>
     )

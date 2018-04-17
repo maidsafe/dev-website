@@ -66,6 +66,8 @@ header
       font-weight: 600
       margin: 0 25px
       line-height: $header-height - 32px
+      &.active
+        color: $colr-blue
   .opts
     position: absolute
     height: 100%
@@ -108,6 +110,7 @@ header
   z-index: 999
   background-color: $colr-white
   box-shadow: 0 1px 3px #00000073
+  transition: top .1s ease
 
 footer
   width: 100%
@@ -262,14 +265,18 @@ footer
       display: none
       background-color: $colr-theme-light
       &.active
-        display: block
+        display: table
       .tab-cntr-img
         width: 50%
-        float: left
-        height: 300px
+        display: table-cell
+        vertical-align: middle
+        text-align: center
+        img
+          width: 80%
+          margin: 0 auto
       .tab-cntr-content
         width: 50%
-        float: left
+        display: table-cell
         text-align: left
         padding: 60px
         background-color: $colr-blue

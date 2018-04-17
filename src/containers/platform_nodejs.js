@@ -10,15 +10,30 @@ class Platform extends React.Component {
     this.state = {
       showNav: false
     };
+    this.hideNav = this.hideNav.bind(this);
+  }
+  componentDidMount() {
+    const linkHeads = document.getElementsByClassName('nav-i-head');
+    for (let i = 0; i< linkHeads.length; i++) {
+      linkHeads[i].addEventListener('click', () => {
+        this.hideNav();
+      }, false)
+    }
+    const links = document.getElementsByClassName('nav-i-links');
+    for (let i = 0; i< links.length; i++) {
+      links[i].addEventListener('click', () => {
+        this.hideNav();
+      }, false)
+    }
   }
 
   hideNav() {
-    console.log('hidee')
     if (!this.state.showNav) {
       return;
     }
     this.setState({ showNav: false });
   }
+
   render() {
     const { data } = this.props;
     const navClasses = classNames('nav', {

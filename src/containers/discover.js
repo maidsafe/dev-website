@@ -3,13 +3,51 @@ import { withRouteData } from 'react-static'
 import classNames from 'classnames';
 import Tabs from './partials/tabs'
 //
-import EcoSystemBanner from '../../public/images/ecosystem_banner.png'
+import EcoSystemBanner from '../../public/images/ecosystem_banner.svg'
+import Auth1 from '../../public/images/auth_1.png'
+import Auth2 from '../../public/images/auth_2.png'
+import Auth3 from '../../public/images/auth_3.png'
 
 import CONST from '../constants';
 
 class Discover extends React.Component {
+  constructor() {
+    super();
+    this.authImgs = {
+      AUTH_1: Auth1,
+      AUTH_2: Auth2,
+      AUTH_3: Auth3,
+    };
+  }
+  componentDidMount() {
+    this.prepareTabs();
+    window.addEventListener('resize', () => {
+      this.prepareTabs();
+    }, true);
+  }
+
+  prepareTabs() {
+    if (window.innerWidth <= 768) {
+      this.tabNavWidth = 100
+
+      // network type
+      const tabNav = document.getElementsByClassName('tab-nav');
+      for(let i = 0; i < tabNav.length; i++) {
+        const tabBase = tabNav[i].querySelector('.tab-nav-ib');
+        tabBase.style.width = `${tabNav[i].offsetWidth * 3}px`;
+      }
+    } else {
+      const tabNav = document.getElementsByClassName('tab-nav');
+      for(let i = 0; i < tabNav.length; i++) {
+        const tabBase = tabNav[i].querySelector('.tab-nav-ib');
+        tabBase.style.width = `100%`;
+      }
+    }
+  }
+
   render() {
     const { data } = this.props;
+
     return (
       <section className="discover">
         <div className="intro base">
@@ -33,7 +71,7 @@ class Discover extends React.Component {
               {
                 data.authenticator.steps.map((step, i) => (
                   <div key={`authenticator-steps-${i}`} className="step">
-                    <h3 className="step-img"></h3>
+                    <h3 className="step-img"><img src={this.authImgs[step.icon]} /></h3>
                     <h3 className="step-name">{step.title}</h3>
                     <p className="step-desc">{step.desc}</p>
                   </div>

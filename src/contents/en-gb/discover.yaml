@@ -11,10 +11,13 @@ authenticator:
     chunk2: ". Similarly every app registers their own safe--prefixed url-scheme. The process for authentication is as follows:"
   steps:
     - title: Application requests access
+      icon: AUTH_1
       desc: The application authorises with the Authenticator with the needed access permissions. The application can create its own container, and request access to default containers or other applications' containers through the authorisation request.
     - title: User grants access
+      icon: AUTH_2
       desc: When the user approves the request, application specific encryption keys are generated. The application will be identified in the network using its keys. When the user grants or denies authorisation, the application will receive a URI.
     - title: Application connects to the Network
+      icon: AUTH_3
       desc: Applications can connect to the SAFE Network on behalf of the user by using the URI received.
 networks:
   title: Network Types
