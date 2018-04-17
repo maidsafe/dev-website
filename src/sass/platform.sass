@@ -1,7 +1,17 @@
 .platform
-  background-color: $colr-theme-light
+  background-color: $colr-theme-dark
   position: relative
   +clearfix()
+  .platform-links
+    background-color: $colr-theme-light
+    .platform-links-b
+      padding: 16px 0
+      text-align: center
+      .platform-link-i
+        @extend .platform-i
+        .icn
+          &.active
+            background-color: $colr-green !important
   .content
     width: $platform-content-width-lg
     padding: 24px

@@ -42,6 +42,22 @@ class Platform extends React.Component {
 
     return (
       <div className="platform">
+      <div className="platform-links">
+          <div className="platform-links-b">
+            {
+              data.platformLinks.map((platform, i) => (
+                <div key={`platform-link-${i}`} className="platform-link-i">
+                  <a href={platform.href}>
+                    <div className={classNames(`icn ${platform.icon}`, {
+                      active: platform.isActive
+                    })}></div>
+                    <div className="name">{platform.name}</div>
+                  </a>
+                </div>
+              ))
+            }
+          </div>
+        </div>
         <div className="content">
           <div className="content-b">
             <h1 id="pageHeading" className="page-title">{data.pageTitle}</h1>

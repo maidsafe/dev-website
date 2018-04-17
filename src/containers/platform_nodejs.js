@@ -14,13 +14,13 @@ class Platform extends React.Component {
   }
   componentDidMount() {
     const linkHeads = document.getElementsByClassName('nav-i-head');
-    for (let i = 0; i< linkHeads.length; i++) {
+    for (let i = 0; i < linkHeads.length; i++) {
       linkHeads[i].addEventListener('click', () => {
         this.hideNav();
       }, false)
     }
     const links = document.getElementsByClassName('nav-i-links');
-    for (let i = 0; i< links.length; i++) {
+    for (let i = 0; i < links.length; i++) {
       links[i].addEventListener('click', () => {
         this.hideNav();
       }, false)
@@ -42,31 +42,24 @@ class Platform extends React.Component {
 
     return (
       <div className="platform">
+        <div className="platform-links">
+          <div className="platform-links-b">
+            {
+              data.platformLinks.map((platform, i) => (
+                <div key={`platform-link-${i}`} className="platform-link-i">
+                  <a href={platform.href}>
+                    <div className={classNames(`icn ${platform.icon}`, {
+                      active: platform.isActive
+                    })}></div>
+                    <div className="name">{platform.name}</div>
+                  </a>
+                </div>
+              ))
+            }
+          </div>
+        </div>
         <div className="content">
           <div className="content-b">
-            {/* <h1 className="page-title">{data.pageTitle}</h1>
-            <h2 className="page-sub-title">{data.installation.title}</h2>
-            <p className="para">{data.installation.para1}</p>
-            <p className="para last">{data.installation.para2}</p>
-            <h2 className="page-sub-title">{data.setupElectron.title}</h2>
-            <p className="para">
-              {`${data.setupElectron.para1.chunk1} `}
-              <span className="highlight">{data.setupElectron.para1.highlight1}</span>
-              {` ${data.setupElectron.para1.chunk2} `}
-              <span className="highlight">{data.setupElectron.para1.highlight2}</span>
-              {` ${data.setupElectron.para1.chunk3}`}
-            </p>
-            <p className="quote">{data.setupElectron.quote1}</p>
-            <div className="code-block">
-              <SyntaxHighlighter language='javascript' style={duotoneLight}>{data.setupElectron.code1}</SyntaxHighlighter>
-            </div>
-            <div className="list-type-1">
-              <ul>
-                <li>{data.setupElectron.list1.list1_1}</li>
-                <li>{`${data.setupElectron.list1.list1_2.chunk1} `}<Link to={data.setupElectron.list1.list1_2.link1.href}>{data.setupElectron.list1.list1_2.link1.name}</Link>{` ${data.setupElectron.list1.list1_2.chunk2}`}</li>
-                <li>{data.setupElectron.list1.list1_3}</li>
-              </ul>
-            </div> */}
             <h1 id="pageHeading" className="page-title">{data.pageTitle}</h1>
             <p className="para">
               {`${data.safeDesktop.para1.chunk1} `}
