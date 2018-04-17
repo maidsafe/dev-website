@@ -1,4 +1,15 @@
-pageNav: 
+platformLinks:
+  - icon: nodejs
+    name: NodeJs
+    href: '/platform/nodejs'
+  - icon: web
+    name: Web
+    href: '/platform/web'
+  - icon: rust
+    name: Rust
+    isActive: true
+    href: '/platform/rust'
+pageNav:
   name: SAFE App Tutorial for Rust
   href: "#pageHeading"
   nav1:
@@ -64,12 +75,12 @@ preRequisites:
     title: Installing SAFE Browser
     para1: Since the application will be authorising with the Authenticator to get the credentials needed to then connect to the SAFE Network, we first need to have an instance of the SAFE Browser installed.
     para2:
-      chunk1: You can find the links to download the SAFE Browser package from 
+      chunk1: You can find the links to download the SAFE Browser package from
       link1:
         name: MaidSafe’s website
         href: https://maidsafe.net/
       chunk2: ", or directly from the"
-      link2: 
+      link2:
         name: SAFE Browser GitHub releases repository
         href: https://github.com/maidsafe/safe_browser/releases
       chunk3: ". It’s recommended to always use the latest available version."
@@ -216,7 +227,7 @@ usingSafeCoreApi:
             });
   para2:
     chunk1: However, the futures use guide is out of the scope of this tutorial, so please follow the
-    link1: 
+    link1:
       name: documentation
       href: https://docs.rs/futures/0.1.0/futures/
     chunk2: for details.
@@ -240,4 +251,3 @@ usingSafeCoreApi:
     title: Update and remove entries
     code1: |
             client.mutate_mdata_entries();
-  

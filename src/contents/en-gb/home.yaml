@@ -47,3 +47,21 @@ contribute:
 roadmap:
   title: Roadmap
   desc: The Network is in Alpha 2 and the APIs are subjected to change. We do try to keep the APIs backward compatible as much as possible while the Network is progressing towards a stable beta.
+  mobView:
+    done:
+      - name: Alpha 1
+        icon: alpha1
+        desc: Initial alpha implementation enabling users to access MaidSafe managed nodes using the SAFE Launcher to use several demo applications.
+      - name: Alpha 2
+        icon: alpha2
+        desc: The Authenticator. The current release incorporating a more secure form of network access now bundled with the SAFE Browser.
+    inprogress:
+      - name: Alpha 3
+        icon: alpha3
+        desc: Secure Autonomous Network. An autonomous secure routing layer that will see the network architecture becoming more decentralised, enabling users to run routing nodes and providing secure transient data in the process.
+      - name: Alpha 4
+        icon: alpha4
+        desc: Secure autonomous data services. The addition of a storage layer through the reintroduction of user run vaults facilitating a much broader range of decentralised apps and use cases.
+      - name: Beyond
+        icon: beyond
+        desc: Data republish and network restarts. A security audit of the network. Test safecoin. Real-time network upgrades. Network validated upgrades.

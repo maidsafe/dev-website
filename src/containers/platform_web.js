@@ -42,6 +42,22 @@ class Platform extends React.Component {
 
     return (
       <div className="platform">
+      <div className="platform-links">
+          <div className="platform-links-b">
+            {
+              data.platformLinks.map((platform, i) => (
+                <div key={`platform-link-${i}`} className="platform-link-i">
+                  <a href={platform.href}>
+                    <div className={classNames(`icn ${platform.icon}`, {
+                      active: platform.isActive
+                    })}></div>
+                    <div className="name">{platform.name}</div>
+                  </a>
+                </div>
+              ))
+            }
+          </div>
+        </div>
         <div className="content">
           <div className="content-b">
             <h1 id="pageHeading" className="page-title">{data.pageTitle}</h1>
@@ -88,7 +104,7 @@ class Platform extends React.Component {
                 </li>
                 <li>
                   {`${data.preRequisites.list1.list1_3.chunk1} `}
-                  <span className="highlights">
+                  <span className="highlight">
                     {data.preRequisites.list1.list1_3.highlight1}
                   </span>
                   {` ${data.preRequisites.list1.list1_3.chunk2} `}
@@ -96,11 +112,11 @@ class Platform extends React.Component {
                     {data.preRequisites.list1.list1_3.link1.name}
                   </Link>
                   {` ${data.preRequisites.list1.list1_3.chunk3} `}
-                  <span className="highlights">
+                  <span className="highlight">
                     {data.preRequisites.list1.list1_3.highlight2}
                   </span>
                   {` ${data.preRequisites.list1.list1_3.chunk4} `}
-                  <span className="highlights">
+                  <span className="highlight">
                     {data.preRequisites.list1.list1_3.highlight3}
                   </span>
                   {`${data.preRequisites.list1.list1_3.chunk5}`}
@@ -124,13 +140,13 @@ class Platform extends React.Component {
             <div className="list-type-1">
               <ul>
                 <li>
-                  <span className="highlights">
+                  <span className="highlight">
                     {data.installBrowser.list1.list1_1.highlight1}
                   </span>
                   {` ${data.installBrowser.list1.list1_1.chunk1}`}
                 </li>
                 <li>
-                  <span className="highlights">
+                  <span className="highlight">
                     {data.installBrowser.list1.list1_2.highlight1}
                   </span>
                   {` ${data.installBrowser.list1.list1_2.chunk1}`}
@@ -154,11 +170,11 @@ class Platform extends React.Component {
             <h2 id="createSkeleton" className="page-sub-title">{data.createBasicSkeleton.title}</h2>
             <p className="para">
               {`${data.createBasicSkeleton.para1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createBasicSkeleton.para1.highlight1}
               </span>
               {` ${data.createBasicSkeleton.para1.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createBasicSkeleton.para1.highlight2}
               </span>
               {` ${data.createBasicSkeleton.para1.chunk3} `}
@@ -186,7 +202,7 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.createBasicSkeleton.para4.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createBasicSkeleton.para4.highlight1}
               </span>
               {` ${data.createBasicSkeleton.para4.chunk2} `}
@@ -202,11 +218,11 @@ class Platform extends React.Component {
             <p className="para"> {data.authAppandConnect.para1} </p>
             <p className="para">
               {`${data.authAppandConnect.para2.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para2.highlight1}
               </span>
               {` ${data.authAppandConnect.para2.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para2.highlight2}
               </span>
               {` ${data.authAppandConnect.para2.chunk3} `}
@@ -219,26 +235,26 @@ class Platform extends React.Component {
             <p className="para"> {data.authAppandConnect.para2_1} </p>
             <p className="para">
               {`${data.authAppandConnect.para3.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para3.highlight1}
               </span>
               {` ${data.authAppandConnect.para3.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para3.highlight2}
               </span>
               {` ${data.authAppandConnect.para3.chunk3} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para3.highlight3}
               </span>
               {` ${data.authAppandConnect.para3.chunk4} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para3.highlight4}
               </span>
               {` ${data.authAppandConnect.para3.chunk5} `}
             </p>
             <p className="para">
               {`${data.authAppandConnect.para4.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para4.highlight1}
               </span>
               {` ${data.authAppandConnect.para4.chunk2} `}
@@ -250,14 +266,14 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.authAppandConnect.para5.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para5.highlight1}
               </span>
               {` ${data.authAppandConnect.para5.chunk2} `}
             </p>
             <p className="para">
               {`${data.authAppandConnect.para6.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para6.highlight1}
               </span>
               {` ${data.authAppandConnect.para6.chunk2} `}
@@ -272,11 +288,11 @@ class Platform extends React.Component {
             </p>
             <p className="para">
               {`${data.authAppandConnect.para8.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para8.highlight1}
               </span>
               {` ${data.authAppandConnect.para8.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para8.highlight2}
               </span>
               {` ${data.authAppandConnect.para8.chunk3} `}
@@ -288,22 +304,22 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.authAppandConnect.para9.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para9.highlight1}
               </span>
               {` ${data.authAppandConnect.para9.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para9.highlight2}
               </span>
               {` ${data.authAppandConnect.para9.chunk3} `}
             </p>
             <p className="para">
               {`${data.authAppandConnect.para10.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para10.highlight1}
               </span>
               {` ${data.authAppandConnect.para10.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authAppandConnect.para10.highlight2}
               </span>
               {` ${data.authAppandConnect.para10.chunk3} `}
@@ -319,7 +335,7 @@ class Platform extends React.Component {
             <h2 id="createMD" className="page-sub-title">{data.createPublicMD.title}</h2>
             <p className="para">
               {`${data.createPublicMD.para1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para1.highlight1}
               </span>
               {` ${data.createPublicMD.para1.chunk2} `}
@@ -356,33 +372,33 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.createPublicMD.para6.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para6.highlight1}
               </span>
               {` ${data.createPublicMD.para6.chunk2} `}
             </p>
             <p className="para">
               {`${data.createPublicMD.para7.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para7.highlight1}
               </span>
               {` ${data.createPublicMD.para7.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para7.highlight2}
               </span>
               {` ${data.createPublicMD.para7.chunk3} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para7.highlight3}
               </span>
               {` ${data.createPublicMD.para7.chunk4} `}
             </p>
             <p className="para">
               {`${data.createPublicMD.para8.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para8.highlight1}
               </span>
               {` ${data.createPublicMD.para8.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para8.highlight2}
               </span>
               {` ${data.createPublicMD.para8.chunk3} `}
@@ -394,7 +410,7 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.createPublicMD.para9.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createPublicMD.para9.highlight1}
               </span>
               {` ${data.createPublicMD.para9.chunk2} `}
@@ -405,15 +421,15 @@ class Platform extends React.Component {
             <h2 id="readEntries" className="page-sub-title">{data.readMDEntries.title}</h2>
             <p className="para">
               {`${data.readMDEntries.para1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.readMDEntries.para1.highlight1}
               </span>
               {` ${data.readMDEntries.para1.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.readMDEntries.para1.highlight2}
               </span>
               {` ${data.readMDEntries.para1.chunk3} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.readMDEntries.para1.highlight3}
               </span>
               {` ${data.readMDEntries.para1.chunk4} `}
@@ -425,11 +441,11 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.readMDEntries.para2.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.readMDEntries.para2.highlight1}
               </span>
               {` ${data.readMDEntries.para2.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.readMDEntries.para2.highlight2}
               </span>
               {` ${data.readMDEntries.para2.chunk3} `}
@@ -459,22 +475,22 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.addEntries.para4.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.addEntries.para4.highlight1}
               </span>
               {` ${data.addEntries.para4.chunk2} `}
             </p>
             <p className="para">
               {`${data.addEntries.para5.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.addEntries.para5.highlight1}
               </span>
               {` ${data.addEntries.para5.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.addEntries.para5.highlight2}
               </span>
               {` ${data.addEntries.para5.chunk3} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.addEntries.para5.highlight3}
               </span>
               {` ${data.addEntries.para5.chunk4} `}
@@ -493,15 +509,15 @@ class Platform extends React.Component {
             <h2 id="updateRemoveEntries" className="page-sub-title">{data.updateRemoveEntries.title}</h2>
             <p className="para">
               {`${data.updateRemoveEntries.para1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para1.highlight1}
               </span>
               {` ${data.updateRemoveEntries.para1.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para1.highlight2}
               </span>
               {` ${data.updateRemoveEntries.para1.chunk3} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para1.highlight3}
               </span>
               {` ${data.updateRemoveEntries.para1.chunk4} `}
@@ -513,18 +529,18 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.updateRemoveEntries.para2.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para2.highlight1}
               </span>
               {` ${data.updateRemoveEntries.para2.chunk2} `}
             </p>
             <p className="para">
               {`${data.updateRemoveEntries.para3.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para3.highlight1}
               </span>
               {` ${data.updateRemoveEntries.para3.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para3.highlight2}
               </span>
               {` ${data.updateRemoveEntries.para3.chunk3} `}

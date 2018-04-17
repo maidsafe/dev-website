@@ -52,15 +52,37 @@
               background-size: 18px
     .roadmap
       .roadmap-b
+        padding-bottom: 0
         .lay-40
           .dual-tone-text
             padding-left: 24px
+            padding-right: 24px
             padding-top: 60px
+            padding-bottom: 60px
             p
-              width: 80%
+              width: 100%
               margin-top: 24px
+              text-align: justify
               &:after
-                margin-top: 28px
+                display: none
         .lay-60
-          padding: 60px 24px
+          display: none
+        .mob-view
+          display: block
+          .mob-view-b
+            .progress-pointer
+              &:before
+                left: 25px
+            .mob-view-ib
+              padding: 40px 40px 40px 80px
+              &:before
+                left: 40px
+              .mob-view-i
+                .mob-view-icon
+                  width: 40px
+                  height: 40px
+                  left: -60px
+
+
+
 

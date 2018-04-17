@@ -2,7 +2,9 @@ import React from 'react'
 import { withSiteData, Link } from 'react-static'
 import classNames from 'classnames';
 
-import MockRouting from '../../../public/images/mock-net.png';
+import MockRouting from '../../../public/images/mock_routing.svg';
+import ActualRouting from '../../../public/images/actual_routing.svg';
+import LocalNetwork from '../../../public/images/local_network.svg';
 
 import CONST from '../../constants';
 import Wizard from './wizard';
@@ -17,25 +19,12 @@ export default class Tabs extends React.Component {
     };
     this.imgs = {
       mockRouting: MockRouting,
-      localNetwork: MockRouting,
-      actualRouting: MockRouting,
+      localNetwork: LocalNetwork,
+      actualRouting: ActualRouting,
     };
     this.getLayoutHalfContainer = this.getLayoutHalfContainer.bind(this);
     this.goNext = this.goNext.bind(this);
     this.goPrev = this.goPrev.bind(this);
-  }
-
-  componentDidMount() {
-    // if (window.innerWidth <= 768) {
-    //   this.tabNavWidth = 100
-
-    //   // network type
-    //   const tabNav = document.getElementsByClassName('tab-nav');
-    //   for(let i = 0; i < tabNav.length; i++) {
-    //     const tabBase = tabNav[i].querySelector('.tab-nav-ib');
-    //     tabBase.style.width = `${tabNav[i].offsetWidth * 3}px`;
-    //   }
-    // }
   }
 
   goPrev() {

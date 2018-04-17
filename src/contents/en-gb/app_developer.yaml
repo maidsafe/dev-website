@@ -38,27 +38,23 @@ startDevelop:
     dark: Start
     light: Developing
   features:
-    - title: Contact Application
+    - title: Saving Decentralised Data
       icon: contact-app
       para:
-        chunk1: Storing vCard data in a MutableData. Compare it to a No SQL store/Firebase/Mongo/Redis etc
-        link:
-          name: Example
-          href: '#'
+        chunk1: When using traditional NoSQL platforms like MondoDB, or Redis we'd need to implement both the database in our application as well set up a server to handle requests, or go direct to a cloud provider like Firebase. But these are centralized solutions that you as an app developer will be paying for.
+        chunk2: With SAFE, you have no infrastructure to set up, and as the user own's their data, they commit it directly to the network. All you need worry about is your data structures and authorising your application against the network.
     - title: File storage
       icon: file-storage
       para:
-        chunk1: Storing vCard data in a MutableData. Compare it to a No SQL store/Firebase/Mongo/Redis etc
-        link:
-          name: Example
-          href: '#'
-    - title: Sharing data between apps
+        chunk1: Beyond using the network as a decentralized key-value storage, we can store much more that purely serialised data structures. Using the Network File System (NFS), you and your users can store any file, regardless of size or type, easily on the network.
+        chunk2: What's more, securing your users data is a breeze and built right into the network.
+        chunk3: You no longer need to worry about servers, CDNs, backup or data duplication. The SAFE Network handles all this for you. So you're free to create something useful for everyone.
+    - title: Sharing Data Across Applications
       icon: share-data
       para:
-        chunk1: Contact created by contact app being shared to a chat application, so that it can make use of the existing contacts.
-        link:
-          name: Example
-          href: '#'
+        chunk1: Traditionally accessing another applications data would involve a maze of APIs and authentication systems. More third parties, more problems. And in the end you'd still be responsible for storing and securing that data too!
+        chunk2: This is no longer an issue on SAFE. With user's owning their data, all you need do is request access to specific containers or Mutable Datas and you're off.
+        chunk3: Complex inter-application data sharing has never been easier or more secure.
 accessingNetwork:
   title:
     dark: Accessing

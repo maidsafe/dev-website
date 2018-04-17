@@ -1,3 +1,14 @@
+platformLinks:
+  - icon: nodejs
+    name: NodeJs
+    isActive: true
+    href: '/platform/nodejs'
+  - icon: web
+    name: Web
+    href: '/platform/web'
+  - icon: rust
+    name: Rust
+    href: '/platform/rust'
 pageNav:
   nav1:
     name: SAFE Desktop App Tutorial
