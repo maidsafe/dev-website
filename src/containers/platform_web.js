@@ -206,7 +206,7 @@ class Platform extends React.Component {
                 {data.createBasicSkeleton.para4.highlight1}
               </span>
               {` ${data.createBasicSkeleton.para4.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.createBasicSkeleton.para4.highlight2}
               </span>
               {` ${data.createBasicSkeleton.para4.chunk3} `}
@@ -547,7 +547,7 @@ class Platform extends React.Component {
             </p>
             <p className="para">
               {`${data.updateRemoveEntries.para3_1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para3_1.highlight1}
               </span>
               {` ${data.updateRemoveEntries.para3.chunk2} `}

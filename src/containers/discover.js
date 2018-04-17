@@ -62,7 +62,7 @@ class Discover extends React.Component {
             <p className="desc">{data.authenticator.desc}</p>
             <p className="para">
               {`${data.authenticator.para1.chunk1}`}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authenticator.para1.highlight}
               </span>
               {`${data.authenticator.para1.chunk2}`}
@@ -100,23 +100,23 @@ class Discover extends React.Component {
             <h3 className="def-cntrs-title">{data.containers.title}</h3>
             <p className="def-cntrs-desc">
               {`${data.containers.desc.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.containers.desc.highlight1}
               </span>
               {` ${data.containers.desc.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.containers.desc.highlight2}
               </span>
               {` ${data.containers.desc.chunk3} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.containers.desc.highlight3}
               </span>
               {` ${data.containers.desc.chunk4} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.containers.desc.highlight4}
               </span>
               {` ${data.containers.desc.chunk5} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.containers.desc.highlight5}
               </span>
               {` ${data.containers.desc.chunk6} `}

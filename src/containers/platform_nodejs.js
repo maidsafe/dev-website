@@ -618,7 +618,7 @@ class Platform extends React.Component {
             </p>
             <p className="para">
               {`${data.updateRemoveEntries.para3_1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.updateRemoveEntries.para3_1.highlight1}
               </span>
               {` ${data.updateRemoveEntries.para3.chunk2} `}
