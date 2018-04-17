@@ -42,6 +42,22 @@ class Platform extends React.Component {
 
     return (
       <div className="platform">
+      <div className="platform-links">
+          <div className="platform-links-b">
+            {
+              data.platformLinks.map((platform, i) => (
+                <div key={`platform-link-${i}`} className="platform-link-i">
+                  <a href={platform.href}>
+                    <div className={classNames(`icn ${platform.icon}`, {
+                      active: platform.isActive
+                    })}></div>
+                    <div className="name">{platform.name}</div>
+                  </a>
+                </div>
+              ))
+            }
+          </div>
+        </div>
         <div className="content">
           <div className="content-b">
             <h1 id="pageHeading" className="page-title">{data.pageTitle}</h1>
@@ -75,13 +91,13 @@ class Platform extends React.Component {
             <div className="list-type-1">
               <ul>
                 <li>
-                  <span className="highlights">
+                  <span className="highlight">
                     {data.preRequisites.installBrowser.list1.list1_1.highlight1}
                   </span>
                   {` ${data.preRequisites.installBrowser.list1.list1_1.chunk1}`}
                 </li>
                 <li>
-                  <span className="highlights">
+                  <span className="highlight">
                     {data.preRequisites.installBrowser.list1.list1_2.highlight1}
                   </span>
                   {` ${data.preRequisites.installBrowser.list1.list1_2.chunk1}`}
@@ -99,7 +115,7 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.preRequisites.installRustDep.para2.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.preRequisites.installRustDep.para2.highlight1}
               </span>
               {` ${data.preRequisites.installRustDep.para2.chunk2} `}
@@ -115,7 +131,7 @@ class Platform extends React.Component {
             <p className="para">{data.authApp.reqAuthAccess.para1}</p>
             <p className="para">
               {`${data.authApp.reqAuthAccess.para2.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.reqAuthAccess.para2.highlight1}
               </span>
               {` ${data.authApp.reqAuthAccess.para2.chunk2} `}
@@ -127,7 +143,7 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.authApp.reqAuthAccess.para3.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.reqAuthAccess.para3.highlight1}
               </span>
               {` ${data.authApp.reqAuthAccess.para3.chunk2} `}
@@ -139,7 +155,7 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.authApp.reqAuthAccess.para4.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.reqAuthAccess.para4.highlight1}
               </span>
               {` ${data.authApp.reqAuthAccess.para4.chunk2} `}
@@ -151,7 +167,7 @@ class Platform extends React.Component {
             </div>
             <p className="para">
               {`${data.authApp.reqAuthAccess.para5.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.reqAuthAccess.para5.highlight1}
               </span>
               {` ${data.authApp.reqAuthAccess.para5.chunk2} `}
@@ -162,7 +178,7 @@ class Platform extends React.Component {
             </p>
             <p className="para">
               {`${data.authApp.reqAuthAccess.para6.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.reqAuthAccess.para6.highlight1}
               </span>
               {` ${data.authApp.reqAuthAccess.para6.chunk2} `}
@@ -175,7 +191,7 @@ class Platform extends React.Component {
             <h3 id="connectNetwork" className="page-sub-2-title"> {data.authApp.connectNetwork.title} </h3>
             <p className="para">
               {`${data.authApp.connectNetwork.para1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.connectNetwork.para1.highlight1}
               </span>
               {` ${data.authApp.connectNetwork.para1.chunk2} `}
@@ -191,11 +207,11 @@ class Platform extends React.Component {
             <h3 id="realNetworkConn" className="page-sub-2-title"> {data.authApp.realNetworkConn.title} </h3>
             <p className="para">
               {`${data.authApp.realNetworkConn.para1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.realNetworkConn.para1.highlight1}
               </span>
               {` ${data.authApp.realNetworkConn.para1.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.realNetworkConn.para1.highlight2}
               </span>
               {` ${data.authApp.realNetworkConn.para1.chunk3} `}
@@ -206,11 +222,11 @@ class Platform extends React.Component {
             </p>
             <p className="para">
               {`${data.authApp.mockNetworkConn.para2.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.mockNetworkConn.para2.highlight1}
               </span>
               {` ${data.authApp.mockNetworkConn.para2.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.authApp.mockNetworkConn.para2.highlight2}
               </span>
               {` ${data.authApp.mockNetworkConn.para2.chunk3} `}
@@ -234,19 +250,19 @@ class Platform extends React.Component {
             <h2 id="usingSafeCoreApi" className="page-sub-title"> {data.usingSafeCoreApi.title} </h2>
             <p className="para">
               {`${data.usingSafeCoreApi.para1.chunk1} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.usingSafeCoreApi.para1.highlight1}
               </span>
               {` ${data.usingSafeCoreApi.para1.chunk2} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.usingSafeCoreApi.para1.highlight2}
               </span>
               {` ${data.usingSafeCoreApi.para1.chunk3} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.usingSafeCoreApi.para1.highlight3}
               </span>
               {` ${data.usingSafeCoreApi.para1.chunk4} `}
-              <span className="highlights">
+              <span className="highlight">
                 {data.usingSafeCoreApi.para1.highlight4}
               </span>
               {` ${data.usingSafeCoreApi.para1.chunk5} `}

@@ -5,10 +5,6 @@ import Contribute from '../../public/images/contribute.svg';
 import Roadmap from '../../public/images/roadmap.png';
 
 class Home extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     const { data } = this.props;
     return (
@@ -32,15 +28,13 @@ class Home extends React.Component {
                 <div className="six-keys">
                   <div className="six-keys-b">
                     {
-                      data.buildOnSafeNet.sixKeys.map((key, i) => {
-                        return (
-                          <div key={`key-features-${i}`} className="six-key-i">
-                            <div className={`icn ${key.icon}`}></div>
-                            <div className="title">{key.title}</div>
-                            <div className="desc">{key.desc}</div>
-                          </div>
-                        )
-                      })
+                      data.buildOnSafeNet.sixKeys.map((key, i) => (
+                        <div key={`key-features-${i}`} className="six-key-i">
+                          <div className={`icn ${key.icon}`}></div>
+                          <div className="title">{key.title}</div>
+                          <div className="desc">{key.desc}</div>
+                        </div>
+                      ))
                     }
                   </div>
                 </div>
@@ -83,6 +77,35 @@ class Home extends React.Component {
               </div>
               <div className="lay-60">
                 <img src={Roadmap} />
+              </div>
+              <div className="mob-view">
+                <div className="mob-view-b">
+                  <div className="mob-view-ib mob-view-done">
+                    {
+                      data.roadmap.mobView.done.map((item, i) => (
+                        <div key={`mob-view-done-i-${i}`} className={`mob-view-i ${item.icon}`}>
+                          <div className="mob-view-icon"></div>
+                          <div className="mob-view-title">{item.name}</div>
+                          <div className="mob-view-desc">{item.desc}</div>
+                        </div>
+                      ))
+                    }
+                    <span className="mob-view-status-title">Complete</span>
+                  </div>
+                  <div className="progress-pointer"></div>
+                  <div className="mob-view-ib mob-view-inprogress">
+                    {
+                      data.roadmap.mobView.inprogress.map((item, i) => (
+                        <div key={`mob-view-progress-i-${i}`} className={`mob-view-i ${item.icon}`}>
+                          <div className="mob-view-icon"></div>
+                          <div className="mob-view-title">{item.name}</div>
+                          <div className="mob-view-desc">{item.desc}</div>
+                        </div>
+                      ))
+                    }
+                    <span className="mob-view-status-title">In Progress</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
