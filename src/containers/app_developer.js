@@ -1,6 +1,8 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
 
+import CONST from '../constants';
+
 import IntroImage from '../../public/images/app_dev_intro.svg';
 import WHMLogo from '../../public/images/web_hosting_manager_logo.png';
 import EmailAppLogo from '../../public/images/email_app_logo.png';
@@ -17,6 +19,7 @@ class AppDev extends React.Component {
       JAMS: JAMSLogo,
       SAFE_CMS: SAFECmsLogo,
     };
+    this.sampleAppsLinks = CONST.externalLinks.appDevs.sampleApps;
   }
   render() {
     const { data } = this.props;
@@ -74,7 +77,7 @@ class AppDev extends React.Component {
                       {
                         data.dapps.sampleApps.apps.map((app, i) => (
                           <div key={`sample-apps-${i}`} className="sample-app-i">
-                            <a href="#">
+                            <a href={this.sampleAppsLinks[app.linkId]} target="_blank">
                               <div className="sample-app-logo"><img src={this.appsLogos[app.logo]} /></div>
                               <div className="sample-app-name">{app.name}</div>
                             </a>

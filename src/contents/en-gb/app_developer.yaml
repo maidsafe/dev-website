@@ -31,12 +31,16 @@ dapps:
     apps:
       - name: Web Hosting Manager
         logo: WEB_HOSTING_MANAGER
+        linkId: webHosting
       - name: Email Application
         logo: EMAIL_APP
+        linkId: emailApp
       - name: JAMS - Remote Music Storage
         logo: JAMS
+        linkId: jams
       - name: SAFE CMS
         logo: SAFE_CMS
+        linkId: safeCms
 startDevelop:
   title:
     dark: Start
