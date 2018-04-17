@@ -8,42 +8,42 @@ buildOnSafeNet:
     dark2: the
     light: SAFE Network
   sixKeys:
-    - title: The Privacy First Network
-      desc: Encrypted communication is the only option today for your users.
+    - title: The privacy first network
+      desc: Privacy and anonymity for your users - The Secure Access for Everyone (SAFE) Network is built to negate the prying eyes of internet interlopers with built-in encrypted encrypted communications.
       icon: privacy
-    - title: Infrastructure Free
+    - title: Infrastructure-free
       desc: Easy to use APIs in many languages, means you can focus on coding. No need to worry about your infrastructure or scaling costs here!
       icon: infrastructure
-    - title: Complete Anonymity For Your Users
+    - title: Complete anonymity for your users
       desc: The SAFE Network is built to negate the prying eyes of internet interlopers.
       icon: anonymity
-    - title: Our Application Is The Product.
-      desc: Users are always in control of their data. But with monetisation being built into the core of network, you can focus on making the best app, without selling your users short.
+    - title: Your application is the product, not your users' data
+      desc: Users are always in control of their data, and with monetisation being built into the network, you can focus on making the best app, without selling your users short.
       icon: application
-    - title: Network Wide Sign On
-      desc: You don’t need to roll your own account management solutions. Users log in once at the network level. With SAFE you have no passwords left to lose!
+    - title: Network-wide sign-on
+      desc: You don’t need to roll-your-own account management solutions, users log in once at the network level. With SAFE you have no passwords left to lose!
       icon: sign-on
-    - title: Truly Collaborative Applications
+    - title: Truly collaborative applications
       desc: With data owned by users, you can share data across applications to create and reuse data sets in new ways!
       icon: collaborate
 contribute:
   title:
     dark1: Contribute
-    dark2: to
+    dark2: to the
     light: SAFE Network
   appDev:
     title: Build your idea
-    desc: Building D-Apps on the SAFE Network is a breeze with security and privacy baked into its architecture. Bring your creativity to life on the SAFE Network.
+    desc: Bring your creativity to life on the SAFE Network.
     link:
       name: Application Developer
       href: /app_developer
   coreDev:
     title: Learn about the tech behind the Network
-    desc: All our code is open source! The components involved in the SAFE Network range from clients, vaults and routing to low level networking.
+    desc: The components involved in the SAFE Network range from clients, vaults and routing to low level networking.
     link:
       name: Core Developer
       href: /core_developer
 
 roadmap:
   title: Roadmap
-  desc: The network is in its Alpha stages and the APIs are subjected to change. We do try to keep the APIs backward compatible as much as possible while the network is progressing towards a stable beta.
+  desc: The Network is in Alpha 2 and the APIs are subjected to change. We do try to keep the APIs backward compatible as much as possible while the Network is progressing towards a stable beta.
