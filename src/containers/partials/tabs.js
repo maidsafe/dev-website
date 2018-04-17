@@ -2,6 +2,8 @@ import React from 'react'
 import { withSiteData, Link } from 'react-static'
 import classNames from 'classnames';
 
+import MockRouting from '../../../public/images/mock-net.png';
+
 import CONST from '../../constants';
 import Wizard from './wizard';
 
@@ -9,13 +11,33 @@ import Wizard from './wizard';
 export default class Tabs extends React.Component {
   constructor() {
     super();
+    this.tabNavWidth = 33.33;
     this.state = {
       tabPos: 0
+    };
+    this.imgs = {
+      mockRouting: MockRouting,
+      localNetwork: MockRouting,
+      actualRouting: MockRouting,
     };
     this.getLayoutHalfContainer = this.getLayoutHalfContainer.bind(this);
     this.goNext = this.goNext.bind(this);
     this.goPrev = this.goPrev.bind(this);
   }
+
+  componentDidMount() {
+    // if (window.innerWidth <= 768) {
+    //   this.tabNavWidth = 100
+
+    //   // network type
+    //   const tabNav = document.getElementsByClassName('tab-nav');
+    //   for(let i = 0; i < tabNav.length; i++) {
+    //     const tabBase = tabNav[i].querySelector('.tab-nav-ib');
+    //     tabBase.style.width = `${tabNav[i].offsetWidth * 3}px`;
+    //   }
+    // }
+  }
+
   goPrev() {
     if (this.state.tabPos === 0) {
       return;
@@ -39,7 +61,7 @@ export default class Tabs extends React.Component {
             'active': this.state.tabPos === i
           })}
           id={type.id}>
-          <div className="tab-cntr-img"></div>
+          <div className="tab-cntr-img"><img src={this.imgs[type.id]} /></div>
           <div className="tab-cntr-content">
             <h3 className="tab-cntr-title">{type.name}</h3>
             <p className="tab-cntr-para">{type.para1}</p>
@@ -52,7 +74,6 @@ export default class Tabs extends React.Component {
   }
 
   getWizardContainer(data) {
-    console.log('data', data)
     return data.map((d, i) => {
       return (
         <div
@@ -83,9 +104,9 @@ export default class Tabs extends React.Component {
     return (
       <div className="types tabs">
         <div className="types-b tabs-b">
-          <div className="tab-nav" id="tabNav">
+          <div className="tab-nav" id="NetworkType">
             <div className="tab-nav-b">
-              <div className="tab-nav-ib" style={{ left: `-${33.33 * (this.state.tabPos)}%` }}>
+              <div className="tab-nav-ib" style={{ left: `-${this.tabNavWidth * (this.state.tabPos)}%` }}>
                 {data.map((type, i) => {
                   const navClass = classNames('tab-nav-i', {
                     'active': i === this.state.tabPos

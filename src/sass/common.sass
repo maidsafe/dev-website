@@ -262,14 +262,18 @@ footer
       display: none
       background-color: $colr-theme-light
       &.active
-        display: block
+        display: table
       .tab-cntr-img
         width: 50%
-        float: left
-        height: 300px
+        display: table-cell
+        vertical-align: middle
+        text-align: center
+        img
+          width: 80%
+          margin: 0 auto
       .tab-cntr-content
         width: 50%
-        float: left
+        display: table-cell
         text-align: left
         padding: 60px
         background-color: $colr-blue
