@@ -46,7 +46,6 @@ class AppDev extends React.Component {
                 <div className="sub-title">{data.intro.subTitle}</div>
                 <p>{data.intro.para1}</p>
                 <p>{data.intro.para2}</p>
-                <p>{`${data.intro.para3.chunk} `}<a href={data.intro.para3.link.href} target="_blank">{data.intro.para3.link.name}</a></p>
               </div>
             </div>
             <div className="intro-sec-2 lay-50">
@@ -123,7 +122,7 @@ class AppDev extends React.Component {
               <div className="dual-tone-text">
                 <span className="dark">{data.accessingNetwork.title.dark}</span>
                 <span className="light">{data.accessingNetwork.title.light}</span>
-                <p>{data.accessingNetwork.para1}</p>
+                <p>{data.accessingNetwork.para1.chunk1}<a href={data.accessingNetwork.para1.link.href}>{data.accessingNetwork.para1.link.name}</a>{data.accessingNetwork.para1.chunk2}</p>
                 <p>{data.accessingNetwork.para2}</p>
                 <p>{data.accessingNetwork.para3.chunk}<a href={data.accessingNetwork.para3.link.href}>{data.accessingNetwork.para3.link.name}</a></p>
               </div>
@@ -139,7 +138,7 @@ class AppDev extends React.Component {
             <div className="platform-sec-1 lay-50">
               <div className="dual-tone-text">
                 <span className="light">{data.platforms.title}</span>
-                <p>{data.platforms.desc}</p>
+                <p>{data.platforms.desc.chunk1}<a target="_blank" href={data.platforms.desc.link.href}>{data.platforms.desc.link.name}</a>{data.platforms.desc.chunk2}</p>
               </div>
             </div>
             <div className="platform-sec-2 lay-50">

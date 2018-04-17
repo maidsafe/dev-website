@@ -143,12 +143,16 @@ authAppandConnect:
     chunk3: "function of the DOM API, providing information about the application (this information is displayed to the user when requesting the authorisation):"
   code1: |
           let appInfo = {
+            // User-facing name of our app. It will be shown in
+            // the Authenticator user's interface
             name: 'Hello SAFE Network',
+            // This is a unique ID of our app
             id: 'net.maidsafe.tutorials.web-app',
             version: '0.1.0',
             vendor: 'MaidSafe.net Ltd.'
           };
           let safeAppHandle = await window.safeApp.initialise(appInfo);
+  para2_1: Here we provide some basic information about the application, which will eventually help the user and the Authenticator to identify the application that is requesting permissions.
   para3:
     chunk1: We are using
     highlight1: await
@@ -187,7 +191,10 @@ authAppandConnect:
 
           async function authoriseAndConnect() {
             let appInfo = {
+              // User-facing name of our app. It will be shown in
+              // the Authenticator user's interface
               name: 'Hello SAFE Network',
+              // This is a unique ID of our app
               id: 'net.maidsafe.tutorials.web-app',
               version: '0.1.0',
               vendor: 'MaidSafe.net Ltd.'

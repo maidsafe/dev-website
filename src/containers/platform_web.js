@@ -200,6 +200,7 @@ class Platform extends React.Component {
                 {data.authAppandConnect.code1}
               </SyntaxHighlighter>
             </div>
+            <p className="para"> {data.authAppandConnect.para2_1} </p>
             <p className="para">
               {`${data.authAppandConnect.para3.chunk1} `}
               <span className="highlights">
@@ -265,7 +266,7 @@ class Platform extends React.Component {
               {` ${data.authAppandConnect.para8.chunk3} `}
             </p>
             <div className="code-block">
-              <SyntaxHighlighter language="javascript" style={duotoneLight} showLineNumbers>
+              <SyntaxHighlighter language="javascript" style={duotoneLight}>
                 {data.authAppandConnect.code4}
               </SyntaxHighlighter>
             </div>

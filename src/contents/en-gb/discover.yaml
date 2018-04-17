@@ -1,10 +1,14 @@
 intro:
- para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre. 
- para2: To enable this there are a number of components and features that make the Network - 
- para3:  
+ para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
+ para2: To enable this here are the components and features that make the Network.
+ para3:
 authenticator:
   title: The Authenticator
   desc: Before browsing on the SAFE Network, users need to create an account via the Authenticator application. The Authenticator, enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
+  para1:
+    chunk1: "The Authenticator is bundled with the SAFE Browser and registers a custom URL scheme "
+    highlight: "safe-auth://"
+    chunk2: ". Similarly every app registers their own safe--prefixed url-scheme. The process for authentication is as follows:"
   steps:
     - title: Application requests access
       desc: The application authorises with the Authenticator with the needed access permissions. The application can create its own container, and request access to default containers or other applications' containers through the authorisation request.
@@ -40,13 +44,26 @@ networks:
 vault:
   title: Vault
   desc: When a user uploads (or saves) a ﬁle to the Network, via one of the SAFE Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the vaults of other SAFE Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
+  para: The Vault software is a small executable file that connects the user’s machine to the SAFE Network. It manages the storage of data chunks on the user’s computer and in that way it provides storage capacity to the network. It also routes and caches encrypted data chunks over the network making use of fully encrypted connections to other Vaults.
   btnLink:
     name: Develop
-    link: '#'
+    link: 'https://forum.safedev.org/t/how-to-run-a-local-test-network'
 containers:
   title: Default Containers
-  desc: "The SAFE Network follows a similar pattern of providing default containers. Default containers can be shared by applications when the user grants the needed permission. The default containers are:"
-  quote: The data stored in the containers must be encrypted, except for the _public container.
+  desc:
+    chunk1: The SAFE Network follows a common pattern of providing default containers for storing different types of user's data. For example
+    highlight1: _documents
+    chunk2: is used to store document related data;
+    highlight2: _downloads
+    chunk3: is the container for downloaded content;
+    highlight3: _music
+    chunk4: is the place to store music files, and so on. Two special cases are
+    highlight4: _public
+    chunk5: which is used to store unencrypted data (the container is encrypted even if its content is not), and
+    highlight5: _publicNames
+    chunk6: which is used to store references to the Public IDs owned by the account.
+  para: "Default containers can be shared by applications when the user grants the needed permission. The default containers are:"
+  quote:
   list:
     - title: _documents
       desc: To store document related data
@@ -71,18 +88,17 @@ containers:
       icon: pubNames
 dataTypes:
   title: Data Types
-  desc: The SAFE Network provides two data types to store and retrieve data Mutable Data and Immutable Data:"" 
+  desc: "The SAFE Network provides two data types to store and retrieve data Mutable Data and Immutable Data:"
   types:
     - name: Immutable Data
       features:
         - title: About
-          para: Immutable Data objects are stored at predictable locations on the network:"" an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified:"" it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks.
+          para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks."
         - title: Flavours
-          para: Immutable Data objects are stored at predictable locations on the network:"" an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified:"" it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks.
+          para:
     - name: Mutable Data
       features:
         - title: About
-          para: Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control:"" it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned:"" even the owner cannot update the content silently.
+          para: "Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control: it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned, even the owner cannot update the content silently."
         - title: Flavours
-          para: Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control:"" it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned:"" even the owner cannot update the content silently.
-
+          para:

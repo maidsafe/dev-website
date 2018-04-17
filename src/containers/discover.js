@@ -22,6 +22,13 @@ class Discover extends React.Component {
           <div className="authenticator-b base">
             <h3 className="title">{data.authenticator.title}</h3>
             <p className="desc">{data.authenticator.desc}</p>
+            <p className="para">
+              {`${data.authenticator.para1.chunk1}`}
+              <span className="highlights">
+                {data.authenticator.para1.highlight}
+              </span>
+              {`${data.authenticator.para1.chunk2}`}
+            </p>
             <div className="steps">
               {
                 data.authenticator.steps.map((step, i) => (
@@ -46,20 +53,43 @@ class Discover extends React.Component {
           <div className="vault-b base">
             <h3 className="title">{data.vault.title}</h3>
             <p className="para">{data.vault.desc}</p>
-            <div className="vault-opt"><button className="btn ghost-btn">{data.vault.btnLink.name}</button></div>
+            <p className="para">{data.vault.para}</p>
+            <div className="vault-opt"><button className="btn ghost-btn" onClick={() => { window.open(`${data.vault.btnLink.link}`) }}>{data.vault.btnLink.name}</button></div>
           </div>
         </div>
         <div className="def-cntrs">
           <div className="def-cntrs-b base">
             <h3 className="def-cntrs-title">{data.containers.title}</h3>
-            <p className="def-cntrs-desc">{data.containers.desc}</p>
+            <p className="def-cntrs-desc">
+              {`${data.containers.desc.chunk1} `}
+              <span className="highlights">
+                {data.containers.desc.highlight1}
+              </span>
+              {` ${data.containers.desc.chunk2} `}
+              <span className="highlights">
+                {data.containers.desc.highlight2}
+              </span>
+              {` ${data.containers.desc.chunk3} `}
+              <span className="highlights">
+                {data.containers.desc.highlight3}
+              </span>
+              {` ${data.containers.desc.chunk4} `}
+              <span className="highlights">
+                {data.containers.desc.highlight4}
+              </span>
+              {` ${data.containers.desc.chunk5} `}
+              <span className="highlights">
+                {data.containers.desc.highlight5}
+              </span>
+              {` ${data.containers.desc.chunk6} `}
+            </p>
+            <p className="para">{data.containers.para}</p>
             <div className="def-cntrs-ls">
               {
                 data.containers.list.map((cont, i) => (
                   <div key={`def-cntrs-${i}`} className="def-cntrs-ls-i">
                     <div className={`def-cntrs-ls-i-icon ${cont.icon}`}></div>
                     <div className="def-cntrs-ls-i-title">{cont.title}</div>
-                    <div className="def-cntrs-ls-i-desc">{cont.desc}</div>
                   </div>
                 ))
               }

@@ -14,9 +14,9 @@ buildOnSafeNet:
     - title: Infrastructure-free
       desc: Easy to use APIs in many languages, means you can focus on coding. No need to worry about your infrastructure or scaling costs here!
       icon: infrastructure
-    - title: Complete anonymity for your users
-      desc: The SAFE Network is built to negate the prying eyes of internet interlopers.
-      icon: anonymity
+    - title: Open source
+      desc: All SAFE Network libraries are open source, transparent and free to use.
+      icon: open-source
     - title: Your application is the product, not your users' data
       desc: Users are always in control of their data, and with monetisation being built into the network, you can focus on making the best app, without selling your users short.
       icon: application
