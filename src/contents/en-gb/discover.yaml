@@ -1,25 +1,25 @@
 intro:
- para1: The Authenticator is an important application that users need to create an account and get started on the SAFE Network.
- para2: The SAFE Browser is used to surf safe:// websites and web applications, while the authenticator is used for creating the user account and managing the application authorisations. Applications must be authorised by the user to be able to connect to the SAFE Network on behalf of the user. The user can revoke the granted access at any time from the authenticator.
- para3: Applications using the SAFE Network does not store its Users' data on any central server, rather the data is spread across many disks and devices owned and managed by many different users.
+ para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre. 
+ para2: To enable this there are a number of components and features that make the Network - 
+ para3:  
 authenticator:
-  title: Authenticator
-  desc: The Authenticator, which enables users to securely authenticate themselves onto the SAFE Network, while protecting their network login credentials from apps. Bundled with the SAFE Browser and registers a custom URL scheme safe-auth://. Similarly every app registers their own safe--prefixed url-scheme.
+  title: The Authenticator
+  desc: Before browsing on the SAFE Network, users need to create an account via the Authenticator application. The Authenticator, enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
   steps:
-    - title: App Requesting Access
-      desc: The application must authorise with the Authenticator with the needed access permissions. The application can create its own container, and request access to default containers or other applications' containers through the authorisation request.
-    - title: User Granting Access
+    - title: Application requests access
+      desc: The application authorises with the Authenticator with the needed access permissions. The application can create its own container, and request access to default containers or other applications' containers through the authorisation request.
+    - title: User grants access
       desc: When the user approves the request, application specific encryption keys are generated. The application will be identified in the network using its keys. When the user grants or denies authorisation, the application will receive a URI.
-    - title: Application Connecting To Network
+    - title: Application connects to the Network
       desc: Applications can connect to the SAFE Network on behalf of the user by using the URI received.
 networks:
   title: Network Types
-  desc: Applications can be developed on SAFE Network using one of the three network types depending on development stages.
+  desc: Applications can be developed on the Network using one of the three network types depending on development stages.
   types:
     - name: Mock Routing
       id: mockRouting
-      para1: When the SAFE Browser, or another application, is built with mock-routing enabled, it’s not connecting to a live network, it’s interfacing with a local database that is created on your system to simulate network operations.
-      para2: This saves a great deal of time and provides a safe space for your application or website to initially test operations.
+      para1: When a website or application is built with mock-routing enabled, it’s not connecting to a live network - it is interfacing with a local database, created on your system, to simulate network operations.
+      para2: This saves a great deal of time and provides a safe space for you to initially test operations.
       btnLink:
         name: Know more
         link: '#'
@@ -39,7 +39,7 @@ networks:
         link: '#'
 vault:
   title: Vault
-  desc: User uploads (or saves) a ﬁle to the network, via one of the SAFE Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the vaults of other SAFE Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
+  desc: When a user uploads (or saves) a ﬁle to the Network, via one of the SAFE Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the vaults of other SAFE Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
   btnLink:
     name: Develop
     link: '#'
@@ -71,18 +71,18 @@ containers:
       icon: pubNames
 dataTypes:
   title: Data Types
-  desc: The SAFE Network provides two data types to store and retrieve data. The amount of data that a user can store depends on their Safecoin balance. During test networks, the user account limits are regulated based on the number of mutation requests permitted for the account.
+  desc: The SAFE Network provides two data types to store and retrieve data Mutable Data and Immutable Data:"" 
   types:
-    - name: Mutable Data
-      features:
-        - title: About
-          para: MutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
-        - title: Flavours
-          para: MutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
     - name: Immutable Data
       features:
         - title: About
-          para: ImmMutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
+          para: Immutable Data objects are stored at predictable locations on the network:"" an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified:"" it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks.
         - title: Flavours
-          para: ImmMutableData can be compared to a simple key-value store. MutableData allows fine-grained access control for collaboration. Permission to insert, update, delete, manage can be requested or permitted for collaboration.
+          para: Immutable Data objects are stored at predictable locations on the network:"" an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified:"" it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks.
+    - name: Mutable Data
+      features:
+        - title: About
+          para: Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control:"" it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned:"" even the owner cannot update the content silently.
+        - title: Flavours
+          para: Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control:"" it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned:"" even the owner cannot update the content silently.
 
