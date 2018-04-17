@@ -10,6 +10,22 @@ class Platform extends React.Component {
     this.state = {
       showNav: false
     };
+    this.hideNav = this.hideNav.bind(this);
+  }
+
+  componentDidMount() {
+    const linkHeads = document.getElementsByClassName('nav-i-head');
+    for (let i = 0; i< linkHeads.length; i++) {
+      linkHeads[i].addEventListener('click', () => {
+        this.hideNav();
+      }, false)
+    }
+    const links = document.getElementsByClassName('nav-i-links');
+    for (let i = 0; i< links.length; i++) {
+      links[i].addEventListener('click', () => {
+        this.hideNav();
+      }, false)
+    }
   }
 
   hideNav() {
@@ -34,15 +50,15 @@ class Platform extends React.Component {
             </p>
             <h2 id="outline" className="page-sub-title">{data.outline.title}</h2>
             <div className="list-type-1">
-              <ol>
+              <ul>
                 <li> {data.outline.list1.list1_1} </li>
                 <li> {data.outline.list1.list1_2} </li>
                 <li> {data.outline.list1.list1_3} </li>
                 <li> {data.outline.list1.list1_4} </li>
-              </ol>
+              </ul>
             </div>
             <h2 id="preReq" className="page-sub-title">{data.preRequisites.title}</h2>
-            <h3 id="installBrowser" className="page-sub-sub-title"> {data.preRequisites.installBrowser.title} </h3>
+            <h3 id="installBrowser" className="page-sub-2-title"> {data.preRequisites.installBrowser.title} </h3>
             <p className="para">{data.preRequisites.installBrowser.para1}</p>
             <p className="para">
               {`${data.preRequisites.installBrowser.para2.chunk1} `}
@@ -74,7 +90,7 @@ class Platform extends React.Component {
             </div>
             <p className="para">{data.preRequisites.installBrowser.para4}</p>
             <p className="para">{data.preRequisites.installBrowser.para5}</p>
-            <h3 id="installRustDep" className="page-sub-sub-title"> {data.preRequisites.installRustDep.title} </h3>
+            <h3 id="installRustDep" className="page-sub-2-title"> {data.preRequisites.installRustDep.title} </h3>
             <p className="para">{data.preRequisites.installRustDep.para1}</p>
             <div className="code-block">
               <SyntaxHighlighter language="javascript" style={duotoneLight}>
@@ -95,7 +111,7 @@ class Platform extends React.Component {
             </div>
             <h2 id="authApp" className="page-sub-title"> {data.authApp.title} </h2>
             <p className="para">{data.authApp.para1}</p>
-            <h3 id="reqAuthAccess" className="page-sub-sub-title"> {data.authApp.reqAuthAccess.title} </h3>
+            <h3 id="reqAuthAccess" className="page-sub-2-title"> {data.authApp.reqAuthAccess.title} </h3>
             <p className="para">{data.authApp.reqAuthAccess.para1}</p>
             <p className="para">
               {`${data.authApp.reqAuthAccess.para2.chunk1} `}
@@ -156,7 +172,7 @@ class Platform extends React.Component {
                 {data.authApp.reqAuthAccess.code4}
               </SyntaxHighlighter>
             </div>
-            <h3 id="connectNetwork" className="page-sub-sub-title"> {data.authApp.connectNetwork.title} </h3>
+            <h3 id="connectNetwork" className="page-sub-2-title"> {data.authApp.connectNetwork.title} </h3>
             <p className="para">
               {`${data.authApp.connectNetwork.para1.chunk1} `}
               <span className="highlights">
@@ -172,7 +188,7 @@ class Platform extends React.Component {
             <p className="para">
               {data.authApp.connectNetwork.para2}
             </p>
-            <h3 id="realNetworkConn" className="page-sub-sub-title"> {data.authApp.realNetworkConn.title} </h3>
+            <h3 id="realNetworkConn" className="page-sub-2-title"> {data.authApp.realNetworkConn.title} </h3>
             <p className="para">
               {`${data.authApp.realNetworkConn.para1.chunk1} `}
               <span className="highlights">
@@ -184,7 +200,7 @@ class Platform extends React.Component {
               </span>
               {` ${data.authApp.realNetworkConn.para1.chunk3} `}
             </p>
-            <h3 id="mockNetworkConn" className="page-sub-sub-title"> {data.authApp.mockNetworkConn.title} </h3>
+            <h3 id="mockNetworkConn" className="page-sub-2-title"> {data.authApp.mockNetworkConn.title} </h3>
             <p className="para">
               {data.authApp.mockNetworkConn.para1}
             </p>
@@ -247,25 +263,25 @@ class Platform extends React.Component {
               </Link>
               {` ${data.usingSafeCoreApi.para2.chunk2} `}
             </p>
-            <h3 id="interactingWithNetwork" className="page-sub-sub-title"> {data.usingSafeCoreApi.interactingWithNetwork.title} </h3>
+            <h3 id="interactingWithNetwork" className="page-sub-2-title"> {data.usingSafeCoreApi.interactingWithNetwork.title} </h3>
             <div className="code-block">
               <SyntaxHighlighter language="javascript" style={duotoneLight}>
                 {data.usingSafeCoreApi.interactingWithNetwork.code1}
               </SyntaxHighlighter>
             </div>
-            <h3 id="createPublicMD" className="page-sub-sub-title"> {data.usingSafeCoreApi.createPublicMD.title} </h3>
+            <h3 id="createPublicMD" className="page-sub-2-title"> {data.usingSafeCoreApi.createPublicMD.title} </h3>
             <div className="code-block">
               <SyntaxHighlighter language="javascript" style={duotoneLight}>
                 {data.usingSafeCoreApi.createPublicMD.code1}
               </SyntaxHighlighter>
             </div>
-            <h3 id="readMDEntries" className="page-sub-sub-title"> {data.usingSafeCoreApi.readMDEntries.title} </h3>
+            <h3 id="readMDEntries" className="page-sub-2-title"> {data.usingSafeCoreApi.readMDEntries.title} </h3>
             <div className="code-block">
               <SyntaxHighlighter language="javascript" style={duotoneLight}>
                 {data.usingSafeCoreApi.readMDEntries.code1}
               </SyntaxHighlighter>
             </div>
-            <h3 id="updateRemoveEntries" className="page-sub-sub-title"> {data.usingSafeCoreApi.updateRemoveEntries.title} </h3>
+            <h3 id="updateRemoveEntries" className="page-sub-2-title"> {data.usingSafeCoreApi.updateRemoveEntries.title} </h3>
             <div className="code-block">
               <SyntaxHighlighter language="javascript" style={duotoneLight}>
                 {data.usingSafeCoreApi.updateRemoveEntries.code1}
@@ -288,12 +304,12 @@ class Platform extends React.Component {
                 <Link to={data.pageNav.nav2.href}>
                   {data.pageNav.nav2.name}
                 </Link>
-                <div className="nav-i-links">
+                <div className="nav-i-links-i">
                   <Link to={data.pageNav.nav2.subNavs.sub1.href}>
                     {data.pageNav.nav2.subNavs.sub1.name}
                   </Link>
                 </div>
-                <div className="nav-i-links">
+                <div className="nav-i-links-i">
                   <Link to={data.pageNav.nav2.subNavs.sub2.href}>
                     {data.pageNav.nav2.subNavs.sub2.name}
                   </Link>
@@ -303,22 +319,22 @@ class Platform extends React.Component {
                 <Link to={data.pageNav.nav3.href}>
                   {data.pageNav.nav3.name}
                 </Link>
-                <div className="nav-i-links">
+                <div className="nav-i-links-i">
                   <Link to={data.pageNav.nav3.subNavs.sub1.href}>
                     {data.pageNav.nav3.subNavs.sub1.name}
                   </Link>
                 </div>
-                <div className="nav-i-links">
+                <div className="nav-i-links-i">
                   <Link to={data.pageNav.nav3.subNavs.sub2.href}>
                     {data.pageNav.nav3.subNavs.sub2.name}
                   </Link>
                 </div>
-                <div className="nav-i-links">
+                <div className="nav-i-links-i">
                   <Link to={data.pageNav.nav3.subNavs.sub3.href}>
                     {data.pageNav.nav3.subNavs.sub3.name}
                   </Link>
                 </div>
-                <div className="nav-i-links">
+                <div className="nav-i-links-i">
                   <Link to={data.pageNav.nav3.subNavs.sub4.href}>
                     {data.pageNav.nav3.subNavs.sub4.name}
                   </Link>

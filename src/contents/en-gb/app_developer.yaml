@@ -67,7 +67,7 @@ accessingNetwork:
   title:
     dark: Accessing
     light: the Network
-  para1: To access the SAFE Network, you simply need to download the browser [download image below] which includes the Authenticator component.
+  para1: To access the SAFE Network, you simply need to download the browser which includes the Authenticator component.
   para2: The Authenticator is used by applications to request a user’s consent via a simple API, much like traditional Single Sign-On options. The Authenticator also handles user log on, and allows the user to grant/revoke permissions for each app as they want, putting users in control of their own data.
   para3:
     chunk: The user’s data is stored in ‘containers’ on the network. If you want to read more on network data structure and storage
@@ -76,4 +76,4 @@ accessingNetwork:
       href: /discover
 platforms:
   title: Platforms
-  desc: Currently we've SAFE Network API libraries built for NodeJs, Web, C Sharp, and we're working on expending this to support other platforms as soon as possible.
+  desc: Currently we've SAFE Network API libraries built for NodeJs, Web, C Sharp, and we're working on expanding this to support other platforms as soon as possible.

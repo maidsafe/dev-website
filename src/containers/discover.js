@@ -3,7 +3,7 @@ import { withRouteData } from 'react-static'
 import classNames from 'classnames';
 import Tabs from './partials/tabs'
 //
-import EcoSystemBanner from '../../public/images/ecosystem_banner.png'
+import EcoSystemBanner from '../../public/images/ecosystem_banner.svg'
 import Auth1 from '../../public/images/auth_1.png'
 import Auth2 from '../../public/images/auth_2.png'
 import Auth3 from '../../public/images/auth_3.png'
