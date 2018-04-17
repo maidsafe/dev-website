@@ -32,14 +32,14 @@ pageNav:
         href: "#whatNow"
 pageTitle: SAFE Web App Tutorial
 safeWeb:
-  para1: In this tutorial we will create a SAFE Web application which uses the DOM API to interact with the SAFE Authenticator, and to connect with the SAFE Network.
+  para1: In this tutorial we will create a SAFE Web application which uses the Web API to interact with the SAFE Authenticator, and to connect with the SAFE Network.
   para2:
     chunk1: In this tutorial we use the
     link1:
       name: SAFE Web App quick start
       href: https://github.com/bochaco/safe-web-app-quick-start
     chunk2: boilerplate, which is single page webapp compiled via
-    link2: 
+    link2:
       name: Node.js
       href: https://nodejs.org/
     chunk3: "."
@@ -63,7 +63,7 @@ preRequisites:
         name: Node.js
         href: https://nodejs.org/en/download
       chunk1: "(which comes with "
-      link2: 
+      link2:
         name: npm
         href: http://npmjs.com/
       chunk2: ) to be able to run the application since it’s a Node.js application
@@ -83,12 +83,12 @@ installBrowser:
   title: Install a SAFE Browser
   para1: Since this is a SAFE webapp, we first need to have an instance of the SAFE Browser installed to be able to load our application.
   para2:
-    chunk1: You can find the links to download the SAFE Browser package from 
+    chunk1: You can find the links to download the SAFE Browser package from
     link1:
       name: MaidSafe’s website
       href: https://maidsafe.net/
     chunk2: ", or directly from the"
-    link2: 
+    link2:
       name: SAFE Browser GitHub releases repository
       href: https://github.com/maidsafe/safe_browser/releases
     chunk3: ". It’s recommended to always use the latest available version."
@@ -100,7 +100,13 @@ installBrowser:
     list1_2:
       highlight1: safe-browser-mock-<version>-<platform>.zip
       chunk1: ": SAFE Browser package built to use the mock routing. This will create a local temporary file and you won’t need to connect to the live network."
-  para4: In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, unzip the package in your PC, execute it, and please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
+  para4: "In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC. Before we launch it let's go ahead and set the 'NODE_ENV' environment variable set to 'dev' to have our browser to effectively use the native libraries for mock routing:"
+  code1: |
+          $ export NODE_ENV=dev
+  para4_1: "If you are using Windows you can set it with the following command instead:"
+  code2: |
+          $ set NODE_ENV=dev
+  para4_2: You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
   para5: After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
 createBasicSkeleton:
   title: Create basic skeleton
@@ -122,7 +128,9 @@ createBasicSkeleton:
   para4:
     chunk1: This will create a web server to serve the webapp, and you can load it with your SAFE Browser by loading
     highlight1: localhost://p:5000
-    chunk2: on a new tab.
+    chunk2: on a new tab (if you are using Peruse browser then load
+    highlight2: http://localhost:5000
+    chunk3: instead).
   para5: You should see a “Hello SAFE Network!” message in our app’s page and an empty list of trips. We are now ready to start creating the code to be able to store the planned trips into the SAFE Network.
 authAppandConnect:
   title: Authorise application and connect to the SAFE Network
@@ -141,14 +149,14 @@ authAppandConnect:
             vendor: 'MaidSafe.net Ltd.'
           };
           let safeAppHandle = await window.safeApp.initialise(appInfo);
-  para3: 
+  para3:
     chunk1: We are using
     highlight1: await
     chunk2: to call the
     highlight2: safeApp.initialise
-    chunk3: function since it’s asynchronous as most of the functions exposed by the
-    highlight3: DOM API
-    chunk4: . You can also use JavaScript
+    chunk3: function since it’s asynchronous (as are most of the functions exposed by the
+    highlight3: Web API
+    chunk4: ). You can also use JavaScript
     highlight4: Promises
     chunk5: if you prefer.
   para4:
@@ -157,7 +165,7 @@ authAppandConnect:
     chunk2: "instance is initialised and we received a handle for it, we can use it to generate the authorisation request and send it to the Authenticator:"
   code2: |
           const authUri = await window.safeApp.authorise(safeAppHandle, {});
-  para5: 
+  para5:
     chunk1: Note that we are passing an empty object as the second argument to the
     highlight1: safeApp.authorise
     chunk2: function, this object can contain a list of permissions to access different containers, but for the sake of simplicity we are not doing it here with this application.
@@ -168,7 +176,7 @@ authAppandConnect:
   code3: |
           await window.safeApp.connectAuthorised(safeAppHandle, authUri);
   para7: This function will decode the authorisation URI and create a connection with the SAFE Network using the credentials obtained from it.
-  para8: 
+  para8:
     chunk1: Let’s make all the code for these steps to be the body of the function called
     highlight1: authoriseAndConnect
     chunk2: in the
@@ -190,7 +198,7 @@ authAppandConnect:
             await window.safeApp.connectAuthorised(safeAppHandle, authUri);
             console.log("Application connected to the network");
           };
-  para9: 
+  para9:
     chunk1: As you can see, we declare the
     highlight1: safeAppHandle
     chunk2: variable outside the function since we will be using this same
@@ -203,7 +211,7 @@ authAppandConnect:
     highlight2: src/App.vue
     chunk3: if you are interested in it.
   para11:
-    chunk1: We can now refresh our application page to verify that now it’s able to send the authorisation request to the Authenticator, and connect to the network once it received the authorisation. Make sure you log in using the Authenticator (see the 
+    chunk1: We can now refresh our application page to verify that now it’s able to send the authorisation request to the Authenticator, and connect to the network once it received the authorisation. Make sure you log in using the Authenticator (see the
     link1:
       name: pre-requisites
       href: "#preReq"
@@ -211,19 +219,19 @@ authAppandConnect:
   para12: You should have had the Authenticator to show a pop-up with the authorisation request, with the information of our web application, which you can can authorise so the application can connect to the network.
 createPublicMD:
   title: Create a public MutableData
-  para1: 
+  para1:
     chunk1: One of the native data types of the SAFE Network is the
     highlight1: MutableData
     chunk2: . A MutableData is a key-value store which can be created at either a specific address on the network, or just at a random address, and it can be publicly available (a public MutableData) or otherwise have all its content encrypted (private MutableData). It also has a type associated to it (type tag) which is a number that can be chosen at the moment of creating the MutableData.
-  para2: 
+  para2:
     chunk1: We are not going to go into the other aspects of the MutableData here, we will just create MutableData in the network to store the data of our application. Please refer to the
-    link1: 
+    link1:
       name: Discover page
       href: /en-gb/discover
     chunk2: to learn more about the MutableData type as well as the other types of data available in the SAFE Network.
   para3:
     chunk1: In this tutorial we are going to create a public MutableData at a random address. Each piece of data stored on the network has its own unique 256 bits address in the network (you can read more about XOR addresses of the SAFE Network in the
-    link1: 
+    link1:
       name: MaidSafe’s blog
       href: https://blog.maidsafe.net/2016/05/27/structuring-networks-with-xor
     chunk2: "), we will request the API to generate a random address for our new public MutableData:"
@@ -256,7 +264,7 @@ createPublicMD:
     chunk3: ) which indicates if the trip has been made by the user. Since the entry’s value in a MutableData needs to be a string of bytes, we serialise with
     highlight3: JSON.stringify
     chunk4: before storing it.
-  para8: 
+  para8:
     chunk1: Let’s put all the code for these steps inside the
     highlight1: createMutableData
     chunk2: function in the
@@ -281,7 +289,7 @@ createPublicMD:
             };
             await window.safeMutableData.quickSetup(mdHandle, initialData);
           };
-  para9: 
+  para9:
     chunk1: Here we are declaring the
     highlight1: mdHandle
     chunk2: variable outside the function so we can then access the same MutableData from other functions.
@@ -332,7 +340,7 @@ addEntries:
     highlight1: safeMutableData.applyEntriesMutation
     chunk2: function, let’s put all this code into the body of the
     highlight2: insertItem
-    chunk3: function in the 
+    chunk3: function in the
     highlight3: src/safenetwork.js
     chunk4: "file:"
   code3: |
@@ -377,6 +385,12 @@ updateRemoveEntries:
     chunk2: is invoked when the user selects some of the trips from the list and then clicks on “remove trips already made”. As you can see we receive a list of items to be removed and we are able to add a “remove” action for each of them into the mutation transaction before we actually send the mutation request to the network when invoking
     highlight2: applyEntriesMutation
     chunk3: . This is to reduce the network traffic needed to perform several mutations on a single MutableData.
+  para3_1:
+    chunk1: Also bear in mind that when you remove and entry it is never deleted from the MutableData, but its value is just cleared, so you cannot insert a new entry with same key but update it. This is the reason that in our implementation of the
+    highlight1: getItems
+    chunk2: "function we filter the deleted entries with the following condition when iterating thu them:"
+  code2: |
+          if (value.buf.length == 0) return;
   para4: Note that the boilerplate code doesn’t have the implementation in the UI to be able to update trips, but we just added the implementation for updating the items on the MutableData entries, so go ahead and try to add the UI components to allow the user to do this ;)
 whatNow:
   title: What now?
