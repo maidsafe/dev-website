@@ -12,20 +12,15 @@ intro:
   title:
     dark: The
     light: SAFE Network
-  subTitle: Make D-Apps the easy way
-  para1: The Safe Network is a scalable, distributed application platform, with baked-in security. It doesn’t rely on third party cloud services, and abstracts away security, encryption and user management to make building truly Decentralized Apps (D-Apps) a breeze.
+  subTitle: Make Decentralised Apps the easy way
+  para1: The SAFE Network is a scalable, distributed application platform, with baked-in security. It doesn’t rely on third party cloud services, and abstracts away security, encryption and user management to make building truly Decentralized Apps (D-Apps) less complex.
   para2: You are free to code and build your apps faster with zero infrastructure costs.
-  para3:
-    chunk: Find out more about
-    link:
-      name: the Safe Network here
-      href: https://maidsafe.net
 dapps:
   title:
     dark1: Decentralised
     dark2: Apps are
     light: the future
-  para: Desktop, Web, Mobile and IoT applications can be easily built on the SAFE Network. You can work with a number of languages to bring your ideas to the new, decentralised internet.
+  para: Desktop, Web and Mobile applications can all easily be built on the SAFE Network. You can work with several languages to bring your ideas to the new, decentralised internet.
   sampleApps:
     title: Check out existing apps
     apps:
@@ -38,9 +33,6 @@ dapps:
       - name: JAMS - Remote Music Storage
         logo: JAMS
         linkId: jams
-      - name: SAFE CMS
-        logo: SAFE_CMS
-        linkId: safeCms
 startDevelop:
   title:
     dark: Start
@@ -67,13 +59,23 @@ accessingNetwork:
   title:
     dark: Accessing
     light: the Network
-  para1: To access the SAFE Network, you simply need to download the browser which includes the Authenticator component.
-  para2: The Authenticator is used by applications to request a user’s consent via a simple API, much like traditional Single Sign-On options. The Authenticator also handles user log on, and allows the user to grant/revoke permissions for each app as they want, putting users in control of their own data.
-  para3:
-    chunk: The user’s data is stored in ‘containers’ on the network. If you want to read more on network data structure and storage
+  para1:
+    chunk1: "To access the SAFE Network, you simply need to "
     link:
-      name: click here to Discover more
+      name: download the browser
+      href: 'https://github.com/maidsafe/safe_browser/releases'
+    chunk2: " which includes the Authenticator component."
+  para2: The Authenticator is used by applications to request a user’s consent via a simple API, much like traditional single sign-on options. The Authenticator also handles user log on, and enables the user to grant/revoke permissions for each app, putting users in control of their own data.
+  para3:
+    chunk: "The user’s data is stored in ‘containers’ on the network. If you want to read more on network data structure and storage "
+    link:
+      name: click here to discover more
       href: /discover
 platforms:
   title: Platforms
-  desc: Currently we've SAFE Network API libraries built for NodeJs, Web, C Sharp, and we're working on expanding this to support other platforms as soon as possible.
+  desc:
+    chunk1: "Currently we have SAFE Network API libraries built for NodeJs, Web, C Sharp and Rust. We are working on expanding this to support other platforms. If you want to join others in our community and contribute to development, head over to our "
+    link:
+      name: Dev Forum
+      href: 'https://forum.safedev.org'
+    chunk2: " and join the conversation."

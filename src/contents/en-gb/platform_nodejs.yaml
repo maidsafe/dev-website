@@ -122,7 +122,13 @@ installBrowser:
     list1_2:
       highlight1: safe-browser-mock-<version>-<platform>.zip
       chunk1: ": SAFE Browser package built to use the mock routing. This will create a local temporary file and you won’t need to connect to the live network."
-  para4: In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, unzip the package in your PC, execute it, and please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
+  para4: "In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC. Before we launch it let's go ahead and set the 'NODE_ENV' environment variable set to 'dev' to have our browser to effectively use the native libraries for mock routing:"
+  code1: |
+          $ export NODE_ENV=dev
+  para4_1: "If you are using Windows you can set it with the following command instead:"
+  code2: |
+          $ set NODE_ENV=dev
+  para4_2: You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
   para5: After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
 createBasicSkeleton:
   title: Create basic skeleton
@@ -182,10 +188,14 @@ sendAuthRequest:
     chunk3: "function of the API, providing information about the application (this information is displayed to the user when requesting the authorisation):"
   code1: |
           let appInfo = {
+            // User-facing name of our app. It will be shown
+            // in the Authenticator user's interface.
             name: 'Hello SAFE Network',
+            // This is a unique ID of our app
             id: 'net.maidsafe.tutorials.nodejs',
             version: '0.1.0',
             vendor: 'MaidSafe.net Ltd.',
+            bundle: 'com.github.electron',
             customExecPath
           };
           let safeApp = await safeNodeApp.initializeApp(appInfo);
@@ -213,6 +223,7 @@ sendAuthRequest:
           const app = require('electron').remote.app;
 
           const customExecPath = [process.execPath, app.getAppPath()];
+  para4_1: For OSX we need a bundle that matches the electron app (as we're not registering a packaged app), so we should add the bundle 'com.github.electron' to the app info, otherwise the registered protocol won't function for this OS.
   para5:
     chunk1: Once the
     highlight1: safeApp
@@ -240,10 +251,14 @@ sendAuthRequest:
           async function sendAuthRequest() {
             console.log('Authorising SAFE application...');
             let appInfo = {
+              // User-facing name of our app. It will be shown
+              // in the Authenticator user's interface.
               name: 'Hello SAFE Network',
-              id: 'net.maidsafe.tutorials.desktop-app',
+              // This is a unique ID of our app
+              id: 'net.maidsafe.tutorials.nodejs',
               version: '0.1.0',
               vendor: 'MaidSafe.net Ltd.',
+              bundle: 'com.github.electron',
               customExecPath
             };
             safeApp = await safeNodeApp.initializeApp(appInfo);
@@ -454,6 +469,12 @@ updateRemoveEntries:
     chunk2: is invoked when the user selects some of the trips from the list and then clicks on “remove trips already made”. As you can see we receive a list of items to be removed and we are able to add a “remove” action for each of them into the mutation transactin before we actually send the mutation request to the netowork when invoking
     highlight2: applyEntriesMutation
     chunk3: . This is to reduce the network traffic needed to perform several mutations on a single MutableData.
+  para3_1:
+    chunk1: Also bear in mind that when you remove and entry it is never deleted from the MutableData, but its value is just cleared, so you cannot insert a new entry with same key but update it. This is the reason that in our implementation of the
+    highlight1: getItems
+    chunk2: "function we filter the deleted entries with the following condition when iterating thu them:"
+  code2: |
+          if (value.buf.length == 0) return;
   para4: Note that the boilerplate code doesn’t have the implementation in the UI to be able to update trips, but we jut added the implementation for updating the items on the MutableData entries, so go ahead and try to add the UI commponents to allow the user to do this ;)
 whatNow:
   title: What now?

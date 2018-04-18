@@ -154,6 +154,18 @@ class Platform extends React.Component {
               </ul>
             </div>
             <p className="para">{data.installBrowser.para4}</p>
+            <div className="code-block">
+              <SyntaxHighlighter language="bash" style={duotoneLight}>
+                {data.installBrowser.code1}
+              </SyntaxHighlighter>
+            </div>
+            <p className="para">{data.installBrowser.para4_1}</p>
+            <div className="code-block">
+              <SyntaxHighlighter language="bash" style={duotoneLight}>
+                {data.installBrowser.code2}
+              </SyntaxHighlighter>
+            </div>
+            <p className="para">{data.installBrowser.para4_2}</p>
             <p className="para">{data.installBrowser.para5}</p>
             <h2 id="createSkeleton" className="page-sub-title">{data.createBasicSkeleton.title}</h2>
             <p className="para">
@@ -300,10 +312,11 @@ class Platform extends React.Component {
               {` ${data.sendAuthRequest.para4.chunk5}`}
             </p>
             <div className="code-block">
-              <SyntaxHighlighter language="javascript" style={duotoneLight} showLineNumbers>
+              <SyntaxHighlighter language="javascript" style={duotoneLight}>
                 {data.sendAuthRequest.code2}
               </SyntaxHighlighter>
             </div>
+            <p className="para">{data.sendAuthRequest.para4_1}</p>
             <p className="para">
               {`${data.sendAuthRequest.para5.chunk1} `}
               <span className="highlight">
@@ -335,7 +348,7 @@ class Platform extends React.Component {
               {` ${data.sendAuthRequest.para7.chunk3} `}
             </p>
             <div className="code-block">
-              <SyntaxHighlighter language="javascript" style={duotoneLight} showLineNumbers>
+              <SyntaxHighlighter language="javascript" style={duotoneLight}>
                 {data.sendAuthRequest.code4}
               </SyntaxHighlighter>
             </div>
@@ -604,17 +617,19 @@ class Platform extends React.Component {
               {` ${data.updateRemoveEntries.para3.chunk3} `}
             </p>
             <p className="para">
+              {`${data.updateRemoveEntries.para3_1.chunk1} `}
+              <span className="highlight">
+                {data.updateRemoveEntries.para3_1.highlight1}
+              </span>
+              {` ${data.updateRemoveEntries.para3.chunk2} `}
+            </p>
+            <div className="code-block">
+              <SyntaxHighlighter language="javascript" style={duotoneLight}>
+                {data.updateRemoveEntries.code2}
+              </SyntaxHighlighter>
+            </div>
+            <p className="para">
               {data.updateRemoveEntries.para4}
-            </p>
-            <h2 id="whatNow" className="page-sub-title">{data.whatNow.title}</h2>
-            <p className="para">
-              {data.whatNow.para1}
-            </p>
-            <p className="para">
-              {data.whatNow.para2}
-            </p>
-            <p className="para">
-              {data.whatNow.para3}
             </p>
           </div>
         </div>
