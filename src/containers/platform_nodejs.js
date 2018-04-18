@@ -12,6 +12,7 @@ class Platform extends React.Component {
     };
     this.hideNav = this.hideNav.bind(this);
   }
+
   componentDidMount() {
     const linkHeads = document.getElementsByClassName('nav-i-head');
     for (let i = 0; i < linkHeads.length; i++) {
@@ -24,6 +25,27 @@ class Platform extends React.Component {
       links[i].addEventListener('click', () => {
         this.hideNav();
       }, false)
+    }
+
+    window.addEventListener("hashchange", this.hashChange);
+    window.addEventListener("load", this.hashChange);
+  }
+
+  hashChange() {
+    console.log('hashchange')
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const targetHash = window.location.hash.split('#').pop();
+        if (!targetHash) {
+          return;
+        }
+        var targetEle = document.getElementById(targetHash);
+        console.log('targetEle.offsetTop - 200', targetEle.offsetTop - 150)
+        if (targetEle && targetEle.offsetTop) {
+          window.scroll(0, targetEle.offsetTop - 200);
+        }
+      }, 100);
+
     }
   }
 

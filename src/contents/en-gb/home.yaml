@@ -16,7 +16,7 @@ buildOnSafeNet:
       icon: infrastructure
     - title: Open source
       desc: All SAFE Network libraries are open source, transparent and free to use.
-      icon: open-source
+      icon: anonymity
     - title: Your application is the product, not your users' data
       desc: Users are always in control of their data, and with monetisation being built into the network, you can focus on making the best app, without selling your users short.
       icon: application
