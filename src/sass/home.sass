@@ -61,12 +61,13 @@
         .six-keys-b
           padding: 60px
           background-color: $colr-white
-          +clearfix()
+          display: flex
+          flex-wrap: wrap
           .six-key-i
             width: 50%
-            float: left
             padding-right: 16px
             padding-bottom: 24px
+            +clearfix()
             .icn
               width: 36px
               height: 36px
