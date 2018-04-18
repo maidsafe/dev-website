@@ -47,8 +47,9 @@ export default {
     <Html lang="en-US">
       <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/icon" href="  images/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="shortcut icon" type="image/icon" href="/images/favicon.ico" />
+        <title>SAFE Network - DevHub</title>
       </Head>
       <Body>{children}</Body>
     </Html>

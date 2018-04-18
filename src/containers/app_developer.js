@@ -109,12 +109,14 @@ class AppDev extends React.Component {
                       <div key={`start-dev-${i}`} className="start-develop-i">
                         <div className="start-develop-i-title">{feature.title}</div>
                         <div className={`start-develop-i-icon ${feature.icon}`}></div>
-                        <div className="start-develop-i-desc">{`${feature.para.chunk1} `}</div>
-                        <div className="start-develop-i-desc">{`${feature.para.chunk2} `}</div>
-						{
-							feature.para.chunk3 &&
-							<div className="start-develop-i-desc">{`${feature.para.chunk3} `}</div>
-						}
+                        <div className="start-develop-i-desc">
+                          <p>{`${feature.para.chunk1} `}</p>
+                          <p>{`${feature.para.chunk2} `}</p>
+                          {
+                            feature.para.chunk3 &&
+                            <p>{`${feature.para.chunk3} `}</p>
+                          }
+                        </div>
                       </div>
                     ))
                   }
