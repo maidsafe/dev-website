@@ -1,6 +1,6 @@
 intro:
  para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
- para2: To enable this here are the components and features that make the Network.
+ para2: To enable this here are the components and features that together form the Network.
  para3:
 authenticator:
   title: The Authenticator
@@ -25,7 +25,7 @@ networks:
   types:
     - name: Mock Routing
       id: mockRouting
-      para1: When a website or application is built with mock-routing enabled, it’s not connecting to a live network - it is interfacing with a local database, created on your system, to simulate network operations.
+      para1: When a website or application is built with mock-routing enabled, it does not connect to a live network. Instead, it interfaces with a local database, created on your system, to simulate network operations.
       para2: This saves a great deal of time and provides a safe space for you to initially test operations.
       btnLink:
         name: Know more
@@ -47,7 +47,7 @@ networks:
 vault:
   title: Vault
   desc: When a user uploads (or saves) a ﬁle to the Network, via one of the SAFE Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the vaults of other SAFE Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
-  para: The Vault software is a small executable file that connects the user’s machine to the SAFE Network. It manages the storage of data chunks on the user’s computer and in that way it provides storage capacity to the network. It also routes and caches encrypted data chunks over the network making use of fully encrypted connections to other Vaults.
+  para: The Vault software is a small executable file that connects the user’s machine to the SAFE Network. It manages the storage of data chunks on the user’s computer and in that way, it provides storage capacity to the network. It also routes and caches encrypted data chunks over the network making use of fully encrypted connections to other Vaults.
   btnLink:
     name: Develop
     link: 'https://forum.safedev.org/t/how-to-run-a-local-test-network'
@@ -98,7 +98,7 @@ dataTypes:
         - title: About
           para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks."
         - title: Flavours
-          para:
+          para: 
     - name: Mutable Data
       features:
         - title: About
