@@ -13,6 +13,7 @@ import CONST from '../constants';
 class Discover extends React.Component {
   constructor() {
     super();
+    this.tabNavWidth = 33.33;
     this.authImgs = {
       AUTH_1: Auth1,
       AUTH_2: Auth2,
@@ -84,7 +85,7 @@ class Discover extends React.Component {
           <div className="network-type-b base">
             <h3 className="title">{data.networks.title}</h3>
             <p className="desc">{data.networks.desc}</p>
-            <Tabs data={data.networks.types} type={CONST.tabTypes.LAY_HALF} />
+            <Tabs data={data.networks.types} type={CONST.tabTypes.LAY_HALF} tabNavWidth={this.tabNavWidth} />
           </div>
         </div>
         <div className="vault">
@@ -132,14 +133,14 @@ class Discover extends React.Component {
                 ))
               }
             </div>
-            <div className="def-cntr-quote">{data.containers.quote}</div>
+            {/* <div className="def-cntr-quote">{data.containers.quote}</div> */}
           </div>
         </div>
         <div className="data-types">
           <div className="data-types-b base">
             <h3 className="data-types-title">{data.dataTypes.title}</h3>
             <p className="data-types-desc">{data.dataTypes.desc}</p>
-            <Tabs data={data.dataTypes.types} type={CONST.tabTypes.WIZARD} />
+            <Tabs data={data.dataTypes.types} type={CONST.tabTypes.WIZARD} tabNavWidth={this.tabNavWidth} />
           </div>
         </div>
       </section>

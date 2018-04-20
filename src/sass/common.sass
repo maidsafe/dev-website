@@ -16,81 +16,58 @@ header
   padding: 16px 24px
   background-color: $bg-header-light
   +clearfix()
-  &.light
-    background-color: #2482e2
-    .brand-logo
-      .images
-        background-image: url($logo-light)
-      .split
-        border-color: $colr-white
-      .desc
-        color: $colr-white
-    nav
-      a
-        color: $colr-white
   .brand-logo
     padding: 16px 24px
     position: absolute
     top: 0
     left: 0
     .images
-      width: $brand-logo-height
+      width: $brand-logo-width
       height: $brand-logo-height
       display: block
       float: left
-      background-image: url($logo-dark)
+      background-image: url($logo-url)
       background-repeat: no-repeat
       background-size: contain
       background-position: center
-    .split
-      width: 2px
-      height: 28px
-      display: block
-      border: 1px solid #606b7a
-      float: left
-      margin: 11px 10px
-    .desc
-      line-height: $brand-logo-height
-      display: block
-      float: left
-      font-size: 16px
-      font-weight: 600
-      color: #8b8b8b
   nav
-    text-align: center
+    text-align: right
     z-index: 999
+    padding-left: $brand-logo-width
     a
       color: $colr-header-nav-text
       text-decoration: none
       font-size: 16px
       font-weight: 600
-      margin: 0 25px
+      margin: 0 20px
       line-height: $header-height - 32px
-      &.active
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+      &.active,
+      &:hover
         color: $colr-blue
-  .opts
-    position: absolute
-    height: 100%
-    top: 0
-    right: 0
-    padding: 16px 24px
-    .opt
-      width: 30px
-      height: 30px
-      position: relative
-      top: 50%
-      transform: translate(0, -50%)
-      background-position: center
-      background-repeat: no-repeat
-      background-size: contain
-      float: left
-      margin-left: 16px
-      a
-        display: block
-        width: 100%
-        height: 30px
-      &.community
-        background-image: url('../../public/images/community_forum.svg')
+      &.external
+        background-color: $colr-white
+        padding: 8px 48px 8px 16px
+        border-radius: 20px
+        position: relative
+        &.community
+          &:after
+            content: ""
+            display: block
+            width: 24px
+            height: 100%
+            background-image: url($community-forum-url)
+            position: absolute
+            top: 0
+            right: 12px
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+          &:hover:after
+            background-image: url($community-forum-hover-url)
 
   .mob-menu
     display: none
@@ -111,7 +88,10 @@ header
   background-color: $colr-white
   box-shadow: 0 1px 3px #00000073
   transition: top .1s ease
-
+  nav
+    a
+      &.external
+        background-color: $colr-theme-dark
 footer
   width: 100%
   .footer-b

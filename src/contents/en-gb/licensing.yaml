@@ -1,0 +1,56 @@
+intro:
+  title: Licensing
+  para1: "All SAFE Network libraries are available under the General Public License Version 3 (GPLv3). This license was chosen as it adheres to four principles that are critically important to the company’s vision of the internet of the future; namely:"
+  list:
+    - The freedom to use the software for any purpose
+    - The freedom to change the software to suit your needs
+    - The freedom to share the software with your friends and neighbors, and
+    - The freedom to share the changes you make.
+  para2: "This approach has been made synonymous with ‘copyleft’, which is important to MaidSafe  because the company agrees with the values of free software and the right of any developer to publish code under the terms of the GPLv3."
+  para3:
+    chunk1: If you're a developer building on (forking) our core libraries via crates.io or GitHub repositories, then GPLv3 applies. You can find out more about this license
+    link:
+      name: here
+      href: https://www.gnu.org/licenses/gpl-3.0.html
+    chunk2: ", and if you are not familiar with the license we would certainly recommend doing that. Some major considerations are that derivative works must remain open source (GPLv3 license) and the license requires that you publish all your source code."
+useOfApi:
+  title: Use of APIs
+  para: "Any app that uses the bindings is fine to choose whatever license they wish for their app/product as in this case they are making API calls on the network as opposed to integrating directly with the libraries. These bindings are: "
+  list:
+    - name: Node.js
+      href: https://github.com/maidsafe/safe_app_nodejs
+    - name: Java
+      href: https://github.com/maidsafe/safe_app_java
+    - name: C#
+      href: https://github.com/maidsafe/safe_app_csharp
+    - name: Web
+      href: https://github.com/maidsafe/beaker-plugin-safe-app/
+linking:
+  title: Linking exception
+  para1: There is an exception to the terms of the GPLv3. If you link to our libraries (either statically or dynamically) with independent modules to produce an executable, you can license it under terms of your choice, provided that you also meet the terms and conditions of the license of each linked module. So with this exception we will enable projects that provide library code — .i.e. code intended to be reusable in different applications, under different circumstances — to be extendable and adaptable without code changes.
+  para2: If you modify this library, you may extend this exception to your version of the library, but you are not obliged to do so. If you do not wish to do so, delete this exception statement from your version.
+coreContributions:
+  title: Core contributions
+  para1: There is no Contributor License Agreement (CLA) for any developer wishing to make code contributions to our code in order to minimise complexity and avoid confusion through additional legal agreements. Any contributions made to the SAFE Network assumes the contributor contributes under the terms of the GPLv3.
+  para2:
+    chunk1: The logic here is that if code is submitted to be incorporated into an open source project, with the knowledge that it will be distributed under a certain license, they must intend that code to be licensed similarly. In fact, GitHub has now made this point explicit in Section Six in their
+    link:
+      name: terms of service.
+      href: https://help.github.com/articles/github-terms-of-service/
+patents:
+  title: Patents
+  para1: Patents are often used in malicious ways that stifle innovation. An alternative to the patent system is clearly required, but we cannot ignore that it exists and shouting our disagreement from the sidelines won’t help either.
+  para2: At MaidSafe our primary goal is open innovation and to enable technologies that build on top of, or around, SAFE Network code to have protection. It’s to this end that we have taken the steps of filling a number of defensive patents. These patents are owned by The MaidSafe Foundation, a registered Scottish charity (reg SC042030) set up by MaidSafe founder David Irvine (who gave away his shares in the process) to foster education and innovation. The Foundation has granted MaidSafe a license to these patents royalty free and in perpetuity.
+  list:
+    title: "These worldwide patents include:"
+    items:
+      - Distributed File Systems
+      - Communication System and Method
+      - Distributed Network System
+      - MaidSafe.net
+      - Data system and method
+      - Apparatus for implementing a method of creating a data chain, which can be cryptographically proven to contain valid data
+      - Self Encryption Process
+      - File System Authentication
+      - Managed Authentication on a distributed network
+  para3: We believe this structure will provide SAFE Network developers and partners freedom to operate and mitigate some of the risks associated with modern software development.
