@@ -11,7 +11,7 @@ class CoreDeveloper extends React.Component {
           <div className="content-intro">
             <h1>{data.pageIntro.title}</h1>
             <p>
-              <a href={data.pageIntro.para.link1.href}>{data.pageIntro.para.link1.name}</a> {` ${data.pageIntro.para.chunk1} `}
+              <a href={data.pageIntro.para.link1.href} target="_blank">{data.pageIntro.para.link1.name}</a> {` ${data.pageIntro.para.chunk1} `}
               <span className="highlight">{data.pageIntro.para.highlight1}</span> {data.pageIntro.para.chunk2}
             </p>
           </div>

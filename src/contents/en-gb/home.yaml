@@ -8,8 +8,8 @@ buildOnSafeNet:
     dark2: the
     light: SAFE Network
   sixKeys:
-    - title: The privacy first network
-      desc: Privacy and anonymity for your users - The Secure Access for Everyone (SAFE) Network is built to negate the prying eyes of internet interlopers with built-in encrypted encrypted communications.
+    - title: The privacy-first network
+      desc: Privacy and anonymity for your users. The Secure Access for Everyone (SAFE) Network is built to negate the prying eyes of internet interlopers with built-in encrypted communications.
       icon: privacy
     - title: Infrastructure-free
       desc: Easy to use APIs in many languages, means you can focus on coding. No need to worry about your infrastructure or scaling costs here!
@@ -39,7 +39,7 @@ contribute:
       href: /app_developer
   coreDev:
     title: Learn about the tech behind the Network
-    desc: The components involved in the SAFE Network range from clients, vaults and routing to low level networking.
+    desc: The components involved in the SAFE Network range from clients, vaults, routing and low level networking.
     link:
       name: Core Developer
       href: /core_developer
