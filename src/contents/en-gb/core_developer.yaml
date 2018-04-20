@@ -4,7 +4,7 @@ pageIntro:
     link1:
       name: SAFE Client Libs
       href: 'https://github.com/maidsafe/safe_client_libs'
-    chunk1: The SAFE Network is powered by a set of modular libraries written in Rust. With each library being dedicated to a specific facet of the network. This modular build should make it easy for anyone to dig into the code, both to make improvements and to check our security chops, too.
+    chunk1: The SAFE Network is powered by a set of modular libraries written in Rust. With each library being dedicated to a specific facet of the network. This modular structure should make it easy for anyone to dig into the code, propose improvements and get involved.
 client_libs:
   title: The SAFE Client Libraries
   para: "The SAFE Client libs are a trio of libraries that provide the APIs needed for applications to interface with the SAFE Network."
@@ -16,7 +16,7 @@ client_libs:
       name: view on github
       href: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_core'
     para:
-      chunk1: "SAFE Core provides the foundation for the Authenticator and App libraries. It provides an interface for all requests from the higher-level API’s to the actual Routing layer. It abstracts away interactions with Routing, managing them with an event loop in a non-blocking client. It also provides convenient functionality for the upper API’s, including type definitions, network file system utilities, interprocess communication utilities, and cryptographic utilities, among others. SAFE Core uses the Rust"
+      chunk1: "SAFE Core provides the foundation for the Authenticator and App libraries. It provides an interface for all requests from the higher-level API’s to the actual Routing layer. It abstracts away interactions with Routing, managing them with an event loop in a non-blocking client. It also provides convenient functionality for the upper API’s including type definitions, network file system utilities, interprocess communication utilities, cryptographic utilities, among others. SAFE Core uses Rust"
       highlight1: futures
       chunk2: "crate to provide asynchronous APIs."
   comp2:
@@ -24,8 +24,8 @@ client_libs:
     link:
       name: view on github
     href: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_authenticator'
-    para1: "The SAFE Authenticator library provides the APIs for the frontend user interface, which allows users to log-on to the SAFE Network."
-    para2: "It contains all the functionality for creating accounts, logging in, and getting account information. In addition to app authorisation, SAFE Authenticator is the home of the logic for revoking app access to the Authenticator."
+    para1: "The SAFE Authenticator library provides APIs for the frontend user interface, allowing users to log-on to the SAFE Network."
+    para2: "It contains all the functionality for creating accounts, logging in, getting account information and both authorising and revoking application access to a user's data."
     para3: "This crate also provides ways to manage application and Mutable Data permissions."
   comp3:
     name: SAFE App
@@ -33,7 +33,8 @@ client_libs:
       name: view on github
       href: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_app'
     para: "The SAFE App library provides the application APIs to the network, which largely consists of a C-compatible foreign function interface."
-    para2: "SAFE App provides methods to create registered and unregistered apps, handles to which are necessary for many of the functions in this library. For example, the crypto and NFS routines provided by SAFE App function within the context of an app and require handles to app instances. SAFE App provides various other facilities which are required by higher-level apps, such as routines for manipulating Immutable and Mutable Data. Most of the functions in this library either take as parameters, or return handles to, objects which are themselves stored in a cache within the library."
+    para2: "These APIs allow applications to interact with the Authenticator and the network itself, registering apps in the user's account and obtain the necessary handles which are necessary for many of the functions in this library. It can also be used in the unregistered mode if an app wants to have a read-only access to the network. SAFE App provides various other facilities which are required by higher-level apps, such as routines for manipulating Immutable and Mutable Data."
+    para3: "Most of the functions in this library either take as parameters, or return handles to, objects which are themselves stored in a cache within the library."
 network_libs:
   title: The SAFE Network Libraries
   para: "The heart of the network. These libraries provide the functionality that makes the SAFE Network autonomous and secure."
