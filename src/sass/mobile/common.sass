@@ -7,26 +7,32 @@
   header
     .brand-logo
       padding: 16px
-      .split
-        height: 24px
-        margin: 13px 10px
-      .desc
-        .extend
-          display: none
-    .opts
-      padding: 16px
-      right: 50px
+      .images
+        width: 150px
     nav
       display: none
-      width: 100%
+      width: 200px
+      padding: 16px
       position: absolute
       top: 80px
-      left: 0
-      background-color: $colr-theme-dark
-      border-bottom: 1px solid $colr-theme-dark
-      border-top: 1px solid $colr-theme-dark
+      right: 0
+      text-align: center
+      background-color: $colr-white
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
       a
-        margin: 0 16px
+        margin: 0
+        display: block
+        text-align: left
+        font-size: 16px
+        &.external
+          background-color: transparent
+          padding: 0
+          border-radius: 0
+          &.active,
+          &:hover
+            color: $colr-text
+          &:after
+            display: none !important
       &.active
         display: block
     .mob-menu

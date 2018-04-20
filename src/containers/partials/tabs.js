@@ -13,7 +13,6 @@ import Wizard from './wizard';
 export default class Tabs extends React.Component {
   constructor() {
     super();
-    this.tabNavWidth = 33.33;
     this.state = {
       tabPos: 0
     };
@@ -55,7 +54,7 @@ export default class Tabs extends React.Component {
             <h3 className="tab-cntr-title">{type.name}</h3>
             <p className="tab-cntr-para">{type.para1}</p>
             <p className="tab-cntr-para">{type.para2}</p>
-            <div className="tab-cntr-opt"><button className="btn ghost-btn">{type.btnLink.name}</button></div>
+            {/* <div className="tab-cntr-opt"><button className="btn ghost-btn">{type.btnLink.name}</button></div> */}
           </div>
         </div>
       )
@@ -95,7 +94,7 @@ export default class Tabs extends React.Component {
         <div className="types-b tabs-b">
           <div className="tab-nav" id="NetworkType">
             <div className="tab-nav-b">
-              <div className="tab-nav-ib" style={{ left: `-${this.tabNavWidth * (this.state.tabPos)}%` }}>
+              <div className="tab-nav-ib" style={{ left: `-${this.props.tabNavWidth * (this.state.tabPos)}%` }}>
                 {data.map((type, i) => {
                   const navClass = classNames('tab-nav-i', {
                     'active': i === this.state.tabPos

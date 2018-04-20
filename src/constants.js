@@ -8,6 +8,7 @@ export default {
       devForum: 'https://forum.safedev.org/'
     },
     footer: {
+      licensing: '/licensing',
       community: 'https://safenetforum.org/',
       docs: 'https://safenetwork.org/documentation/',
       blog: 'https://blog.maidsafe.net/',

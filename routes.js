@@ -11,6 +11,7 @@ const PAGES = {
   DISCOVER: 'discover',
   PLATFORM_WEB: 'platform_web',
   PLATFORM_RUST: 'platform_rust',
+  LICENSING: 'licensing',
 };
 
 const CONTENT_PATH = path.resolve('src', 'contents');
@@ -76,6 +77,13 @@ export default [
     component: 'src/containers/platform_rust',
     getData: () => ({
       data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_RUST),
+    }),
+  },
+  {
+    path: '/licensing',
+    component: 'src/containers/licensing',
+    getData: () => ({
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.LICENSING),
     }),
   },
   {

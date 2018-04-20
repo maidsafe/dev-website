@@ -43,8 +43,6 @@ export default class Header extends React.Component {
         <div className="brand-logo">
           <Link to="/" onClick={() => { this.hideMenu() }}>
             <span className="images"></span>
-            <span className="split"></span>
-            <span className="desc">DevHub</span>
           </Link>
         </div>
         <div className="mob-menu" onClick={(e) => {
@@ -60,10 +58,8 @@ export default class Header extends React.Component {
           <Link className={classNames({
             active: route === this.routes.DISCOVER
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
+          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Dev Comm<span className="extend">unity</span></Link>
         </nav>
-        <div className="opts">
-          <div className="opt community"><a onClick={() => { this.hideMenu() }} href={CONST.externalLinks.header.devForum} target="_blank" /></div>
-        </div>
       </header>
     );
   }
