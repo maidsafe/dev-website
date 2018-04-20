@@ -3,7 +3,7 @@ pageIntro:
   para:
     link1:
       name: SAFE Client Libs
-      href: '#'
+      href: 'https://github.com/maidsafe/safe_client_libs'
     chunk1: The SAFE Network is powered by a set of modular libraries written in Rust. With each library being dedicated to a specific facet of the network. This modular build should make it easy for anyone to dig into the code, both to make improvements and to check our security chops, too.
 client_libs:
   title: The SAFE Client Libraries
@@ -14,7 +14,7 @@ client_libs:
     name: SAFE Core
     link:
       name: view on github
-      href: 'https://github.com/maidsafe.net'
+      href: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_core'
     para:
       chunk1: "SAFE Core provides the foundation for the Authenticator and App libraries. It provides an interface for all requests from the higher-level API’s to the actual Routing layer. It abstracts away interactions with Routing, managing them with an event loop in a non-blocking client. It also provides convenient functionality for the upper API’s, including type definitions, network file system utilities, interprocess communication utilities, and cryptographic utilities, among others. SAFE Core uses the Rust"
       highlight1: futures
@@ -23,7 +23,7 @@ client_libs:
     name: Authenticator
     link:
       name: view on github
-      href: 'https://github.com/maidsafe.net'
+    href: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_authenticator'
     para1: "The SAFE Authenticator library provides the APIs for the frontend user interface, which allows users to log-on to the SAFE Network."
     para2: "It contains all the functionality for creating accounts, logging in, and getting account information. In addition to app authorisation, SAFE Authenticator is the home of the logic for revoking app access to the Authenticator."
     para3: "This crate also provides ways to manage application and Mutable Data permissions."
@@ -31,7 +31,7 @@ client_libs:
     name: SAFE App
     link:
       name: view on github
-      href: 'https://github.com/maidsafe.net'
+      href: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_app'
     para: "The SAFE App library provides the application APIs to the network, which largely consists of a C-compatible foreign function interface."
     para2: "SAFE App provides methods to create registered and unregistered apps, handles to which are necessary for many of the functions in this library. For example, the crypto and NFS routines provided by SAFE App function within the context of an app and require handles to app instances. SAFE App provides various other facilities which are required by higher-level apps, such as routines for manipulating Immutable and Mutable Data. Most of the functions in this library either take as parameters, or return handles to, objects which are themselves stored in a cache within the library."
 network_libs:
@@ -41,32 +41,32 @@ network_libs:
     name: Routing
     link:
       name: view on github
-      href: 'https://github.com/maidsafe.net'
+      href: 'https://github.com/maidsafe/routing'
     para1: "This library provides client and node implementations for a resilient decentralised network. The network is based on the kademlia routing table and uses the XOR metric to define the “distance” between two XOR names. These XOR names are used as addresses of nodes, clients, and data. Routing also provides the two types for the data of messages: Immutable Data and Mutable Data."
     para2: "A decentralised service based on the Routing library uses the Client struct to send requests to the network of nodes and receive responses. The Node struct is used to handle and send requests within that network and to implement its functionality, including storing and retrieving data, validating permissions, and managing metadata."
   comp5:
     name: Crust
     link:
       name: view on github
-      href: 'https://github.com/maidsafe.net'
+      href: 'https://github.com/maidsafe/crust'
     para: "The Crust (short for “Connections in Rust”) library provides reliable peer-to-peer network connections. It enables establishing and maintaining such connections across a wide variety of network conditions and protocols. The main object through which Crust is used is the Service struct, which represents all the Crust services."
 rfcs:
   title: RFCs
   rfc1:
-    name: Safe Launcher API
-    href: '/rfc1'
+    name: Mutable Data
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0047-mutable-data/0047-mutable-data.md'
   rfc2:
     name: Async safe_core
-    href: '/rfc2'
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0043-async-safe-core/0043-async-safe-core.md'
   rfc3:
     name: Auth Flow
-    href: '/rfc3'
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0046-new-auth-flow/0046-new-auth-flow.md'
   rfc4:
-    name: Mutable Data
-    href: '/rfc4'
-  rfc5:
     name: Authorise Apps
-    href: '/rfc5'
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0048-authorise-apps/0048-authorise-apps.md'
+  rfc5:
+    name: Containers
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0046-new-auth-flow/containers.md'
 patents:
   title: Relevant Patents
   patent1:
