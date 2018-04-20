@@ -107,7 +107,7 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-i-cntr">
                 <p>
-                  {data.utilities.comp2.para1.chunk1}&nbsp;
+                  {data.utilities.comp2.para1}&nbsp;
                   {/* <a href={data.utilities.comp2.para1.link1.href} target="_blank">{data.utilities.comp2.para1.link1.name}</a> */}
                 </p>
               </div>
