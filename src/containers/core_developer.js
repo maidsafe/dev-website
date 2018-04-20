@@ -11,60 +11,73 @@ class CoreDeveloper extends React.Component {
           <div className="content-intro">
             <h1>{data.pageIntro.title}</h1>
             <p>
-              <a href={data.pageIntro.para.link1.href} target="_blank">{data.pageIntro.para.link1.name}</a> {` ${data.pageIntro.para.chunk1} `}
-              <span className="highlight">{data.pageIntro.para.highlight1}</span> {data.pageIntro.para.chunk2}
+             {data.pageIntro.para.chunk1}
             </p>
           </div>
           <div className="content-comp">
-            <h1>{data.components.title}</h1>
+            <h2>{data.client_libs.title}</h2>
             <p>
-              {data.components.para}
+              {data.client_libs.para}
+            </p>
+            <p>
+              {data.client_libs.para2}
+            </p>
+            <p>
+              {data.client_libs.para3}
             </p>
             <div className="comp-i">
               <div className="comp-i-head">
-                <h3>{data.components.comp1.name}</h3>
-                <div className="git-link"><a href={data.components.comp1.link.href} target="_blank">{data.components.comp1.link.name}</a></div>
+                <h3>{data.client_libs.comp1.name}</h3>
+                <div className="git-link"><a href={data.client_libs.comp1.link.href} target="_blank">{data.client_libs.comp1.link.name}</a></div>
               </div>
               <div className="comp-i-cntr">
-                <p>{data.components.comp1.para.chunk1}&nbsp;<span className="highlight">{`${data.components.comp1.para.highlight1}`}</span>&nbsp;{data.components.comp1.para.chunk2}</p>
+                <p>{data.client_libs.comp1.para.chunk1}&nbsp;<span className="highlight">{`${data.client_libs.comp1.para.highlight1}`}</span>&nbsp;{data.client_libs.comp1.para.chunk2}</p>
               </div>
             </div>
             <div className="comp-i">
               <div className="comp-i-head">
-                <h3>{data.components.comp2.name}</h3>
-                <div className="git-link"><a href={data.components.comp2.link.href} target="_blank">{data.components.comp2.link.name}</a></div>
+                <h3>{data.client_libs.comp2.name}</h3>
+                <div className="git-link"><a href={data.client_libs.comp2.link.href} target="_blank">{data.client_libs.comp2.link.name}</a></div>
               </div>
               <div className="comp-i-cntr">
-                <p>{data.components.comp2.para1}</p>
-                <p>{data.components.comp2.para2}</p>
+                <p>{data.client_libs.comp2.para1}</p>
+                <p>{data.client_libs.comp2.para2}</p>
+                <p>{data.client_libs.comp2.para3}</p>
               </div>
             </div>
             <div className="comp-i">
               <div className="comp-i-head">
-                <h3>{data.components.comp3.name}</h3>
-                <div className="git-link"><a href={data.components.comp3.link.href} target="_blank">{data.components.comp3.link.name}</a></div>
+                <h3>{data.client_libs.comp3.name}</h3>
+                <div className="git-link"><a href={data.client_libs.comp3.link.href} target="_blank">{data.client_libs.comp3.link.name}</a></div>
               </div>
               <div className="comp-i-cntr">
-                <p>{data.components.comp3.para}</p>
+                <p>{data.client_libs.comp3.para}</p>
+                <p>{data.client_libs.comp3.para2}</p>
+              </div>
+            </div>
+		</div>
+		<div className="content-comp">
+		  <h2>{data.network_libs.title}</h2>
+		  <p>
+			{data.network_libs.para}
+		  </p>
+            <div className="comp-i">
+              <div className="comp-i-head">
+                <h3>{data.network_libs.comp4.name}</h3>
+                <div className="git-link"><a href={data.network_libs.comp4.link.href} target="_blank">{data.network_libs.comp4.link.name}</a></div>
+              </div>
+              <div className="comp-i-cntr">
+                <p>{data.network_libs.comp4.para1}</p>
+                <p>{data.network_libs.comp4.para2}</p>
               </div>
             </div>
             <div className="comp-i">
               <div className="comp-i-head">
-                <h3>{data.components.comp4.name}</h3>
-                <div className="git-link"><a href={data.components.comp4.link.href} target="_blank">{data.components.comp4.link.name}</a></div>
+                <h3>{data.network_libs.comp5.name}</h3>
+                <div className="git-link"><a href={data.network_libs.comp5.link.href} target="_blank">{data.network_libs.comp5.link.name}</a></div>
               </div>
               <div className="comp-i-cntr">
-                <p>{data.components.comp4.para1}</p>
-                <p>{data.components.comp4.para2}</p>
-              </div>
-            </div>
-            <div className="comp-i">
-              <div className="comp-i-head">
-                <h3>{data.components.comp5.name}</h3>
-                <div className="git-link"><a href={data.components.comp5.link.href} target="_blank">{data.components.comp5.link.name}</a></div>
-              </div>
-              <div className="comp-i-cntr">
-                <p>{data.components.comp5.para}</p>
+                <p>{data.network_libs.comp5.para}</p>
               </div>
             </div>
           </div>
