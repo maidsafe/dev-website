@@ -55,14 +55,14 @@ export default class Header extends React.Component {
         <nav className={navMenuClasses}>
           <Link className={classNames({
             active: this.isNavMatch(this.routes.APP_DEV) || this.isNavMatch(this.routes.PLATFORM_NODEJS) || this.isNavMatch(this.routes.PLATFORM_RUST) || this.isNavMatch(this.routes.PLATFORM_WEB)
-          })} to="/app_developer" onClick={() => { this.hideMenu() }}>App Dev</Link>
+          })} to="/app_developer" onClick={() => { this.hideMenu() }}>Start Developing</Link>
           <Link className={classNames({
             active: this.isNavMatch(this.routes.CORE_DEV)
-          })} to="/core_developer" onClick={() => { this.hideMenu() }}>Core Dev</Link>
+          })} to="/core_developer" onClick={() => { this.hideMenu() }}>Core Technology</Link>
           <Link className={classNames({
             active: this.isNavMatch(this.routes.DISCOVER)
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
-          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Dev Comm<span className="extend">unity</span></Link>
+          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Comm<span className="extend">unity</span></Link>
         </nav>
       </header>
     );
