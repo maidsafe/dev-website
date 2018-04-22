@@ -1,11 +1,16 @@
 pageIntro:
   title: 'Core Developer'
-  para1:  Code is 100% Rust for all the libraries which, in Rust terminology, we call a crate. Executables projects such as safe_vault are also called crates. All our code is opensourced.
+  para1:
+    chunk1: The SAFE Network core libraries are written exclusively in Rust and the content below provides a brief explanation of their hierarchy. The code is all open source and for more information please refer to our
+    link:
+      name: licensing
+      href: /licensing
+    chunk2: page.
 components:
   title: Project Hierarchy
   comp1:
     name: Crust
-    para1: 
+    para1:
       chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimized for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and
       link1:
         name: Tokio
@@ -19,13 +24,13 @@ components:
   comp2:
     name: Routing
     para1: Sits on top of Crust, this is our overlay networking and routing layer and forms the brain of the SAFE Network. It aims at forming a decentralised Internet and routing information within it.
-    para2: 
+    para2:
       chunk1: Routing is based on an algorithm that extends the
-      link1: 
+      link1:
         name: Kademlia
         href: https://en.wikipedia.org/wiki/Kademlia
       chunk2: DHT routing. It uses 32-byte XOR addresses to locate data on the network. It is guaranteed that messages can be routed from any part of the network to any other end - as is proven by the Kademlia paper. Routing works purely on the terms of group consensus. We don’t trust a single entity, only a group decision with
-      link2: 
+      link2:
         name: eventual consistency
         href: https://en.wikipedia.org/wiki/Eventual_consistency
       chunk3: "."
@@ -38,7 +43,7 @@ components:
     name: SAFE Client Libs
     para1: This is the other consumer of Routing. It is a library that provides high-level interface to access the SAFE Network for front-end apps written in different programming languages that we support. SAFE Client Libs consist of a group of crates that have their own specific respective roles.
     para2: The Authenticator is the component that provides Self Authenticated login and account creation and handles the register of all users' apps. It is integrated with the SAFE Browser and apps can request the access to the network through it. If users don't want to use a certain app anymore, they can revoke the access.
-    para3: 
+    para3:
       chunk1: SAFE App is the component that provides access to SAFE Network for frontend Apps in a user friendly way via
       link1:
         name: FFI
@@ -50,9 +55,9 @@ utilities:
   comp1:
     name: Self-Encryption
     para1: MaidSAFE patented scheme for generating entropy to obfuscate and encrypt data from the data itself.
-    para2: 
-      chunk1: Self-Encryption is based on the 
-      link1: 
+    para2:
+      chunk1: Self-Encryption is based on the
+      link1:
         name: convergent encryption
         href: https://en.wikipedia.org/wiki/Convergent_encryption
       chunk2: "algorithm. It produces the same encrypted output for the same plaintext input. This property allows to deduplicate files on the network level. Files are split up into multiple chunks, stored on the network at the same predictable location, based on the encrypted chunks’ hashes. The result of the encryption process is a data map that holds keys to the encrypted data chunks and is stored securely on the network. This crate is usable even outside of the SAFE Network context as the I/O implementation is abstract."

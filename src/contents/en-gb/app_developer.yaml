@@ -13,7 +13,7 @@ intro:
     dark: The
     light: SAFE Network
   subTitle: Make Decentralised Apps the easy way
-  para1: The SAFE Network is a scalable, distributed application platform, with baked-in security. It doesn’t rely on third party cloud services, and abstracts away security, encryption and user management to make building truly Decentralized Apps (D-Apps) less complex.
+  para1: The SAFE Network is a scalable, distributed application platform, with baked-in security. It doesn’t rely on third party cloud services, and abstracts away security, encryption and user management to make building truly Decentralised Apps (D-Apps) less complex.
   para2: You are free to code and build your apps faster with zero infrastructure costs.
 dapps:
   title:
@@ -42,7 +42,7 @@ startDevelop:
       icon: contact-app
       para:
         chunk1: When using traditional NoSQL platforms like MondoDB, or Redis we'd need to implement both the database in our application as well set up a server to handle requests, or go direct to a cloud provider like Firebase. But these are centralized solutions that you as an app developer will be paying for.
-        chunk2: With SAFE, you have no infrastructure to set up, and as the user own's their data, they commit it directly to the network. All you need worry about is your data structures and authorising your application against the network.
+        chunk2: With SAFE, you have no infrastructure to set up, and as the users own their own data, they commit it directly to the network. All you need worry about is your data structures and authorising your application against the network.
     - title: File storage
       icon: file-storage
       para:
