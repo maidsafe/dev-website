@@ -1,7 +1,7 @@
 homeBanner:
   link:
     name: View Live Stream
-    href: '#'
+    href: https://www.youtube.com/watch?v=8DKjsJxVdfg
 buildOnSafeNet:
   title:
     dark1: Why build on
@@ -46,7 +46,7 @@ contribute:
 
 roadmap:
   title: Roadmap
-  desc: The Network is in Alpha 2 and the APIs are subjected to change. We do try to keep the APIs backward compatible as much as possible while the Network is progressing towards a stable beta.
+  desc: The Network is in Alpha 2 and the APIs are subject to change. We do try to keep the APIs backward compatible as much as possible while the Network is progressing towards a stable beta.
   mobView:
     done:
       - name: Alpha 1

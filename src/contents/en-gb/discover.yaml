@@ -1,7 +1,8 @@
 intro:
- para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
- para2: To enable this here are the components and features that together form the Network.
- para3:
+  title: Discover
+  para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
+  para2: To enable this here are the components and features that together form the Network.
+  para3:
 authenticator:
   title: The Authenticator
   desc: Before browsing on the SAFE Network, users need to create an account via the Authenticator application. The Authenticator, enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.

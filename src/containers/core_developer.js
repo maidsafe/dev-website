@@ -10,7 +10,7 @@ class CoreDeveloper extends React.Component {
         <div className="core-dev-b">
           <div className="content-intro">
             <h1>{data.pageIntro.title}</h1>
-            <p>{data.pageIntro.para1}</p>
+            <p>{data.pageIntro.para1.chunk1}&nbsp;<a href={data.pageIntro.para1.link.href}>{data.pageIntro.para1.link.name}</a>&nbsp;{data.pageIntro.para1.chunk2}</p>
           </div>
           <div className="content-comp">
             <h1>{data.components.title}</h1>

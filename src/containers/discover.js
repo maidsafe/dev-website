@@ -52,10 +52,11 @@ class Discover extends React.Component {
     return (
       <section className="discover">
         <div className="intro base">
-          <div className="ecosystem-banner"><img src={EcoSystemBanner} /></div>
+          <h3 className="title">{data.intro.title}</h3>
           <p className="para">{data.intro.para1}</p>
           <p className="para">{data.intro.para2}</p>
           <p className="para">{data.intro.para3}</p>
+          <div className="ecosystem-banner"><img src={EcoSystemBanner} /></div>
         </div>
         <div className="authenticator">
           <div className="authenticator-b base">

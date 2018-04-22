@@ -27,7 +27,7 @@ useOfApi:
       href: https://github.com/maidsafe/beaker-plugin-safe-app/
 linking:
   title: Linking exception
-  para1: There is an exception to the terms of the GPLv3. If you link to our libraries (either statically or dynamically) with independent modules to produce an executable, you can license it under terms of your choice, provided that you also meet the terms and conditions of the license of each linked module. So with this exception we will enable projects that provide library code — .i.e. code intended to be reusable in different applications, under different circumstances — to be extendable and adaptable without code changes.
+  para1: There is an exception to the terms of the GPLv3. If you link to our libraries (either statically or dynamically) with independent modules to produce an executable, you can license it under terms of your choice, provided that you also meet the terms and conditions of the license of each linked module. So with this exception we will enable projects that provide library code — i.e. code intended to be reusable in different applications, under different circumstances — to be extendable and adaptable without code changes.
   para2: If you modify this library, you may extend this exception to your version of the library, but you are not obliged to do so. If you do not wish to do so, delete this exception statement from your version.
 coreContributions:
   title: Core contributions
