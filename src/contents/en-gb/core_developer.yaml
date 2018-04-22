@@ -6,11 +6,11 @@ components:
   comp1:
     name: Crust
     para1: 
-      chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimized for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and 
+      chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimized for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and
       link1:
         name: Tokio
         href: 'https://tokio.rs'
-      chunk2: ". It supports multiple protocols (μTP and TCP) and it is crypto secure: all communications, starting with handshake messages, are encrypted. It also provides other security features like randomised ports that are used to prevent targeting a particular known port to conduct DoS attacks. Crust implements several NAT traversal techniques such as hole punching and usage of "
+      chunk2: ". It supports multiple protocols (μTP and TCP) and it is crypto secure: all communications, starting with handshake messages, are encrypted. It also provides other security features like randomised ports that are used to prevent targeting a particular known port to conduct DoS attacks. Crust implements several NAT traversal techniques such as hole punching and usage of"
       link2:
         name: IGD
         href: https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol
@@ -20,11 +20,11 @@ components:
     name: Routing
     para1: Sits on top of Crust, this is our overlay networking and routing layer and forms the brain of the SAFE Network. It aims at forming a decentralised Internet and routing information within it.
     para2: 
-      chunk1: Routing is based on an algorithm that extends the 
+      chunk1: Routing is based on an algorithm that extends the
       link1: 
         name: Kademlia
         href: https://en.wikipedia.org/wiki/Kademlia
-      chunk2: "DHT routing. It uses 32-byte XOR addresses to locate data on the network. It is guaranteed that messages can be routed from any part of the network to any other end - as is proven by the Kademlia paper. Routing works purely on the terms of group consensus. We don’t trust a single entity, only a group decision with "
+      chunk2: DHT routing. It uses 32-byte XOR addresses to locate data on the network. It is guaranteed that messages can be routed from any part of the network to any other end - as is proven by the Kademlia paper. Routing works purely on the terms of group consensus. We don’t trust a single entity, only a group decision with
       link2: 
         name: eventual consistency
         href: https://en.wikipedia.org/wiki/Eventual_consistency
@@ -39,10 +39,11 @@ components:
     para1: This is the other consumer of Routing. It is a library that provides high-level interface to access the SAFE Network for front-end apps written in different programming languages that we support. SAFE Client Libs consist of a group of crates that have their own specific respective roles.
     para2: The Authenticator is the component that provides Self Authenticated login and account creation and handles the register of all users' apps. It is integrated with the SAFE Browser and apps can request the access to the network through it. If users don't want to use a certain app anymore, they can revoke the access.
     para3: 
-      chunk1: "SAFE App is the component that provides access to SAFE Network for frontend Apps in a user friendly way via "
+      chunk1: SAFE App is the component that provides access to SAFE Network for frontend Apps in a user friendly way via
       link1:
         name: FFI
         href: https://en.wikipedia.org/wiki/Foreign_function_interface
+      chunk2: '.'
     para4: SAFE Core is the foundation that provides various helpful abstractions like NFS on top of the basic network building blocks. It is also the common backend for the Authenticator and SAFE App, forming the client engine.
 utilities:
   title: Utilities and Helper Libraries
