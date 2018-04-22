@@ -19,6 +19,7 @@ authenticator:
     - title: Application connects to the Network
       icon: AUTH_3
       desc: Applications can connect to the SAFE Network on behalf of the user by using the URI received.
+      smallIcon: true
 networks:
   title: Network Types
   desc: Applications can be developed on the Network using one of the three network types depending on development stages.

@@ -31,7 +31,6 @@ class Platform extends React.Component {
   }
 
   hashChange() {
-    console.log('hashchange')
     if (typeof window !== 'undefined') {
       setTimeout(() => {
         const targetHash = window.location.hash.split('#').pop();
@@ -39,7 +38,6 @@ class Platform extends React.Component {
           return;
         }
         var targetEle = document.getElementById(targetHash);
-        console.log('targetEle.offsetTop - 200', targetEle.offsetTop - 150)
         if (targetEle && targetEle.offsetTop) {
           window.scroll(0, targetEle.offsetTop - 200);
         }

@@ -27,6 +27,14 @@ export default class Header extends React.Component {
     this.setState({ showMenu: false });
   }
 
+  isNavMatch(target) {
+    let route = '';
+    if (typeof window !== 'undefined') {
+      route = window.location.pathname;
+    }
+    return (route.search(target) !== -1);
+  }
+
   render() {
     const navMenuClasses = classNames({
       active: this.state.showMenu
@@ -34,10 +42,6 @@ export default class Header extends React.Component {
     const headerClasses = classNames({
       'header-fixed': this.props.isScrolling
     });
-    let route = '';
-    if (typeof window !== 'undefined') {
-      route = window.location.pathname;
-    }
     return (
       <header className={headerClasses}>
         <div className="brand-logo">
@@ -50,13 +54,13 @@ export default class Header extends React.Component {
         }}></div>
         <nav className={navMenuClasses}>
           <Link className={classNames({
-            active: (route === this.routes.APP_DEV) || (route === this.routes.PLATFORM_NODEJS) || (route === this.routes.PLATFORM_RUST) || (route === this.routes.PLATFORM_WEB)
+            active: this.isNavMatch(this.routes.APP_DEV) || this.isNavMatch(this.routes.PLATFORM_NODEJS) || this.isNavMatch(this.routes.PLATFORM_RUST) || this.isNavMatch(this.routes.PLATFORM_WEB)
           })} to="/app_developer" onClick={() => { this.hideMenu() }}>App Dev</Link>
           <Link className={classNames({
-            active: route === this.routes.CORE_DEV
+            active: this.isNavMatch(this.routes.CORE_DEV)
           })} to="/core_developer" onClick={() => { this.hideMenu() }}>Core Dev</Link>
           <Link className={classNames({
-            active: route === this.routes.DISCOVER
+            active: this.isNavMatch(this.routes.DISCOVER)
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
           <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Dev Comm<span className="extend">unity</span></Link>
         </nav>

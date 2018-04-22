@@ -103,8 +103,12 @@ export default class Tabs extends React.Component {
                 })}
               </div>
               <div className="tab-nav-opts">
-                <div className="tab-nav-opt left"><button onClick={() => this.goPrev()}></button></div>
-                <div className="tab-nav-opt right"><button onClick={() => this.goNext()}></button></div>
+                <div className={classNames('tab-nav-opt left', {
+                  hidden: this.state.tabPos === 0
+                })}><button onClick={() => this.goPrev()}></button></div>
+                <div className={classNames('tab-nav-opt right', {
+                  hidden: this.state.tabPos === data.length - 1
+                })}><button onClick={() => this.goNext()}></button></div>
               </div>
             </div>
           </div>

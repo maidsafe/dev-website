@@ -72,7 +72,9 @@ class Discover extends React.Component {
               {
                 data.authenticator.steps.map((step, i) => (
                   <div key={`authenticator-steps-${i}`} className="step">
-                    <h3 className="step-img"><img src={this.authImgs[step.icon]} /></h3>
+                    <h3 className={classNames('step-img', {
+                      small: !!step.smallIcon
+                    })}><img src={this.authImgs[step.icon]} /></h3>
                     <h3 className="step-name">{step.title}</h3>
                     <p className="step-desc">{step.desc}</p>
                   </div>
