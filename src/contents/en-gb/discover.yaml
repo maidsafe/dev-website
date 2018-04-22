@@ -96,12 +96,12 @@ dataTypes:
     - name: Immutable Data
       features:
         - title: About
-          para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks."
-        - title: Flavours
-          para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks."
+          para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash."
+        - title: Use case
+          para: "In most of the cases Immutable Data will be encrypted using the Self Encryption algorithm that produces the same ciphertext output for the same plaintext input. This is called the convergent encryption and it allows for data deduplication; the same files will be stored at the same places, even in the encrypted form. To retrieve this data, users need to have a private key - or a _data map_ - holding the encryption keys and hashes of data chunks."
     - name: Mutable Data
       features:
         - title: About
           para: "Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control: it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned, even the owner cannot update the content silently."
         - title: Flavours
-          para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks."
+          para: "The data stored on the network is always accessible by anyone. If users don't want to give access to third parties, they can encrypt the contents of Mutable Data objects. We recognise two different flavours of it: Private and Public Mutable Data. Through Authenticator users can share the access to their private Mutable Data objects with apps and other users."

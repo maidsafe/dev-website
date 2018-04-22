@@ -1,61 +1,63 @@
 pageIntro:
   title: 'Core Developer'
-  para1:  All the code is open sourced and is GPLv3 licensed. (Ask Nick about the commercial licence)
-  para2: Code is 100% Rust for all the libraries which, in Rust terminology, we call a crate. (Executables projects such as safe_vault are also called crates)
+  para1:  Code is 100% Rust for all the libraries which, in Rust terminology, we call a crate. Executables projects such as safe_vault are also called crates. All our code is opensourced.
 components:
   title: Project Hierarchy
   comp1:
     name: Crust
-    para1: Lowest layer in the project stack. This is our IP networking layer for peer to peer connection.
-    para2:
+    para1: 
       chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimized for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and 
       link1:
         name: Tokio
         href: 'https://tokio.rs'
-      chunk2: ". It supports multiple protocols (μTP and TCP) and it is crypto secure: all communications, starting with handshake messages, are encrypted. It also provides other security features like randomised ports that are used to prevent targeting a particular known port to conduct DoS attacks. Crust implements several NAT traversal techniques such as hole punching and usage of IGD."
+      chunk2: ". It supports multiple protocols (μTP and TCP) and it is crypto secure: all communications, starting with handshake messages, are encrypted. It also provides other security features like randomised ports that are used to prevent targeting a particular known port to conduct DoS attacks. Crust implements several NAT traversal techniques such as hole punching and usage of "
+      link2:
+        name: IGD
+        href: https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol
+      chunk3: "."
 
   comp2:
     name: Routing
-    para1: Sits on top of Crust, this is our overlay networking and routing layer and forms the brain (use some other term here if this is cliched) of the SAFE Network. It aims at forming a decentralised Internet and routing information within it.
+    para1: Sits on top of Crust, this is our overlay networking and routing layer and forms the brain of the SAFE Network. It aims at forming a decentralised Internet and routing information within it.
     para2: 
       chunk1: Routing is based on an algorithm that extends the 
       link1: 
         name: Kademlia
         href: https://en.wikipedia.org/wiki/Kademlia
-      chunk2: DHT routing. It uses 32-byte XOR addresses to locate data on the network. It is guaranteed that messages can be routed from any part of the network to any other end - as is proven by the Kademlia paper.
-    para3: The most important fact about routing is that it works purely on the terms of group consensus. We don’t trust a single entity, only a group decision with eventual consistency.
-    para4: "It provides secure message relay: it is guaranteed that messages will reach the destination, untampered, even if there is a malicious party on the path."
-    para5: We also require a proof of resource from newly joining nodes to test if they have enough bandwidth and computation capability. Nodes are sent a challenge that requires intense computation, which they are required to solve within a specified amount of time (which is configurable). This algorithm can be configured and reused by other networks too as it is not specific to SAFE Network.
-    para6: Routing divides the network into sections. Each section has a prefix, except for the starting genesis section which has an empty prefix. [TODO neighbours & siblings]. When enough nodes join a section, the section splits.
-    para7: To prevent nodes from staying in one section for too long and opening a possibility to form a malicious group within a section nodes can be relocated to other sections. The target relocation address is derived deterministically from randomly occurring network events this way all nodes in a section can agree on the destination without having to synchronise time or random seeds.
-    para8: "Each node has an age which currently starts at 4. Voting weight of a node is based on its age: the older the node, the more influence it has in the quorum (> 50% of nodes agreeing on something). The age also affects the relocation process: the younger the node, the more probable that it will be relocated to another section. Every time a node is relocated, it increases its age by 1. Ages increment logarithmically: older nodes take more time to get older. That also means older nodes are incentivised to not leave the network and not behave maliciously as it is difficult to attain the higher ages."
+      chunk2: "DHT routing. It uses 32-byte XOR addresses to locate data on the network. It is guaranteed that messages can be routed from any part of the network to any other end - as is proven by the Kademlia paper. Routing works purely on the terms of group consensus. We don’t trust a single entity, only a group decision with "
+      link2: 
+        name: eventual consistency
+        href: https://en.wikipedia.org/wiki/Eventual_consistency
+      chunk3: "."
   comp3:
     name: Vault
     para1: This is one of the executable consumers of Routing and will primarily hold SAFE Network Data.
-    para2: "Vaults support multiple data types: the ones that are currently available to developers are Mutable Data and Immutable Data. The major difference between these two types is the ability to change the data. Both have their own set of properties."
-    para3: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash. Currently, the maximum allowed size of a data object is roughly 1MB. If users want to store large files, the network will split them into multiple chunks."
-    para4: "Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control: it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned: even the owner cannot update the content silently."
-    para5: "Personas in Vaults handle the different aspects of the network: Data Managers store the data, Client Managers store the users accounts balance, which is currently measured in allowed mutations, and eventually will be changed to SafeCoin. Client Managers also store lists of users’ apps and implement the access control rules. They handle incoming requests and check whether a user or an app is allowed to modify a certain piece of data on the network. If a user has required permissions and a request was successful, Client Managers deduct the account balance. This behaviour requires all mutation requests to go through Client Managers which send these requests on further to Data Managers. However, users are free to send read requests directly to Data Managers - there is no requirement to have a registered account to read data."
+    para2: "Vaults support multiple data types, the ones that are currently available to developers are Mutable Data and Immutable Data. The major difference between these two types is the ability to change the data. Both have their own set of properties."
+    para5: "Personas in Vaults handle the different aspects of the network. Data Managers store the data, Client Managers store the users accounts balance, which is currently measured in allowed mutations, and eventually will be changed to SafeCoin. Client Managers also store lists of users’ apps and implement the access control rules. There is no requirement to have a registered account to retrieve data and users are always free to send direct read requests to Data Managers."
   comp4:
     name: SAFE Client Libs
-    para1: This is the other consumer of Routing and is a library that serves as the Gateway to access, and deal with, the SAFE Network for frontend Apps. SAFE Client Libs consists of a group of crates each of which have specific roles.
-    para2: "Authenticator: A component of the client-libs group that allows for self-authenticated login and account creation."
-    para3: "Safe-App: Provides access to SAFE Network for frontend Apps in a user friendly way via FFI. The details of exact expectations by layers below is abstracted away."
-    para4: "Safe-Core: Common backend for Authenticator and Safe-App, forming the client engine."
+    para1: This is the other consumer of Routing. It is a library that provides high-level interface to access the SAFE Network for front-end apps written in different programming languages that we support. SAFE Client Libs consist of a group of crates that have their own specific respective roles.
+    para2: The Authenticator is the component that provides Self Authenticated login and account creation and handles the register of all users' apps. It is integrated with the SAFE Browser and apps can request the access to the network through it. If users don't want to use a certain app anymore, they can revoke the access.
+    para3: 
+      chunk1: "SAFE App is the component that provides access to SAFE Network for frontend Apps in a user friendly way via "
+      link1:
+        name: FFI
+        href: https://en.wikipedia.org/wiki/Foreign_function_interface
+    para4: SAFE Core is the foundation that provides various helpful abstractions like NFS on top of the basic network building blocks. It is also the common backend for the Authenticator and SAFE App, forming the client engine.
 utilities:
   title: Utilities and Helper Libraries
   comp1:
     name: Self-Encryption
     para1: MaidSAFE patented scheme for generating entropy to obfuscate and encrypt data from the data itself.
     para2: 
-      chunk1: Self Encryption is based on the 
+      chunk1: Self-Encryption is based on the 
       link1: 
         name: convergent encryption
         href: https://en.wikipedia.org/wiki/Convergent_encryption
-      chunk2: "algorithm. It produces the same encrypted output for the same plaintext input. This property allows to deduplicate files on the network level: files are split up into multiple chunks,  stored on the network at the same predictable location, based on the encrypted chunks’ hashes. The result of the encryption process is a data map that holds keys to the encrypted data chunks and is stored securely on the network. This self-encryption crate is usable even outside of the SAFE Network context as the I/O implementation is abstract."
+      chunk2: "algorithm. It produces the same encrypted output for the same plaintext input. This property allows to deduplicate files on the network level. Files are split up into multiple chunks, stored on the network at the same predictable location, based on the encrypted chunks’ hashes. The result of the encryption process is a data map that holds keys to the encrypted data chunks and is stored securely on the network. This crate is usable even outside of the SAFE Network context as the I/O implementation is abstract."
   comp2:
     name: System-URI
-    para1: Generic crate that registers executables for the specified scheme with the OS so the executable can become the handle for that scheme.
+    para1: Generic crate that registers executables for the specified scheme with the OS so the executable can become the handler for that scheme.
   comp3:
     name: Rust-Sodium
     para1: libsodium bindings, forked from the sodiumoxide project, provides extra features and improves the security.
@@ -63,20 +65,20 @@ utilities:
 rfcs:
   title: RFCs
   rfc1:
-    name: Safe Launcher API
-    href: '/rfc1'
+    name: Disjoint Sections
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0037-disjoint-groups/0037-disjoint-groups.md'
   rfc2:
     name: Async safe_core
-    href: '/rfc2'
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0043-async-safe-core/0043-async-safe-core.md'
   rfc3:
     name: Auth Flow
-    href: '/rfc3'
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0046-new-auth-flow/0046-new-auth-flow.md'
   rfc4:
     name: Mutable Data
-    href: '/rfc4'
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0047-mutable-data/0047-mutable-data.md'
   rfc5:
     name: Authorise Apps
-    href: '/rfc5'
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0048-authorise-apps/0048-authorise-apps.md'
 patents:
   title: Relevant Patents
   patent1:

@@ -5,9 +5,9 @@ platformLinks:
   - icon: web
     name: Web
     href: '/platform/web'
-  - icon: rust
-    name: Rust
-    href: '/platform/rust'
+  # - icon: rust
+  #   name: Rust
+  #   href: '/platform/rust'
 intro:
   title:
     dark: The
