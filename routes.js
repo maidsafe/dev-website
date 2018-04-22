@@ -73,13 +73,6 @@ export default [
     }),
   },
   {
-    path: '/platform/rust',
-    component: 'src/containers/platform_rust',
-    getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_RUST),
-    }),
-  },
-  {
     path: '/licensing',
     component: 'src/containers/licensing',
     getData: () => ({

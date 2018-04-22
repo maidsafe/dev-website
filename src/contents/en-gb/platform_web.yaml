@@ -6,9 +6,6 @@ platformLinks:
     name: Web
     href: '/platform/web'
     isActive: true
-  - icon: rust
-    name: Rust
-    href: '/platform/rust'
 pageNav:
   nav1:
     name: SAFE Web App Tutorial
