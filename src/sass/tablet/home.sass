@@ -2,6 +2,27 @@
   .home
     .home-banner
       height: $home-banner-height-sm
+    .hom-bnr-2
+      height: $home-banner-height-sm-2
+      &:after
+        height: 120%
+        top: auto
+        bottom: -15%
+        background-image: url($home-banner-sm-url)
+        background-position: left bottom
+      .hom-bnr-2-cntx
+        width: 90%
+        transform: translate(0, 0)
+        position: relative
+        top: 0
+        left: 0
+        padding: 50px 30px 30px
+        .hom-bnr-2-h
+          font-size: 28px
+          padding-bottom: 24px
+          margin-bottom: 28px
+        .hom-bnr-2-cntn
+          font-size: 22px
     .build-on-safe
       .build-on-safe-b
         .lay-40

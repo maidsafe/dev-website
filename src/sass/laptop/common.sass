@@ -10,3 +10,38 @@
   .dual-tone-text
     +header-1-1()
 
+// for header nav
+@media screen and (min-width: 769px) and (max-width: 850px)
+  header
+    nav
+      display: none
+      width: 200px
+      padding: 16px
+      position: absolute
+      top: 80px
+      right: 0
+      text-align: center
+      background-color: $colr-white
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+      a
+        margin: 0
+        display: block
+        text-align: left
+        font-size: 16px
+        &.external
+          background-color: transparent
+          padding: 0
+          border-radius: 0
+          &:after
+            display: none !important
+          &.active,
+          &:hover
+            color: $colr-text
+      &.active
+        display: block
+    .mob-menu
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      margin: 15px 0

@@ -10,9 +10,15 @@ class Home extends React.Component {
     return (
       <section className="home">
         <div className="home-b">
-          <div className="home-banner">
+          {/* <div className="home-banner">
             <div className="home-banner-typo"></div>
             <div className="home-banner-link"><a href={data.homeBanner.link.href} target="_blank">{data.homeBanner.link.name}</a></div>
+          </div> */}
+          <div className="hom-bnr-2">
+            <div className="hom-bnr-2-cntx">
+              <div className="hom-bnr-2-h">{data.homeBanner2.title}</div>
+              <div className="hom-bnr-2-cntn">{data.homeBanner2.para}</div>
+            </div>
           </div>
 
           <div className="build-on-safe">
