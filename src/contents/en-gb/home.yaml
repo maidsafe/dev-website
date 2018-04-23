@@ -3,8 +3,8 @@ homeBanner:
     name: View Live Stream
     href: https://www.youtube.com/watch?v=8DKjsJxVdfg
 homeBanner2:
-  title: Start developing on the world’s first autonomous network
-  para: Decentralised, privacy, secure and infrastructure free. Get the tools and support you need to start building.
+  title: Start developing on the world’s first autonomous data network
+  para: Decentralised, private, secure and infrastructure free. Get the tools and support you need to start building.
 buildOnSafeNet:
   title:
     dark1: Why build on
