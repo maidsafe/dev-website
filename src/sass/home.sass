@@ -45,6 +45,48 @@
           position: absolute
           top: 0
           left: 0
+  .hom-bnr-2
+    position: relative
+    height: $home-banner-height
+    position: relative
+    overflow: hidden
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-image: url($home-banner-lg-url)
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: left bottom
+      z-index: -1
+    .hom-bnr-2-cntx
+      width: 30%
+      position: absolute
+      top: 50%
+      left: 80px
+      color: $colr-text
+      transform: translate(0, -50%)
+      .hom-bnr-2-h
+        font-size: 48px
+        font-weight: 600
+        position: relative
+        padding-bottom: 30px
+        margin-bottom: 40px
+        &:after
+          content: ""
+          width: 150px
+          height: 5px
+          border-radius: 3px
+          background-color: $colr-white
+          display: block
+          bottom: 0
+          left: 0
+          position: absolute
+      .hom-bnr-2-cntn
+        font-size: 30px
   .build-on-safe
     background-color: $colr-theme-light
     min-height: 300px
