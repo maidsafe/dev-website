@@ -38,7 +38,7 @@ components:
     name: Vault
     para1: This is one of the executable consumers of Routing and will primarily hold SAFE Network Data.
     para2: "Vaults support multiple data types, the ones that are currently available to developers are Mutable Data and Immutable Data. The major difference between these two types is the ability to change the data. Both have their own set of properties."
-    para5: "Personas in Vaults handle the different aspects of the network. Data Managers store the data, Client Managers store the users accounts balance, which is currently measured in allowed mutations, and eventually will be changed to SafeCoin. Client Managers also store lists of users’ apps and implement the access control rules. There is no requirement to have a registered account to retrieve data and users are always free to send direct read requests to Data Managers."
+    para5: "Personas in Vaults handle the different aspects of the network. Data Managers store the data, Client Managers store the users accounts balance, which is currently measured in allowed mutations, and eventually will be changed to Safecoin. Client Managers also store lists of users’ apps and implement the access control rules. There is no requirement to have a registered account to retrieve data and users are always free to send direct read requests to Data Managers."
   comp4:
     name: SAFE Client Libs
     para1: This is the other consumer of Routing. It is a library that provides high-level interface to access the SAFE Network for front-end apps written in different programming languages that we support. SAFE Client Libs consist of a group of crates that have their own specific respective roles.
@@ -66,7 +66,7 @@ utilities:
     para1: Generic crate that registers executables for the specified scheme with the OS so the executable can become the handler for that scheme.
   comp3:
     name: Rust-Sodium
-    para1: libsodium bindings, forked from the sodiumoxide project, provides extra features and improves the security.
+    para1: Libsodium bindings, forked from the sodiumoxide project, provides extra features and improves the security.
 
 rfcs:
   title: RFCs

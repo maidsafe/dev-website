@@ -1,6 +1,6 @@
 intro:
   title: Licensing
-  para1: "All SAFE Network libraries are available under the General Public License Version 3 (GPLv3). This license was chosen as it adheres to four principles that are critically important to the company’s vision of the internet of the future; namely:"
+  para1: "All core SAFE Network libraries are available under the General Public License Version 3 (GPLv3). This license was chosen as it adheres to four principles that are critically important to the company’s vision of the internet of the future; namely:"
   list:
     - The freedom to use the software for any purpose
     - The freedom to change the software to suit your needs
@@ -15,7 +15,16 @@ intro:
     chunk2: ", and if you are not familiar with the license we would certainly recommend doing that. Some major considerations are that derivative works must remain open source (GPLv3 license) and the license requires that you publish all your source code."
 useOfApi:
   title: Use of APIs
-  para: "Any app that uses the bindings is fine to choose whatever license they wish for their app/product as in this case they are making API calls on the network as opposed to integrating directly with the libraries. These bindings are: "
+  para: 
+    chunk1: "The SAFE bindings are available under either the" 
+    link1:
+      name: MIT
+      href: https://opensource.org/licenses/MIT
+    chunk2: " or "
+    link2:
+      name: BSD
+      href: https://opensource.org/licenses/BSD-3-Clause 
+    chunk3: " license and any app that uses the bindings is fine to choose whatever license they wish for their app/product as in this case they are making API calls on the network as opposed to integrating directly with the libraries. These bindings are:"
   list:
     - name: Node.js
       href: https://github.com/maidsafe/safe_app_nodejs

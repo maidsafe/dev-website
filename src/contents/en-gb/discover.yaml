@@ -1,7 +1,7 @@
 intro:
   title: Discover
   para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
-  para2: To enable this here are the components and features that together form the Network.
+  para2: The following components and features represent key aspects of the Network
   para3:
 authenticator:
   title: The Authenticator
@@ -98,12 +98,12 @@ dataTypes:
     - name: Immutable Data
       features:
         - title: About
-          para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified: it is not possible to change the contents without affecting the hash."
+          para: "Immutable Data objects are stored at predictable locations on the network: an address (XorName) of an Immutable Data object is the hash of its contents. This makes Immutable Data objects self-verified and it is not possible to change the contents without affecting the hash."
         - title: Use case
           para: "In most of the cases Immutable Data will be encrypted using the Self Encryption algorithm that produces the same ciphertext output for the same plaintext input. This is called the convergent encryption and it allows for data deduplication; the same files will be stored at the same places, even in the encrypted form. To retrieve this data, users need to have a private key - or a _data map_ - holding the encryption keys and hashes of data chunks."
     - name: Mutable Data
       features:
         - title: About
-          para: "Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control: it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned, even the owner cannot update the content silently."
+          para: "Mutable Data objects are key-value mappings. Each Mutable Data has an owner and owners are free to modify the data by adding new values or updating existing ones. Mutable Data objects also provide access control and it is possible to set fine-grained permissions to allow other users or apps to modify the Mutable Data contents. This feature allows apps to explicitly ask users for permission to act and store data on their behalf. Mutable Data objects and their values are versioned, even the owner cannot update the content silently."
         - title: Flavours
           para: "The data stored on the network is always accessible by anyone. If users don't want to give access to third parties, they can encrypt the contents of Mutable Data objects. We recognise two different flavours of it: Private and Public Mutable Data. Through Authenticator users can share the access to their private Mutable Data objects with apps and other users."
