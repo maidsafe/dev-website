@@ -23,7 +23,9 @@ class Licensing extends React.Component {
           </div>
           <div className="lic-content">
             <h3 className="sub-title">Use of APIs</h3>
-            <p>{data.useOfApi.para}</p>
+            <p>
+              {data.useOfApi.para.chunk1}&nbsp;<a href={data.useOfApi.para.link1.href}>{data.useOfApi.para.link1.name}</a>{data.useOfApi.para.chunk2}<a href={data.useOfApi.para.link2.href}>{data.useOfApi.para.link2.name}</a>{data.useOfApi.para.chunk3}
+            </p>
             <ul className="list">
               {
                 data.useOfApi.list.map((li, i) => (
@@ -31,11 +33,6 @@ class Licensing extends React.Component {
                 ))
               }
             </ul>
-          </div>
-          <div className="lic-content">
-            <h3 className="sub-title">{data.linking.title}</h3>
-            <p>{data.linking.para1}</p>
-            <p>{data.linking.para2}</p>
           </div>
           <div className="lic-content">
             <h3 className="sub-title">{data.coreContributions.title}</h3>
