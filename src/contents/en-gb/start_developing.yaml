@@ -41,7 +41,7 @@ startDevelop:
     - title: Saving decentralised data
       icon: contact-app
       para:
-        chunk1: When using traditional NoSQL platforms like MondoDB, or Redis we'd need to implement both the database in our application as well set up a server to handle requests, or go direct to a cloud provider like Firebase. But these are centralised solutions that you as an app developer will be paying for.
+        chunk1: When using traditional NoSQL platforms like MongoDB, or Redis we'd need to implement both the database in our application as well set up a server to handle requests, or go direct to a cloud provider like Firebase. But these are centralised solutions that you as an app developer will be paying for.
         chunk2: With SAFE, you have no infrastructure to set up, and as the users own their own data, they commit it directly to the network. All you need worry about is your data structures and authorising your application against the network.
     - title: File storage
       icon: file-storage
