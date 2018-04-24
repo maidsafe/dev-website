@@ -5,15 +5,15 @@ intro:
   para3:
 authenticator:
   title: The Authenticator
-  desc: Before browsing on the SAFE Network, users need to create an account via the Authenticator application. The Authenticator, enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
+  desc: Before browsing on the SAFE Network, users need to create an account via the Authenticator application. The Authenticator enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
   para1:
     chunk1: "The Authenticator is bundled with the SAFE Browser and registers a custom URL scheme "
     highlight: "safe-auth://"
-    chunk2: ". Similarly every app registers their own safe--prefixed url-scheme. The process for authentication is as follows:"
+    chunk2: ". Similarly every app registers their own safe-prefixed url-scheme. The process for authentication is as follows:"
   steps:
     - title: Application requests access
       icon: AUTH_1
-      desc: The application authorises with the Authenticator with the needed access permissions. The application can create its own container, and request access to default containers or other applications' containers through the authorisation request.
+      desc: The application authorises with the Authenticator with the needed access permissions. The application can create its own container and request access to default containers or other applications' containers through the authorisation request.
     - title: User grants access
       icon: AUTH_2
       desc: When the user approves the request, application specific encryption keys are generated. The application will be identified in the network using its keys. When the user grants or denies authorisation, the application will receive a URI.
@@ -29,23 +29,17 @@ networks:
       id: mockRouting
       para1: When a website or application is built with mock-routing enabled, it does not connect to a live network. Instead, it interfaces with a local database, created on your system, to simulate network operations.
       para2: This saves a great deal of time and provides a safe space for you to initially test operations.
-      btnLink:
-        name: Know more
-        link: '#'
     - name: Local Network
       id: localNetwork
-      para1: When the SAFE Browser, or another application, is built with mock-routing enabled, it’s not connecting to a live network, it’s interfacing with a local database that is created on your system to simulate network operations.
-      para2: This saves a great deal of time and provides a safe space for your application or website to initially test operations.
+      para1: A local SAFE Network can be created by running several vaults on a LAN, or even on the same computer, which any application can then be configured to connect to.
+      para2: This is also a good way to save time when testing and debugging applications before they are ready to connect to the actual network.
       btnLink:
         name: Know more
-        link: '#'
+        link: https://forum.safedev.org/t/how-to-run-a-local-test-network/842
     - name: Actual Routing
       id: actualRouting
-      para1: When the SAFE Browser, or another application, is built with mock-routing enabled, it’s not connecting to a live network, it’s interfacing with a local database that is created on your system to simulate network operations.
-      para2: This saves a great deal of time and provides a safe space for your application or website to initially test operations.
-      btnLink:
-        name: Know more
-        link: '#'
+      para1: The SAFE Browser or any other application can also use the public testnets.
+      para2: This may not be the best option for initial tests or debugging when developing a SAFE app, as you would be limited in the number of mutations allowed per test account.
 vault:
   title: Vault
   desc: When a user uploads (or saves) a ﬁle to the Network, via one of the SAFE Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the vaults of other SAFE Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
@@ -56,7 +50,7 @@ vault:
 containers:
   title: Default Containers
   desc:
-    chunk1: The SAFE Network follows a common pattern of providing default containers for storing different types of user's data. For example
+    chunk1: The SAFE Network follows a common pattern of providing default containers for storing different types of users' data. For example
     highlight1: _documents
     chunk2: is used to store document related data;
     highlight2: _downloads

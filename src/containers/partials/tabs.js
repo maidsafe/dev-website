@@ -54,6 +54,9 @@ export default class Tabs extends React.Component {
             <h3 className="tab-cntr-title">{type.name}</h3>
             <p className="tab-cntr-para">{type.para1}</p>
             <p className="tab-cntr-para">{type.para2}</p>
+            {
+              type.btnLink ? (<div className="tab-cntr-opt"><button className="btn ghost-btn" onClick={() => window.open(type.btnLink.link)}>{type.btnLink.name}</button></div>) : null
+            }
             {/* <div className="tab-cntr-opt"><button className="btn ghost-btn">{type.btnLink.name}</button></div> */}
           </div>
         </div>

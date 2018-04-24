@@ -1,5 +1,5 @@
 pageIntro:
-  title: 'Core Developer'
+  title: Core Technology
   para1:
     chunk1: The SAFE Network core libraries are written exclusively in Rust and the content below provides a brief explanation of their hierarchy. The code is all open source and for more information please refer to our
     link:
@@ -11,7 +11,7 @@ components:
   comp1:
     name: Crust
     para1:
-      chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimized for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and
+      chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimised for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and
       link1:
         name: Tokio
         href: 'https://tokio.rs'
@@ -23,7 +23,7 @@ components:
 
   comp2:
     name: Routing
-    para1: Sits on top of Crust, this is our overlay networking and routing layer and forms the brain of the SAFE Network. It aims at forming a decentralised Internet and routing information within it.
+    para1: Routing sits on top of Crust. It is our overlay networking and routing layer and forms the brain of the SAFE Network. Its purpose is forming a decentralised Internet and routing information within it.
     para2:
       chunk1: Routing is based on an algorithm that extends the
       link1:
@@ -44,7 +44,7 @@ components:
     para1: This is the other consumer of Routing. It is a library that provides high-level interface to access the SAFE Network for front-end apps written in different programming languages that we support. SAFE Client Libs consist of a group of crates that have their own specific respective roles.
     para2: The Authenticator is the component that provides Self Authenticated login and account creation and handles the register of all users' apps. It is integrated with the SAFE Browser and apps can request the access to the network through it. If users don't want to use a certain app anymore, they can revoke the access.
     para3:
-      chunk1: SAFE App is the component that provides access to SAFE Network for frontend Apps in a user friendly way via
+      chunk1: SAFE App is the component that provides access to SAFE Network for front-end Apps in a user friendly way via
       link1:
         name: FFI
         href: https://en.wikipedia.org/wiki/Foreign_function_interface
@@ -60,7 +60,7 @@ utilities:
       link1:
         name: convergent encryption
         href: https://en.wikipedia.org/wiki/Convergent_encryption
-      chunk2: "algorithm. It produces the same encrypted output for the same plaintext input. This property allows to deduplicate files on the network level. Files are split up into multiple chunks, stored on the network at the same predictable location, based on the encrypted chunks’ hashes. The result of the encryption process is a data map that holds keys to the encrypted data chunks and is stored securely on the network. This crate is usable even outside of the SAFE Network context as the I/O implementation is abstract."
+      chunk2: "algorithm. It produces the same encrypted output for the same plaintext input. This property allows us to deduplicate files at the network level. Files are split up into multiple chunks, stored on the network at the same predictable location, based on the encrypted chunks’ hashes. The result of the encryption process is a data map that holds keys to the encrypted data chunks and is stored securely on the network. This crate is usable even outside of the SAFE Network context as the I/O implementation is abstract."
   comp2:
     name: System-URI
     para1: Generic crate that registers executables for the specified scheme with the OS so the executable can become the handler for that scheme.
