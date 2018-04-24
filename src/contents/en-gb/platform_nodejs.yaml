@@ -378,7 +378,7 @@ createPublicMD:
     highlight1: md
     chunk2: variable outside the function so we can then access this same MutableData from other functions.
   para10:
-    If we run the application again now, it should successfully connect to the network after an authorisation was given, and it will create a random MutableData with some initial data, although we won’t see it on the UI yet, so let’s now add the code to retrive the values from the MutableData to render it in the UI.
+    If we run the application again now, it should successfully connect to the network after an authorisation was given, and it will create a random MutableData with some initial data, although we won’t see it on the UI yet, so let’s now add the code to retrieve the values from the MutableData to render it in the UI.
 readMDEntries:
   title: Read the MutableData entries
   para1:
@@ -433,7 +433,7 @@ addEntries:
             await md.applyEntriesMutation(mutations);
           };
   para6: Let’s now run the application and try to add a new trip to the list, the application will insert it in the MutableData and the list will be automatically refreshed on the UI afterwards.
-  para7: Note that since we are creating a MutableData at a random location each time the application loads, any new items/trps the user inserts won’t be displayed after restarting the application. This can obviously be changed by storing the MutableData at a custom location that can be found each time the application loads. We are leaving this out of the scope of this tutorial for the sake of simplicity.
+  para7: Note that since we are creating a MutableData at a random location each time the application loads, any new items/trips the user inserts won’t be displayed after restarting the application. This can obviously be changed by storing the MutableData at a custom location that can be found each time the application loads. We are leaving this out of the scope of this tutorial for the sake of simplicity.
 updateRemoveEntries:
   title: Update and remove entries
   para1:
@@ -463,7 +463,7 @@ updateRemoveEntries:
   para3:
     chunk1: The
     highlight1: removeItems
-    chunk2: is invoked when the user selects some of the trips from the list and then clicks on “remove trips already made”. As you can see we receive a list of items to be removed and we are able to add a “remove” action for each of them into the mutation transactin before we actually send the mutation request to the netowork when invoking
+    chunk2: is invoked when the user selects some of the trips from the list and then clicks on “remove trips already made”. As you can see we receive a list of items to be removed and we are able to add a “remove” action for each of them into the mutation transactin before we actually send the mutation request to the network when invoking
     highlight2: applyEntriesMutation
     chunk3: . This is to reduce the network traffic needed to perform several mutations on a single MutableData.
   para3_1:
