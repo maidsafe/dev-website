@@ -139,7 +139,7 @@ class Platform extends React.Component {
                   <Link to={data.preRequisites.list1.list1_2.link2.href}>
                     {data.preRequisites.list1.list1_2.link2.name}
                   </Link>
-                  {` ${data.preRequisites.list1.list1_2.chunk2}`}
+                  {`${data.preRequisites.list1.list1_2.chunk2}`}
                 </li>
               </ul>
             </div>

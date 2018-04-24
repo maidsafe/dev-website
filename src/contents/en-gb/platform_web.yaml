@@ -45,7 +45,7 @@ safeWeb:
     chunk1: In this tutorial we use the
     link1:
       name: SAFE Web App quick start
-      href: https://github.com/bochaco/safe-web-app-quick-start
+      href: https://github.com/maidsafe/safe_examples/tree/master/safe_web_app_quick_start
     chunk2: boilerplate, which is single page webapp compiled via
     link2:
       name: Node.js
@@ -119,16 +119,16 @@ installBrowser:
 createBasicSkeleton:
   title: Create basic skeleton
   para1:
-    chunk1: We first clone the boilerplate repo using
+    chunk1: We first clone the repo which contains the boilerplate using
     highlight1: git
     chunk2: onto a local folder named
-    highlight2: hello-safe-network
+    highlight2: safe_examples
     chunk3: ":"
   code1: |
-          $ git clone https://github.com/bochaco/safe-web-app-quick-start hello-safe-network
+          $ git clone https://github.com/maidsafe/safe_examples safe_examples
   para2: "And then install its dependencies:"
   code2: |
-          $ cd hello-safe-network
+          $ cd safe_examples/safe_web_app_quick_start
           $ npm install
   para3: "At this point we have a Node.js application ready to be launched, let’s run it:"
   code3: |

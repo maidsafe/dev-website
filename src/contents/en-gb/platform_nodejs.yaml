@@ -64,7 +64,7 @@ safeDesktop:
     chunk1: We are going to use the
     link1:
       name: SAFE App Electron quick start
-      href: https://github.com/bochaco/safe-app-electron-quick-start
+      href: https://github.com/maidsafe/safe_examples/tree/master/safe_app_electron_quick_start
     chunk2: boilerplate, which is based on the
     link2:
       name: Electron quick start
@@ -130,13 +130,13 @@ installBrowser:
 createBasicSkeleton:
   title: Create basic skeleton
   para1:
-    chunk1: We first clone the boilerplate repo using
+    chunk1: We first clone the repo which contains the boilerplate using
     highlight1: git
     chunk2: onto a local folder named
-    highlight2: hello-safe-network
+    highlight2: safe_examples
     chunk3: ":"
   code1: |
-          $ git clone https://github.com/bochaco/safe-app-electron-quick-start hello-safe-network
+          $ git clone https://github.com/maidsafe/safe_examples safe_examples
   para2:
     chunk1: As mentioned above in the
     link1:
@@ -150,7 +150,7 @@ createBasicSkeleton:
   para3: If you otherwise decided to use the browser which connects to a live SAFE Network, please skip the above step.
   para4: "And then install its dependencies:"
   code3: |
-          $ cd hello-safe-network
+          $ cd safe_examples/safe_app_electron_quick_start
           $ npm install
   para5: "At this point we have an Electron application ready to be launched, let’s run it:"
   code4: |
