@@ -45,7 +45,7 @@ safeWeb:
     chunk1: In this tutorial we use the
     link1:
       name: SAFE Web App quick start
-      href: https://github.com/bochaco/safe-web-app-quick-start
+      href: https://github.com/maidsafe/safe_examples/tree/master/safe_web_app_quick_start
     chunk2: boilerplate, which is single page webapp compiled via
     link2:
       name: Node.js
@@ -119,16 +119,16 @@ installBrowser:
 createBasicSkeleton:
   title: Create basic skeleton
   para1:
-    chunk1: We first clone the boilerplate repo using
+    chunk1: We first clone the repo which contains the boilerplate using
     highlight1: git
     chunk2: onto a local folder named
-    highlight2: hello-safe-network
+    highlight2: safe_examples
     chunk3: ":"
   code1: |
-          $ git clone https://github.com/bochaco/safe-web-app-quick-start hello-safe-network
+          $ git clone https://github.com/maidsafe/safe_examples safe_examples
   para2: "And then install its dependencies:"
   code2: |
-          $ cd hello-safe-network
+          $ cd safe_examples/safe_web_app_quick_start
           $ npm install
   para3: "At this point we have a Node.js application ready to be launched, let’s run it:"
   code3: |
@@ -308,7 +308,7 @@ createPublicMD:
     chunk1: Here we are declaring the
     highlight1: mdHandle
     chunk2: variable outside the function so we can then access the same MutableData from other functions.
-  para10: If we refresh the application page again now, it should successfully connect to the network after an authorisation was given, and it will create a random MutableData with some initial data, although we won’t see it on the UI yet, so let’s now add the code to retrive the values from the MutableData to render it in the UI.
+  para10: If we refresh the application page again now, it should successfully connect to the network after an authorisation was given, and it will create a random MutableData with some initial data, although we won’t see it on the UI yet, so let’s now add the code to retrieve the values from the MutableData to render it in the UI.
 readMDEntries:
   title: Read the MutableData entries
   para1:
@@ -403,7 +403,7 @@ updateRemoveEntries:
   para3_1:
     chunk1: Also bear in mind that when you remove and entry it is never deleted from the MutableData, but its value is just cleared, so you cannot insert a new entry with same key but update it. This is the reason that in our implementation of the
     highlight1: getItems
-    chunk2: "function we filter the deleted entries with the following condition when iterating thu them:"
+    chunk2: "function we filter the deleted entries with the following condition when iterating thru them:"
   code2: |
           if (value.buf.length == 0) return;
   para4: Note that the boilerplate code doesn’t have the implementation in the UI to be able to update trips, but we just added the implementation for updating the items on the MutableData entries, so go ahead and try to add the UI components to allow the user to do this ;)
