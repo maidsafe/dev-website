@@ -11,8 +11,8 @@ export default class Header extends React.Component {
       showMenu: false
     };
     this.routes = {
-      APP_DEV: '/app_developer',
-      CORE_DEV: '/core_developer',
+      APP_DEV: '/start_developing',
+      CORE_TECH: '/core_technology',
       DISCOVER: '/discover',
       PLATFORM_NODEJS: '/platform/nodejs',
       PLATFORM_RUST: '/platform/rust',
@@ -55,10 +55,10 @@ export default class Header extends React.Component {
         <nav className={navMenuClasses}>
           <Link className={classNames({
             active: this.isNavMatch(this.routes.APP_DEV) || this.isNavMatch(this.routes.PLATFORM_NODEJS) || this.isNavMatch(this.routes.PLATFORM_RUST) || this.isNavMatch(this.routes.PLATFORM_WEB)
-          })} to="/app_developer" onClick={() => { this.hideMenu() }}>Start Developing</Link>
+          })} to="/start_developing" onClick={() => { this.hideMenu() }}>Start Developing</Link>
           <Link className={classNames({
-            active: this.isNavMatch(this.routes.CORE_DEV)
-          })} to="/core_developer" onClick={() => { this.hideMenu() }}>Core Technology</Link>
+            active: this.isNavMatch(this.routes.CORE_TECH)
+          })} to="/core_technology" onClick={() => { this.hideMenu() }}>Core Technology</Link>
           <Link className={classNames({
             active: this.isNavMatch(this.routes.DISCOVER)
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>

@@ -5,8 +5,8 @@ import yaml from 'js-yaml';
 //
 const PAGES = {
   HOME: 'home',
-  APP_DEV: 'app_developer',
-  CORE_DEV: 'core_developer',
+  START_DEV: 'start_developing',
+  CORE_TECH: 'core_technology',
   PLATFORM_NODEJS: 'platform_nodejs',
   DISCOVER: 'discover',
   PLATFORM_WEB: 'platform_web',
@@ -38,17 +38,17 @@ export default [
     })
   },
   {
-    path: '/app_developer',
-    component: 'src/containers/app_developer',
+    path: '/start_developing',
+    component: 'src/containers/start_developing',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.APP_DEV)
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.START_DEV)
     })
   },
   {
-    path: '/core_developer',
-    component: 'src/containers/core_developer',
+    path: '/core_technology',
+    component: 'src/containers/core_technology',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.CORE_DEV)
+      data: getLocalContent(CONST.locals.EN_GB, PAGES.CORE_TECH)
     })
   },
   {

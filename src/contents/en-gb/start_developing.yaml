@@ -41,19 +41,19 @@ startDevelop:
     - title: Saving decentralised data
       icon: contact-app
       para:
-        chunk1: When using traditional NoSQL platforms like MondoDB, or Redis we'd need to implement both the database in our application as well set up a server to handle requests, or go direct to a cloud provider like Firebase. But these are centralized solutions that you as an app developer will be paying for.
+        chunk1: When using traditional NoSQL platforms like MondoDB, or Redis we'd need to implement both the database in our application as well set up a server to handle requests, or go direct to a cloud provider like Firebase. But these are centralised solutions that you as an app developer will be paying for.
         chunk2: With SAFE, you have no infrastructure to set up, and as the users own their own data, they commit it directly to the network. All you need worry about is your data structures and authorising your application against the network.
     - title: File storage
       icon: file-storage
       para:
         chunk1: Beyond using the network as a decentralised key-value storage, we can store much more than purely serialised data structures. Using the Network File System (NFS), you and your users can store any file, regardless of size or type, easily on the network.
-        chunk2: What's more, securing your users data is built right into the network.
+        chunk2: What's more, securing your users' data is built right into the network.
         chunk3: You no longer need to worry about servers, CDNs, backup or data duplication. The SAFE Network handles all this for you. So you're free to create something useful for everyone.
     - title: Sharing data across applications
       icon: share-data
       para:
         chunk1: Traditionally accessing data from another application would involve a maze of APIs and authentication systems. More third parties, more problems. And in the end you'd still be responsible for storing and securing that data too!
-        chunk2: This is no longer an issue on SAFE. With users owning their data, all you need to do is request access to specific containers or Mutable Datas and you're off.
+        chunk2: This is no longer an issue on SAFE. With users owning their data, all you need to do is request access to specific containers or MutableData's and you're off.
         chunk3: Complex inter-application data sharing has never been easier or more secure.
 accessingNetwork:
   title:
