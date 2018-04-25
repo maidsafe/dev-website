@@ -38,14 +38,14 @@ contribute:
     title: Build your idea
     desc: Bring your creativity to life on the SAFE Network.
     link:
-      name: Application Developer
-      href: /app_developer
+      name: Start Developing
+      href: /start_developing
   coreDev:
     title: Learn about the tech behind the Network
     desc: The components involved in the SAFE Network range from clients, vaults, routing and low level networking.
     link:
-      name: Core Developer
-      href: /core_developer
+      name: Core Technology
+      href: /core_technology
 
 roadmap:
   title: Roadmap
