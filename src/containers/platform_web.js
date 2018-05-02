@@ -105,20 +105,20 @@ class Platform extends React.Component {
             <div className="list-type-1">
               <ul>
                 <li>
-                  <Link to={data.preRequisites.list1.list1_1.link1.href}>
+                  <Link to={data.preRequisites.list1.list1_1.link1.href} target="_blank">
                     {data.preRequisites.list1.list1_1.link1.name}
                   </Link>
-                  {` ${data.preRequisites.list1.list1_1.chunk1}`}
+                  {`${data.preRequisites.list1.list1_1.chunk1}`}
                 </li>
                 <li>
-                  <Link to={data.preRequisites.list1.list1_2.link1.href}>
+                  <Link to={data.preRequisites.list1.list1_2.link1.href} target="_blank">
                     {data.preRequisites.list1.list1_2.link1.name}
                   </Link>
                   {` ${data.preRequisites.list1.list1_2.chunk1} `}
-                  <Link to={data.preRequisites.list1.list1_2.link2.href}>
+                  <Link to={data.preRequisites.list1.list1_2.link2.href} target="_blank">
                     {data.preRequisites.list1.list1_2.link2.name}
                   </Link>
-                  {`${data.preRequisites.list1.list1_2.chunk2}`}
+                  {` ${data.preRequisites.list1.list1_2.chunk2}`}
                 </li>
                 <li>
                   {`${data.preRequisites.list1.list1_3.chunk1} `}
@@ -126,7 +126,7 @@ class Platform extends React.Component {
                     {data.preRequisites.list1.list1_3.highlight1}
                   </span>
                   {` ${data.preRequisites.list1.list1_3.chunk2} `}
-                  <Link to={data.preRequisites.list1.list1_3.link1.href}>
+                  <Link to={data.preRequisites.list1.list1_3.link1.href} target="_blank">
                     {data.preRequisites.list1.list1_3.link1.name}
                   </Link>
                   {` ${data.preRequisites.list1.list1_3.chunk3} `}
@@ -624,11 +624,6 @@ class Platform extends React.Component {
               <div className="nav-i-links">
                 <Link to={data.pageNav.nav1.subNavs.sub8.href}>
                   {data.pageNav.nav1.subNavs.sub8.name}
-                </Link>
-              </div>
-              <div className="nav-i-links">
-                <Link to={data.pageNav.nav1.subNavs.sub9.href}>
-                  {data.pageNav.nav1.subNavs.sub9.name}
                 </Link>
               </div>
             </div>

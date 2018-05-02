@@ -129,7 +129,7 @@ class Platform extends React.Component {
                   <Link to={data.preRequisites.list1.list1_1.link1.href}>
                     {data.preRequisites.list1.list1_1.link1.name}
                   </Link>
-                  {` ${data.preRequisites.list1.list1_1.chunk1}`}
+                  {`${data.preRequisites.list1.list1_1.chunk1}`}
                 </li>
                 <li>
                   <Link to={data.preRequisites.list1.list1_2.link1.href}>
@@ -139,7 +139,30 @@ class Platform extends React.Component {
                   <Link to={data.preRequisites.list1.list1_2.link2.href}>
                     {data.preRequisites.list1.list1_2.link2.name}
                   </Link>
-                  {`${data.preRequisites.list1.list1_2.chunk2}`}
+                  {` ${data.preRequisites.list1.list1_2.chunk2}`}
+                </li>
+                <li>
+                  {`${data.preRequisites.list1.list1_3.chunk1} `}
+                  <span className="highlight">
+                    {data.preRequisites.list1.list1_3.highlight1}
+                  </span>
+                  {` ${data.preRequisites.list1.list1_3.chunk2} `}
+                  <span className="highlight">
+                    {data.preRequisites.list1.list1_3.highlight2}
+                  </span>
+                  {` ${data.preRequisites.list1.list1_3.chunk3} `}
+                  <Link to={data.preRequisites.list1.list1_3.link1.href} target="_blank">
+                    {data.preRequisites.list1.list1_3.link1.name}
+                  </Link>
+                  {` ${data.preRequisites.list1.list1_3.chunk4} `}
+                  <span className="highlight">
+                    {data.preRequisites.list1.list1_3.highlight3}
+                  </span>
+                  {` ${data.preRequisites.list1.list1_3.chunk5} `}
+                  <span className="highlight">
+                    {data.preRequisites.list1.list1_3.highlight4}
+                  </span>
+                  {`${data.preRequisites.list1.list1_3.chunk6}`}
                 </li>
               </ul>
             </div>
@@ -220,6 +243,17 @@ class Platform extends React.Component {
                 {data.createBasicSkeleton.code2}
               </SyntaxHighlighter>
             </div>
+            <p className="para">
+              {data.createBasicSkeleton.para2_1}
+            </p>
+            <div className="code-block">
+              <SyntaxHighlighter language="bash" style={duotoneLight}>
+                {data.createBasicSkeleton.code2_1}
+              </SyntaxHighlighter>
+            </div>
+            <p className="para">
+              {data.createBasicSkeleton.para2_2}
+            </p>
             <p className="para">
               {data.createBasicSkeleton.para3}
             </p>
@@ -707,11 +741,6 @@ class Platform extends React.Component {
               <div className="nav-i-links">
                 <Link to={data.pageNav.nav1.subNavs.sub10.href}>
                   {data.pageNav.nav1.subNavs.sub10.name}
-                </Link>
-              </div>
-              <div className="nav-i-links">
-                <Link to={data.pageNav.nav1.subNavs.sub11.href}>
-                  {data.pageNav.nav1.subNavs.sub11.name}
                 </Link>
               </div>
             </div>
