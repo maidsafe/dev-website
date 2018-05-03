@@ -91,13 +91,27 @@ preRequisites:
       chunk1: ": to be able to clone the boilerplate code"
     list1_2:
       link1:
-        name: Node.js
+        name: Node.js v8.11.1
         href: https://nodejs.org/en/download
       chunk1: "(which comes with "
       link2:
         name: npm
         href: http://npmjs.com/
-      chunk2: ) to be able to run the application since it’s a Node.js application
+      chunk2: v5.6.0) to be able to run the application since it’s a Node.js application
+    list1_3:
+      chunk1: If you are using Debian 9 as OS,
+      highlight1: build-essential
+      chunk2: and/or
+      highlight2: libgconf-2-4
+      chunk3: dependencies might be missing. Please install them with
+      link1:
+        name: Synaptic Package Mgr.
+        href: https://help.ubuntu.com/community/SynapticHowto
+      chunk4: ", or with"
+      highlight3: apt
+      chunk5: "from a shell console:"
+      highlight4: $ sudo apt-get install build-essential libgconf-2-4
+      chunk6: "."
 installBrowser:
   title: Install a SAFE Browser
   para1: Since the application will be authorising with the Authenticator to get the credentials needed to then connect to the SAFE Network, we first need to have an instance of the SAFE Browser installed.
@@ -125,7 +139,7 @@ installBrowser:
   para4_1: "If you are using Windows you can set it with the following command instead:"
   code2: |
           $ set NODE_ENV=dev
-  para4_2: You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
+  para4_2: You can now launch the browser (make sure you launch it from the same console where you just set the NODE_ENV variable), please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
   para5: After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
 createBasicSkeleton:
   title: Create basic skeleton
@@ -147,6 +161,10 @@ createBasicSkeleton:
     chunk3: "environment variable:"
   code2: |
           $ export NODE_ENV=dev
+  para2_1: "If you are using Windows you can set it with the following command instead:"
+  code2_1: |
+          $ set NODE_ENV=dev
+  para2_2: Please note that all the commands we will be executing in the next steps need to be made on the same console where you just set the NODE_ENV environment variable.
   para3: If you otherwise decided to use the browser which connects to a live SAFE Network, please skip the above step.
   para4: "And then install its dependencies:"
   code3: |

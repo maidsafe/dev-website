@@ -63,18 +63,18 @@ preRequisites:
   list1:
     list1_1:
       link1:
-        name: git
+        name: Git
         href: https://git-scm.com/
       chunk1: ": to be able to clone the boilerplate code"
     list1_2:
       link1:
-        name: Node.js
+        name: Node.js v8.11.1
         href: https://nodejs.org/en/download
       chunk1: "(which comes with "
       link2:
         name: npm
-        href: http://npmjs.com/
-      chunk2: ) to be able to run the application since it’s a Node.js application
+        href: http://npmjs.com
+      chunk2: v5.6.0) to be able to run the application since it’s a Node.js application
     list1_3:
       chunk1: If you are using Ubuntu as OS,
       highlight1: libpng-dev
@@ -114,7 +114,7 @@ installBrowser:
   para4_1: "If you are using Windows you can set it with the following command instead:"
   code2: |
           $ set NODE_ENV=dev
-  para4_2: You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
+  para4_2: You can now launch the browser (make sure you launch it from the same console where you just set the NODE_ENV variable), please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
   para5: After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
 createBasicSkeleton:
   title: Create basic skeleton
