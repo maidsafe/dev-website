@@ -97,7 +97,11 @@ preRequisites:
       link2:
         name: npm
         href: http://npmjs.com/
-      chunk2: v5.6.0) to be able to run the application since it’s a Node.js application
+      chunk2: v5.6.0) to be able to run the application since it’s a Node.js application. All the steps in this tutorial are explained using npm, if you otherwise prefer to use
+      link3:
+        name: yarn
+        href: https://yarnpkg.com/en/
+      chunk3: ", please make sure you install v1.6.0. Note that the use of yarn is not required and totally optional"
     list1_3:
       chunk1: If you are using Debian 9 as OS,
       highlight1: build-essential
