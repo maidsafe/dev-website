@@ -80,7 +80,7 @@ preRequisites:
         href: https://yarnpkg.com/en/
       chunk3: ", please make sure you install v1.6.0. Note that the use of yarn is not required and totally optional"
     list1_3:
-      chunk1: If you are using Ubuntu as OS,
+      chunk1: If you are using Ubuntu or Debian 9 as OS,
       highlight1: libpng-dev
       chunk2: might be needed. Please install it with
       link1:

@@ -103,10 +103,10 @@ preRequisites:
         href: https://yarnpkg.com/en/
       chunk3: ", please make sure you install v1.6.0. Note that the use of yarn is not required and totally optional"
     list1_3:
-      chunk1: If you are using Debian 9 as OS,
-      highlight1: build-essential
+      chunk1: If you are using Ubuntu or Debian 9 as OS,
+      highlight1: libgconf-2-4
       chunk2: and/or
-      highlight2: libgconf-2-4
+      highlight2: build-essential
       chunk3: dependencies might be missing. Please install them with
       link1:
         name: Synaptic Package Mgr.
@@ -114,7 +114,7 @@ preRequisites:
       chunk4: ", or with"
       highlight3: apt
       chunk5: "from a shell console:"
-      highlight4: $ sudo apt-get install build-essential libgconf-2-4
+      highlight4: $ sudo apt-get install libgconf-2-4 build-essential
       chunk6: "."
 installBrowser:
   title: Install a SAFE Browser
