@@ -3,7 +3,7 @@ intro:
   para1:
     chunk1: The following core SAFE Network libraries are available under the
     link:
-      name: General Public licence Version 3
+      name: General Public Licence Version 3
       href: https://www.gnu.org/licenses/gpl-3.0.en.html
     chunk2: (GPLv3).
   list:
@@ -12,7 +12,7 @@ intro:
     - Safe_core
     - Safe_authenticator
     - Self_encryption
-  para2: By doing this, we are ensuring that the fundamental aspects of the SAFE Network will be locked open and accessible to all. In practice,  this means that developers building on (forking) MaidSafe’s core libraries must use the GPLv3 and publish all their source code.
+  para2: By doing this, we are ensuring that the fundamental aspects of the SAFE Network will be locked open and accessible to all. In practice, this means that developers building on (forking) MaidSafe’s core libraries must use the GPLv3 and publish all their source code.
   para3:
     chunk1: "There is one exception to this approach for the core libraries:"
     link1:
@@ -29,7 +29,7 @@ intro:
     chunk4: "(Modified). This library is potentially very useful to any project that needs a network connections library for a server-less, decentralised project. Therefore, in order to ensure that this library is used as widely as possible, we’ve chosen these permissive licences as they ensure that developers building on Crust receive the maximum flexibility in the sense that they can then select whatever licence they choose."
 useOfApi:
   title: Use of APIs
-  para: All other SAFE libraries, including the APIs and bindings, are licensed using both the MIT and BSD (Modified) licence.  In addition, any app that uses the bindings is allowed choose any licence for their app/product. The reason for this is that the app is only making API calls on the network as opposed to integrating directly with the libraries.
+  para: All other SAFE libraries, including the APIs and bindings, are licensed using both the MIT and BSD (Modified) licence.  In addition, any app that uses the bindings is allowed to choose any licence for their app/product. The reason for this is that the app is only making API calls on the network as opposed to integrating directly with the libraries.
 coreContributions:
   title: Core contributions
   para1: There is no Contributor Licence Agreement (CLA) for any developer wishing to make code contributions to the SAFE Network. This is because we want to minimise complexity and avoid confusion through additional legal agreements. Any contributions made to the SAFE Network assumes the contributor is contributing under the licence(s) of the library they are contributing to.
