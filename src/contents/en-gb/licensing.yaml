@@ -1,57 +1,45 @@
 intro:
   title: Licensing
-  para1: "All core SAFE Network libraries are available under the General Public License Version 3 (GPLv3). This license was chosen as it adheres to four principles that are critically important to the company’s vision of the internet of the future; namely:"
-  list:
-    - The freedom to use the software for any purpose
-    - The freedom to change the software to suit your needs
-    - The freedom to share the software with your friends and neighbors, and
-    - The freedom to share the changes you make.
-  para2: "This approach has been made synonymous with ‘copyleft’, which is important to MaidSafe  because the company agrees with the values of free software and the right of any developer to publish code under the terms of the GPLv3."
-  para3:
-    chunk1: If you're a developer building on (forking) our core libraries via crates.io or GitHub repositories, then GPLv3 applies. You can find out more about this license
+  para1:
+    chunk1: The following core SAFE Network libraries are available under the
     link:
-      name: here
-      href: https://www.gnu.org/licenses/gpl-3.0.html
-    chunk2: ", and if you are not familiar with the license we would certainly recommend doing that. Some major considerations are that derivative works must remain open source (GPLv3 license) and the license requires that you publish all your source code."
-useOfApi:
-  title: Use of APIs
-  para: 
-    chunk1: "The SAFE bindings are available under either the" 
+      name: General Public licence Version 3
+      href: https://www.gnu.org/licenses/gpl-3.0.en.html
+    chunk2: (GPLv3).
+  list:
+    - Routing
+    - Safe_vault
+    - Safe_core
+    - Safe_authenticator
+    - Self_encryption
+  para2: By doing this, we are ensuring that the fundamental aspects of the SAFE Network will be locked open and accessible to all. In practice,  this means that developers building on (forking) MaidSafe’s core libraries must use the GPLv3 and publish all their source code.
+  para3:
+    chunk1: "There is one exception to this approach for the core libraries:"
     link1:
+      name: Crust
+      href: https://github.com/maidsafe/crust
+    chunk2: ", a P2P network connections library, is licensed using either"
+    link2:
       name: MIT
       href: https://opensource.org/licenses/MIT
-    chunk2: " or "
-    link2:
+    link3:
       name: BSD
-      href: https://opensource.org/licenses/BSD-3-Clause 
-    chunk3: " license and any app that uses the bindings is fine to choose whatever license they wish for their app/product as in this case they are making API calls on the network as opposed to integrating directly with the libraries. These bindings are:"
-  list:
-    - name: Node.js
-      href: https://github.com/maidsafe/safe_app_nodejs
-    - name: Java
-      href: https://github.com/maidsafe/safe_app_java
-    - name: C#
-      href: https://github.com/maidsafe/safe_app_csharp
-    - name: Web
-      href: https://github.com/maidsafe/beaker-plugin-safe-app/
-linking:
-  title: Linking exception
-  para1: There is an exception to the terms of the GPLv3. If you link to our libraries (either statically or dynamically) with independent modules to produce an executable, you can license it under terms of your choice, provided that you also meet the terms and conditions of the license of each linked module. So with this exception we will enable projects that provide library code — i.e. code intended to be reusable in different applications, under different circumstances — to be extendable and adaptable without code changes.
-  para2: If you modify this library, you may extend this exception to your version of the library, but you are not obliged to do so. If you do not wish to do so, delete this exception statement from your version.
+      href: https://opensource.org/licenses/BSD-3-Clause
+    chunk3: or
+    chunk4: "(Modified). This library is potentially very useful to any project that needs a network connections library for a server-less, decentralised project. Therefore, in order to ensure that this library is used as widely as possible, we’ve chosen these permissive licences as they ensure that developers building on Crust receive the maximum flexibility in the sense that they can then select whatever licence they choose."
+useOfApi:
+  title: Use of APIs
+  para: All other SAFE libraries, including the APIs and bindings, are licensed using both the MIT and BSD (Modified) licence.  In addition, any app that uses the bindings is allowed choose any licence for their app/product. The reason for this is that the app is only making API calls on the network as opposed to integrating directly with the libraries.
 coreContributions:
   title: Core contributions
-  para1: There is no Contributor License Agreement (CLA) for any developer wishing to make code contributions to our code in order to minimise complexity and avoid confusion through additional legal agreements. Any contributions made to the SAFE Network assumes the contributor contributes under the terms of the GPLv3.
-  para2:
-    chunk1: The logic here is that if code is submitted to be incorporated into an open source project, with the knowledge that it will be distributed under a certain license, they must intend that code to be licensed similarly. In fact, GitHub has now made this point explicit in Section Six in their
-    link:
-      name: terms of service.
-      href: https://help.github.com/articles/github-terms-of-service/
+  para1: There is no Contributor Licence Agreement (CLA) for any developer wishing to make code contributions to the SAFE Network. This is because we want to minimise complexity and avoid confusion through additional legal agreements. Any contributions made to the SAFE Network assumes the contributor is contributing under the licence(s) of the library they are contributing to.
+  para2: The logic here is that if code is submitted to be incorporated into an open source project, with the knowledge that it will be distributed under a certain licence, the developer must intend that code to be licensed similarly. In fact, GitHub has now made this point explicit in Section Six in their Terms of Service.
 patents:
   title: Patents
-  para1: Patents are often used in malicious ways that stifle innovation. An alternative to the patent system is clearly required, but we cannot ignore that it exists and shouting our disagreement from the sidelines won’t help either.
-  para2: At MaidSafe our primary goal is open innovation and to enable technologies that build on top of, or around, SAFE Network code to have protection. It’s to this end that we have taken the steps of filling a number of defensive patents. These patents are owned by The MaidSafe Foundation, a registered Scottish charity (reg SC042030) set up by MaidSafe founder David Irvine (who gave away his shares in the process) to foster education and innovation. The Foundation has granted MaidSafe a license to these patents royalty free and in perpetuity.
+  para1: Patents are often used in malicious ways that stifle innovation. We strongly believe that an alternative to the patent system is clearly required. However, we can’t ignore that it exists and simply shouting our disagreement from the sidelines won’t help either as it may leave SAFE developers open to others that are looking to smother their work.
+  para2: At MaidSafe our primary goal is open innovation. To achieve this, we must ensure that the technologies that build on top of, or around, SAFE Network code are protected. For this purpose, we have filed a number of defensive patents. These patents are owned by The MaidSafe Foundation, a registered Scottish charity (reg SC042030) set up by MaidSafe founder David Irvine (who gave away his shares in the process) to foster education and innovation. The Foundation has granted MaidSafe a licence to these patents royalty-free and in perpetuity.
   list:
-    title: "These worldwide patents include:"
+    title: "These worldwide patents cover a range of technologies including:"
     items:
       - Distributed File Systems
       - Communication System and Method
@@ -62,4 +50,4 @@ patents:
       - Self Encryption Process
       - File System Authentication
       - Managed Authentication on a distributed network
-  para3: We believe this structure will provide SAFE Network developers and partners freedom to operate and mitigate some of the risks associated with modern software development.
+  para3: We firmly believe that under the current system, this structure that we have built will provide SAFE Network developers and partners freedom to operate freely and mitigate some of the risks associated with modern software development.
