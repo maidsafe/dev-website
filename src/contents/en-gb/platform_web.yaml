@@ -246,7 +246,7 @@ createPublicMD:
     chunk1: We are not going to go into the other aspects of the MutableData here, we will just create MutableData in the network to store the data of our application. Please refer to the
     link1:
       name: Discover page
-      href: /en-gb/discover
+      href: /discover
     chunk2: to learn more about the MutableData type as well as the other types of data available in the SAFE Network.
   para3:
     chunk1: In this tutorial we are going to create a public MutableData at a random address. Each piece of data stored on the network has its own unique 256 bits address in the network (you can read more about XOR addresses of the SAFE Network in the

@@ -12,32 +12,29 @@ class Licensing extends React.Component {
         <div className="licensing-b base">
           <div className="lic-content">
             <h3 className="page-title">{data.intro.title}</h3>
-            <p>{data.intro.para1}</p>
+            <p>{data.intro.para1.chunk1}&nbsp;<a href={data.intro.para1.link.href} target="_blank">{data.intro.para1.link.name}</a>&nbsp;{data.intro.para1.chunk2}</p>
             <ul className="list">
               {data.intro.list.map((li, i) => (
                 <li key={`intro-list=${i}`} className="ls-i">{li}</li>
               ))}
             </ul>
             <p>{data.intro.para2}</p>
-            <p>{data.intro.para3.chunk1}&nbsp;<a target="_blank" href={data.intro.para3.link.href}>{data.intro.para3.link.name}</a>{data.intro.para3.chunk2}</p>
+            <p>
+              {data.intro.para3.chunk1}&nbsp;<a target="_blank" href={data.intro.para3.link1.href}>{data.intro.para3.link1.name}</a>{data.intro.para3.chunk2}
+              &nbsp;<a target="_blank" href={data.intro.para3.link2.href}>{data.intro.para3.link2.name}</a>&nbsp;{data.intro.para3.chunk3}
+              &nbsp;<a target="_blank" href={data.intro.para3.link3.href}>{data.intro.para3.link3.name}</a>&nbsp;{data.intro.para3.chunk4}
+            </p>
           </div>
           <div className="lic-content">
-            <h3 className="sub-title">Use of APIs</h3>
+            <h3 className="sub-title">{data.useOfApi.title}</h3>
             <p>
-              {data.useOfApi.para.chunk1}&nbsp;<a href={data.useOfApi.para.link1.href}>{data.useOfApi.para.link1.name}</a>{data.useOfApi.para.chunk2}<a href={data.useOfApi.para.link2.href}>{data.useOfApi.para.link2.name}</a>{data.useOfApi.para.chunk3}
+              {data.useOfApi.para}
             </p>
-            <ul className="list">
-              {
-                data.useOfApi.list.map((li, i) => (
-                  <li key={`useapi-list-${i}`} className="ls-i"><a href={li.href} target="_blank">{li.name}</a></li>
-                ))
-              }
-            </ul>
           </div>
           <div className="lic-content">
             <h3 className="sub-title">{data.coreContributions.title}</h3>
             <p>{data.coreContributions.para1}</p>
-            <p>{data.coreContributions.para2.chunk1}&nbsp;<a href={data.coreContributions.para2.link.href} target="_blank">{data.coreContributions.para2.link.name}</a></p>
+            <p>{data.coreContributions.para2}</p>
           </div>
           <div className="lic-content">
             <h3 className="sub-title">{data.patents.title}</h3>
