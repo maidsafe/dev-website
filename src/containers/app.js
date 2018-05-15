@@ -1,10 +1,13 @@
 import React from 'react';
 import { Router, Link } from 'react-static';
 import { hot } from 'react-hot-loader';
+import ReactGA from 'react-ga';
+
 //
 import Routes from 'react-static-routes';
 import Header from './partials/header';
 import Footer from './partials/footer';
+import CONST from '../constants';
 
 import '../sass/main.sass';
 class App extends React.Component {
@@ -18,6 +21,8 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    ReactGA.initialize(CONST.GA_ID);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   handleScroll(e) {

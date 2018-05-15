@@ -3,6 +3,7 @@ import { withRouteData, Link } from 'react-static'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { duotoneLight } from 'react-syntax-highlighter/styles/prism';
 import classNames from 'classnames';
+import withTracker from './partials/withTracker';
 
 class Platform extends React.Component {
   constructor() {
@@ -409,5 +410,5 @@ class Platform extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  <Platform data={data} />
+  withTracker(Platform, data)
 ))

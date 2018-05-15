@@ -1,6 +1,8 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
 //
+import withTracker from './partials/withTracker';
+
 class CoreDeveloper extends React.Component {
   render() {
     const { data } = this.props;
@@ -161,5 +163,5 @@ class CoreDeveloper extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  <CoreDeveloper data={data} />
+  withTracker(CoreDeveloper,  data)
 ))

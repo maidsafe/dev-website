@@ -1,6 +1,7 @@
 import React from 'react'
 import { withRouteData, Link } from 'react-static'
 //
+import withTracker from './partials/withTracker';
 import Contribute from '../../public/images/contribute.svg';
 import Roadmap from '../../public/images/roadmap.png';
 
@@ -122,5 +123,5 @@ class Home extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  <Home data={data} />
+  withTracker(Home, data)
 ));

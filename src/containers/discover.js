@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouteData } from 'react-static'
 import classNames from 'classnames';
 import Tabs from './partials/tabs'
+import withTracker from './partials/withTracker';
 //
 import EcoSystemBanner from '../../public/images/ecosystem_banner.svg'
 import Auth1 from '../../public/images/auth_1.png'
@@ -152,5 +153,5 @@ class Discover extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  <Discover data={data} />
+  withTracker(Discover, data)
 ));
