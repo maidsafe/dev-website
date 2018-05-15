@@ -21,7 +21,6 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    ReactGA.initialize(CONST.GA_ID);
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
