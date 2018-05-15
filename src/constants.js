@@ -28,5 +28,6 @@ export default {
   tabTypes: {
     WIZARD: 'wizard',
     LAY_HALF: 'layout_half'
-  }
+  },
+  GA_ID: 'UA-39610124-17'
 };
