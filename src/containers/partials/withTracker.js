@@ -16,15 +16,6 @@ export default function withTracker(WrappedComponent, data = {}, options = {}) {
       trackPage(page);
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //   const currentPage = window.location.pathname;
-    //   const nextPage = nextProps.location.pathname;
-    //   console.log('currentPage', currentPage, nextPage);
-    //   if (currentPage !== nextPage) {
-    //     trackPage(nextPage);
-    //   }
-    //   // ReactGA.pageview(window.location.pathname + window.location.search);
-    // }
     render() {
       return <WrappedComponent data={data} {...this.props} />;
     }
