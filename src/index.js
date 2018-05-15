@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import ReactGA from 'react-ga'
 
 // Your top level component
+import CONST from './constants'
 import App from './containers/app'
 
 // Export your top level component as JSX (for static rendering)
