@@ -16,15 +16,20 @@
     "react-dom": "^16.0.0",
     "react-ga": "^2.5.2",
     "react-router": "^4.2.0",
+    "react-scroll": "^1.7.9",
     "react-static": "^5.7.1",
     "react-syntax-highlighter": "^7.0.2"
   },
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "eslint-config-react-tools": "1.x.x",
     "extract-text-webpack-plugin": "^3.0.2",
+    "html-react-parser": "^0.4.6",
     "js-yaml": "^3.11.0",
     "node-sass": "^4.7.2",
+    "prismjs": "^1.14.0",
     "sass-loader": "^6.0.6",
-    "serve": "^6.1.0"
+    "serve": "^6.1.0",
+    "showdown": "^1.8.6"
   }
 }

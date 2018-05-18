@@ -47,30 +47,23 @@
     float: right
     padding-top: $platform-top-pad-lg
     .nav-i
-      font-size: 18px
-      .nav-i-head
-        line-height: 24px
-        padding: 8px 0
-        a
-          text-decoration: none
-          color: inherit
-          &.selected
-            color: #2e3742
-            font-weight: bold
-      .nav-i-links
+      font-size: 20px
+      margin-bottom: 8px
+      font-weight: normal
+      line-height: 24px
+      padding: 8px 0
+      a
+        line-height: 28px
+        text-decoration: none
+        color: inherit
+        &.selected
+          color: #2e3742
+          font-weight: bold
+      &.nav-i-h1
         margin-left: 16px
-        margin-bottom: 8px
-        font-weight: normal
-        a
-          line-height: 28px
-          text-decoration: none
-          color: inherit
-        .nav-i-links-i
-          margin-left: 16px
-          margin-bottom: 8px
-          &.selected
-            color: #2e3742
-            font-weight: bold
+      &.nav-i-h2
+        margin-left: 32px
+        font-size: 18px
     .ref-link
       position: relative
       height: 100%
@@ -90,13 +83,13 @@
         background-position: center
         background-repeat: no-repeat
 
-  .page-title
+  .header-1
     font-size: 36px
     font-weight: 600
     margin-bottom: 40px
     padding-top: $platform-top-pad-lg
 
-  .page-sub-title
+  .header-2
     font-size: 24px
     font-weight: 600
     padding-top: 20px
@@ -127,19 +120,18 @@
 
   .code-block
     margin-bottom: 24px
-  .list-type-1
+  ul.list
     font-size: 18px
     margin-bottom: 24px
-    ul
-      list-style: none
-      margin-left: 24px
-      li
-        padding: 8px 0
-        list-style: disc
-        +para()
-        a
-          text-decoration: none
-          font-weight: 600
-          color: inherit
-          &:hover
-            text-decoration: underline
+    list-style: none
+    margin-left: 24px
+    li
+      padding: 8px 0
+      list-style: disc
+      +para()
+      a
+        text-decoration: none
+        font-weight: 600
+        color: inherit
+        &:hover
+          text-decoration: underline
