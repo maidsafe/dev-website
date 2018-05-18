@@ -1,29 +1,28 @@
 import CONST from './src/constants';
 import fs from 'fs';
 import path from 'path';
-import yaml from 'js-yaml';
 //
-const PAGES = {
-  HOME: 'home',
-  START_DEV: 'start_developing',
-  CORE_TECH: 'core_technology',
-  PLATFORM_NODEJS: 'platform_nodejs',
-  DISCOVER: 'discover',
-  PLATFORM_WEB: 'platform_web',
-  PLATFORM_RUST: 'platform_rust',
-  LICENSING: 'licensing',
+import * as parser from './parser';
+//
+
+const CONTENT_DIR = path.resolve('src', 'contents');
+
+const CONTENT_FILE = {
+  HOME: 'home.yaml',
+  START_DEV: 'start_developing.yaml',
+  CORE_TECH: 'core_technology.yaml',
+  DISCOVER: 'discover.yaml',
+  LICENSING: 'licensing.yaml',
+  PLATFORM_NODEJS: 'doc_node_js.md',
+  PLATFORM_WEB: 'doc_web.md',
 };
 
-const CONTENT_PATH = path.resolve('src', 'contents');
-
-const getLocalContent = (local, page) => {
+const getLocalContent = (local, fileName) => {
   try {
     // file path
-    const filePath = path.resolve(CONTENT_PATH, local, `${page}.yaml`);
-
+    const filePath = path.resolve(CONTENT_DIR, local, fileName);
     // read file
-    const content = fs.readFileSync(filePath, 'utf8');
-    return yaml.safeLoad(content);
+    return fs.readFileSync(filePath, 'utf8');
   } catch (err) {
     console.error('Read content file error : ', err);
   }
@@ -34,49 +33,67 @@ export default [
     path: '/',
     component: 'src/containers/home',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.HOME)
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.HOME))
     })
   },
   {
     path: '/start_developing',
     component: 'src/containers/start_developing',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.START_DEV)
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV))
     })
   },
   {
     path: '/core_technology',
     component: 'src/containers/core_technology',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.CORE_TECH)
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.CORE_TECH))
     })
   },
   {
     path: '/discover',
     component: 'src/containers/discover',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.DISCOVER)
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DISCOVER))
     })
   },
   {
     path: '/platform/nodejs',
-    component: 'src/containers/platform_nodejs',
-    getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_NODEJS)
-    })
+    component: 'src/containers/platform',
+    getData: () => {
+      const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
+      const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_NODEJS));
+      const data = {
+        otherPlatforms,
+        content,
+        name: 'nodejs'
+      };
+      return ({
+        data
+      });
+    }
   },
   {
     path: '/platform/web',
-    component: 'src/containers/platform_web',
-    getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.PLATFORM_WEB),
-    }),
+    component: 'src/containers/platform',
+    getData: () => {
+      const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
+      const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_WEB));
+      const data = {
+        otherPlatforms,
+        content,
+        name: 'web'
+      };
+      return ({
+        data,
+      });
+    },
   },
   {
     path: '/licensing',
     component: 'src/containers/licensing',
     getData: () => ({
-      data: getLocalContent(CONST.locals.EN_GB, PAGES.LICENSING),
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.LICENSING)),
     }),
   },
   {
