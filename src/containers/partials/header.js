@@ -1,14 +1,18 @@
 import React from 'react'
 import { withSiteData, Link } from 'react-static'
+import { withRouter } from 'react-static'
 //
 import classNames from 'classnames';
 import CONST from '../../constants';
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   constructor() {
     super();
     this.state = {
-      showMenu: false
+      showMenu: false,
+      appDevNav: false,
+      coreTechNav: false,
+      discoverNav: false,
     };
     this.routes = {
       APP_DEV: '/start_developing',
@@ -20,6 +24,16 @@ export default class Header extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setNavActive();
+  }
+
+  componentDidUpdate(prevProp) {
+    if (prevProp.location.pathname !== this.props.location.pathname) {
+      this.setNavActive();
+    }
+  }
+
   hideMenu() {
     if (!this.state.showMenu) {
       return;
@@ -29,10 +43,25 @@ export default class Header extends React.Component {
 
   isNavMatch(target) {
     let route = '';
+    if (!target) {
+      return;
+    }
     if (typeof window !== 'undefined') {
       route = window.location.pathname;
     }
-    return (route.search(target) !== -1);
+    if (typeof target === 'string') {
+      return (route.search(target) !== -1);
+    }
+    return (target.filter((nav) => (route.search(nav) !== -1)).length !== 0);
+  }
+
+  setNavActive() {
+    this.setState({
+      appDevNav: this.isNavMatch([this.routes.APP_DEV, this.routes.PLATFORM_NODEJS, this.routes.PLATFORM_WEB]),
+      coreTechNav: this.isNavMatch(this.routes.CORE_TECH),
+      discoverNav: this.isNavMatch(this.routes.DISCOVER),
+    });
+    this.hideMenu();
   }
 
   render() {
@@ -54,13 +83,13 @@ export default class Header extends React.Component {
         }}></div>
         <nav className={navMenuClasses}>
           <Link className={classNames({
-            active: this.isNavMatch(this.routes.APP_DEV) || this.isNavMatch(this.routes.PLATFORM_NODEJS) || this.isNavMatch(this.routes.PLATFORM_RUST) || this.isNavMatch(this.routes.PLATFORM_WEB)
+            selected: this.state.appDevNav
           })} to="/start_developing" onClick={() => { this.hideMenu() }}>Start Developing</Link>
           <Link className={classNames({
-            active: this.isNavMatch(this.routes.CORE_TECH)
+            selected: this.state.coreTechNav
           })} to="/core_technology" onClick={() => { this.hideMenu() }}>Core Technology</Link>
           <Link className={classNames({
-            active: this.isNavMatch(this.routes.DISCOVER)
+            selected: this.state.discoverNav
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
           <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Comm<span className="extend">unity</span></Link>
         </nav>
@@ -68,3 +97,7 @@ export default class Header extends React.Component {
     );
   }
 }
+
+const HeaderCompWithRoute = withRouter(Header);
+
+export default HeaderCompWithRoute;
