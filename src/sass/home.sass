@@ -101,14 +101,13 @@
         min-height: 400px
         width: 100%
         .six-keys-b
-          padding: 60px
+          padding: 24px
           background-color: $colr-white
           display: flex
           flex-wrap: wrap
           .six-key-i
             width: 50%
-            padding-right: 16px
-            padding-bottom: 24px
+            padding: 24px
             +clearfix()
             .icn
               width: 36px
@@ -157,26 +156,34 @@
         padding: 30px 0
         h3
           +header-2()
-          margin-bottom: 24px
+          margin-bottom: 25px
         p
           +para()
-          margin-bottom: 24px
+          margin-bottom: 25px
+          text-align: left
         a
           +link()
           color: $colr-text()
-          font-size: 24px
-          padding-right: 60px
+          background-color: $colr-grey
+          font-size: 18px
+          padding: 8px 60px 8px 16px
           position: relative
+          border-radius: 5px
           &:after
             content: ''
-            width: 36px
-            height: 36px
+            width: 24px
+            height: 100%
             position: absolute
             top: 0
-            right: 0
-            background-size: 24px
+            right: 8px
+            background-size: 18px
             background-position: center
             background-repeat: no-repeat
+            transition: right .2s linear
+          &:hover
+            text-decoration: none
+            &:after
+              right: 1%
         &.app
           a
             color: $colr-blue

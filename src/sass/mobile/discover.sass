@@ -23,6 +23,29 @@
         .desc
           width: 100%
           padding-bottom: 24px
+        .network-type-i
+          .network-type-i-b
+            display: block
+            +clearfix()
+            .network-type-i-med
+              display: block
+              float: none !important
+              width: 100%
+              max-width: 200px
+              text-align: center !important
+              margin-left: auto
+              margin-right: auto
+            .network-type-i-ctx
+              margin-top: 40px
+              display: block
+              float: none
+              width: 100%
+              text-align: center
+              .network-type-i-h
+                +header-2()
+                &:after
+                  left: 50%
+                  transform: translate(-50%, 0)
     .vault
       margin-top: 40px
       padding: 40px 0
@@ -47,4 +70,19 @@
           margin-bottom: 24px
         .data-types-desc
           padding-bottom: 24px
-
+        .data-types-split
+          .data-types-split-b
+            display: block
+            .data-types-split-i
+              display: block
+              width: 100%
+              padding: 0 !important
+              margin-top: 80px
+              .data-types-split-i-h
+                +header-1-1()
+                display: block
+                text-align: center
+                &:after
+                  width: 150px
+                  left: 50%
+                  transform: translate(-50%, 0)

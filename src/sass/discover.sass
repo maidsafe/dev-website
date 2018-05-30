@@ -63,6 +63,54 @@
       .types
         .types-b
           display: block
+      .network-type-i
+        margin-top: 80px
+        .network-type-i-b
+          display: table
+          .network-type-i-med
+            display: table-cell
+            width: 30%
+            vertical-align: middle
+            text-align: left
+            img
+              width: 80%
+          .network-type-i-ctx
+            display: table-cell
+            width: 70%
+            vertical-align: middle
+            padding: 0 20px
+            .network-type-i-h
+              +header-1-1()
+              display: inline-block
+              margin-bottom: 25px
+              padding-bottom: 25px
+              position: relative
+              &:after
+                content: ''
+                display: block
+                width: 50%
+                height: 5px
+                border-radius: 3px
+                position: absolute
+                bottom: 0
+                left: 0
+                background-color: $colr-theme-dark
+            .network-type-i-desc
+              +para()
+            .network-type-i-link
+              +link()
+              font-size: 18px
+              text-transform: uppercase
+              font-weight: 600
+              margin-top: 8px
+              display: inline-block
+        &.flip
+          .network-type-i-b
+            .network-type-i-med
+              float: right
+              text-align: right
+            .network-type-i-ctx
+              float: left
 
   .vault
     background-color: $colr-vault-bg
@@ -151,8 +199,41 @@
         margin-bottom: 40px
       .data-types-desc
         +para()
-        text-align: justify
+        text-align: center
         padding-bottom: 40px
+      .data-types-split
+        .data-types-split-b
+          display: table
+          margin-top: 80px
+          padding-bottom: 80px
+        .data-types-split-i
+          display: table-cell
+          width: 50%
+          &:first-child
+            padding-right: 24px
+          &:last-child
+            padding-left: 24px
+          .data-types-split-i-h
+            +header-1-1()
+            display: inline-block
+            position: relative
+            padding-bottom: 25px
+            &:after
+              content: ""
+              position: absolute
+              bottom: 0
+              left: 0
+              width: 50%
+              height: 5px
+              border-radius: 3px
+              background-color: $colr-vault-bg
+          .data-types-split-i-feat
+            margin-top: 40px
+            .data-types-split-i-feat-h
+              +header-2-1()
+              margin-bottom: 18px
+            .data-types-split-i-feat-p
+              +para()
 
 .wizard
   .wizard-b
