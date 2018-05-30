@@ -5,9 +5,9 @@ import CONST from '../constants';
 import withTracker from './partials/withTracker';
 
 import IntroImage from '../../public/images/app_dev_intro.svg';
-import WHMLogo from '../../public/images/web_hosting_manager_logo.png';
-import EmailAppLogo from '../../public/images/email_app_logo.png';
-import JAMSLogo from '../../public/images/jams_logo.png';
+import WHMLogo from '../../public/images/web_hosting_manager_rgb.svg';
+import EmailAppLogo from '../../public/images/email_app_rgb.svg';
+import JAMSLogo from '../../public/images/jams_rgb.png';
 import SAFECmsLogo from '../../public/images/safe_cms_logo.png';
 import AccessNetwork from '../../public/images/access_network.png';
 //

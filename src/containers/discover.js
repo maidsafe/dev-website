@@ -8,6 +8,9 @@ import EcoSystemBanner from '../../public/images/ecosystem_banner.svg'
 import Auth1 from '../../public/images/auth_1.png'
 import Auth2 from '../../public/images/auth_2.png'
 import Auth3 from '../../public/images/auth_3.png'
+import MockRouting from '../../public/images/mock_routing.svg';
+import ActualRouting from '../../public/images/actual_routing.svg';
+import LocalNetwork from '../../public/images/local_network.svg';
 
 import CONST from '../constants';
 
@@ -34,13 +37,13 @@ class Discover extends React.Component {
 
       // network type
       const tabNav = document.getElementsByClassName('tab-nav');
-      for(let i = 0; i < tabNav.length; i++) {
+      for (let i = 0; i < tabNav.length; i++) {
         const tabBase = tabNav[i].querySelector('.tab-nav-ib');
         tabBase.style.width = `${tabNav[i].offsetWidth * 3}px`;
       }
     } else {
       const tabNav = document.getElementsByClassName('tab-nav');
-      for(let i = 0; i < tabNav.length; i++) {
+      for (let i = 0; i < tabNav.length; i++) {
         const tabBase = tabNav[i].querySelector('.tab-nav-ib');
         tabBase.style.width = `100%`;
       }
@@ -89,7 +92,40 @@ class Discover extends React.Component {
           <div className="network-type-b base">
             <h3 className="title">{data.networks.title}</h3>
             <p className="desc">{data.networks.desc}</p>
-            <Tabs data={data.networks.types} type={CONST.tabTypes.LAY_HALF} tabNavWidth={this.tabNavWidth} />
+            {/* <Tabs data={data.networks.types} type={CONST.tabTypes.LAY_HALF} tabNavWidth={this.tabNavWidth} /> */}
+            <div className="network-type-i flip">
+              <div className="network-type-i-b">
+                <div className="network-type-i-med"><img src={MockRouting} /></div>
+                <div className="network-type-i-ctx">
+                  <h3 className="network-type-i-h">{data.networks.types[0].name}</h3>
+                  <p className="network-type-i-desc">{data.networks.types[0].para1}</p>
+                  <p className="network-type-i-desc">{data.networks.types[0].para2}</p>
+                  <a className="network-type-i-link"></a>
+                </div>
+              </div>
+            </div>
+            <div className="network-type-i">
+              <div className="network-type-i-b">
+                <div className="network-type-i-med"><img src={LocalNetwork} /></div>
+                <div className="network-type-i-ctx">
+                  <h3 className="network-type-i-h">{data.networks.types[1].name}</h3>
+                  <p className="network-type-i-desc">{data.networks.types[1].para1}</p>
+                  <p className="network-type-i-desc">{data.networks.types[1].para2}</p>
+                  <a className="network-type-i-link" href={data.networks.types[1].btnLink.link} target="_blank">{data.networks.types[1].btnLink.name}</a>
+                </div>
+              </div>
+            </div>
+            <div className="network-type-i flip">
+              <div className="network-type-i-b">
+                <div className="network-type-i-med"><img src={ActualRouting} /></div>
+                <div className="network-type-i-ctx">
+                  <h3 className="network-type-i-h">{data.networks.types[2].name}</h3>
+                  <p className="network-type-i-desc">{data.networks.types[2].para1}</p>
+                  <p className="network-type-i-desc">{data.networks.types[2].para2}</p>
+                  <a className="network-type-i-link"></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="vault">
@@ -144,7 +180,33 @@ class Discover extends React.Component {
           <div className="data-types-b base">
             <h3 className="data-types-title">{data.dataTypes.title}</h3>
             <p className="data-types-desc">{data.dataTypes.desc}</p>
-            <Tabs data={data.dataTypes.types} type={CONST.tabTypes.WIZARD} tabNavWidth={this.tabNavWidth} />
+            {/* <Tabs data={data.dataTypes.types} type={CONST.tabTypes.WIZARD} tabNavWidth={this.tabNavWidth} /> */}
+            <div className="data-types-split">
+              <div className="data-types-split-b">
+                <div className="data-types-split-i">
+                  <h3 className="data-types-split-i-h">{data.dataTypes.types[0].name}</h3>
+                  <div className="data-types-split-i-feat">
+                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[0].features[0].title}</h4>
+                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[0].features[0].para}</p>
+                  </div>
+                  <div className="data-types-split-i-feat">
+                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[0].features[1].title}</h4>
+                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[0].features[1].para}</p>
+                  </div>
+                </div>
+                <div className="data-types-split-i">
+                  <h3 className="data-types-split-i-h">{data.dataTypes.types[1].name}</h3>
+                  <div className="data-types-split-i-feat">
+                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[1].features[0].title}</h4>
+                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[1].features[0].para}</p>
+                  </div>
+                  <div className="data-types-split-i-feat">
+                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[1].features[1].title}</h4>
+                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[1].features[1].para}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

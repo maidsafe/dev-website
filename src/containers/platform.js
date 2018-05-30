@@ -38,13 +38,13 @@ class Platform extends React.Component {
 
   componentDidMount() {
     const linkHeads = document.getElementsByClassName('nav-i');
-    for (let i = 0; i< linkHeads.length; i++) {
+    for (let i = 0; i < linkHeads.length; i++) {
       linkHeads[i].addEventListener('click', () => {
         this.hideNav();
       }, false)
     }
     const links = document.getElementsByClassName('nav-i');
-    for (let i = 0; i< links.length; i++) {
+    for (let i = 0; i < links.length; i++) {
       links[i].addEventListener('click', () => {
         this.hideNav();
       }, false)
@@ -80,25 +80,27 @@ class Platform extends React.Component {
       active: this.state.showNav
     });
 
+    console.log('this.props', this)
+
     return (
       <div className="platform">
-        <div className="platform-links">
-          <div className="platform-links-b">
-            {
-              data.otherPlatforms.map((platform, i) => (
-                <div key={`platform-link-${i}`} className="platform-link-i">
-                  <a href={platform.href}>
-                    <div className={classNames(`icn ${platform.icon}`, {
-                      active: (platform.name.toLowerCase() === data.name.toLowerCase())
-                    })}></div>
-                    <div className="name">{platform.name}</div>
-                  </a>
-                </div>
-              ))
-            }
-          </div>
-        </div>
         <div className="content">
+          <div className="platform-links">
+            <div className="platform-links-b">
+              {
+                data.otherPlatforms.map((platform, i) => (
+                  <div key={`platform-link-${i}`} className="platform-link-i">
+                    <a href={platform.href}>
+                      <div className={classNames(`icn ${platform.icon}`, {
+                        active: (platform.name.toLowerCase() === data.name.toLowerCase())
+                      })}></div>
+                      <div className="name">{platform.name}</div>
+                    </a>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
           <div className="content-b">
             {this.content}
           </div>

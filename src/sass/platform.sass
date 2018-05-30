@@ -11,10 +11,9 @@
         @extend .platform-i
         .icn
           &.active
-            background-color: $colr-green !important
+            // background-color: $colr-blue-dark !important
   .content
     width: $platform-content-width-lg
-    padding: 24px
     float: left
     background-color: $colr-white
     height: 100%
@@ -23,6 +22,7 @@
     .content-b
       width: $platform-content-base-width-lg
       margin: 0 auto
+      padding: 24px
   .mob-nav-menu-icon
     width: 50px
     height: 50px
@@ -43,9 +43,13 @@
       outline: 0
   .nav
     width: $platform-nav-width-lg
-    padding: 24px
-    float: right
-    padding-top: $platform-top-pad-lg
+    height: 100%
+    overflow-y: auto
+    padding: 60px 24px
+    position: fixed
+    top: 80px
+    right: 0
+    z-index: 9
     .nav-i
       font-size: 20px
       margin-bottom: 8px
