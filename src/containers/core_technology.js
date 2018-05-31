@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouteData } from 'react-static'
 //
 import withTracker from './partials/withTracker';
+import NetworkLayers from '../../public/images/network_layer.svg';
 
 class CoreDeveloper extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class CoreDeveloper extends React.Component {
           <div className="content-intro">
             <h1>{data.pageIntro.title}</h1>
             <p>{data.pageIntro.para1.chunk1}&nbsp;<a href={data.pageIntro.para1.link.href}>{data.pageIntro.para1.link.name}</a>&nbsp;{data.pageIntro.para1.chunk2}</p>
+            <div className="med"><img src={NetworkLayers} alt="Network layer" /></div>
           </div>
           <div className="content-comp">
             <h1>{data.components.title}</h1>
