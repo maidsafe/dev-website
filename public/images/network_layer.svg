@@ -1,0 +1,153 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1016.04" height="499" viewBox="0 0 1016.04 499">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #32526e;
+      }
+
+      .cls-1, .cls-10, .cls-13, .cls-16, .cls-19, .cls-25, .cls-28, .cls-34, .cls-4, .cls-7 {
+        opacity: 0.27;
+      }
+
+      .cls-12, .cls-15, .cls-27, .cls-3, .cls-6, .cls-9 {
+        font-size: 43.21px;
+      }
+
+      .cls-12, .cls-15, .cls-18, .cls-21, .cls-24, .cls-27, .cls-3, .cls-30, .cls-31, .cls-33, .cls-6, .cls-9 {
+        font-family: OpenSans-Semibold, Open Sans;
+        font-weight: 700;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        fill: #2471aa;
+      }
+
+      .cls-7, .cls-8 {
+        fill: #ccb856;
+      }
+
+      .cls-9 {
+        fill: gray;
+      }
+
+      .cls-10, .cls-11, .cls-12 {
+        fill: #42a081;
+      }
+
+      .cls-13, .cls-14, .cls-15, .cls-33 {
+        fill: #cc9f56;
+      }
+
+      .cls-16, .cls-17, .cls-18 {
+        fill: #586eae;
+      }
+
+      .cls-18, .cls-21, .cls-30 {
+        font-size: 21px;
+      }
+
+      .cls-19, .cls-20, .cls-21 {
+        fill: #888988;
+      }
+
+      .cls-22 {
+        fill: #c4e6e8;
+      }
+
+      .cls-23 {
+        fill: #6d9da0;
+      }
+
+      .cls-24 {
+        font-size: 21.22px;
+      }
+
+      .cls-24, .cls-31 {
+        fill: #666563;
+      }
+
+      .cls-25, .cls-26, .cls-27 {
+        fill: #5995ad;
+      }
+
+      .cls-28, .cls-29, .cls-30 {
+        fill: #cc5a5a;
+      }
+
+      .cls-31 {
+        font-size: 33.34px;
+      }
+
+      .cls-32 {
+        fill: #dddcdb;
+      }
+
+      .cls-33 {
+        font-size: 19px;
+      }
+    </style>
+  </defs>
+  <title>layers v2</title>
+  <g>
+    <rect class="cls-1" x="100.04" y="431" width="916" height="59"/>
+    <rect class="cls-2" x="100.04" y="490" width="916" height="9"/>
+    <text class="cls-3" transform="translate(304.79 477.23)">Crust (TCP, UDP μTP)</text>
+  </g>
+  <g>
+    <rect class="cls-4" x="100.04" y="347" width="916" height="59"/>
+    <rect class="cls-5" x="100.04" y="406" width="916" height="9"/>
+    <text class="cls-6" transform="translate(439.58 393.23)">Routing</text>
+  </g>
+  <g>
+    <rect class="cls-7" x="100.04" y="240" width="607" height="59"/>
+    <rect class="cls-8" x="100.04" y="299" width="607" height="9"/>
+    <text class="cls-9" transform="translate(299.56 287.23)">SAFE Core</text>
+  </g>
+  <g>
+    <rect class="cls-10" x="789.04" y="240" width="227" height="59"/>
+    <rect class="cls-11" x="789.04" y="299" width="227" height="9"/>
+    <text class="cls-12" transform="translate(837.83 287.23)">Vaults</text>
+  </g>
+  <g>
+    <rect class="cls-13" x="100.04" y="164" width="358.53" height="59"/>
+    <rect class="cls-14" x="100.04" y="223.06" width="358.53" height="8.87"/>
+    <text class="cls-15" transform="translate(182.77 208.23)">SAFE App</text>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-16" x="406.04" y="76" width="301" height="59"/>
+      <rect class="cls-17" x="406.04" y="135" width="301" height="9"/>
+      <text class="cls-18" transform="translate(477.02 102.01)">SAFE Browser &amp;<tspan x="-25.29" y="25.2">Authenticator plugin</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-19" x="100.04" y="76" width="299" height="59"/>
+      <rect class="cls-20" x="100.04" y="135" width="299" height="9"/>
+      <text class="cls-21" transform="translate(147.42 102.01)">Language bindings<tspan x="0" y="25.2">(JavaScript, Java, C#)</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-22" x="100.04" width="299" height="59"/>
+      <rect class="cls-23" x="100.04" y="59" width="299" height="9"/>
+      <text class="cls-24" transform="translate(163.45 24.1)">Desktop, mobile,<tspan x="43.08" y="25.47">CLI apps</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-25" x="406.04" width="301" height="59"/>
+      <rect class="cls-26" x="406.04" y="59" width="301" height="9"/>
+      <text class="cls-27" transform="translate(452.87 45.23)">Web Apps</text>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-28" x="466.51" y="164" width="240.53" height="59"/>
+    <rect class="cls-29" x="466.51" y="223.06" width="240.53" height="8.87"/>
+    <text class="cls-30" transform="translate(490.4 189.78)">SAFE Authenticator <tspan x="37.85" y="25.2">Component</tspan></text>
+  </g>
+  <g>
+    <text class="cls-31" transform="translate(28.57 491.73) rotate(-90)">Network<tspan x="25.3" y="33">Layer</tspan></text>
+    <rect class="cls-32" x="73.04" y="345" width="10" height="154"/>
+  </g>
+  <text class="cls-31" transform="translate(61.57 290.75) rotate(-90)">Application Layer</text>
+  <rect class="cls-32" x="73.04" width="10" height="309"/>
+  <text class="cls-33" transform="translate(743.3 307.99) rotate(-90) scale(0.98 1)">SAFE Client Libs</text>
+  <g class="cls-34">
+    <rect class="cls-14" x="718.54" y="165" width="5" height="144"/>
+  </g>
+</svg>
