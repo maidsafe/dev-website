@@ -7,8 +7,8 @@ homeBanner2:
   para: Decentralised, private, secure and infrastructure free. Get the tools and support you need to start building.
 buildOnSafeNet:
   title:
-    dark1: Why build on
-    dark2: the
+    dark1: Why build
+    dark2: on the
     light: SAFE Network
   sixKeys:
     - title: The privacy-first network

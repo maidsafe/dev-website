@@ -1,7 +1,7 @@
 intro:
   title: Discover
   para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
-  para2: The following components and features represent key aspects of the Network
+  para2: "The following components and features represent key aspects of the Network:"
   para3:
 authenticator:
   title: The Authenticator
