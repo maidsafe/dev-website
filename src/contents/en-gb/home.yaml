@@ -46,6 +46,17 @@ contribute:
     link:
       name: Core Technology
       href: /core_technology
+sharing:
+  title:
+    dark1: Use Components
+    dark2: from the
+    light: SAFE Network
+  parsec:
+    title: PARSEC
+    desc: Protocol for Asynchronous, Reliable, Secure and Efficient Consensus.
+    link:
+      name: Learn More
+      href: /parsec
 
 roadmap:
   title: Roadmap

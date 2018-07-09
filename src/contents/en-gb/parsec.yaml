@@ -1,0 +1,28 @@
+pageIntro:
+  title: PARSEC - Protocol for Asynchronous, Reliable, Secure and Efficient Consensus
+  desc: PARSEC has been built by MaidSafe to power the SAFE Network.  PARSEC has been released under a GPL v3 licence (with linking exception) and it is free for anyone to build upon and will prove to be of immense value to other decentralised projects.
+whatIs:
+  title: What does PARSEC do?
+  para1: PARSEC solves a well-known problem in decentralised, distributed computer networks... how can individual computers (nodes) in a system reliably communicate truths (in other words, events that have taken place on the network) to each other where a proportion of the nodes are malicious (Byzantine) and looking to disrupt the system? Or to put it another way, how can a group of computers agree on which transactions have correctly taken place and in which order?
+whoFor:
+  title: Where could you use PARSEC?
+  para1: It could be used in any project that needs a consensus mechanism and currently uses what might be considered to be 'inferior' solutions. For instance, anywhere that is currently considering using a consensus protocol that is limited to permissioned networks but want to use them in a permission-less context. Anywhere that's currently using slower consensus mechanisms (e.g. mechanisms based on broadcast).
+resources:
+  title:
+    dark: PARSEC
+    light1: PARSEC Resources
+    light2: Resources For Developers
+  para: Resources for you to include PARSEC in your own projects.
+  res:
+    - name: GitHub
+      logo: GITHUB
+      linkId: github
+    - name: RFC
+      logo: RFC
+      linkId: rfc
+    - name: Whitepaper
+      logo: WHITEPAPER
+      linkId: whitepaper
+    - name: Documentation
+      logo: DOCUMENTATION
+      linkId: documentation
