@@ -15,6 +15,8 @@ const CONTENT_FILE = {
   LICENSING: 'licensing.yaml',
   PLATFORM_NODEJS: 'doc_node_js.md',
   PLATFORM_WEB: 'doc_web.md',
+  PLATFORM_DOTNET: 'doc_dotnet.md',
+  PLATFORM_XAMARIN: 'doc_xamarin.md',
 };
 
 const getLocalContent = (local, fileName) => {
@@ -83,6 +85,38 @@ export default [
         otherPlatforms,
         content,
         name: 'web'
+      };
+      return ({
+        data,
+      });
+    },
+  },
+  {
+    path: '/platform/dotnet',
+    component: 'src/containers/platform',
+    getData: () => {
+      const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
+      const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_DOTNET));
+      const data = {
+        otherPlatforms,
+        content,
+        name: '.Net'
+      };
+      return ({
+        data,
+      });
+    },
+  },
+  {
+    path: '/platform/xamarin',
+    component: 'src/containers/platform',
+    getData: () => {
+      const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
+      const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_XAMARIN));
+      const data = {
+        otherPlatforms,
+        content,
+        name: 'Xamarin'
       };
       return ({
         data,

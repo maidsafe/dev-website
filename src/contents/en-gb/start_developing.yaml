@@ -5,6 +5,12 @@ platformLinks:
   - icon: web
     name: Web
     href: '/platform/web'
+  - icon: dotnet
+    name: .Net
+    href: '/platform/dotnet'
+  - icon: xamarin
+    name: Xamarin
+    href: '/platform/xamarin'
 intro:
   title:
     dark: The
