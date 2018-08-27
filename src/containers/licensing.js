@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
 //
-import withTracker from './partials/withTracker';
+import Wrapper from './partials/wrapper';
 import CONST from '../constants';
 
 class Licensing extends React.Component {
@@ -58,5 +58,5 @@ class Licensing extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  withTracker(Licensing, data)
+  Wrapper(Licensing, data)
 ));
