@@ -1,5 +1,5 @@
 import React from 'react'
-import withTracker from './partials/withTracker';
+import Wrapper from './partials/wrapper';
 //
 class NotFound extends React.Component {
   render() {
@@ -12,5 +12,5 @@ class NotFound extends React.Component {
 }
 
 export default () => (
-  withTracker(NotFound)
+  Wrapper(NotFound)
 );

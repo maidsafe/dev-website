@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { duotoneLight } from 'react-syntax-highlighter/styles/prism';
 import classNames from 'classnames';
-import withTracker from './partials/withTracker';
+import Wrapper from './partials/wrapper';
 import { parsePlatformData } from '../../parser';
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -117,5 +117,5 @@ class Platform extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  withTracker(Platform, data)
+  Wrapper(Platform, data)
 ));

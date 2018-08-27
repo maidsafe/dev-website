@@ -1,7 +1,6 @@
 import React from 'react';
 import { Router, Link } from 'react-static';
 import { hot } from 'react-hot-loader';
-import ReactGA from 'react-ga';
 
 //
 import Routes from 'react-static-routes';
@@ -21,7 +20,6 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   handleScroll(e) {
