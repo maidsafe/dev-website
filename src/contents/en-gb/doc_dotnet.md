@@ -1,6 +1,6 @@
 # SAFE .Net Desktop App Tutorial
 
-In this tutorial, we will create a [.Net Framework](https://docs.microsoft.com/en-us/dotnet/framework/) console application. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server, and Microsoft Azure using C#, Visual Basic and F#. And, this tutorial can also be used for developing [.Net Core](https://github.com/dotnet/core) apps.
+In this tutorial, we will create a [.Net Framework](https://docs.microsoft.com/en-us/dotnet/framework/) console application. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server, and Microsoft Azure using C#, Visual Basic and F#. this tutorial can also be used for developing [.Net Core](https://github.com/dotnet/core) apps.
 
 We will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the `safe_app` API to connect and interact with the SAFE Network.
 
@@ -69,7 +69,7 @@ var encodedReq = await Session.EncodeAuthReqAsync(authReq);
 var url = $"safe-auth://{encodedReq}";
 System.Diagnostics.Process.Start(url);
 ```
-This code will generate the authorisation request and send it to the authenticator. Make sure you launch the SAFE Browser and log in using the Authenticator ([install-safe-browser](#install-safe-browser)) before running the application.
+This code will generate the authorisation request and send it to the authenticator. Make sure you launch the Safe Browser and log in using the Authenticator ([install-safe-browser](#install-safe-browser)) before running the application.
 
 You would notice a pop-up on the Authenticator prompting authorisation request with the information of the application.
 
@@ -96,13 +96,13 @@ Once we get the response, we decode it and check whether the request was granted
 
 ## Using Mock Network
 
-We provide the mock feature with Safe APIs which can be used for fast app development and, also provides a safe space to perform test operations. 
+We provide the mock feature with SAFE APIs which can be used for fast app development and provides a safe space to perform test operations. 
 
-When we use the mock feature in an application, it does not communicate with the live network. Instead, it will interface with a local MockVault file in the system to simulate network operations, which is used to store and retrieve data. Let's see how we can set up and use the mock network.
+When we use the mock feature in an application, it does not communicate with the live network. Instead, it will interface with a local MockVault file in the system to simulate network operations, which is used to store and retrieve data. Let's see how we can set up and use the mock network:
 
 - Build conditional compilation symbols: Add `SAFE_APP_MOCK` flag for your project in `Properties > Build > Conditional compilation symbols'.
 
-Once we set this flag in build settings, a reference to `SafeApp.MockAuthBindings.dll` will be added into the project automatically. It has Additional classes and functions used for mock authentication. We can use any of the following processes for mock authentication based on our requirement.
+Once we set this flag in build settings, a reference to `SafeApp.MockAuthBindings.dll` will be added into the project automatically. It has additional classes and functions used for mock authentication. We can use any of the following processes for mock authentication based on our requirements.
 
 - Safe-browser-mock: We need to download and setup safe-browser-mock version for this. Follow [install-safe-browser](#install-safe-browser) for setting up mock browser. Authentication process will be the same as in [connecting-live-network](#connecting-to-live-safe-network) except we will use safe-browser-mock. 
 - Authenticator: In this process, we use authenticator shipped with MaidSafe.SafeApp package. This is quite helpful while working with tests.
@@ -209,7 +209,7 @@ We can perform multiple transactions together and perform `MutateEntriesAsync` a
 
 Now we have our Mutable Data stored on the network with multiple entries, thus we can retrieve them using an `EntriesHandle`. To get that we use `GetHandleAsync` function in `MDEntries` class. We need `MDInfo` of Mutable Data for that, which we already have.
 
-Let's write a method to fetch Mutable Data entries from network.
+Let's write a method to fetch Mutable Data entries from network:
 ```csharp
 using (var entriesHandle = await session.MDataEntries.GetHandleAsync(mDataInfo))
 {
@@ -227,7 +227,7 @@ We are getting a list of entries from `ListEntriesAsync` function. We can iterat
 
 As we saw above, to update or remove entries we just need to create a mutation transaction, with "update" and/or "remove" actions, and apply the mutations to the Mutable Data. We will need `MDataEntryActionHanle` and `key` to perform these operations.
 
-Let's try to update an entry Item.
+Let's try to update an entry Item:
 ```csharp
 var keys = await session.MData.ListKeysAsync(mdInfo);
 var keyToUpdate = keys[0];
@@ -240,7 +240,7 @@ using (var entriesHandle = await session.MDataEntryActions.NewAsync())
 }
 ```
 
-Code to remove entry from Mutable Data.
+Code to remove entry from Mutable Data:
 ```csharp
 var keys = await session.MData.ListKeysAsync(mdInfo);
 var keyToDelete = keys[0];
