@@ -14,7 +14,7 @@ Before we start working on our first SAFE app, make sure you have the following 
 - **SafeAuthenticator**: Safe Authenticator mobile application will be required to initiate the authentication process with SAFE Network. Please follow installation instructions [here](https://github.com/maidsafe/safe_mobile#Installation).
 - Beginner level knowledge of Xamarin.Forms.
 
-## Setup a basic project
+## Set up a basic project
 
 - Create a new Project: Create a new **cross-platform mobile app (Xamarin.Forms)** project in visual studio.
 - Install MaidSafe.SafeApp package: Install the latest version of [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) package in all projects using NuGet package manager. 
@@ -25,9 +25,9 @@ We provide the mock feature with SAFE APIs which can be used for fast app develo
 
 When we use the mock feature in an application, it does not communicate with the live network. Instead, it will interface with a local MockVault file in the system to simulate network operations, which is used to store and retrieve data. Let's see how we can set up and use a mock network:
 
-- Build conditional compilation symbols: Add `SAFE_APP_MOCK` flag for your project in "Properties > Build > Conditional compilation symbols". Add the flag in platform specific projects also.
+- Build conditional compilation symbols: Add `SAFE_APP_MOCK` flag for your project in "Properties > Build > Conditional compilation symbols" and add the flag in to platform specific projects also.
 
-Once we set this flag in build settings, a reference to `SafeApp.MockAuthBindings.dll` will be added into the project automatically. It has additional classes and functions used for mock authentication. We can use the following process for mock authentication.
+Once we set this flag in build settings, a reference to `SafeApp.MockAuthBindings.dll` will be added into the project automatically. It has additional classes and functions used for mock authentication. We can use the following process for mock authentication:
 
 Following is the example code, we can use for mock authentication.
 We create a mock user account and login using the same credentials:

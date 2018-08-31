@@ -1,6 +1,6 @@
 # SAFE .Net Desktop App Tutorial
 
-In this tutorial, we will create a [.Net Framework](https://docs.microsoft.com/en-us/dotnet/framework/) console application. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server, and Microsoft Azure using C#, Visual Basic and F#. this tutorial can also be used for developing [.Net Core](https://github.com/dotnet/core) apps.
+In this tutorial, we will create a [.Net Framework](https://docs.microsoft.com/en-us/dotnet/framework/) console application. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server, and Microsoft Azure using C#, Visual Basic and F#. This tutorial can also be used for developing [.Net Core](https://github.com/dotnet/core) apps.
 
 We will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the `safe_app` API to connect and interact with the SAFE Network.
 
