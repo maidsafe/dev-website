@@ -4,11 +4,11 @@ In this tutorial, we will create a [Xamarin.Forms](https://github.com/xamarin/Xa
 
 To create this app, we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE APIs to connect and interact with the SAFE Network.
 
-Download working example code for from [here](https://github.com/maidsafe/safe-getting-started-dotnet/SafeTodoExample). Follow the steps described in this tutorial to create am app for SAFE Network.
+Download working example code for from [here](https://github.com/maidsafe/safe-getting-started-dotnet/SafeTodoExample). Follow the steps described in this tutorial to create an app for SAFE Network.
 
 ## Pre-requisites
 
-Before we start working on our first SAFE app, make sure you have the following tools installed to work with this tutorial.
+Before we start working on our first SAFE app, make sure you have the following tools installed to work with this tutorial:
 
 - **Visual Studio with Xamarin**: You need Visual Studio (any edition) to build our first SAFE Network mobile application. Follow the instructions [here](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/installation) to download and install visual studio with Xamarin.Forms for your Operating System.
 - **SafeAuthenticator**: Safe Authenticator mobile application will be required to initiate the authentication process with SAFE Network. Please follow installation instructions [here](https://github.com/maidsafe/safe_mobile#Installation).

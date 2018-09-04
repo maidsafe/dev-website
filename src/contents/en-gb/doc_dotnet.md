@@ -2,17 +2,17 @@
 
 In this tutorial, we will create a [.Net Framework](https://docs.microsoft.com/en-us/dotnet/framework/) console application. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server, and Microsoft Azure using C#, Visual Basic and F#. This tutorial can also be used for developing [.Net Core](https://github.com/dotnet/core) apps.
 
-We will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the `safe_app` API to connect and interact with the SAFE Network.
+To create this app, we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE APIs to connect and interact with the SAFE Network.
 
-Download demo code for this tutorial from [here](https://github.com/maidsafe/safe-getting-started-dotnet/SafeDesktopExample).
+Download working example code for from [here](https://github.com/maidsafe/safe-getting-started-dotnet/SafeDesktopExample). Follow the steps described in this tutorial to create an app for SAFE Network.
 
 ## Pre-requisites
 
-Before we start working on our first SAFE app, make sure you have the following tools installed to be able to follow this tutorial.
+Before we start working on our first SAFE app, make sure you have the following tools installed to be able to follow this tutorial:
 
 - **Visual Studio**: You need visual studio to compile and run your app. Follow the instructions [here](https://visualstudio.microsoft.com/) to download and install the visual studio for your Operating System. .Net Framework and .Net Core SDKs are installed automatically while installing visual studio.
 
-## Install Safe Browser
+## Install SAFE Browser
 
 Since the application will be authenticated with the Authenticator to get the credentials needed to connect to the SAFE Network, we first need to have an instance of the Safe Browser installed.
 
@@ -34,7 +34,7 @@ After you finished creating your account, please keep the browser open and logge
 - Set CPU architecture: SafeApp APIs support only x64 architecture for desktops. So set the CPU architecture to x64 in project build configuration.
 - Install MaidSafe.SafeApp package: Install the latest version of [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) package using NuGet package manager. 
 
-## Connecting to Test SAFE Network
+## Connecting to Live SAFE Network
 
 To be able to connect to the SAFE Network, a SAFE application needs to get an authorisation from the user, this is achieved by sending an authorisation request to the Authenticator (safe browser in this case).
 
