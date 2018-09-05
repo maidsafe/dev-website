@@ -4,17 +4,17 @@ In this tutorial, we will create a [.Net Framework](https://docs.microsoft.com/e
 
 To create this app, we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE APIs to connect and interact with the SAFE Network.
 
-Download working example code for from [here](https://github.com/maidsafe/safe-getting-started-dotnet/SafeDesktopExample). Follow the steps described in this tutorial to create an app for SAFE Network.
+Download the working example code [here](https://github.com/maidsafe/safe-getting-started-dotnet/SafeDesktopExample) or follow the steps described in this tutorial to create an app for SAFE Network.
 
 ## Pre-requisites
 
 Before we start working on our first SAFE app, make sure you have the following tools installed to be able to follow this tutorial:
 
-- **Visual Studio**: You need visual studio to compile and run your app. Follow the instructions [here](https://visualstudio.microsoft.com/) to download and install the visual studio for your Operating System. .Net Framework and .Net Core SDKs are installed automatically while installing visual studio.
+- **Visual Studio**: You need Visual Studio to compile and run your app. Follow the instructions [here](https://visualstudio.microsoft.com/) to download and install the Visual Studio for your operating system. .Net Framework and .Net Core SDKs are installed automatically while installing Visual Studio.
 
 ## Install SAFE Browser
 
-Since the application will be authenticated with the Authenticator to get the credentials needed to connect to the SAFE Network, we first need to have an instance of the Safe Browser installed.
+Since the application will be authenticated with the Authenticator to get the credentials needed to connect to the SAFE Network, we first need to have an instance of the SAFE Browser installed.
 
 You can find the links to download the SAFE Browser package from the [SAFE Browser GitHub releases](https://github.com/maidsafe/safe_browser/releases). It's always recommended to use the latest available version.
 
@@ -26,9 +26,9 @@ In this tutorial, we will be using the Safe Browser package that is built to wor
 
 Please login using your existing SAFE Network account or create an account from the Authenticator.
 
-After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
+After you finished creating your account, please keep the browser open and logged in to your account before proceeding with next steps.
 
-## Setup basic project
+## Set up a basic project
 
 - Create a new Project: Create a new c# desktop project in visual studio. For this demo, we are creating a console app.
 - Set CPU architecture: SafeApp APIs support only x64 architecture for desktops. So set the CPU architecture to x64 in project build configuration.
@@ -36,9 +36,9 @@ After you finished creating your account, please keep the browser open and logge
 
 ## Connecting to Live SAFE Network
 
-To be able to connect to the SAFE Network, a SAFE application needs to get an authorisation from the user, this is achieved by sending an authorisation request to the Authenticator (safe browser in this case).
+To be able to connect to the SAFE Network, a SAFE application needs to get an authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (which is bundled with SAFE browser).
 
-We first need to generate an `AuthReq` instance which provides information about the application and, permissions requested by this application. These details will be displayed in the authenticator:
+We first need to generate an `AuthReq` instance which provides information about the application and the permissions requested by this application. These details will be displayed in the Authenticator:
 ```csharp
 var authReq = new AuthReq
 {
@@ -61,7 +61,11 @@ var authReq = new AuthReq
 ```
 Note that we are passing a list of `ContainerPermissions`, this allows us to define the various permissions provided to specific containers.
 
-When the Authenticator sends an authorisation response using the system URI mechanism, the system will match the URI scheme to our application, and it will launch our application passing the URI as an argument. Since we are running our application using the dotnet executable, we need to make sure the system registers the URI scheme with the dotnet executable file path. We are using system registry for this. Soon we will release .Net `system_uri` package to achieve this on all platforms.
+When the Authenticator sends an authorisation response using the system URI mechanism, the system matches the URI scheme to our application, and it launches our application passing the URI as an argument.
+
+Since the application is run using the dotnet executable, we need to make sure the system registers the URI scheme with the dotnet executable file path. This is achieved using the system registry. 
+
+.Net `system_uri` package will be a future release to achieve this on all platforms.
 
 Once the `AuthReq` instance is initialised, we can use it to generate the authorisation request and send it to the Authenticator:
 ```csharp
@@ -69,11 +73,11 @@ var encodedReq = await Session.EncodeAuthReqAsync(authReq);
 var url = $"safe-auth://{encodedReq}";
 System.Diagnostics.Process.Start(url);
 ```
-This code will generate the authorisation request and send it to the authenticator. Make sure you launch the Safe Browser and log in using the Authenticator ([install-safe-browser](#install-safe-browser)) before running the application.
+This code will generate the authorisation request and send it to the Authenticator. Remember to launch the SAFE Browser and login using the Authenticator ([How to install the SAFE Browser](#install-safe-browser)) before running the application.
 
-You would notice a pop-up on the Authenticator prompting authorisation request with the information of the application.
+You will notice a pop-up on the Authenticator prompting an authorisation request with the information of the application. At this point you can allow or deny the request, and the Authenticator will send the response back to the application.
 
-At this point you can allow or deny the request, and the Authenticator will send the response back to the application. The demo application already has the code to send the response from new instance to already running console app instance using [IPC Pipes](https://docs.microsoft.com/en-us/dotnet/standard/io/pipe-operations).
+The demo application already has the code to send a response from the new instance to the already running console app instance using [IPC Pipes](https://docs.microsoft.com/en-us/dotnet/standard/io/pipe-operations).
 ```csharp
 var decodeResult = await Session.DecodeIpcMessageAsync(encodedRequest);
 if (decodeResult.GetType() == typeof(AuthIpcMsg))
@@ -91,7 +95,7 @@ else
 }
 ```
 
-Once we get the response, we decode it and check whether the request was granted or denied. If the request was granted we will initialize a new session to communicate with SAFE Network.
+Once a response is received, it is decoded and checked whether the request was granted or denied. If the request was granted a new new session is initialised to communicate with SAFE Network.
 
 
 ## Using Mock Network
