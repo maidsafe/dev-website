@@ -41,9 +41,11 @@ export default {
         ],
       },
     ]
-    config.plugins = [
-      new ExtractTextPlugin('styles.css'),
-    ]
+    if(stage != 'dev') {
+      config.plugins = [
+        new ExtractTextPlugin('styles.css')
+      ]
+    }
     return config
   },
   Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
