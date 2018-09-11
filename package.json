@@ -7,7 +7,7 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -l 3000"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -16,7 +16,7 @@
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-scroll": "^1.7.9",
-    "react-static": "^5.7.1",
+    "react-static": "lionel1704/react-static",
     "react-syntax-highlighter": "^7.0.2"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "node-sass": "^4.7.2",
     "prismjs": "^1.14.0",
     "sass-loader": "^6.0.6",
-    "serve": "^6.1.0",
+    "serve": "^7.0.0",
     "showdown": "^1.8.6"
   }
 }
