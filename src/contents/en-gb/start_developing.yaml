@@ -60,7 +60,7 @@ accessingNetwork:
     chunk1: "To access the SAFE Network, you simply need to "
     link:
       name: download the browser
-      href: 'https://github.com/maidsafe/safe_browser/releases'
+      href: 'https://github.com/maidsafe/safe_browser/releases/latest'
     chunk2: " which includes the Authenticator component."
   para2: The Authenticator is used by applications to request a user’s consent via a simple API, much like traditional single sign-on options. The Authenticator also handles user log on, and enables the user to grant/revoke permissions for each app, putting users in control of their own data.
   para3:

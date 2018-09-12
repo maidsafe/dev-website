@@ -18,7 +18,7 @@ First you need to make sure you have the following tools installed to be able to
 
 Since this is a SAFE webapp, we first need to have an instance of the SAFE Browser installed to be able to load our application.
 
-You can find the links to download the SAFE Browser package from [MaidSafe's website](https://maidsafe.net), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases). It's recommended to always use the latest available version.
+You can find the links to download the SAFE Browser package from [MaidSafe's website](https://maidsafe.net), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases/latest). It's recommended to always use the latest available version.
 
 Note that there are packages for each of the supported platforms, i.e. Linux, Windows and OSX. Also note there are two type of packages for each of the supported platforms:
 - `safe-browser-<version>-<platform>.zip`: SAFE Browser package built to use the live SAFE Network
