@@ -22,29 +22,15 @@ First you need to make sure you have the following tools installed to be able to
 
 Since the application will be authorising with the Authenticator to get the credentials needed to then connect to the SAFE Network, we first need to have an instance of the SAFE Browser installed.
 
-You can find the links to download the SAFE Browser package from [MaidSafe's website](https://maidsafe.net), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases/latest). It's recommended to always use the latest available version.
+You can find the links to download the SAFE Browser package from the [SAFE Network website](https://safenetwork.tech), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases/latest). It's recommended to always use the latest available version.
 
 Note that there are packages for each of the supported platforms, i.e. Linux, Windows and macOS. Also note there are two type of packages for each of the supported platforms:
-- `safe-browser-<version>-<platform>.zip`: SAFE Browser package built to use the live SAFE Network
-- `safe-browser-mock-<version>-<platform>.zip`: SAFE Browser package built to use the mock routing. This will create a local temporary file and you won't need to connect to the live network.
+- `Peruse-<version>-<platform>-<arch>.zip`: SAFE Browser package built to use the live SAFE Network
+- `Peruse-<version>-<platform>-<arch>-dev.zip`: SAFE Browser package built to use the mock routing. This will create a local temporary file and you won't need to connect to the live network.
 
-In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC. Before we launch it let's go ahead and set the `NODE_ENV` environment variable set to `dev` to have our browser to effectively use the native libraries for mock routing:
-```bash
-$ export NODE_ENV=dev
-```
+In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC.
 
-If you are using Windows you can set it with the following commands instead:
-Command prompt
-```
-$ set NODE_ENV=dev
-```
-
-Powershell
-```
-$ $env:NODE_ENV = "dev"
-```
-
-You can now launch the browser (make sure you launch it from the same console where you just set the NODE_ENV variable), please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
+You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
 
 After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
 
@@ -55,14 +41,14 @@ We first clone the repo which contains the boilerplate using `git` onto a local 
 $ git clone https://github.com/maidsafe/safe_examples safe_examples
 ```
 
-As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to also make sure to signal our application that it needs to use the SAFE libraries required to connect to the mock routing as well. We do this by setting the `NODE_ENV` environment variable:
+As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to also make sure to signal our application that it needs to use the SAFE libraries required to connect to mock routing as well. We do this by setting the `NODE_ENV` environment variable:
 ```bash
-$ export NODE_ENV=dev
+$ export NODE_ENV=test
 ```
 
 If you are using Windows you can set it with the following command instead:
 ```bash
-$ set NODE_ENV=dev
+$ set NODE_ENV=test
 ```
 
 Please note that all the commands we will be executing in the next steps need to be made on the same console where you just set the NODE_ENV environment variable.
