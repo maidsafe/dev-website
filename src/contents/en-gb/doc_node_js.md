@@ -22,7 +22,7 @@ First you need to make sure you have the following tools installed to be able to
 
 Since the application will be authorising with the Authenticator to get the credentials needed to then connect to the SAFE Network, we first need to have an instance of the SAFE Browser installed.
 
-You can find the links to download the SAFE Browser package from the [SAFE Network website](https://safenetwork.tech), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases). It's recommended to always use the latest available version.
+You can find the links to download the SAFE Browser package from the [SAFE Network website](https://safenetwork.tech), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases/latest). It's recommended to always use the latest available version.
 
 Note that there are packages for each of the supported platforms, i.e. Linux, Windows and macOS. Also note there are two type of packages for each of the supported platforms:
 - `Peruse-<version>-<platform>-<arch>.zip`: SAFE Browser package built to use the live SAFE Network
