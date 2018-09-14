@@ -41,20 +41,6 @@ We first clone the repo which contains the boilerplate using `git` onto a local 
 $ git clone https://github.com/maidsafe/safe_examples safe_examples
 ```
 
-As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to also make sure to signal our application that it needs to use the SAFE libraries required to connect to mock routing as well. We do this by setting the `NODE_ENV` environment variable:
-```bash
-$ export NODE_ENV=test
-```
-
-If you are using Windows you can set it with the following command instead:
-```bash
-$ set NODE_ENV=test
-```
-
-Please note that all the commands we will be executing in the next steps need to be made on the same console where you just set the NODE_ENV environment variable.
-
-If you otherwise decided to use the browser which connects to a live SAFE Network, please skip the above step.
-
 And then install its dependencies:
 ```bash
 $ cd safe_examples/safe_app_electron_quick_start
@@ -69,10 +55,15 @@ $ npm start
 You should see a "Hello SAFE Network!" message in our app's window and an empty list of trips. We are now ready to start creating the code to be able to store the planned trips into the SAFE Network.
 
 ## Import the SAFE API
-The application will interact with the SAFE Network using the `safe-node-app` package, we therefore need to add it as a dependency in our package:
+The application will interact with the SAFE Network using the `safe-node-app` package, we therefore need to add it as a dependency in our package.
+
+As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to make sure to install the SAFE libraries required to connect to mock routing as well. We do this by setting the `NODE_ENV` environment variable specifically during installation of the `safe-node-app` package:
 ```bash
-$ npm install @maidsafe/safe-node-app --save
+$ NODE_ENV=dev npm install @maidsafe/safe-node-app --save
 ```
+Windows users in Command Prompt, will first need to run `set NODE_ENV=dev`, then run `npm install @maidsafe/safe-node-app --save`.  
+If using Windows PowerShell, run `$env:NODE_ENV = "dev"`.  
+Note that this environment variable will only persist in your current terminal until it is closed.
 
 Any interaction with the SAFE Network is made thru the API imported from the `safe-node-app` package, we do this by adding a `require` statement at the top of the `safenetwork.js` file:
 ```js
@@ -99,6 +90,8 @@ const opts = {
 
 let safeApp = await safeNodeApp.initialiseApp(appInfo, null, opts);
 ```
+
+Notice the use of `forceUseMock`, which signals to our application that we want to use the mock routing binaries that were additionally installed with `@maidsafe/safe-node-app`.
 
 We are using `await` to call the `initialiseApp` function since it's asynchronous as most of the functions exposed by the `safe-app-nodejs` API. You can also use JavaScript `Promises` if you prefer.
 
