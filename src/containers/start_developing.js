@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouteData } from 'react-static'
 
 import CONST from '../constants';
-import withTracker from './partials/withTracker';
+import Wrapper from './partials/wrapper';
 
 import IntroImage from '../../public/images/app_dev_intro.svg';
 import WHMLogo from '../../public/images/web_hosting_manager_rgb.svg';
@@ -174,5 +174,5 @@ class AppDev extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  withTracker(AppDev, data)
+  Wrapper(AppDev, data)
 ));

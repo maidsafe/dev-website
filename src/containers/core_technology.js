@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
 //
-import withTracker from './partials/withTracker';
+import Wrapper from './partials/wrapper';
 import NetworkLayers from '../../public/images/network_layer.svg';
 
 class CoreDeveloper extends React.Component {
@@ -175,5 +175,5 @@ class CoreDeveloper extends React.Component {
 }
 
 export default withRouteData(({ data }) => (
-  withTracker(CoreDeveloper,  data)
+  Wrapper(CoreDeveloper,  data)
 ))

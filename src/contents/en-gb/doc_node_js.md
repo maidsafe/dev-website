@@ -22,29 +22,15 @@ First you need to make sure you have the following tools installed to be able to
 
 Since the application will be authorising with the Authenticator to get the credentials needed to then connect to the SAFE Network, we first need to have an instance of the SAFE Browser installed.
 
-You can find the links to download the SAFE Browser package from [MaidSafe's website](https://maidsafe.net), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases). It's recommended to always use the latest available version.
+You can find the links to download the SAFE Browser package from the [SAFE Network website](https://safenetwork.tech), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases/latest). It's recommended to always use the latest available version.
 
 Note that there are packages for each of the supported platforms, i.e. Linux, Windows and macOS. Also note there are two type of packages for each of the supported platforms:
-- `safe-browser-<version>-<platform>.zip`: SAFE Browser package built to use the live SAFE Network
-- `safe-browser-mock-<version>-<platform>.zip`: SAFE Browser package built to use the mock routing. This will create a local temporary file and you won't need to connect to the live network.
+- `Peruse-<version>-<platform>-<arch>.zip`: SAFE Browser package built to use the live SAFE Network
+- `Peruse-<version>-<platform>-<arch>-dev.zip`: SAFE Browser package built to use the mock routing. This will create a local temporary file and you won't need to connect to the live network.
 
-In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC. Before we launch it let's go ahead and set the `NODE_ENV` environment variable set to `dev` to have our browser to effectively use the native libraries for mock routing:
-```bash
-$ export NODE_ENV=dev
-```
+In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC.
 
-If you are using Windows you can set it with the following commands instead:
-Command prompt
-```
-$ set NODE_ENV=dev
-```
-
-Powershell
-```
-$ $env:NODE_ENV = "dev"
-```
-
-You can now launch the browser (make sure you launch it from the same console where you just set the NODE_ENV variable), please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
+You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
 
 After you finished creating your account, please keep the browser open and logged in your account before proceeding with next steps.
 
@@ -54,20 +40,6 @@ We first clone the repo which contains the boilerplate using `git` onto a local 
 ```bash
 $ git clone https://github.com/maidsafe/safe_examples safe_examples
 ```
-
-As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to also make sure to signal our application that it needs to use the SAFE libraries required to connect to the mock routing as well. We do this by setting the `NODE_ENV` environment variable:
-```bash
-$ export NODE_ENV=dev
-```
-
-If you are using Windows you can set it with the following command instead:
-```bash
-$ set NODE_ENV=dev
-```
-
-Please note that all the commands we will be executing in the next steps need to be made on the same console where you just set the NODE_ENV environment variable.
-
-If you otherwise decided to use the browser which connects to a live SAFE Network, please skip the above step.
 
 And then install its dependencies:
 ```bash
@@ -83,10 +55,15 @@ $ npm start
 You should see a "Hello SAFE Network!" message in our app's window and an empty list of trips. We are now ready to start creating the code to be able to store the planned trips into the SAFE Network.
 
 ## Import the SAFE API
-The application will interact with the SAFE Network using the `safe-node-app` package, we therefore need to add it as a dependency in our package:
+The application will interact with the SAFE Network using the `safe-node-app` package, we therefore need to add it as a dependency in our package.
+
+As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to make sure to install the SAFE libraries required to connect to mock routing as well. We do this by setting the `NODE_ENV` environment variable specifically during installation of the `safe-node-app` package:
 ```bash
-$ npm install @maidsafe/safe-node-app --save
+$ NODE_ENV=dev npm install @maidsafe/safe-node-app --save
 ```
+Windows users in Command Prompt, will first need to run `set NODE_ENV=dev`, then run `npm install @maidsafe/safe-node-app --save`.  
+If using Windows PowerShell, run `$env:NODE_ENV = "dev"`.  
+Note that this environment variable will only persist in your current terminal until it is closed.
 
 Any interaction with the SAFE Network is made thru the API imported from the `safe-node-app` package, we do this by adding a `require` statement at the top of the `safenetwork.js` file:
 ```js
@@ -98,7 +75,7 @@ A SAFE application needs to get an authorisation from the user before being able
 
 We first need to generate a `SAFEApp` instance by calling the `initialiseApp` function of the API, providing information about the application (this information is displayed to the user when requesting the authorisation):
 ```js
-let appInfo = {
+const appInfo = {
   name: 'Hello SAFE Network',
   id: 'net.maidsafe.tutorials.nodejs',
   version: '0.1.0',
@@ -106,8 +83,15 @@ let appInfo = {
   bundle: 'com.github.electron',
   customExecPath
 };
-let safeApp = await safeNodeApp.initializeApp(appInfo);
+
+const opts = {
+  forceUseMock: true
+};
+
+let safeApp = await safeNodeApp.initialiseApp(appInfo, null, opts);
 ```
+
+Notice the use of `forceUseMock`, which signals to our application that we want to use the mock routing binaries that were additionally installed with `@maidsafe/safe-node-app`.
 
 We are using `await` to call the `initialiseApp` function since it's asynchronous as most of the functions exposed by the `safe-app-nodejs` API. You can also use JavaScript `Promises` if you prefer.
 
@@ -137,7 +121,7 @@ let safeApp;
 
 async function sendAuthRequest() {
   console.log('Authorising SAFE application...');
-  let appInfo = {
+  const appInfo = {
     // User-facing name of our app. It will be shown
     // in the Authenticator user's interface.
     name: 'Hello SAFE Network',
@@ -148,7 +132,12 @@ async function sendAuthRequest() {
     bundle: 'com.github.electron',
     customExecPath
   };
-  safeApp = await safeNodeApp.initializeApp(appInfo);
+
+  const opts = {
+    forceUseMock: true
+  };
+
+  safeApp = await safeNodeApp.initialiseApp(appInfo, null, opts);
   const authUri = await safeApp.auth.genAuthUri({});
   await safeApp.auth.openUri(authUri);
 }
@@ -175,7 +164,7 @@ async function uponAuthResponse(resAuthUri) {
 ## Connecting to the SAFE Network
 We can now use the authorisation URI we received from the Authenticator to connect to the SAFE Network. In order to do this we simply call the `loginFromUri` API function:
 ```js
-await safeApp.auth.loginFromURI(resAuthUri);
+await safeApp.auth.loginFromUri(resAuthUri);
 ```
 
 This function will decode the authorisation URI and create a connection with the SAFE Network using the credentials obtained from it.
@@ -218,7 +207,7 @@ let md;
 async function uponAuthResponse(resAuthUri) {
   console.log("Authorisation response received");
 
-  await safeApp.auth.loginFromURI(resAuthUri);
+  await safeApp.auth.loginFromUri(resAuthUri);
   console.log("Application connected to the network");
 
   const typeTag = 15000;
@@ -246,11 +235,13 @@ We now have our MutableData stored on the network with an initial set of key-val
 ```js
 async function getItems() {
   const entries = await md.getEntries();
+  let entriesList = await entries.listEntries();
   let items = [];
-  await entries.forEach((key, value) => {
+  entriesList.forEach((entry) => {
+    const value = entry.value;
     if (value.buf.length == 0) return;
     const parsedValue = JSON.parse(value.buf);
-    items.push({ key: key, value: parsedValue, version: value.version });
+    items.push({ key: entry.key, value: parsedValue, version: value.version });
   });
   return items;
 };
@@ -289,7 +280,7 @@ Let's now run the application and try to add a new trip to the list, the applica
 Note that since we are creating a MutableData at a random location each time the application loads, any new items/trips the user inserts won't be displayed after restarting the application. This can obviously be changed by storing the MutableData at a custom location that can be found each time the application loads. We are leaving this out of the scope of this tutorial for the sake of simplicity.
 
 ## Update and remove entries
-As we saw above, to update or remove entries we just need to create a mutation transaction, with "update" and/or "remove" actions, and apply the mutations to the MutableData. Let's fill up the body of the `updateItem` and `removeItems` functions to respectively perform these mutations on our MutableData:
+As we saw above, to update or remove entries we just need to create a mutation transaction, with "update" and/or "remove" actions, and apply the mutations to the MutableData. Let's fill up the body of the `updateItem` and `deleteItems` functions to respectively perform these mutations on our MutableData:
 ```js
 async function updateItem(key, value, version) {
   const mutations = await safeApp.mutableData.newMutation();
@@ -297,10 +288,10 @@ async function updateItem(key, value, version) {
   await md.applyEntriesMutation(mutations);
 };
 
-async function removeItems(items) {
+async function deleteItems(items) {
   const mutations = await safeApp.mutableData.newMutation();
   items.forEach(async (item) => {
-    await mutations.remove(item.key, item.version + 1);
+    await mutations.delete(item.key, item.version + 1);
   });
   await md.applyEntriesMutation(mutations);
 };
@@ -313,6 +304,6 @@ Also bear in mind that when you remove and entry it is never deleted from the Mu
 if (value.buf.length == 0) return;
 ```
 
-The `removeItems` is invoked when the user selects some of the trips from the list and then clicks on "remove trips already made". As you can see we receive a list of items to be removed and we are able to add a "remove" action for each of them into the mutation transaction before we actually send the mutation request to the network when invoking `applyEntriesMutation`. This is to reduce the network traffic needed to perform several mutations on a single MutableData.
+The `deleteItems` is invoked when the user selects some of the trips from the list and then clicks on "remove trips already made". As you can see we receive a list of items to be removed and we are able to add a "remove" action for each of them into the mutation transaction before we actually send the mutation request to the network when invoking `applyEntriesMutation`. This is to reduce the network traffic needed to perform several mutations on a single MutableData.
 
 Note that the boilerplate code doesn't have the implementation in the UI to be able to update trips, but we jut added the implementation for updating the items on the MutableData entries, so go ahead and try to add the UI components to allow the user to do this ;)
