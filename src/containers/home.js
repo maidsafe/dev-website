@@ -85,6 +85,7 @@ class Home extends React.Component {
                 </div>
               </div>
               <div className="sharing-sec-2 lay-50">
+              <span className="sharing-desc">{data.sharing.title.desc}</span>              
                 <div className="sharing-i app">
                   <h3>{data.sharing.parsec.title}</h3>
                   <p>{data.sharing.parsec.desc}</p>
