@@ -47,6 +47,11 @@ class CoreDeveloper extends React.Component {
                   <a href={data.components.comp2.para2.link2.href} target="_blank">{data.components.comp2.para2.link2.name}</a>
                   {data.components.comp2.para2.chunk3}
                 </p>
+                <p>
+                  {data.components.comp2.para3.chunk1}&nbsp;
+                  <a href={data.components.comp2.para3.link1.href} target="_blank">{data.components.comp2.para3.link1.name}</a>
+                  {data.components.comp2.para3.chunk2}&nbsp;
+                </p>
               </div>
             </div>
             <div className="comp-i">
@@ -85,7 +90,7 @@ class CoreDeveloper extends React.Component {
               <div className="comp-i-cntr">
                 <p>
                   {data.utilities.comp1.para1.chunk1}&nbsp;
-                  {/* <a href={data.utilities.comp1.para1.link1.href} target="_blank">{data.utilities.comp1.para1.link1.name}</a> */}
+                  {/* <a href={data.utilities.comp2.para1.link1.href} target="_blank">{data.utilities.comp2.para1.link1.name}</a> */}
                 </p>
                 <p>
                   {data.utilities.comp1.para2.chunk1}&nbsp;
@@ -153,6 +158,11 @@ class CoreDeveloper extends React.Component {
                   <div className="rfc-i">
                     <a href={data.rfcs.rfc5.href} target="_blank">
                       <span>{data.rfcs.rfc5.name}</span>
+                    </a>
+                  </div>
+                  <div className="rfc-i">
+                    <a href={data.rfcs.rfc6.href} target="_blank">
+                      <span>{data.rfcs.rfc6.name}</span>
                     </a>
                   </div>
                 </div>

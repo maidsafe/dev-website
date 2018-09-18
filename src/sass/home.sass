@@ -194,6 +194,70 @@
             color: $colr-blue
             &:after
               background-image: url($arrow-blue-url)
+  .sharing
+    background-color: $colr-theme-dark
+    min-height: 120px
+    .sharing-b
+      .sharing-sec-1
+      .sharing-sec-2
+        padding: 120px 80px 220px 0
+      .dual-tone-text
+        margin-top: 100px
+        position: relative
+        float: right
+        margin-right: 200px
+        z-index: 0
+        .contribute-img
+          position: absolute
+          top: 100%
+          right: 0
+          width: 250px
+          transform: translate(80px, -30px)
+          z-index: -1
+      .sharing-desc
+        font-size: 18px
+      .sharing-i
+        padding: 30px 0
+        h3
+          +header-2()
+          margin-bottom: 25px
+        p
+          +para()
+          margin-bottom: 25px
+          text-align: left
+        a
+          +link()
+          color: $colr-text()
+          background-color: $colr-grey
+          font-size: 18px
+          padding: 8px 60px 8px 16px
+          position: relative
+          border-radius: 5px
+          &:after
+            content: ''
+            width: 24px
+            height: 100%
+            position: absolute
+            top: 0
+            right: 8px
+            background-size: 18px
+            background-position: center
+            background-repeat: no-repeat
+            transition: right .2s linear
+          &:hover
+            text-decoration: none
+            &:after
+              right: 1%
+        &.app
+          a
+            color: $colr-blue
+            &:after
+              background-image: url($arrow-blue-url)
+        &.core
+          a
+            color: $colr-blue
+            &:after
+              background-image: url($arrow-blue-url)
   .roadmap
     background-color: $colr-theme-light
     min-height: 300px
@@ -319,4 +383,3 @@
                 background-image: url($roadmap-beyond-url)
               .mob-view-title
                 color: $colr-roadmap-rest
-
