@@ -23,44 +23,39 @@ moreInfo:
   link2:
     name: developer
     href: 'https://forum.safedev.org/'
-  links:
-    title: Useful links
-    link1:
-      name: PARSEC - A Paradigm Shift for Asynchronous and Permissionless Consensus
-      href: 'https://medium.com/safenetwork/parsec-a-paradigm-shift-for-asynchronous-and-permissionless-consensus-e312d721f9d8'
-    link2:
-      name: PARSEC - The Release of the Code
-      href: 'https://medium.com/safenetwork/parsec-the-release-of-the-code-91d514faaa71'
-  videos:
-    title: Videos
-    video1:
-      name: "1. PARSEC - Protocol for Asynchronous, Reliable, Secure and Efficient Consensus"
-      href: 'https://www.youtube.com/watch?v=JKagaPUrDsY'
-    video2:
-      name: "2. PARSEC - The Release of the Code"
-      href: 'https://www.youtube.com/watch?v=3YRaTCET5ZU'
-    video3:
-      name: "3. PARSEC - it's cool tech, yo! | SAFE Network - London Meetup"
-      href: 'https://www.youtube.com/watch?v=4p653ewa7R0'
-    video4:
-      name: "4. PARSEC Graphs - Visualising ABFT Consensus"
-      href: 'https://www.youtube.com/watch?v=kkafYeHKzIk&t=1s'
 resources:
-  title:
-    dark: PARSEC
-    light1: PARSEC Resources
-    light2: Resources For Developers
-  para: Resources for you to include PARSEC in your own projects.
-  res:
-    - name: GitHub
-      logo: GITHUB
-      linkId: github
-    - name: RFC
-      logo: RFC
-      linkId: rfc
-    - name: Whitepaper
-      logo: WHITEPAPER
-      linkId: whitepaper
-    - name: Documentation
-      logo: DOCUMENTATION
-      linkId: documentation
+  title: Resources
+  res1:
+    name: "GitHub repository"
+    href: 'https://github.com/maidsafe/parsec'
+  res2:
+    name: "RFC"
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0049-parsec/0049-parsec.md'
+  res3:
+    name: "Whitepaper"
+    href: 'https://docs.maidsafe.net/Whitepapers/pdf/PARSEC.pdf'
+  res4:
+    name: "Documentation"
+    href: 'https://docs.rs/parsec/'
+articles:
+  title: Medium Articles
+  link1:
+    name: PARSEC - A Paradigm Shift for Asynchronous and Permissionless Consensus
+    href: 'https://medium.com/safenetwork/parsec-a-paradigm-shift-for-asynchronous-and-permissionless-consensus-e312d721f9d8'
+  link2:
+    name: PARSEC - The Release of the Code
+    href: 'https://medium.com/safenetwork/parsec-the-release-of-the-code-91d514faaa71'
+videos:
+  title: Videos
+  video1:
+    name: "1. PARSEC - Protocol for Asynchronous, Reliable, Secure and Efficient Consensus"
+    href: 'https://www.youtube.com/watch?v=JKagaPUrDsY'
+  video2:
+    name: "2. PARSEC - The Release of the Code"
+    href: 'https://www.youtube.com/watch?v=3YRaTCET5ZU'
+  video3:
+    name: "3. PARSEC - it's cool tech, yo! | SAFE Network - London Meetup"
+    href: 'https://www.youtube.com/watch?v=4p653ewa7R0'
+  video4:
+    name: "4. PARSEC Graphs - Visualising ABFT Consensus"
+    href: 'https://www.youtube.com/watch?v=kkafYeHKzIk&t=1s'

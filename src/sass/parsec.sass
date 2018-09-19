@@ -3,7 +3,7 @@
   text-align: center
   @extend .base
 
-  .intro
+  .intro-base
     .title
       +header-1()
       text-align: center
@@ -14,103 +14,46 @@
       padding: 80px 0 20px
       img
         width: 100%
-    .para
+    .desc
       +para()
       margin-bottom: 16px
   .parsec-i
-    margin-top: 80px
-    .parsec-i-b
-      display: table
-      .parsec-i-med
-        display: table-cell
-        width: 30%
-        vertical-align: middle
-        text-align: left
-        img
-          width: 80%
-      .parsec-i-ctx
-        display: table-cell
-        width: 70%
-        vertical-align: middle
-        padding: 0 20px
-        .parsec-i-h
-          +header-1-1()
-          display: inline-block
-          margin-bottom: 25px
-          padding-bottom: 25px
-          position: relative
-          &:after
-            content: ''
-            display: block
-            width: 50%
-            height: 5px
-            border-radius: 3px
-            position: absolute
-            bottom: 0
-            left: 0
-            background-color: $colr-theme-dark
-        .parsec-i-desc
-          +para()
-        .parsec-i-link
-          +link()
-          font-size: 18px
-          text-transform: uppercase
-          font-weight: 600
-          margin-top: 8px
-          display: inline-block
-    &.flip
-      .parsec-i-b
-        .parsec-i-med
-          float: right
-          text-align: right
-        .parsec-i-ctx
-          float: left
-  .parres
-    .parres-b
-      //background-color: $colr-theme-light
-      .parres-lay-40
-        //padding-left: 80px
-        //padding-top: 200px
-        padding-left: 40px
-        padding-top: 40px
-        //background-color: $colr-theme-light
-      .parres-lay-60
-        //padding: 80px 0
-        padding: 40px 0
-        .parres-cntr
-          text-align: center
-          //transform: translate(-80px, 0)
-          .parres-cntr-b
-            //background-color: $colr-white
-            //padding: 60px
-            padding: 10px
-            text-align: center
-            .desc
-              +para()
-          .parres-app
-            margin-top: 40px
-            h3
-              +header-2()
-            .parres-app-ls
-              margin-top: 40px
-              +clearfix()
-              .parres-app-i
-                width: 25%
-                text-align: center
-                float: left
-                a
-                  +link()
-                  display: block
-                  color: $colr-text
-                  &:hover
-                    text-decoration: none
-                    color: $colr-blue
-                .parres-app-logo
-                  width: 80px
-                  height: 80px
-                  margin: 0 auto
-                  img
-                    width: 100%
-                .parres-app-name
-                  width: 80%
-                  margin: 24px auto 0
+    padding-top: 60px
+    .parsec-i-head
+      width: 100%
+      text-align: center
+      margin-bottom: 24px
+      padding-bottom: 16px
+      position: relative
+      &:after
+        content: ""
+        width: 100px
+        height: 5px
+        background-color: $colr-theme-dark
+        position: absolute
+        border-radius: 3px
+        bottom: 0
+        left: 50%
+        transform: translate(-50%, 0)
+      h3
+        +header-2-1()
+      .git-link
+        +para()
+        font-size: 16px
+        a
+          font-weight: normal !important
+    .parsec-i-cntr
+      width: 100%
+      text-align: justify
+      p
+        +para()
+        margin-bottom: 12px
+    .parsec-i-desc
+      +para()
+    .parsec-i-link
+      +link()
+      font-size: 18px
+      text-transform: uppercase
+      font-weight: 600
+      margin-top: 8px
+      display: inline-block
