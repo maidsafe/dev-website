@@ -15,6 +15,7 @@ const CONTENT_FILE = {
   LICENSING: 'licensing.yaml',
   PLATFORM_NODEJS: 'doc_node_js.md',
   PLATFORM_WEB: 'doc_web.md',
+  PARSEC: 'parsec.yaml'
 };
 
 const getLocalContent = (local, fileName) => {
@@ -95,6 +96,13 @@ export default [
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.LICENSING)),
     }),
+  },
+  {
+    path: '/parsec',
+    component: 'src/containers/parsec',
+    getData: () => ({
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PARSEC))
+    })
   },
   {
     is404: true,

@@ -3,6 +3,7 @@ import { withRouteData, Link } from 'react-static'
 //
 import Wrapper from './partials/wrapper';
 import Contribute from '../../public/images/contribute.svg';
+import Sharing from '../../public/images/sharing.svg';
 import Roadmap from '../../public/images/roadmap.png';
 
 class Home extends React.Component {
@@ -70,6 +71,26 @@ class Home extends React.Component {
                   <p>{data.contribute.coreDev.desc}</p>
                   <a href={data.contribute.coreDev.link.href}>{data.contribute.coreDev.link.name}</a>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sharing">
+            <div className="sharing-b layout5050">
+              <div className="sharing-sec-1 lay-50 top-align">
+                <div className="dual-tone-text">
+                  <span className="vlight">
+                  <p>{data.sharing.title.shared}</p>
+                  <p>{data.sharing.title.tech}</p>
+                  </span>
+                </div>
+              </div>
+              <div className="sharing-sec-2 lay-50">
+                <div className="sharing-i parsec">
+                  <h3>{data.sharing.parsec.title}</h3>
+                  <p>{data.sharing.parsec.desc}</p>
+                  <a href={data.sharing.parsec.link.href}>{data.sharing.parsec.link.name}</a>
+                </div>                
               </div>
             </div>
           </div>

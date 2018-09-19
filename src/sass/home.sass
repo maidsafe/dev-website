@@ -194,6 +194,59 @@
             color: $colr-blue
             &:after
               background-image: url($arrow-blue-url)
+  .sharing
+    .sharing-b
+      background-color: $colr-blue-dark
+      .sharing-sec-1
+      .sharing-sec-2
+        padding: 120px 80px 120px 80
+      .dual-tone-text
+        color: $colr-white
+        margin-top: 80px
+        position: relative
+        float: left
+        margin-left: 80px
+        z-index: 0
+      .sharing-i
+        padding: 30px 0
+        h3
+          +header-2()
+          margin-bottom: 25px
+          text-align: left
+          color: $colr-white
+        p
+          +para()
+          margin-bottom: 25px
+          text-align: left
+          color: $colr-white
+        a
+          +link()
+          color: $colr-text()
+          background-color: $colr-white
+          font-size: 18px
+          padding: 8px 60px 8px 16px
+          position: relative
+          border-radius: 5px
+          &:after
+            content: ''
+            width: 24px
+            height: 100%
+            position: absolute
+            top: 0
+            right: 8px
+            background-size: 18px
+            background-position: center
+            background-repeat: no-repeat
+            transition: right .2s linear
+          &:hover
+            text-decoration: none
+            &:after
+              right: 1%
+        &.parsec
+          a
+            color: $colr-blue
+            &:after
+              background-image: url($arrow-blue-url)
   .roadmap
     background-color: $colr-theme-light
     min-height: 300px
@@ -319,4 +372,3 @@
                 background-image: url($roadmap-beyond-url)
               .mob-view-title
                 color: $colr-roadmap-rest
-
