@@ -49,7 +49,7 @@ class CoreDeveloper extends React.Component {
                 </p>
                 <p>
                   {data.components.comp2.para3.chunk1}&nbsp;
-                  <a href={data.components.comp2.para3.link1.href} target="_blank">{data.components.comp2.para3.link1.name}</a>
+                  <a href={data.components.comp2.para3.link1.href} target="_self">{data.components.comp2.para3.link1.name}</a>
                   {data.components.comp2.para3.chunk2}&nbsp;
                 </p>
               </div>
