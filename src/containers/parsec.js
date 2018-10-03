@@ -28,8 +28,14 @@ class Parsec extends React.Component {
       <section className="parsec">
         <div className="intro-base">
 
-          <h3 className="title">{data.pageIntro.title}</h3>
-          <p className="desc">{data.pageIntro.desc}</p>
+          <p className="title">{data.header.title}</p>
+        </div>
+
+        <div className="parsec-i">
+          <div className="parsec-i-head"> <h3>{data.pageIntro.title}</h3> </div>
+          <div className="parsec-i-cntr">
+            <p className="parsec-i-desc">{data.pageIntro.desc}</p>
+          </div>
         </div>
 
         <div className="parsec-i">
@@ -74,28 +80,28 @@ class Parsec extends React.Component {
         <div className="parsec-i">
           <div className="parsec-i-head"> <h3>{data.resources.title}</h3> </div>
           <div className="parsec-i-cntr">
-            <p><a href={data.resources.res1.href} target="_blank">{data.resources.res1.name}</a></p>
-            <p><a href={data.resources.res2.href} target="_blank">{data.resources.res2.name}</a></p>
-            <p><a href={data.resources.res3.href} target="_blank">{data.resources.res3.name}</a></p>
-            <p><a href={data.resources.res4.href} target="_blank">{data.resources.res4.name}</a></p>
+            <p><h5><a href={data.resources.res1.href} target="_blank">{data.resources.res1.name}</a></h5></p>
+            <p><h5><a href={data.resources.res2.href} target="_blank">{data.resources.res2.name}</a></h5></p>
+            <p><h5><a href={data.resources.res3.href} target="_blank">{data.resources.res3.name}</a></h5></p>
+            <p><h5><a href={data.resources.res4.href} target="_blank">{data.resources.res4.name}</a></h5></p>
           </div>
         </div>
 
         <div className="parsec-i">
           <div className="parsec-i-head"> <h3>{data.articles.title}</h3> </div>
           <div className="parsec-i-cntr">
-            <p><a href={data.articles.link1.href} target="_blank">{data.articles.link1.name}</a></p>
-            <p><a href={data.articles.link2.href} target="_blank">{data.articles.link2.name}</a></p>
+            <p><h5><a href={data.articles.link1.href} target="_blank">{data.articles.link1.name}</a></h5></p>
+            <p><h5><a href={data.articles.link2.href} target="_blank">{data.articles.link2.name}</a></h5></p>
           </div>
         </div>
 
         <div className="parsec-i">
           <div className="parsec-i-head"> <h3>{data.videos.title}</h3> </div>
           <div className="parsec-i-cntr">
-            <p><a href={data.videos.video1.href} target="_blank">{data.videos.video1.name}</a></p>
-            <p><a href={data.videos.video2.href} target="_blank">{data.videos.video2.name}</a></p>
-            <p><a href={data.videos.video3.href} target="_blank">{data.videos.video3.name}</a></p>
-            <p><a href={data.videos.video4.href} target="_blank">{data.videos.video4.name}</a></p>
+            <p><h5><a href={data.videos.video1.href} target="_blank">{data.videos.video1.name}</a></h5></p>
+            <p><h5><a href={data.videos.video2.href} target="_blank">{data.videos.video2.name}</a></h5></p>
+            <p><h5><a href={data.videos.video3.href} target="_blank">{data.videos.video3.name}</a></h5></p>
+            <p><h5><a href={data.videos.video4.href} target="_blank">{data.videos.video4.name}</a></h5></p>
           </div>
         </div>
 
