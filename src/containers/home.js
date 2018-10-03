@@ -75,22 +75,21 @@ class Home extends React.Component {
             </div>
           </div>
 
-          <div className="sharing">
-            <div className="sharing-b layout5050">
-              <div className="sharing-sec-1 lay-50 top-align">
+          <div className="standalone">
+            <div className="standalone-b layout5050">
+              <div className="standalone-sec-1 lay-50 top-align">
                 <div className="dual-tone-text">
-                  <span className="vlight">
-                  <p>{data.sharing.title.shared}</p>
-                  <p>{data.sharing.title.tech}</p>
-                  </span>
+                  <span className="vlight">{data.sharing.title.shared}</span>
+                  <span className="light">{data.sharing.title.tech}</span>
+                  <div className="standalone-img"><img src={Sharing} /></div>
                 </div>
               </div>
-              <div className="sharing-sec-2 lay-50">
-                <div className="sharing-i parsec">
+              <div className="standalone-sec-2 lay-50">
+                <div className="standalone-i core">
                   <h3>{data.sharing.parsec.title}</h3>
                   <p>{data.sharing.parsec.desc}</p>
                   <a href={data.sharing.parsec.link.href}>{data.sharing.parsec.link.name}</a>
-                </div>                
+                </div>
               </div>
             </div>
           </div>
