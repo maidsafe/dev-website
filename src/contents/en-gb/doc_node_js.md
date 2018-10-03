@@ -14,6 +14,8 @@ The boilerplate implements a simple single page application using [Angular.js](h
 First you need to make sure you have the following tools installed to be able to work with this tutorial:
 - [Git](https://git-scm.com/): to be able to clone the boilerplate code
 - [Node.js](https://nodejs.org/en/download) v8.11.1 (which comes with [npm](http://npmjs.com/) v5.6.0) to be able to run the application since it's a Node.js application. All the steps in this tutorial are explained using npm, if you otherwise prefer to use [yarn](https://yarnpkg.com/en/), please make sure you install v1.6.0. Note that the use of yarn is not required and totally optional
+- If you are using MacOS you will need the cross-platform command-line tool `node-gyp`.  You can get this by installing [Xcode](https://developer.apple.com/xcode/download/) from Apple.
+ - You may also need to install the `Command Line Tools` via Xcode.  This is under the menu `Xcode>Preference>Locations` (or by running `$ xcode-select --install` from your terminal).
 - If you are using Ubuntu or Debian 9 as OS, `libgconf-2-4` and/or `build-essential` dependencies might be missing. Please install them with [Synaptic Package Mgr.](https://help.ubuntu.com/community/SynapticHowto), or with apt from a shell console: `$ sudo apt-get install libgconf-2-4 build-essential`
 - If you are using Windows, run `npm install --global --production windows-build-tools`.
 - If you decide to use yarn and are using Windows, run `yarn config set child-concurrency 1` because yarn attempts to build modules concurrently with multiple child processes, which causes intermittent timing issues on Windows.
