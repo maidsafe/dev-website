@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static'
 //
 import Wrapper from './partials/wrapper';
 import Contribute from '../../public/images/contribute.svg';
-import Sharing from '../../public/images/sharing.svg';
+import StandaloneImg from '../../public/images/standalone.svg';
 import Roadmap from '../../public/images/roadmap.png';
 
 class Home extends React.Component {
@@ -81,7 +81,7 @@ class Home extends React.Component {
                 <div className="dual-tone-text">
                   <span className="vlight">{data.sharing.title.shared}</span>
                   <span className="light">{data.sharing.title.tech}</span>
-                  <div className="standalone-img"><img src={Sharing} /></div>
+                  <div className="standalone-img"><img src={StandaloneImg} /></div>
                 </div>
               </div>
               <div className="standalone-sec-2 lay-50">

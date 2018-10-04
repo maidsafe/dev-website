@@ -34,7 +34,11 @@ class Parsec extends React.Component {
         <div className="parsec-i">
           <div className="parsec-i-head"> <h3>{data.pageIntro.title}</h3> </div>
           <div className="parsec-i-cntr">
-            <p className="parsec-i-desc">{data.pageIntro.desc}</p>
+            <p>
+              {data.pageIntro.desc}&nbsp;
+              <a href={data.pageIntro.link1.href} target="_blank">{data.pageIntro.link1.name}</a>
+              {data.pageIntro.end}
+            </p>
           </div>
         </div>
 
