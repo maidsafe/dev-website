@@ -53,6 +53,7 @@ articles:
     href: 'https://medium.com/safenetwork/parsec-the-release-of-the-code-91d514faaa71'
 videos:
   title: Videos
+  intro: While MaidSafe do not use cookies the videos linked here are hosted on YouTube and so may use cookies.
   video1:
     name: "1. PARSEC - Protocol for Asynchronous, Reliable, Secure and Efficient Consensus"
     href: 'https://www.youtube.com/watch?v=JKagaPUrDsY'
