@@ -34,6 +34,12 @@ components:
         name: eventual consistency
         href: https://en.wikipedia.org/wiki/Eventual_consistency
       chunk3: "."
+    para3:
+      chunk1: In order to come to this eventual consistency the routing layer uses the consensus mechanism
+      link1:
+        name: PARSEC
+        href: '/parsec'
+      chunk2: "."
   comp3:
     name: Vault
     para1: This is one of the executable consumers of Routing and will primarily hold SAFE Network Data.
@@ -85,6 +91,9 @@ rfcs:
   rfc5:
     name: Authorise Apps
     href: 'https://github.com/maidsafe/rfcs/blob/master/text/0048-authorise-apps/0048-authorise-apps.md'
+  rfc6:
+    name: PARSEC
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0049-parsec/0049-parsec.md'
 patents:
   title: Relevant Patents
   patent1:

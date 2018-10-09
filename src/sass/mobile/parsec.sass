@@ -1,0 +1,46 @@
+@media screen and (max-width: 576px)
+  .parsec
+    .pageIintro
+      .title
+        +header-1()
+        text-align: center
+        margin-bottom: 40px
+        padding-top: 60px
+      .para
+        +para()
+        margin-bottom: 16px
+    .parsec-i
+      .parsec-i-b
+        display: block
+        +clearfix()
+        .parsec-i-med
+          display: block
+          float: none !important
+          width: 100%
+          max-width: 200px
+          text-align: center !important
+          margin-left: auto
+          margin-right: auto
+        .parsec-i-ctx
+          margin-top: 40px
+          display: block
+          float: none
+          width: 100%
+          text-align: center
+          .parsec-i-h
+            +header-2()
+            &:after
+              left: 50%
+              transform: translate(-50%, 0)
+    .parres
+      .parres-app
+        .parres-app-ls
+          margin-top: 20px
+          .parres-app-i
+            width: 100% !important
+            margin-bottom: 36px
+            position: relative
+            .parres-app-logo
+              width: 60px !important
+              height: 60px !important
+            

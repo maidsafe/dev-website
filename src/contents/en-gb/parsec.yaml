@@ -1,0 +1,68 @@
+header:
+  title: PARSEC
+pageIntro:
+  title: What is PARSEC?
+  desc: PARSEC is a Protocol for Asynchronous, Reliable, Secure and Efficient Consensus and is the world's first open source ABFT (Asynchronous Byzantine Fault Tolerance) protocol that can be used in a truly permissionless setting created by
+  link1:
+    name: MaidSafe
+    href: 'https://maidsafe.net'
+  end: .
+networkUse:
+  title: Why does the Network need PARSEC?
+  para1: As a global decentralised data and communications network, the SAFE Network has to be public and permissionless.
+  para2: Unlike centralised systems there is no central body to act as a final authority on the state of the Network.  Nodes on a decentralised system such as the SAFE Network must therefore agree on network actions and state amongst themselves. Other decentralised systems such as BitCoin use blockchain to achieve consensus.  However, there are a number of drawbacks with a blockchain based system notably the speed and cost as it grows - this is not a scalable option.
+bigDeal:
+  title: Why is PARSEC a big deal?
+  para1: As far as we know, no other project has managed to ensure ABFT consensus in permissionless environments.  This is technology that will power the SAFE Network, the only truly next-generation decentralised autonomous internet that promises privacy, security and freedom by default.
+myProject:
+  title: Great, can I use PARSEC in my project?
+  para1: PARSEC will be released under a GPL v3 licence (with linking exception). It will be free for anyone to build upon and likely prove to be of immense value to other decentralised projects facing similar challenges.
+moreInfo:
+  title: Where can I get more information?
+  para1:
+    chunk1: "Our "
+    chunk2: " and "
+    chunk3: " forums are a wealth of knowledge and are a great place to ask any questions you may have."
+  link1:
+    name: community
+    href: 'https://safenetforum.org/'
+  link2:
+    name: developer
+    href: 'https://forum.safedev.org/'
+resources:
+  title: Resources
+  res1:
+    name: "GitHub repository"
+    href: 'https://github.com/maidsafe/parsec'
+  res2:
+    name: "RFC"
+    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0049-parsec/0049-parsec.md'
+  res3:
+    name: "Whitepaper"
+    href: 'https://docs.maidsafe.net/Whitepapers/pdf/PARSEC.pdf'
+  res4:
+    name: "Documentation"
+    href: 'https://docs.rs/parsec/'
+articles:
+  title: Medium Articles
+  link1:
+    name: PARSEC - A Paradigm Shift for Asynchronous and Permissionless Consensus
+    href: 'https://medium.com/safenetwork/parsec-a-paradigm-shift-for-asynchronous-and-permissionless-consensus-e312d721f9d8'
+  link2:
+    name: PARSEC - The Release of the Code
+    href: 'https://medium.com/safenetwork/parsec-the-release-of-the-code-91d514faaa71'
+videos:
+  title: Videos
+  intro: While MaidSafe do not use cookies the videos linked here are hosted on YouTube and so may use cookies.
+  video1:
+    name: "1. PARSEC - Protocol for Asynchronous, Reliable, Secure and Efficient Consensus"
+    href: 'https://www.youtube.com/watch?v=JKagaPUrDsY'
+  video2:
+    name: "2. PARSEC - The Release of the Code"
+    href: 'https://www.youtube.com/watch?v=3YRaTCET5ZU'
+  video3:
+    name: "3. PARSEC - it's cool tech, yo! | SAFE Network - London Meetup"
+    href: 'https://www.youtube.com/watch?v=4p653ewa7R0'
+  video4:
+    name: "4. PARSEC Graphs - Visualising ABFT Consensus"
+    href: 'https://www.youtube.com/watch?v=kkafYeHKzIk&t=1s'

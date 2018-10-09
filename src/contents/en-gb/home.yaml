@@ -46,7 +46,18 @@ contribute:
     link:
       name: Core Technology
       href: /core_technology
-
+sharing:
+  title:
+    shared: Stand alone
+    tech: technology
+    safe: SAFE Network
+    desc: Use standalone components from the SAFE Network in your own projects.
+  parsec:
+    title: PARSEC
+    desc: PARSEC (Protocol for Asynchronous, Reliable, Secure and Efficient Consensus) is an algorithm which allows nodes to reach ordered consensus in a decentralised network.
+    link:
+      name: Use PARSEC
+      href: /parsec
 roadmap:
   title: Roadmap
   desc: The Network is in Alpha 2 and the APIs are subject to change. We do try to keep the APIs backward compatible as much as possible while the Network is progressing towards a stable beta.
