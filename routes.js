@@ -15,7 +15,9 @@ const CONTENT_FILE = {
   LICENSING: 'licensing.yaml',
   PLATFORM_NODEJS: 'doc_node_js.md',
   PLATFORM_WEB: 'doc_web.md',
-  PARSEC: 'parsec.yaml'
+  PARSEC: 'parsec.yaml',
+  CRUST: 'crust.yaml',
+  GLOSSARY: 'glossary.yaml'
 };
 
 const getLocalContent = (local, fileName) => {
@@ -102,6 +104,20 @@ export default [
     component: 'src/containers/parsec',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PARSEC))
+    })
+  },
+  {
+    path: '/crust',
+    component: 'src/containers/crust',
+    getData: () => ({
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.CRUST))
+    })
+  },
+  {
+    path: '/glossary',
+    component: 'src/containers/glossary',
+    getData: () => ({
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.GLOSSARY))
     })
   },
   {
