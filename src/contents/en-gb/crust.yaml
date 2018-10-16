@@ -39,7 +39,7 @@ features:
     href: "#multiprotocol"
     anchor: "multiprotocol"
     name: "Multi-protocol"
-    summary: "Crust will include TCP-direct and introduce µTP which wraps UDP and adds reliability, congestion control and ordered delivery to make a more robust and a better paradigm. Supporting multiple protocols means that if a firewall/router does not support one particular protocol then the network switches to another to get connected. If the firewall/router supports all protocols then Crust chooses the 1st protocol that successfully establishes the connection."
+    summary: "Adding to the existing TCP & UDP hole-punching protocols Crust will soon include TCP-direct and introduce µTP, which wraps UDP and adds reliability, congestion control and ordered delivery to make a more robust and a better paradigm. Supporting multiple protocols means that if a firewall/router does not support one particular protocol then the network switches to another to get connected. If the firewall/router supports all protocols then Crust chooses the 1st protocol that successfully establishes the connection."
   f2:
     href: "#serialisation"
     anchor: "serialisation"
@@ -49,17 +49,26 @@ features:
     href: "#bootstrap"
     anchor: "bootstrap"
     name: "Bootstrap cache"
-    summary: "Bootstrap caching enhances the concept of using genesis nodes (hard-coded addresses) for initial vault detection by dynamically creating a list of “good” nodes. This list is appended and pruned as nodes connect/disconnect to the network so is always up-to-date."
-  f4:
-    href: "#modern_paradigm"
-    anchor: "modern_paradigm"
-    name: "Modern Rust paradigm"
-    summary: "Upgrade to make the asynchronous Crust routing libraries more advanced, utilising the more modern features of Rust as it has evolved (asynchronicity). This adds additional scalability and robustness to the libraries."
-  f5:
-    href: "#compatibility"
-    anchor: "compatibility"
-    name: "Compatibility layer"
-    summary: "This is an exposed translation layer which allows older flavours of Rust to make use of the newer Crust methods while the libraries are being updated."
+    summary: "Bootstrap caching enhances the concept of using genesis nodes (hard-coded addresses) for initial vault detection by dynamically creating a list of nodes which are directly reachable without the need to hole-punch. This list is appended and pruned as nodes connect/disconnect to the network so is always kept up-to-date."
+license:
+  href: '#license'
+  anchor: "license"
+  title: "License"
+  chunk1: "This Crust library is dual-licensed under the Modified BSD ("
+  link1:
+    href: 'https://opensource.org/licenses/BSD-3-Clause'
+    name: "LICENSE-BSD"
+  chunk2: ") or the MIT license ("
+  link2:
+    name: "LICENSE-MIT"
+    href: 'http://opensource.org/licenses/MIT'
+  chunk3: ") at your option."
+contrib:
+  href: '#contrib'
+  anchor: "contrib"
+  title: "Contribute"
+  para:
+    chunk1: Copyrights in the SAFE Network are retained by their contributors. No copyright assignment is required to contribute to this project.
 action:
   href: "#action"
   anchor: "action"

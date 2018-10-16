@@ -107,25 +107,52 @@ class Crust extends React.Component {
               {data.features.f3.summary}
             </p>
 
+          </div>
+        </div>
+      </div>
 
-            {/* Feature 4: Modern Rust paradigm */}
-            <a name={data.features.f4.anchor}></a>
-            <p>
-              &nbsp;&#9679;&nbsp;
-              <b>{data.features.f4.name}</b>:&nbsp;
-              {data.features.f4.summary}
-            </p>
+      {/* ---------- License  ---------- */}
+      <div className="content-comp">
+        <a name={data.license.anchor}></a>
+        <div className="comp-i">
 
+          {/* License Header */}
+          <div className="comp-i-head">
+            <h3>{data.license.title}</h3>
+          </div>
 
-            {/* Feature 5: Compatibility layer */}
-            <a name={data.features.f5.anchor}></a>
-            <p>
-              &nbsp;&#9679;&nbsp;
-              <b>{data.features.f5.name}</b>:&nbsp;
-              {data.features.f5.summary}
-            </p>
+          {/* License text */}
+          <div className="comp-i">
+            <div className="comp-i-cntr">
+              <p>
+                {data.license.chunk1}
+                <a href={data.license.link1.href} target="_blank"> {data.license.link1.name}</a>
+                {data.license.chunk2}
+                <a href={data.license.link2.href} target="_blank"> {data.license.link2.name}</a>
+                {data.license.chunk3}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      {/* ---------- Contribution  ---------- */}
+      <div className="content-comp">
+        <a name={data.contrib.anchor}></a>
+        <div className="comp-i">
 
+          {/* License Header */}
+          <div className="comp-i-head">
+            <h3>{data.contrib.title}</h3>
+          </div>
+
+          {/* License text */}
+          <div className="comp-i">
+            <div className="comp-i-cntr">
+              <p>
+                {data.contrib.para.chunk1}
+              </p>
+            </div>
           </div>
         </div>
       </div>
