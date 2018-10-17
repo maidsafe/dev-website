@@ -10,7 +10,7 @@ intro:
     summary: "all communications are securely encrypted."
   bullet3:
     name: "Bootstrap cache"
-    summary: "up-to-date list of start-up vaults (not just hardwired genesis nodes)."
+    summary: "up-to-date list of start-up vaults."
 overview:
   title: "An overview of Crust"
   para:

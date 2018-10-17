@@ -11,7 +11,7 @@ components:
   comp1:
     name: Crust
     para1:
-      chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimised for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and
+      chunk1: Crust is a low level networking library that is optimised for peer-to-peer connections and data transportation.
       link1:
         name: Tokio
         href: 'https://tokio.rs'
@@ -21,7 +21,7 @@ components:
         href: https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol
       chunk3: ". "
       readmore:
-        name: "Read more..."
+        name: "Read more about Crust..."
         href: '/crust'
   comp2:
     name: Routing
