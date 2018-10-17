@@ -21,7 +21,14 @@ class Home extends React.Component {
               <div className="hom-bnr-2-h">{data.homeBanner2.title}</div>
               <div className="hom-bnr-2-cntn">{data.homeBanner2.para}</div>
             </div>
+            {/* DG - test out a banner link! */}
+            <div className="hom-bnr-2-link">
+                <h3>{data.test.crust_test.title}</h3>
+                <p>{data.test.crust_test.desc}</p>
+                <a href={data.test.crust_test.link.href}>{data.test.crust_test.link.name}</a>
+            </div>
           </div>
+
 
           <div className="build-on-safe">
             <div className="build-on-safe-b layout4060">

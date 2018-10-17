@@ -19,8 +19,10 @@ components:
       link2:
         name: IGD
         href: https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol
-      chunk3: "."
-
+      chunk3: ". "
+      readmore:
+        name: "Read more..."
+        href: '/crust'
   comp2:
     name: Routing
     para1: Routing sits on top of Crust. It is our overlay networking and routing layer and forms the brain of the SAFE Network. Its purpose is forming a decentralised Internet and routing information within it.
