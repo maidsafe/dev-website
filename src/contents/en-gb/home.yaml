@@ -82,8 +82,8 @@ roadmap:
         desc: Data republish and network restarts. A security audit of the network. Test safecoin. Real-time network upgrades. Network validated upgrades.
 test:
   crust_test:
-    title: "Crust Test"
-    desc: "Participate the Crust test programme"
+    title: "Crust"
+    desc: "Help us by live testing our peer-to-peer connections library"
     link:
       href: 'https://safenetforum.org/t/crust-nat-traversal-test/25799'
-      name: "Get Involved"
+      name: "Join the test"

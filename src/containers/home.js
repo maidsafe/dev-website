@@ -23,9 +23,13 @@ class Home extends React.Component {
             </div>
             {/* DG - test out a banner link! */}
             <div className="hom-bnr-2-link">
-                <h3>{data.test.crust_test.title}</h3>
-                <p>{data.test.crust_test.desc}</p>
-                <a href={data.test.crust_test.link.href}>{data.test.crust_test.link.name}</a>
+                <p>{data.test.crust_test.desc}: <b>{data.test.crust_test.title}</b></p>
+                {/*<a href={data.test.crust_test.link.href}>{data.test.crust_test.link.name}</a>*/}
+                <p className="lft-sec-btn">
+                  <button className="btn" type="button" onClick={() => {
+                    location.assign(data.test.crust_test.link.href);
+                  }}>{data.test.crust_test.link.name}</button>
+                </p>
             </div>
           </div>
 
