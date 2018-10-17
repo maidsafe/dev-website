@@ -11,7 +11,7 @@ components:
   comp1:
     name: Crust
     para1:
-      chunk1: Crust is a low level networking library (and protocol) much like TCP, UDP, etc. but optimised for peer-to-peer connections and data transportation. It implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. Crust is implemented with use of modern Rust and the asynchronous I/O is based on futures and
+      chunk1: Crust is a low level networking library that is optimised for peer-to-peer connections and data transportation.
       link1:
         name: Tokio
         href: 'https://tokio.rs'
@@ -19,8 +19,10 @@ components:
       link2:
         name: IGD
         href: https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol
-      chunk3: "."
-
+      chunk3: ". "
+      readmore:
+        name: "Read more about Crust..."
+        href: '/crust'
   comp2:
     name: Routing
     para1: Routing sits on top of Crust. It is our overlay networking and routing layer and forms the brain of the SAFE Network. Its purpose is forming a decentralised Internet and routing information within it.

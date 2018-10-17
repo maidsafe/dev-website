@@ -87,6 +87,44 @@
           position: absolute
       .hom-bnr-2-cntn
         font-size: 30px
+    .hom-bnr-2-link
+      position:  absolute
+      
+      top: 0
+      right: 50px
+      width: 100%
+      text-align: center
+      padding-right: 40px
+      padding-top: 10px
+      padding-bottom: 10px
+      background-color: RGBA(255,255,255, 0.25)
+      a
+        +link()
+        font-size: 24px
+        color: $colr-utube-red
+        text-transform: uppercase
+        line-height: 30px
+        position: relative
+        padding-left: 40px
+        display: inline-block
+        &:before
+          content: ''
+          width: 40px
+          height: 30px
+          background-position: center
+          background-size: 30px
+          background-repeat: no-repeat
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+      .lft-sec-btn
+          .btn
+            background-color: $colr-utube-red
+            min-width: 180px
+            font-size: 14px
+            border-radius: 24px
+            border: 0
   .build-on-safe
     background-color: $colr-theme-light
     min-height: 300px
