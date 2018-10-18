@@ -24,11 +24,14 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-i-cntr">
                 <p>
-                  {data.components.comp1.para1.chunk1}&nbsp;
+                  {data.components.comp1.para1.chunk1}{/*}&nbsp;
                   <a href={data.components.comp1.para1.link1.href} target="_blank">{data.components.comp1.para1.link1.name}</a>
                   {data.components.comp1.para1.chunk2}&nbsp;
                   <a href={data.components.comp1.para1.link2.href} target="_blank">{data.components.comp1.para1.link2.name}</a>
-                  {data.components.comp1.para1.chunk3}
+                  {data.components.comp1.para1.chunk3}*/}
+                </p>
+                <p>
+                  <a href={data.components.comp1.para1.readmore.href}>{data.components.comp1.para1.readmore.name}</a>
                 </p>
               </div>
             </div>
