@@ -12,20 +12,17 @@ class Home extends React.Component {
     return (
       <section className="home">
         <div className="home-b">
-          {/* <div className="home-banner">
-            <div className="home-banner-typo"></div>
-            <div className="home-banner-link"><a href={data.homeBanner.link.href} target="_blank">{data.homeBanner.link.name}</a></div>
-          </div> */}
-          {/* DG - test out a banner link! */}
+          {/* Homepage Top CTA Banner - disable when no action (current: crust test OFF) */}
+          {/*
           <div className="hom-bnr-2-link">
             <p>{data.test.crust_test.desc}: <b>{data.test.crust_test.title}</b></p>
-            {/*<a href={data.test.crust_test.link.href}>{data.test.crust_test.link.name}</a>*/}
             <p className="lft-sec-btn">
               <button className="btn" type="button" onClick={() => {
                 location.assign(data.test.crust_test.link.href);
               }}>{data.test.crust_test.link.name}</button>
             </p>
           </div>
+          */}
           <div className="hom-bnr-2">
             <div className="hom-bnr-2-cntx">
               <div className="hom-bnr-2-h">{data.homeBanner2.title}</div>
