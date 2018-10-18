@@ -179,10 +179,12 @@ class Crust extends React.Component {
               <a href={data.action.a1.link.href} target="_blank"> {data.action.a1.link.name}</a>
             </p>
 
-            {/* Crust Test Programme */}
+            {/* Crust Test Programme - enable when live! */}
+            {/*
             <p>
               <a href={data.action.a2.link.href} target="_blank"> {data.action.a2.link.name}</a>
             </p>
+            */}
           </div>
         </div>
       </div>
