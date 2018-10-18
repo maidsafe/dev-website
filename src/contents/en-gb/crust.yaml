@@ -1,0 +1,85 @@
+title: "Crust: Connections in Rust"
+intro:
+  para:
+    chunk1: "Crust is a low level networking library that is optimised for peer-to-peer connections and data transportation. It encorporates the following highlighted features:"
+  bullet1:
+    name: "Multi-protocol"
+    summary: "UDP & TCP increases connection success rate."
+  bullet2:
+    name: "Secure serialisation"
+    summary: "all communications are securely encrypted."
+  bullet3:
+    name: "Bootstrap cache"
+    summary: "up-to-date list of start-up vaults."
+overview:
+  title: "An overview of Crust"
+  para:
+    chunk1: "Crust implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. It supports multiple protocols ("
+    link1:
+      name: "UDP"
+      href: 'https://en.wikipedia.org/wiki/User_Datagram_Protocol'
+    chunk2: " and "
+    link2:
+      name: "TCP"
+      href: 'https://en.wikipedia.org/wiki/Transmission_Control_Protocol'
+    chunk3: ") and it is crypto secure - all communications, starting with handshake messages, are encrypted. It also provides other security features like randomised ports that are used to prevent targeting a particular known port to conduct DoS attacks. Crust implements several "
+    link3:
+      name: "NAT traversal"
+      href: 'https://en.wikipedia.org/wiki/NAT_traversal'
+    chunk4: " techniques such as hole punching and use of "
+    link4:
+      name: "IGD"
+      href: 'https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol'
+    chunk5: "."
+features:
+  href: "#features"
+  anchor: "features"
+  title: "Upcoming Features / Benefits"
+  f1:
+    href: "#multiprotocol"
+    anchor: "multiprotocol"
+    name: "Multi-protocol"
+    summary: "Adding to the existing TCP & UDP hole-punching protocols Crust will soon include TCP-direct and introduce µTP, which wraps UDP and adds reliability, congestion control and ordered delivery to make a more robust and a better paradigm. Supporting multiple protocols means that if a firewall/router does not support one particular protocol then the network switches to another to get connected. If the firewall/router supports all protocols then Crust chooses the 1st protocol that successfully establishes the connection."
+  f2:
+    href: "#serialisation"
+    anchor: "serialisation"
+    name: "Secure serialisation"
+    summary: "The network encrypts everything handed to it for transportation automatically. With Secure serialisation we have negated MITM attack as everything on the network is encrypted at each network hop. Also, the node signing each packet provides non-repudiation as the sender cannot deny that they signed the packet."
+  f3:
+    href: "#bootstrap"
+    anchor: "bootstrap"
+    name: "Bootstrap cache"
+    summary: "Bootstrap caching enhances the concept of using genesis nodes (hard-coded addresses) for initial vault detection by dynamically creating a list of nodes which are directly reachable without the need to hole-punch. This list is appended and pruned as nodes connect/disconnect to the network so is always kept up-to-date."
+license:
+  href: '#license'
+  anchor: "license"
+  title: "License"
+  chunk1: "This Crust library is dual-licensed under the Modified BSD ("
+  link1:
+    href: 'https://opensource.org/licenses/BSD-3-Clause'
+    name: "LICENSE-BSD"
+  chunk2: ") or the MIT license ("
+  link2:
+    name: "LICENSE-MIT"
+    href: 'http://opensource.org/licenses/MIT'
+  chunk3: ") at your option."
+contrib:
+  href: '#contrib'
+  anchor: "contrib"
+  title: "Contribute"
+  para:
+    chunk1: Copyrights in the SAFE Network are retained by their contributors. No copyright assignment is required to contribute to this project.
+action:
+  href: "#action"
+  anchor: "action"
+  title: "Get Involved"
+  a1:
+    name: "GitHub"
+    link:
+      name: 'Crust GitHub repository'
+      href: 'https://github.com/maidsafe/crust'
+  a2:
+    name: "Test"
+    link:
+      name: 'Crust NAT traversal test programme'
+      href: 'https://safenetforum.org/t/crust-nat-traversal-test/25799'
