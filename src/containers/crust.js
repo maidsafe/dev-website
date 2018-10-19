@@ -180,9 +180,13 @@ class Crust extends React.Component {
             </p>
 
             {/* Crust Test Programme */}
+            {/* ==================== */}
+            {/* Comment out if not live! */}
+            {/*
             <p>
               <a href={data.action.a2.link.href} target="_blank"> {data.action.a2.link.name}</a>
             </p>
+            */}
           </div>
         </div>
       </div>
