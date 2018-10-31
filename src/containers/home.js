@@ -13,7 +13,6 @@ class Home extends React.Component {
       <section className="home">
         <div className="home-b">
           {/* Homepage Top CTA Banner - disable when no action (current: crust test OFF) */}
-          {/*
           <div className="hom-bnr-2-link">
             <p>{data.test.crust_test.desc}: <b>{data.test.crust_test.title}</b></p>
             <p className="lft-sec-btn">
@@ -22,7 +21,6 @@ class Home extends React.Component {
               }}>{data.test.crust_test.link.name}</button>
             </p>
           </div>
-          */}
           <div className="hom-bnr-2">
             <div className="hom-bnr-2-cntx">
               <div className="hom-bnr-2-h">{data.homeBanner2.title}</div>
