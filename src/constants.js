@@ -10,7 +10,7 @@ export default {
     footer: {
       licensing: '/licensing',
       community: 'https://safenetforum.org/',
-      docs: 'https://docs.maidsafe.net/',
+      docs: 'https://safenetwork.org/documentation/',
       blog: 'https://blog.maidsafe.net/',
     },
     appDevs: {
