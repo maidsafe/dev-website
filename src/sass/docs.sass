@@ -1,0 +1,81 @@
+.docs
+  padding-top: 80px
+  .content-intro
+    @extend .base
+    text-align: center
+    h1
+      +header-1()
+      margin-bottom: 40px
+    p
+      +para()
+      text-align: justify
+      margin-bottom: 12px
+    .med
+      margin-top: 80px
+      margin-bottom: 40px
+      img
+        width: 80%
+        max-width: 80%
+        height: auto
+        width: auto\9; /* ie8 */
+        padding: 0 15px
+        float: center
+  .content-comp
+    @extend .base
+    padding-top: 20px
+    text-align: center
+    h1
+      +header-1-1()
+    & > p
+      +para()
+      text-align: justify
+      margin-top: 40px
+    .comp-i
+      padding-top: 40px
+      .comp-i-head
+        width: 100%
+        text-align: center
+        margin-bottom: 24px
+        padding-bottom: 16px
+        position: relative
+        &:after
+          content: ""
+          width: 100px
+          height: 5px
+          background-color: $colr-theme-dark
+          position: absolute
+          border-radius: 3px
+          bottom: 0
+          left: 50%
+          transform: translate(-50%, 0)
+        h3
+          +header-2-1()
+        .git-link
+          +para()
+          font-size: 16px
+          a
+            font-weight: normal !important
+      .comp-i-cntr
+        width: 100%
+        text-align: center
+        h3
+          +header-2-1()
+        h5
+          +header-2-1()
+          margin-bottom: 10px
+          text-align: center
+        p
+          +para()
+          margin-bottom: 12px
+        img
+          width: 200px
+          max-width: 80%
+          height: auto
+          width: auto\9; /* ie8 */
+          padding: 0 0px
+          margin-bottom: 10px
+          .center
+            display: block
+            margin-left: auto
+            margin-right: auto
+            width: 50%
