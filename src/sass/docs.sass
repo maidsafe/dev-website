@@ -3,6 +3,7 @@
   .content-intro
     @extend .base
     text-align: center
+    margin-bottom: 80px
     h1
       +header-1()
       margin-bottom: 40px
@@ -79,3 +80,133 @@
             margin-left: auto
             margin-right: auto
             width: 50%
+  .nodejs
+    background-color: $colr-theme-dark
+    margin-top: 0px
+    padding: 60px 0
+    .nodejs-b
+      @extend .base
+      display: block
+      text-align: left
+      h3
+        +header-2()
+        text-align: center
+      .nodejs-cntr
+        padding-top: 30px
+        .nodejs-i
+          width: 25%
+          display: inline-block
+          padding: 30px 30px 30px 0
+          a
+            +link()
+            font-size: 18px
+            color: $colr-text
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-link-text
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($doc-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
+  .rust
+    background-color: $colr-vault-bg
+    margin-top: 00px
+    padding: 60px 0
+    .rust-b
+      @extend .base
+      display: block
+      text-align: left
+      h3
+        +header-2()
+        text-align: center
+        color: $colr-white
+      .rust-cntr
+        padding-top: 30px
+        p
+          +para()
+          margin-bottom: 12px
+          color: $colr-white
+          a
+            +link()
+            font-size: 18px
+            color: $colr-white
+            display: inline-block
+            position: relative
+            &:hover
+              color: $colr-theme-light
+              text-decoration: underline
+              border: 3px
+        .rust-i
+          width: 33.33%
+          display: inline-block
+          padding: 30px 30px 0px 0
+          border-radius: 3px
+          a
+            +link()
+            font-size: 18px
+            color: $colr-white
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-theme-light
+              text-decoration: underline
+              border: 3px
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($doc-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
+        .rust-url
+  .other
+    background-color: $colr-theme-light
+    margin-top: 0px
+    padding: 60px 0
+    .other-b
+      @extend .base
+      display: block
+      text-align: left
+      h3
+        +header-2()
+        text-align: center
+      .other-cntr
+        padding-top: 30px
+        .other-i
+          width: 25%
+          display: inline-block
+          padding: 30px 30px 30px 0
+          a
+            +link()
+            font-size: 18px
+            color: $colr-text
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-link-text
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($doc-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center

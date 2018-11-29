@@ -10,86 +10,98 @@ class Docs extends React.Component {
     return (
       <section className="docs">
 
-        {/* Page header */}
+        {/* Page header - Introduction */}
         <div className="content-intro">
           <h1>{data.intro.title}</h1>
           <div className="comp-i-cntr">
-            <p>{data.intro.para1}</p>
-            <p>{data.intro.para2}</p>
+            <p>
+              {data.intro.para1.chunk1}
+              <a href={data.intro.para1.href1} target="_blank"> {data.intro.para1.href1}</a>
+              {data.intro.para1.chunk2}
+            </p>
+
+            <p>
+              {data.intro.para2.chunk1}
+              <a href={data.intro.para2.href1} target="_blank"> {data.intro.para2.href1}</a>
+              {data.intro.para2.chunk2}
+              <a href={data.intro.para2.href2} target="_blank"> {data.intro.para2.href2}</a>
+              {data.intro.para2.chunk3}
+            </p>
+
+            <p>
+              {data.intro.para3.chunk1}
+              <a href={data.intro.para3.href1} target="_blank"> {data.intro.para3.href1}</a>
+              {data.intro.para3.chunk2}
+            </p>
+
           </div>
         </div>
 
-        {/* To start with... */}
-        <div className="content-comp">
-          <div className="comp-i">
-            <div className="comp-i-head">
-              <h3>{data.start.title}</h3>
-            </div>
-            <div className="comp-i-cntr">
-              <p>
-                {data.start.para1.chunk1}
-                <a href={data.start.para1.href1} target="_blank"> {data.start.para1.href1}</a>
-                {data.start.para1.chunk2}
-              </p>
-              <p>
-                {data.start.para2.chunk1}
-                <a href={data.start.para2.href1} target="_blank"> {data.start.para2.href1}</a>
-                {data.start.para2.chunk2}
-                <a href={data.start.para2.href2} target="_blank"> {data.start.para2.href2}</a>
-                {data.start.para2.chunk3}
-              </p>
-              <p>{data.start.para3}</p>
-            </div>
-          </div>
-        </div>
 
-        {/* The code... */}
-        <div className="content-comp">
-          <div className="comp-i">
-            <div className="comp-i-head">
-              <h3>{data.code.title}</h3>
-            </div>
-            <div className="comp-i-cntr">
-              <p>
-                {data.code.para1.chunk1}
-                <a href={data.code.para1.href1} target="_blank"> {data.code.para1.href1}</a>
-              </p>
-              <p>
-                {data.code.para2.chunk1}
-                <a href={data.code.para2.href1} target="_blank"> {data.code.para2.href1}</a>
-                {data.code.para2.chunk2}
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {/* Repeating section for each API document item */}
-        <div className="content-comp">
-          <div className="comp-i">
 
-            <div className="comp-i-head"> <h3>{data.api_title}</h3> </div>
+        {/* Platform development - NodeJS API */}
 
-            <div className="comp-i-cntr"> {
-              data.api_items.map((key, i) => (
-                <div key={`key-items-${i}`} className="api_items-i">
+        <div className="nodejs">
+          <div className="nodejs-b">
+
+            <h3>{data.nodejs.title}</h3>
+
+            <div className="nodejs-cntr"> {
+              data.nodejs.items.map((key, i) => (
+                <div key={`key-items-${i}`} className="nodejs-i">
                   <p>
                   <a href={key.href}> {key.name}</a>
                   </p>
                 </div>
               )) }
             </div>
-
           </div>
         </div>
 
-        {/* Repeating section for each additional API document item */}
-        <div className="content-comp">
-          <div className="comp-i">
-            <div className="comp-i-head"> <h3>{data.oth_title}</h3> </div>
+        {/* Core libraries - Rust */}
+        <div className="rust">
+          <div className="rust-b">
 
-            <div className="comp-i-cntr"> {
-              data.oth_items.map((key, i) => (
-                <div key={`key-items-${i}`} className="oth_items-i">
+            <h3>{data.rust.title}</h3>
+
+            <div className="rust-cntr">
+              <p>
+                {data.rust.para1.chunk1}
+                <a href={data.rust.para1.href1} target="_blank"> {data.rust.para1.href1}</a>
+                {data.rust.para1.chunk2}
+              </p>
+            </div>
+
+            <div className="rust-cntr"> {
+              data.rust.items.map((key, i) => (
+                <div key={`key-items-${i}`} className="rust-i">
+                  <p>
+                  <a href={key.href}> {key.name}</a>
+                  </p>
+                </div>
+              )) }
+            </div>
+          </div>
+        </div>
+
+        {/* Core libraries - Rust */}
+        <div className="other">
+          <div className="other-b">
+
+            <h3>{data.other.title}</h3>
+{/*}
+            <div className="other-cntr">
+              <p>
+                {data.other.para1.chunk1}
+                <a href={data.other.para1.href1} target="_blank"> {data.other.para1.href1}</a>
+                {data.other.para1.chunk2}
+              </p>
+            </div>
+*/}
+            <div className="other-cntr"> {
+              data.other.items.map((key, i) => (
+                <div key={`key-items-${i}`} className="other-i">
                   <p>
                   <a href={key.href}> {key.name}</a>
                   </p>
@@ -100,6 +112,8 @@ class Docs extends React.Component {
         </div>
 
       </section>
+
+
     )
   }
 }
