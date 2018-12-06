@@ -81,8 +81,9 @@ class Docs extends React.Component {
 
         </div>
 
-        {/* Platform development - C# .net API */}
 
+        {/* Platform development - C# .net API */}
+{/* ENABLE WHEN RELEASED
         <div className="csharp">
           <div className="csharp-b">
 
@@ -102,7 +103,7 @@ class Docs extends React.Component {
 
           </div>
         </div>
-
+ */}
         {/* Core libraries - Rust */}
         <div className="rust">
           <div className="rust-b">
