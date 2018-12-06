@@ -22,15 +22,19 @@ nodejs:
   anchor: "nodejs"
   title: "Platform development - Nodejs"
   para1:
-    chunk1: ""
-  tutorial:
-    icon: "nodejs"
-    name: "Desktop App Tutorial"
-    href: '/platform/nodejs'
-  web_tut:
-    icon: "web"
-    name: "Web App Tutorial"
-    href: '/platform/web'
+    chunk1: "SAFE Network API libraries built for Node.js which give you the ability to interact with the SAFE Authenticator and connect to and interact with the SAFE Network."
+  tutorials:
+    title: "Tutorials"
+    nodejs:
+      icon: "nodejs"
+      name: "Desktop App Tutorial"
+      href: '/platform/nodejs'
+    web:
+      icon: "web"
+      name: "Web App Tutorial"
+      href: '/platform/web'
+  api:
+    title: "API Documentation"
   items:
    - name: "External API"
      href: "https://docs.maidsafe.net/safe_app_nodejs/#external-api"

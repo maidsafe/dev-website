@@ -43,8 +43,29 @@ class Docs extends React.Component {
         <div className="nodejs">
           <div className="nodejs-b">
 
-            <h3>{data.nodejs.title}</h3>
+            {/* NodeJS heading */}
+            <h1>{data.nodejs.title}</h1>
+            <p>{data.nodejs.para1.chunk1}</p>
 
+            <h3>{data.nodejs.tutorials.title}</h3>
+            {/* Tutorial documentation */}
+            <div className="tutorials">
+              <div className="tutorial">
+                <a href={data.nodejs.tutorials.nodejs.href}>
+                  <div className={`icn ${data.nodejs.tutorials.nodejs.icon}`}></div>
+                  <div className="name">{data.nodejs.tutorials.nodejs.name}</div>
+                </a>
+              </div>
+              <div className="tutorial">
+                <a href={data.nodejs.tutorials.web.href}>
+                  <div className={`icn ${data.nodejs.tutorials.web.icon}`}></div>
+                  <div className="name">{data.nodejs.tutorials.web.name}</div>
+                </a>
+              </div>
+            </div>
+
+            {/* API documentation items */}
+            <h3>{data.nodejs.api.title}</h3>
             <div className="nodejs-cntr"> {
 
               data.nodejs.items.map((key, i) => (
@@ -56,25 +77,6 @@ class Docs extends React.Component {
               )) }
             </div>
 
-          </div>
-
-          <div className="tutorial">
-            <a href={data.nodejs.tutorial.href}>
-              <div className={`icn ${data.nodejs.tutorial.icon}`}></div>
-              <div className="name">{data.nodejs.tutorial.name}</div>
-            </a>
-          </div>
-          <div className="tutorial">
-            <a href={data.nodejs.tutorial.href}>
-              <div className={`icn ${data.nodejs.tutorial.icon}`}></div>
-              <div className="name">{data.nodejs.tutorial.name}</div>
-            </a>
-          </div>
-          <div className="tutorial">
-            <a href={data.nodejs.web_tut.href}>
-              <div className={`icn ${data.nodejs.web_tut.icon}`}></div>
-              <div className="name">{data.nodejs.web_tut.name}</div>
-            </a>
           </div>
 
         </div>
@@ -97,13 +99,6 @@ class Docs extends React.Component {
               )) }
             </div>
 
-
-            <div className="tutorial-link">
-              <a href={data.nodejs.tutorial.href}>
-                <div className={`icn ${data.nodejs.tutorial.icon}`}></div>
-                <div className="name">{data.nodejs.tutorial.name}</div>
-              </a>
-            </div>
 
           </div>
         </div>
