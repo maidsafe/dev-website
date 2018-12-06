@@ -38,8 +38,6 @@ class Docs extends React.Component {
         </div>
 
 
-
-
         {/* Platform development - NodeJS API */}
 
         <div className="nodejs">
@@ -48,6 +46,7 @@ class Docs extends React.Component {
             <h3>{data.nodejs.title}</h3>
 
             <div className="nodejs-cntr"> {
+
               data.nodejs.items.map((key, i) => (
                 <div key={`key-items-${i}`} className="nodejs-i">
                   <p>
@@ -56,6 +55,56 @@ class Docs extends React.Component {
                 </div>
               )) }
             </div>
+
+          </div>
+
+          <div className="tutorial">
+            <a href={data.nodejs.tutorial.href}>
+              <div className={`icn ${data.nodejs.tutorial.icon}`}></div>
+              <div className="name">{data.nodejs.tutorial.name}</div>
+            </a>
+          </div>
+          <div className="tutorial">
+            <a href={data.nodejs.tutorial.href}>
+              <div className={`icn ${data.nodejs.tutorial.icon}`}></div>
+              <div className="name">{data.nodejs.tutorial.name}</div>
+            </a>
+          </div>
+          <div className="tutorial">
+            <a href={data.nodejs.web_tut.href}>
+              <div className={`icn ${data.nodejs.web_tut.icon}`}></div>
+              <div className="name">{data.nodejs.web_tut.name}</div>
+            </a>
+          </div>
+
+        </div>
+
+        {/* Platform development - C# .net API */}
+
+        <div className="csharp">
+          <div className="csharp-b">
+
+            <h3>{data.csharp.title}</h3>
+
+            <div className="csharp-cntr"> {
+
+              data.csharp.items.map((key, i) => (
+                <div key={`key-items-${i}`} className="csharp-i">
+                  <p>
+                  <a href={key.href}> {key.name}</a>
+                  </p>
+                </div>
+              )) }
+            </div>
+
+
+            <div className="tutorial-link">
+              <a href={data.nodejs.tutorial.href}>
+                <div className={`icn ${data.nodejs.tutorial.icon}`}></div>
+                <div className="name">{data.nodejs.tutorial.name}</div>
+              </a>
+            </div>
+
           </div>
         </div>
 

@@ -23,6 +23,14 @@ nodejs:
   title: "Platform development - Nodejs"
   para1:
     chunk1: ""
+  tutorial:
+    icon: "nodejs"
+    name: "Desktop App Tutorial"
+    href: '/platform/nodejs'
+  web_tut:
+    icon: "web"
+    name: "Web App Tutorial"
+    href: '/platform/web'
   items:
    - name: "External API"
      href: "https://docs.maidsafe.net/safe_app_nodejs/#external-api"
@@ -122,13 +130,25 @@ other:
      href: "https://github.com/maidsafe/safe_examples/blob/master/safe_web_app_quick_start/README.md"
    - name: "web_hosting_manager"
      href: "https://github.com/maidsafe/safe_examples/blob/master/web_hosting_manager/README.md"
-dotnet:
-  title: "Platform development - .net"
+csharp:
+  title: "Platform development - C# (.net)"
   para1:
-    chunk1: ""
+    chunk1: "safe_app_csharp API Documentation"
   items:
     - name: "C# API"
-      href: "https://docs.maidsafe.net/safe_app_csharp/"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/'
+    - name: "SafeApp"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.html'
+    - name: "IData"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.IData.html'
+    - name: "MData"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.MData.html'
+    - name: "Misc"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.Misc.html'
+    - name: "MockAuthBindings"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.MockAuthBindings.html'
+    - name: "Utilities"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.Utilities.html'
 java:
   title: "Platform development - Java"
   para1:
