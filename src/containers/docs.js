@@ -83,12 +83,14 @@ class Docs extends React.Component {
 
 
         {/* Platform development - C# .net API */}
-{/* ENABLE WHEN RELEASED
         <div className="csharp">
           <div className="csharp-b">
 
-            <h3>{data.csharp.title}</h3>
+          {/* C-sharp heading */}
+          <h1>{data.csharp.title}</h1>
+          <p>{data.csharp.para1.chunk1}</p>
 
+            <h3>{data.csharp.api.title}</h3>
             <div className="csharp-cntr"> {
 
               data.csharp.items.map((key, i) => (
@@ -103,7 +105,32 @@ class Docs extends React.Component {
 
           </div>
         </div>
- */}
+
+
+        {/* Platform development - Java API */}
+        <div className="java">
+          <div className="java-b">
+
+          {/* Java heading */}
+          <h1>{data.java.title}</h1>
+          <p>{data.java.para1.chunk1}</p>
+
+            <h3>{data.java.api.title}</h3>
+            <div className="java-cntr"> {
+
+              data.java.items.map((key, i) => (
+                <div key={`key-items-${i}`} className="java-i">
+                  <p>
+                  <a href={key.href}> {key.name}</a>
+                  </p>
+                </div>
+              )) }
+            </div>
+
+
+          </div>
+        </div>
+
         {/* Core libraries - Rust */}
         <div className="rust">
           <div className="rust-b">

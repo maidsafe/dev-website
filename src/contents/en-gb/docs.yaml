@@ -135,9 +135,11 @@ other:
    - name: "web_hosting_manager"
      href: "https://github.com/maidsafe/safe_examples/blob/master/web_hosting_manager/README.md"
 csharp:
-  title: "Platform development - C# (.net)"
+  title: "Platform development - C#"
   para1:
-    chunk1: "safe_app_csharp API Documentation"
+    chunk1: "safe_app_csharp API documentation."
+  api:
+    title: "API Documentation"
   items:
     - name: "C# API"
       href: 'https://docs.maidsafe.net/safe_app_csharp/'
@@ -154,9 +156,17 @@ csharp:
     - name: "Utilities"
       href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.Utilities.html'
 java:
-  title: "Platform development - Java"
+  title: "Platform development - Android"
   para1:
-    chunk1: ""
+    chunk1: "safe_app_java API documentation"
+  api:
+    title: "Android - API documentation"
   items:
-    - name: "Java API"
-      href: "https://docs.maidsafe.net/safe_app_java/"
+    - name: "Android API"
+      href: 'https://docs.maidsafe.net/safe_app_java/'
+    - name: "Overview"
+      href: 'https://docs.maidsafe.net/safe_app_java/overview-summary.html'
+    - name: "Package"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/package-summary.html'
+    - name: "Class Hierarchy"
+      href: 'https://docs.maidsafe.net/safe_app_java/overview-tree.html'
