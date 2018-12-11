@@ -2,17 +2,17 @@ title: "Documentation"
 intro:
   title: "Welcome to the Docs landing page!"
   para1:
-    chunk1: "The SAFE Network is an exciting project to develop for, but if you are new to decentralised, autonomous data networks, it can be quite confusing. If you are brand new to the SAFE Network and it's concepts, head over to "
+    chunk1: "The SAFE Network is an exciting project for developers.But if like most people, you’re new to decentralised, autonomous data networks, there’s a chance that things can get complicated quickly. The best place to start is "
     href1: "https://safenetwork.tech/"
-    chunk2: " for a full overview of the network concepts and downloads of the SAFE Browser to start using the network."
+    chunk2: " where you’ll find an overview of the main concepts around the SAFE Network, together with a link to download the SAFE Browser."
   para2:
-    chunk1: "You'll also see links to our communities ("
+    chunk1: "You’re bound to have questions - and we’re incredibly lucky to have a community that are always keen to help you out. The best place to find them initially is on the Forums ("
     href1: "https://safenetforum.org/"
     chunk2: " and "
     href2: "https://forum.safedev.org/"
-    chunk3: ") these are great places to ask questions and be among the first to see what's going on. Achieve Trust Level 1 and you can start testing early releases with us."
+    chunk3: ") where you’ll be among the first to see what's going on and you can ask questions to your heart’s content. Spend an hour or so reading some of the posts, and you’ll quickly achieve Trust Level 1 at which stage you can get onto the Network using the SAFE Browser and start testing early releases with us."
   para3:
-    chunk1: "All our code is open source and hosted on GitHub: "
+    chunk1: "As you’d expect for a project whose goal includes accessibility for every person around the world, all our code is open source and hosted on GitHub: "
     href1: "https://github.com/maidsafe/"
     chunk2: "."
 contents:
@@ -22,7 +22,7 @@ nodejs:
   anchor: "nodejs"
   title: "Platform development - Nodejs"
   para1:
-    chunk1: "SAFE Network API libraries built for Node.js which give you the ability to interact with the SAFE Authenticator and connect to and interact with the SAFE Network."
+    chunk1: "SAFE Network API libraries have been built for Node.js. Using these as a developer enables you to interact with the SAFE Authenticator. The Authenticator is the way that users securely authenticate themselves in order to connect and interact with the SAFE Network."
   tutorials:
     title: "Tutorials"
     nodejs:
@@ -53,7 +53,7 @@ nodejs:
 rust:
   title: "Core libraries - Rust"
   para1:
-    chunk1: "As the SAFE Network is complex it is modularised where possible, and as such we have a large number of repositories. All the core libraries are written in Rust (documentation can be found at "
+    chunk1: "As the SAFE Network is complex, it is modularised where possible. The result of this approach is that we have a large number of repositories. All the core libraries are written in Rust (documentation can be found at "
     href1: "https://docs.rs/"
     chunk2: ")."
   items:
@@ -100,8 +100,6 @@ rust:
 other:
   title: "Other Documentation"
   items:
-   - name: "beaker-plugin-safe-authenticator"
-     href: "https://github.com/maidsafe/beaker-plugin-safe-authenticator/blob/master/README.md"
    - name: "deps_downloader"
      href: "https://github.com/maidsafe/deps_downloader/blob/master/README.md"
    - name: "email_app"
@@ -158,15 +156,24 @@ csharp:
 java:
   title: "Platform development - Android"
   para1:
-    chunk1: "safe_app_java API documentation"
+    chunk1: "Develop dApps (Decentralised Applications) for Android mobile platforms using Java."
+  tutorial:
+    title: "Tutorial"
+    icon: "java"
+    name: "Android - Getting Started"
+    href: '/platform/android'
   api:
     title: "Android - API documentation"
   items:
     - name: "Android API"
       href: 'https://docs.maidsafe.net/safe_app_java/'
-    - name: "Overview"
-      href: 'https://docs.maidsafe.net/safe_app_java/overview-summary.html'
-    - name: "Package"
-      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/package-summary.html'
-    - name: "Class Hierarchy"
-      href: 'https://docs.maidsafe.net/safe_app_java/overview-tree.html'
+    - name: "Session"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/Session.html'
+    - name: "Crypto"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/crypto'
+    - name: "IData"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/idata'
+    - name: "MData"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/mdata'
+    - name: "NFS"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/nfs'

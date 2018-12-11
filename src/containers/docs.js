@@ -81,12 +81,45 @@ class Docs extends React.Component {
 
         </div>
 
+        {/* Platform development - Java API */}
+        <div className="java">
+          <div className="java-b">
+
+            {/* Java heading */}
+            <h1>{data.java.title}</h1>
+            <p>{data.java.para1.chunk1}</p>
+
+            <h3>{data.java.tutorial.title}</h3>
+            {/* Tutorial documentation */}
+            <div className="tutorials">
+              <div className="tutorial">
+                <a href={data.java.tutorial.href}>
+                  <div className={`icn ${data.java.tutorial.icon}`}></div>
+                  <div className="name">{data.java.tutorial.name}</div>
+                </a>
+              </div>
+            </div>
+
+            <h3>{data.java.api.title}</h3>
+            <div className="java-cntr"> {
+
+              data.java.items.map((key, i) => (
+                <div key={`key-items-${i}`} className="java-i">
+                  <p>
+                  <a href={key.href}> {key.name}</a>
+                  </p>
+                </div>
+              )) }
+            </div>
+          </div>
+        </div>
 
         {/* Platform development - C# .net API */}
+        {/*
         <div className="csharp">
           <div className="csharp-b">
 
-          {/* C-sharp heading */}
+          {/* C-sharp heading
           <h1>{data.csharp.title}</h1>
           <p>{data.csharp.para1.chunk1}</p>
 
@@ -105,31 +138,10 @@ class Docs extends React.Component {
 
           </div>
         </div>
+*/}
 
 
-        {/* Platform development - Java API */}
-        <div className="java">
-          <div className="java-b">
 
-          {/* Java heading */}
-          <h1>{data.java.title}</h1>
-          <p>{data.java.para1.chunk1}</p>
-
-            <h3>{data.java.api.title}</h3>
-            <div className="java-cntr"> {
-
-              data.java.items.map((key, i) => (
-                <div key={`key-items-${i}`} className="java-i">
-                  <p>
-                  <a href={key.href}> {key.name}</a>
-                  </p>
-                </div>
-              )) }
-            </div>
-
-
-          </div>
-        </div>
 
         {/* Core libraries - Rust */}
         <div className="rust">

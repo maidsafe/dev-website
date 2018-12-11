@@ -179,9 +179,8 @@
             &.rust
               background-image: url($platform-rust-url-hover)
   .java
-    background-color: $colr-theme-dark
+    background-color: $colr-theme-light
     margin-top: 0px
-    padding: 60px 0
     .java-b
       @extend .base
       display: block
@@ -227,8 +226,65 @@
               background-size: 24px
               background-repeat: no-repeat
               background-position: center
+    .tutorials
+      text-align: center
+      .tutorial
+        display: inline-block
+        padding: 0 0px
+        min-width: 60px
+        a
+          +link()
+          color: $colr-text
+          &:hover
+            text-decoration: none
+        .icn
+          width: 60px
+          height: 60px
+          background-color: transparent
+          border: 2px solid $colr-blue
+          border-radius: 50%
+          margin: 0px auto
+          background-size: 30px
+          background-repeat: no-repeat
+          background-position: center
+          &.java
+            background-image: url($platform-android-url)
+          &.nodejs
+            background-image: url($platform-nodejs-url)
+          &.web
+            background-image: url($platform-web-url)
+          &.rust
+            background-image: url($platform-rust-url)
+          &.active
+            background-color: $colr-blue-dark
+            border-color: $colr-blue-dark
+            &.java
+              background-image: url($platform-android-url-hover)
+            &.nodejs
+              background-image: url($platform-nodejs-url-hover)
+            &.web
+              background-image: url($platform-web-url-hover)
+            &.rust
+              background-image: url($platform-rust-url-hover)
+    .name
+      margin-top: 12px
+      margin-left: 80px
+      margin-right: 80px
+      font-size: 18px
+    &:hover
+      .icn
+        background-color: $colr-blue
+        border-color: $colr-blue
+        &.java
+          background-image: url($platform-android-url-hover)
+        &.nodejs
+          background-image: url($platform-nodejs-url-hover)
+        &.web
+          background-image: url($platform-web-url-hover)
+        &.rust
+          background-image: url($platform-rust-url-hover)
   .csharp
-    background-color: $colr-theme-light
+    background-color: $colr-theme-dark
     margin-top: 0px
     padding: 60px 0
     .csharp-b
@@ -277,7 +333,7 @@
               background-repeat: no-repeat
               background-position: center
   .rust
-    background-color: $colr-theme-light
+    background-color: $colr-theme-dark
     margin-top: 00px
     padding: 60px 0
     .rust-b
