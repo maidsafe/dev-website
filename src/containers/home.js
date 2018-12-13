@@ -12,16 +12,16 @@ class Home extends React.Component {
       <section className="home">
         <div className="home-b">
           {/* Homepage Top CTA Banner - disable when no action (current: crust test OFF) */}
-          {/*
+
           <div className="hom-bnr-2-link">
-            <p>{data.test.crust_test.desc}: <b>{data.test.crust_test.title}</b></p>
+            <p>Mobile Platform Development: <b>Android</b></p>
             <p className="lft-sec-btn">
               <button className="btn" type="button" onClick={() => {
-                location.assign(data.test.crust_test.link.href);
-              }}>{data.test.crust_test.link.name}</button>
+                location.assign("/docs");
+              }}>Read more...</button>
             </p>
           </div>
-          */}
+
           <div className="hom-bnr-2">
             <div className="hom-bnr-2-cntx">
               <div className="hom-bnr-2-h">{data.homeBanner2.title}</div>

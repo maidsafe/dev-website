@@ -17,7 +17,8 @@ const CONTENT_FILE = {
   PLATFORM_WEB: 'doc_web.md',
   PARSEC: 'parsec.yaml',
   CRUST: 'crust.yaml',
-  GLOSSARY: 'glossary.yaml'
+  GLOSSARY: 'glossary.yaml',
+  DOCS: 'docs.yaml'
 };
 
 const getLocalContent = (local, fileName) => {
@@ -118,6 +119,13 @@ export default [
     component: 'src/containers/glossary',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.GLOSSARY))
+    })
+  },
+  {
+    path: '/docs',
+    component: 'src/containers/docs',
+    getData: () => ({
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DOCS))
     })
   },
   {
