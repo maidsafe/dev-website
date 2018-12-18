@@ -82,15 +82,16 @@ class Docs extends React.Component {
         </div>
 
         {/* Platform development - Java API */}
+{/*
         <div className="java">
           <div className="java-b">
 
-            {/* Java heading */}
+
             <h1>{data.java.title}</h1>
             <p>{data.java.para1.chunk1}</p>
 
             <h3>{data.java.tutorial.title}</h3>
-            {/* Tutorial documentation */}
+
             <div className="tutorials">
               <div className="tutorial">
                 <a href={data.java.tutorial.href}>
@@ -113,7 +114,7 @@ class Docs extends React.Component {
             </div>
           </div>
         </div>
-
+*/}
         {/* Platform development - C# .net API */}
         {/*
         <div className="csharp">
