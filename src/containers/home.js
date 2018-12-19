@@ -17,7 +17,7 @@ class Home extends React.Component {
             <p>New: <b>Updated SAFE Browser</b></p>
             <p className="lft-sec-btn">
               <button className="btn" type="button" onClick={() => {
-                location.assign('https://github.com/maidsafe/safe_browser/releases/latest');
+                location.assign('https://safenetforum.org/t/safe-browser-v0-11-0-release/26792');
               }}>Read more...</button>
             </p>
           </div>
