@@ -11,17 +11,17 @@ class Home extends React.Component {
     return (
       <section className="home">
         <div className="home-b">
-          {/* Homepage Top CTA Banner - disable when no action (current: crust test OFF) */}
-          {/*
+
+          {/* Homepage Top CTA Banner - disable when no action (current: Updated SAFE Browser) */}
           <div className="hom-bnr-2-link">
-            <p>{data.test.crust_test.desc}: <b>{data.test.crust_test.title}</b></p>
+            <p>New: <b>Updated SAFE Browser</b></p>
             <p className="lft-sec-btn">
               <button className="btn" type="button" onClick={() => {
-                location.assign(data.test.crust_test.link.href);
-              }}>{data.test.crust_test.link.name}</button>
+                location.assign('https://github.com/maidsafe/safe_browser/releases/latest');
+              }}>Download now</button>
             </p>
           </div>
-          */}
+
           <div className="hom-bnr-2">
             <div className="hom-bnr-2-cntx">
               <div className="hom-bnr-2-h">{data.homeBanner2.title}</div>
