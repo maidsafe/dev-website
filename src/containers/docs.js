@@ -82,7 +82,7 @@ class Docs extends React.Component {
         </div>
 
         {/* Platform development - Java API */}
-{/*
+
         <div className="java">
           <div className="java-b">
 
@@ -114,7 +114,7 @@ class Docs extends React.Component {
             </div>
           </div>
         </div>
-*/}
+
         {/* Platform development - C# .net API */}
         {/*
         <div className="csharp">
