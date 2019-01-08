@@ -11,14 +11,13 @@ class Home extends React.Component {
     return (
       <section className="home">
         <div className="home-b">
-          {/* Homepage Top CTA Banner - disable when no action (current: crust test OFF) */}
-
+          {/* Homepage Top CTA Banner - disable when no action (current: Updated SAFE Browser) */}
           <div className="hom-bnr-2-link">
             <p>New: <b>Updated SAFE Browser</b></p>
             <p className="lft-sec-btn">
               <button className="btn" type="button" onClick={() => {
-                location.assign('https://safenetforum.org/t/safe-browser-v0-11-0-release/26792');
-              }}>Read more...</button>
+                location.assign('https://github.com/maidsafe/safe_browser/releases/latest');
+              }}>Download now</button>
             </p>
           </div>
 
