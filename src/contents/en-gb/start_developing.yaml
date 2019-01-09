@@ -5,6 +5,9 @@ platformLinks:
   - icon: web
     name: Web
     href: '/platform/web'
+  - icon: android
+    name: Android
+    href: '/platform/android'
 intro:
   title:
     dark: The
@@ -71,7 +74,7 @@ accessingNetwork:
 platforms:
   title: Platforms
   desc:
-    chunk1: "Currently we have SAFE Network API libraries built for NodeJs, Web and Rust. We are working on expanding this to support other platforms. If you want to join others in our community and contribute to development, head over to our "
+    chunk1: "Currently we have SAFE Network API libraries built for NodeJs, Web, C#, Java and Rust. We are working on expanding this to support other platforms. If you want to join others in our community and contribute to development, head over to our "
     link:
       name: Dev Forum
       href: 'https://forum.safedev.org'
