@@ -15,6 +15,7 @@ const CONTENT_FILE = {
   LICENSING: 'licensing.yaml',
   PLATFORM_NODEJS: 'doc_node_js.md',
   PLATFORM_WEB: 'doc_web.md',
+  PLATFORM_ANDROID: 'doc_android.md',
   PARSEC: 'parsec.yaml',
   CRUST: 'crust.yaml',
   GLOSSARY: 'glossary.yaml',
@@ -127,6 +128,21 @@ export default [
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DOCS))
     })
+  },
+  {
+    path: '/platform/android',
+    component: 'src/containers/platform',
+    getData: () => {
+      const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
+      const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_ANDROID));
+      const data = {
+        otherPlatforms,
+        content,
+        name: 'Android'
+      };
+      return ({
+        data,
+      });
   },
   {
     is404: true,
