@@ -18,7 +18,8 @@ const CONTENT_FILE = {
   PLATFORM_ANDROID: 'doc_android.md',
   PARSEC: 'parsec.yaml',
   CRUST: 'crust.yaml',
-  GLOSSARY: 'glossary.yaml'
+  GLOSSARY: 'glossary.yaml',
+  DOCS: 'docs.yaml'
 };
 
 const getLocalContent = (local, fileName) => {
@@ -122,6 +123,13 @@ export default [
     })
   },
   {
+    path: '/docs',
+    component: 'src/containers/docs',
+    getData: () => ({
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DOCS))
+    })
+  },
+  {
     path: '/platform/android',
     component: 'src/containers/platform',
     getData: () => {
@@ -135,7 +143,7 @@ export default [
       return ({
         data,
       });
-    },
+    }
   },
   {
     is404: true,

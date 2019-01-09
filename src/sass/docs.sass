@@ -1,0 +1,440 @@
+.docs
+  padding-top: 80px
+  .content-intro
+    @extend .base
+    text-align: center
+    margin-bottom: 80px
+    h1
+      +header-1()
+      margin-bottom: 40px
+    p
+      +para()
+      text-align: justify
+      margin-bottom: 12px
+    .med
+      margin-top: 80px
+      margin-bottom: 40px
+      img
+        width: 80%
+        max-width: 80%
+        height: auto
+        width: auto\9; /* ie8 */
+        padding: 0 15px
+        float: center
+  .content-comp
+    @extend .base
+    padding-top: 20px
+    text-align: center
+    h1
+      +header-1-1()
+    & > p
+      +para()
+      text-align: justify
+      margin-top: 40px
+    .comp-i
+      padding-top: 40px
+      .comp-i-head
+        width: 100%
+        text-align: center
+        margin-bottom: 24px
+        padding-bottom: 16px
+        position: relative
+        &:after
+          content: ""
+          width: 100px
+          height: 5px
+          background-color: $colr-theme-dark
+          position: absolute
+          border-radius: 3px
+          bottom: 0
+          left: 50%
+          transform: translate(-50%, 0)
+        h3
+          +header-2-1()
+        .git-link
+          +para()
+          font-size: 16px
+          a
+            font-weight: normal !important
+      .comp-i-cntr
+        width: 100%
+        text-align: center
+        h3
+          +header-2-1()
+        h5
+          +header-2-1()
+          margin-bottom: 10px
+          text-align: center
+        p
+          +para()
+          margin-bottom: 12px
+        img
+          width: 200px
+          max-width: 80%
+          height: auto
+          width: auto\9; /* ie8 */
+          padding: 0 0px
+          margin-bottom: 10px
+          .center
+            display: block
+            margin-left: auto
+            margin-right: auto
+            width: 50%
+  .nodejs
+    background-color: $colr-theme-dark
+    margin-top: 20px
+    .nodejs-b
+      @extend .base
+      display: block
+      h1
+        +header-1()
+        text-align: center
+        padding: 40px 20px
+      h3
+        +header-2()
+        margin-top: 32px
+        text-align: center
+        text-decoration: underline
+      p
+        +para()
+        margin-bottom: 18px
+        text-align: center
+      .nodejs-cntr
+        padding-top: 30px
+        padding-bottom: 30px
+        text-align: center
+        .nodejs-i
+          width: 25%
+          display: inline-block
+          padding: 30px 30px 0px 0
+          text-align: center
+          a
+            +link()
+            font-size: 18px
+            color: $colr-text
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-link-text
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($platform-nodejs-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
+    .tutorials
+      text-align: center
+      .tutorial
+        margin-top: 25px
+        display: inline-block
+        padding: 0 0px
+        min-width: 60px
+        a
+          +link()
+          color: $colr-text
+          &:hover
+            text-decoration: none
+        .icn
+          width: 60px
+          height: 60px
+          background-color: transparent
+          border: 2px solid $colr-blue
+          border-radius: 50%
+          margin: 0px auto
+          background-size: 30px
+          background-repeat: no-repeat
+          background-position: center
+          &.nodejs
+            background-image: url($platform-nodejs-url)
+          &.web
+            background-image: url($platform-web-url)
+          &.rust
+            background-image: url($platform-rust-url)
+          &.active
+            background-color: $colr-blue-dark
+            border-color: $colr-blue-dark
+            &.nodejs
+              background-image: url($platform-nodejs-url-hover)
+            &.web
+              background-image: url($platform-web-url-hover)
+            &.rust
+              background-image: url($platform-rust-url-hover)
+        .name
+          margin-top: 12px
+          margin-left: 80px
+          margin-right: 80px
+          font-size: 18px
+        &:hover
+          .icn
+            background-color: $colr-blue
+            border-color: $colr-blue
+            &.nodejs
+              background-image: url($platform-nodejs-url-hover)
+            &.web
+              background-image: url($platform-web-url-hover)
+            &.rust
+              background-image: url($platform-rust-url-hover)
+  .java
+    background-color: $colr-theme-light
+    margin-top: 0px
+    .java-b
+      @extend .base
+      display: block
+      text-align: left
+      h1
+        +header-1()
+        text-align: center
+        padding: 40px 20px
+      h3
+        +header-2()
+        margin-top: 32px
+        text-align: center
+        text-decoration: underline
+      p
+        +para()
+        margin-bottom: 12px
+        text-align: center
+      .java-cntr
+        padding-top: 30px
+        text-align: center
+        .java-i
+          width: 25%
+          display: inline-block
+          padding: 30px 30px 30px 0
+          text-align: center
+          a
+            +link()
+            font-size: 18px
+            color: $colr-text
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-link-text
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($platform-android-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
+    .tutorials
+      text-align: center
+      .tutorial
+        display: inline-block
+        margin-top: 25px
+        padding: 0 0px
+        min-width: 60px
+        a
+          +link()
+          color: $colr-text
+          &:hover
+            text-decoration: none
+        .icn
+          width: 60px
+          height: 60px
+          background-color: transparent
+          border: 2px solid $colr-blue
+          border-radius: 50%
+          margin: 0px auto
+          background-size: 30px
+          background-repeat: no-repeat
+          background-position: center
+          &.java
+            background-image: url($platform-android-url)
+          &.nodejs
+            background-image: url($platform-nodejs-url)
+          &.web
+            background-image: url($platform-web-url)
+          &.rust
+            background-image: url($platform-rust-url)
+          &.active
+            background-color: $colr-blue-dark
+            border-color: $colr-blue-dark
+            &.java
+              background-image: url($platform-android-url-hover)
+            &.nodejs
+              background-image: url($platform-nodejs-url-hover)
+            &.web
+              background-image: url($platform-web-url-hover)
+            &.rust
+              background-image: url($platform-rust-url-hover)
+        &:hover
+          .icn
+            background-color: $colr-blue
+            border-color: $colr-blue
+            &.nodejs
+              background-image: url($platform-nodejs-url-hover)
+            &.web
+              background-image: url($platform-web-url-hover)
+            &.rust
+              background-image: url($platform-rust-url-hover)
+            &.java
+              background-image: url($platform-android-url-hover)
+    .name
+      margin-top: 12px
+      margin-left: 80px
+      margin-right: 80px
+      font-size: 18px
+    &:hover
+      .icn
+        background-color: $colr-blue
+        border-color: $colr-blue
+        &.java
+          background-image: url($platform-android-url-hover)
+        &.nodejs
+          background-image: url($platform-nodejs-url-hover)
+        &.web
+          background-image: url($platform-web-url-hover)
+        &.rust
+          background-image: url($platform-rust-url-hover)
+  .csharp
+    background-color: $colr-theme-dark
+    margin-top: 0px
+    padding: 60px 0
+    .csharp-b
+      @extend .base
+      display: block
+      text-align: left
+      h1
+        +header-1()
+        text-align: center
+        padding: 40px 20px
+      h3
+        +header-2()
+        margin-top: 32px
+        text-align: center
+        text-decoration: underline
+      p
+        +para()
+        margin-bottom: 12px
+        text-align: center
+      .csharp-cntr
+        padding-top: 30px
+        text-align: center
+        .csharp-i
+          width: 25%
+          display: inline-block
+          padding: 30px 30px 30px 0
+          text-align: center
+          a
+            +link()
+            font-size: 18px
+            color: $colr-text
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-link-text
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($platform-dotnet-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
+  .rust
+    background-color: $bg-header-light
+    margin-top: 00px
+    padding: 60px 0
+    .rust-b
+      @extend .base
+      display: block
+      text-align: left
+      h3
+        +header-2()
+        text-align: center
+      .rust-cntr
+        padding-top: 30px
+        p
+          +para()
+          margin-bottom: 12px
+          a
+            +link()
+            font-size: 18px
+            display: inline-block
+            position: relative
+            &:hover
+              color: $colr-link-text
+              text-decoration: underline
+              border: 3px
+        .rust-i
+          width: 33.33%
+          display: inline-block
+          padding: 30px 30px 0px 0
+          border-radius: 3px
+          a
+            +link()
+            font-size: 18px
+            color: $colr-text
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-link-text
+              text-decoration: underline
+              border: 3px
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($platform-rust-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
+        .rust-url
+  .other
+    background-color: $colr-vault-bg
+    margin-top: 0px
+    padding: 60px 0
+    .other-b
+      @extend .base
+      display: block
+      text-align: left
+      h3
+        +header-2()
+        text-align: center
+        color: $colr-white
+      .other-cntr
+        padding-top: 30px
+        .other-i
+          width: 33.33%
+          display: inline-block
+          padding: 30px 30px 30px 0
+          a
+            +link()
+            font-size: 18px
+            color: $colr-white
+            display: inline-block
+            padding-left: 46px
+            position: relative
+            &:hover
+              color: $colr-theme-light
+            &:before
+              content: ''
+              width: 30px
+              height: 30px
+              position: absolute
+              top: 0
+              left: 0
+              background-image: url($right-url)
+              background-size: 24px
+              background-repeat: no-repeat
+              background-position: center
