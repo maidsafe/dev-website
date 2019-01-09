@@ -24,7 +24,7 @@ git checkout boilerplate
 
 Now import this project into your Android Studio IDE. The required dependencies will be installed. Please give appropriate permissions when required.
 
-## Adding the `safe_app_android` library
+## Adding the safe-app-android library
 
 There are two packages available to develop applications for the SAFE Network. `safe-app-android` for the alpha-2 / local network and `safe-app-android-dev` for mock routing. For easier switching between mock and non-mock versions, we have made use of the [build variants](https://developer.android.com/studio/build/build-variants) feature of Android Studio. We have defined mock and nonMock variants and have added the required dependency as follows in the [`app/build.gradle`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/build.gradle#L32) file.
 
@@ -120,7 +120,9 @@ There are situations when the application may lose its connectivity to the SAFE 
 session.setOnDisconnectListener(onDisconnected);
 ```
 
-## Creating Mutable Data
+## Mutable Data operations
+
+#### Creation <br><br>
 
 One of the native data types of the SAFE Network is `MutableData`. MutableData is a key-value store which can be created at either a specific address on the network, or just at a random address, and it can be publicly available (a public MutableData) or otherwise have all its content encrypted (private MutableData). It also has a type associated to it (type tag) which is a number that can be chosen at the moment of creating the MutableData.
 
@@ -138,11 +140,11 @@ This mDataInfo contains all the information about the mutable data and it is use
 
 In this application, we will be storing instances of `Task` and `TodoList` in the mutable data. The keys and values stored in the mutable data are of type `byte[]`. We can serialise and deserialise the objects using the helper functions provided in the boilerplate.
 
-## A note about handles
+#### A note about handles <br><br>
 
 Going forward, we will be using instances of `NativeHandle` in a number of places. A `NativeHandle` is an address that points to an instance of complex data types in native code. We use these handles whenever we need to manipulate these instances.
 
-## Inserting Data
+#### Inserting Entries <br><br>
 
 Since the `mDataInfo` obtained is randomly generated there will be no data existent in the location that it points to. So, when we `PUT` the mutable data for the first time to the network, we must first insert a permission set into a `permissionHandle`, with the public key of the application. Now we can `PUT` this mutable data on the network using the `MData.put()` API. Since we are inserting only permissions we can use `Constants.MD_ENTRIES_EMPTY` in place of the entries handle. Let us implement this in the `insertPermissions(MDataInfo mdInfo)` function in the `SafeApi` class.
 
@@ -166,8 +168,8 @@ final NativeHandle actionHandle = session.mDataEntryAction.newEntryAction().get(
 session.mDataEntryAction.insert(actionHandle, encryptedKey, encryptedValue).get();
 session.mData.mutateEntries(mDataInfo, actionHandle).get();
 ```
-
-## Reading Data
+<br>
+#### Reading Entries <br><br>
 
 Now that we have data on the network, let us add a function to read it. To get the list of entries, get an entry handle for the `mDataInfo` and call the `mDataEntries.listEntries()` API. We will implement this in the `getEntries()` function of the `SafeApi` class.
 
@@ -175,16 +177,16 @@ Now that we have data on the network, let us add a function to read it. To get t
 final NativeHandle entryHandle = session.mData.getEntriesHandle(mDataInfo).get();
 return session.mDataEntries.listEntries(entryHandle).get();
 ```
-
-## Decryption
+<br>
+#### Decryption <br><br>
 
 In this tutorial, the key-value pairs are encrypted and stored in the MutableData. In order to decrypt the values inserted use the following decrypt API in the `decryptEntryValue()` function in the `SafeApi` class.
 
 ```
 return session.mData.decrypt(mDataInfo, mDataEntry.getValue().getContent()).get();
 ```
-
-## Updating Data
+<br>
+#### Updating an entry <br><br>
 
 Each entry in a MutableData has a numeric version associated to it. When you insert a new entry it is inserted with version 0, and every time a mutation is performed you need to specify the subsequent version the entry is being bumped to. This is used by the network to ensure that only one mutation is applied when simultaneous mutations requests were received for the same version of an entry, making sure the state change of such an entry is effectively what the originator of a request was intending to do.
 
@@ -197,8 +199,8 @@ final NativeHandle actionHandle = session.mDataEntryAction.newEntryAction().get(
 session.mDataEntryAction.update(actionHandle, encryptedKey, encryptedValue, version).get();
 session.mData.mutateEntries(mDataInfo, actionHandle).get();
 ```
-
-## Deleting Data
+<br>
+#### Deleting an entry <br><br>
 
 When you remove an entry it is never deleted from the MutableData, but its value is just cleared, so you cannot insert a new entry with same key, rather you should update it. This is the reason that in our implementation of the [`SafeTodoService.fetchListItems()`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/java/net/maidsafe/sample/services/SafeTodoService.java#L104) and [`SafeTodoService.fetchSections()`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/java/net/maidsafe/sample/services/SafeTodoService.java#L76) functions we filter the deleted entries with the following condition when iterating through them:
 
@@ -217,7 +219,7 @@ session.mData.mutateEntries(mDataInfo, actionHandle).get();
 
 Here, the version increment is done in the [`SafeTodoService.deleteTask()`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/java/net/maidsafe/sample/services/SafeTodoService.java#L126) function *before* calling the Safe API.
 
-## Making use of the App's Container
+#### Making use of the App's Container <br><br>
 
 Since the `appData` we work with is randomly generated, a different `appData` is generated every time the app starts and consequently the entries made in the previous mutable data will be lost. Thus, we need to store this `appData` in a location that is accessible by the application. For this, we can use the App's Container. The app's container is mutable data that is exclusive per app per user. To obtain the `appData` info for the application:
 ```
@@ -238,11 +240,11 @@ If you now run the application it will perform the mutable data operations that 
 
 So far, all the network operations are being performed on the mock network. You can find more information about the different types of networks in the [discover page.](/discover) For the test network, the application will be authorising with the SAFE Authenticator to get the credentials needed to then connect to the SAFE Network.
 
-## Installing the SAFE Authenticator
+#### Installing the SAFE Authenticator <br><br>
 
 You can find the links to download the SAFE Authenticator package from the [GitHub releases](https://github.com/maidsafe/safe-authenticator-mobile/releases). Download the app and install it on your Android Device / Emulator. Open the application and login using your SAFE Network credentials.
 
-## Registering a custom URI for the application
+#### Registering a custom URI for the application <br><br>
 
 When the Authenticator completes the authorisation, it starts the ToDo application from a custom URI. This URI is of the format `<app_id>://<app_id>/<encoded_auth_response>`. This URI scheme is added as an intent-filter in the [application's manifest file.](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/AndroidManifest.xml#L24)
 
