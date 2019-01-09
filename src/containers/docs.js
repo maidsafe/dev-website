@@ -16,21 +16,21 @@ class Docs extends React.Component {
           <div className="comp-i-cntr">
             <p>
               {data.intro.para1.chunk1}
-              <a href={data.intro.para1.href1} target="_blank"> {data.intro.para1.href1}</a>
+              <a href={data.intro.para1.link.href} target="_blank"> {data.intro.para1.link.name}</a>
               {data.intro.para1.chunk2}
             </p>
 
             <p>
               {data.intro.para2.chunk1}
-              <a href={data.intro.para2.href1} target="_blank"> {data.intro.para2.href1}</a>
+              <a href={data.intro.para2.link1.href} target="_blank"> {data.intro.para2.link1.name}</a>
               {data.intro.para2.chunk2}
-              <a href={data.intro.para2.href2} target="_blank"> {data.intro.para2.href2}</a>
+              <a href={data.intro.para2.link2.href} target="_blank"> {data.intro.para2.link2.name}</a>
               {data.intro.para2.chunk3}
             </p>
 
             <p>
               {data.intro.para3.chunk1}
-              <a href={data.intro.para3.href1} target="_blank"> {data.intro.para3.href1}</a>
+              <a href={data.intro.para3.link.href} target="_blank"> {data.intro.para3.link.name}</a>
               {data.intro.para3.chunk2}
             </p>
 
@@ -153,7 +153,7 @@ class Docs extends React.Component {
             <div className="rust-cntr">
               <p>
                 {data.rust.para1.chunk1}
-                <a href={data.rust.para1.href1} target="_blank"> {data.rust.para1.href1}</a>
+                <a href={data.rust.para1.link.href} target="_blank"> {data.rust.para1.link.name}</a>
                 {data.rust.para1.chunk2}
               </p>
             </div>
