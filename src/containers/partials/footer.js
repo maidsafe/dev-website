@@ -11,7 +11,7 @@ export default withSiteData(() => (
       <div className="git-icon"><a href={CONST.externalLinks.general.github} target="_blank"></a></div>
       <div className="footer-cntr">
         <div className="footer-cntr-i"><a href={CONST.externalLinks.footer.licensing}>Licensing</a></div>
-        <div className="footer-cntr-i"><a href={CONST.externalLinks.footer.docs} target="_blank">Docs</a></div>
+        <div className="footer-cntr-i"><a href={CONST.externalLinks.footer.docs}>Docs</a></div>
         <div className="footer-cntr-i"><a href={CONST.externalLinks.footer.blog} target="_blank">Blog</a></div>
       </div>
     </div>

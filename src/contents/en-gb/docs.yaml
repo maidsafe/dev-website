@@ -3,18 +3,25 @@ intro:
   title: "Welcome to the Docs landing page!"
   para1:
     chunk1: "The SAFE Network is an exciting project for developers. But if like most people, you’re new to decentralised, autonomous data networks, there’s a chance that things can get complicated quickly. The best place to start is "
-    href1: "https://safenetwork.tech/"
+    link:
+      name: safenetwork.tech
+      href: "https://safenetwork.tech/"
     chunk2: " where you’ll find an overview of the main concepts around the SAFE Network, together with a link to download the SAFE Browser."
   para2:
-    chunk1: "You’re bound to have questions - and we’re incredibly lucky to have a community that are always keen to help you out. The best place to find them initially is on the Forums ("
-    href1: "https://safenetforum.org/"
+    chunk1: "You’re bound to have questions - and we’re incredibly lucky to have a community that are always keen to help you out. The best place to find them initially is on the "
+    link1:
+      name: network forum
+      href: "https://safenetforum.org/"
     chunk2: " and "
-    href2: "https://forum.safedev.org/"
-    chunk3: ") where you’ll be among the first to see what's going on and you can ask questions to your heart’s content. Spend an hour or so reading some of the posts, and you’ll quickly achieve Trust Level 1 at which stage you can get onto the Network using the SAFE Browser and start testing early releases with us."
+    link2:
+      name: developer forum
+      href: "https://forum.safedev.org/"
+    chunk3: " where you’ll be among the first to see what's going on and you can ask questions to your heart’s content. Spend an hour or so reading some of the posts, and you’ll quickly achieve Trust Level 1 at which stage you can get onto the Network using the SAFE Browser and start testing early releases with us."
   para3:
-    chunk1: "As you’d expect for a project whose goal includes accessibility for every person around the world, all our code is open source and hosted on GitHub: "
-    href1: "https://github.com/maidsafe/"
-    chunk2: "."
+    chunk1: "As you’d expect for a project whose goal includes accessibility for every person around the world, all our code is open source and hosted on "
+    link:
+      name: GitHub.
+      href: "https://github.com/maidsafe/"
 contents:
     title: "Contents"
 nodejs:
@@ -54,7 +61,9 @@ rust:
   title: "Core libraries - Rust"
   para1:
     chunk1: "As the SAFE Network is complex, it is modularised where possible. The result of this approach is that we have a large number of repositories. All the core libraries are written in Rust (documentation can be found at "
-    href1: "https://docs.rs/"
+    link:
+      href: "https://docs.rs/"
+      name: docs.rs
     chunk2: ")."
   items:
    - name: "accumulator"
@@ -122,8 +131,6 @@ other:
      href: "https://github.com/maidsafe/safe_gossip/blob/master/README.md"
    - name: "safe_launcher"
      href: "https://github.com/maidsafe/safe_launcher/blob/master/README.md"
-   - name: "safe_launcher"
-     href: "https://github.com/maidsafe/safe_launcher/blob/master/README.md"
    - name: "safe_mobile"
      href: "https://github.com/maidsafe/safe_mobile/blob/master/README.md"
    - name: "safe_web_api_playground"
@@ -156,7 +163,7 @@ csharp:
 java:
   title: "Platform development - Android"
   para1:
-    chunk1: "Develop dApps (Decentralised Applications) for Android mobile platforms using Java."
+    chunk1: "Develop dApps (Decentralised Applications) for Android mobile platforms using Java and Kotlin."
   tutorial:
     title: "Tutorial"
     icon: "java"
