@@ -143,6 +143,7 @@ export default [
       return ({
         data,
       });
+    }
   },
   {
     is404: true,
