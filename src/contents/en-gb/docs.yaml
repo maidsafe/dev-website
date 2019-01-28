@@ -29,7 +29,7 @@ nodejs:
   anchor: "nodejs"
   title: "Node.js"
   para1:
-    chunk1: "We’ve got tutorials that will show you how to build a desktop DApp, or a web DApp for the SAFE Network using our Node.js API libraries."
+    chunk1: "We’ve got tutorials that will show you how to build a desktop DApp, or a web DApp for the SAFE Network using our Node.js API."
   tutorials:
     title: "Tutorials"
     nodejs:
@@ -60,7 +60,7 @@ nodejs:
 dotnet:
   title: "C#"
   para1:
-    chunk1: "We’ve got C# API libraries that allow you to build DApps for the SAFE Network on multiple platforms. Following the steps in the mobile tutorial you will be able to create a cross-platform mobile DApp using Xamarin and the desktop tutorial will guide you through building a Windows desktop application."
+    chunk1: "We’ve got a C# API that helps you build DApps for the SAFE Network on multiple platforms. Following the steps in the mobile tutorial you will be able to create a cross-platform mobile DApp using Xamarin and the desktop tutorial will guide you through building a Windows desktop application."
   tutorials:
     title: "Tutorials"
     desktop:
@@ -91,7 +91,7 @@ dotnet:
 java:
   title: "Java / Kotlin"
   para1:
-    chunk1: "Using our Java API libraries you can develop mobile DApps natively on Android in both Java and Kotlin, and Java desktop applications for the SAFE Network.  Learn how to build a simple ToDo Task application with our step-by-step tutorial for Android Studio."
+    chunk1: "Using our Java API you can develop mobile DApps natively on Android in both Java and Kotlin, and Java desktop applications for the SAFE Network.  Learn how to build a simple ToDo Task application with our step-by-step tutorial for Android."
   tutorial:
     title: "Tutorial"
     icon: "java"
@@ -164,6 +164,8 @@ other:
      href: "https://github.com/maidsafe/safe_browser/blob/master/README.md"
    - name: "web_hosting_manager"
      href: "https://github.com/maidsafe/safe-web-hosting-manager-electron/blob/master/README.md"
+   - name: "safe-authenticator-mobile"
+     href: "https://github.com/maidsafe/safe-authenticator-mobile"
    - name: "email_app"
      href: "https://github.com/maidsafe/safe_examples/blob/master/email_app/README.md"
    - name: "safe-email-app-csharp"
