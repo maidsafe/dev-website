@@ -10,12 +10,16 @@ You can download the working example code from [GitHub](https://github.com/maids
 
 Before you start working on your first SAFE app, make sure you have the following tools installed:
 - **Git**
+<br />
 To fetch the boilerplate code and for version control.
 - **Visual Studio**
+<br />
 [Download and install Visual Studio](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/installation) (any edition) with Xamarin.Forms for your operating system.
 - **Safe Authenticator**
+<br />
 The Safe Authenticator mobile application is required to authenticate with the SAFE Network. You can download it from [GitHub](https://github.com/maidsafe/safe-authenticator-mobile/releases/latest).
 - **Beginner level knowledge of Xamarin.Forms**
+<br />
 An introduction to Xamarin.Forms can be found [in the official documentation](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/introduction-to-xamarin-forms).
 
 ## Setup the basic skeleton
@@ -27,7 +31,10 @@ git clone https://github.com/ravinderjangra/safe-getting-started-dotnet
 cd safe-getting-started-dotnet
 git checkout boilerplate-mobile
 ```
+<br />
 Open SafeTodoExample solution in Visual Studio and restore nuget packages.
+
+**Note:**
   * We use the latest version of MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
 
 ## Using a Mock Network
@@ -44,6 +51,7 @@ When the `mock` feature is used, a local MockVault file is generated which simul
 Once this flag is set in the build settings, a reference to `SafeApp.MockAuthBindings.dll` will be added to the project automatically which has additional classes and functions used for mock authentication.
 
 1. **Create a mock account:**
+
 Use `CreateAccountAsync()` API to create a new user account and log in. Let us implement this in the `CreateAccountAsync()` function in `AppService` class:
 
 ```csharp
@@ -52,8 +60,8 @@ var password = "Password";
 var invitation = "Invitation";
 _authenticator = await Authenticator.CreateAccountAsync(location, password, invitation);
 ```
-
-3. **Generate an `AuthRequest`**
+<br />
+1. **Generate an `AuthRequest`**
 
 Let us create an AuthReq instance in the `GenerateEncodedAuthReqAsync()` function in `AppService` class:
 
@@ -78,7 +86,7 @@ Return the encoded auth request.
 ```csharp
 return await Session.EncodeAuthReqAsync(authReq);
 ```
-
+<br />
 **4. Authentication**
 
 The `Authenticator.EncodeAuthRespAsync` API needs two parameters: AuthIpcReq and Response. Response is a boolean type representing whether you want to grant the permissions to an app or not. To grant the permissions use true, otherwise false. Once you get the response, decode it and register the app. Let us implement this in the `CreateTestAppAsync()` function in `AppService` class after creating a mock account:
@@ -111,6 +119,7 @@ _mDataInfo = await _session.MDataInfoActions.RandomPrivateAsync(tagType);
 Although the type tag used is a random number, there is a range of reserved numbers for type tags - any mutable data stored with any of the reserved type tags will have special treatment by the network.
 
 **2. Permission Sets**
+
 Every mutable data on the network has a list of permissions which holds information about access given to applications for the forementioned data. The application's public signing key and it's respective `PermissionSet` are inserted into the mutable data permissions list. Add the following code to `CreateMutableData()` function in `AppService` class after creating the mutable data:
 
 ```csharp
@@ -157,7 +166,7 @@ using (var entriesHandle = await _session.MDataEntryActions.NewAsync())
     await _session.MData.MutateEntriesAsync(_mDataInfo, entriesHandle);
 }
 ```
-
+<br />
 The key-value pairs stored in the mutable data are of type byte[]. We can serialise and deserialise the objects using the `ObjectSerialize` functions provided in the boilerplate.
 
 The mutable data entries can be encrypted for security. Use `EncryptEntryKeyAsync` and `EncryptEntryValueAsync` to encrypt the key and the value respectively as demonstrated in code above.
@@ -211,7 +220,7 @@ using (var entriesHandle = await _session.MDataEntryActions.NewAsync())
     await _session.MData.MutateEntriesAsync(_mDataInfo, entriesHandle);
 }
 ```
-
+<br />
 **To remove an entry:**
 ```csharp
 using (var entriesHandle = await _session.MDataEntryActions.NewAsync())
@@ -243,7 +252,7 @@ using (var appContEntActH = await _session.MDataEntryActions.NewAsync())
     await _session.MData.MutateEntriesAsync(appContainerMDataInfo, appContEntActH);
 }
 ```
-
+<br />
 To retrieve `_mDataInfo` from app container and decrypt implement following in `GetMdInfoAsync()` in `AppService` class:
 ```csharp
 var appContainerMDataInfo = await _session.AccessContainer.GetMDataInfoAsync("apps/" + Constants.AppId);
@@ -299,9 +308,11 @@ var url = UrlFormat.Format(Constants.AppId, encodedAuthReq.Item2, true);
 Device.BeginInvokeOnMainThread(() => { Device.OpenUri(new Uri(url)); });
 ```
 2. **Grant access**
+
 Once the authorisation request is received the Authenticator launches and a pop-up dialogue prompts for access (Allow or Deny). The Authenticator then sends the response back to the application using the URI scheme. The OS matches the URI scheme to the application and launches the application passing `EncodedAuthResponse` as an argument. 
 
 3. **Use the response**
+
 To extract and use the response from the Authenticator follow these steps for the respective mobile OS:
 
 **Android: Use `IntentFilter` so the app can respond to the URL** 
@@ -322,14 +333,13 @@ To extract and use the response from the Authenticator follow these steps for th
 - Once this property is set, update `OnCreate()` method and override the `OnNewIntent` action in `MainActivity` to perform the next action:
 
 ```csharp
-
-// Add following code under LoadApplication(new App());
 protected override void OnCreate(Bundle savedInstanceState)
 {
     ...
     ...
     LoadApplication(new App());
     
+    // Check for intent data after LoadApplication(new App());
     if (Intent?.Data != null)
     {
         HandleAppLaunch(Intent.Data.ToString());
@@ -365,7 +375,7 @@ private void HandleAppLaunch(string url)
         });
 }
 ```
-
+<br />
 **iOS: Use the URL Types Registration feature**
 The URL Types Registration feature, available in `info.plist` file, can be added using the UI editor: 
 
@@ -382,7 +392,8 @@ Role: Viewer
 public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options) 
 {
     Device.BeginInvokeOnMainThread(
-    async () => {
+    async () => 
+    {
         try 
         {
             await AppService.HandleUrlActivationAsync(url.ToString());
@@ -395,7 +406,7 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
     return true;
 }
 ```
-
+<br />
 
 **Shared Code: Process response**
 * Once you get the response, decode it to check if the request was granted or denied. If granted, use the `AppRegisteredAsync` API to establish a session with the network. Implement this in `HandleUrlActivationAsync(string url)` in `AppService` class:

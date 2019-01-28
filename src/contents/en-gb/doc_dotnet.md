@@ -9,13 +9,17 @@ You can download working example code [here](https://github.com/maidsafe/safe-ge
 Before you start developing your first SAFE app, make sure you have the following installed:
 
 - **Git**
+<br />
 To fetch the boilerplate code and for version control.
 
 - **Visual Studio**
+<br />
 Follow the instructions [here](https://visualstudio.microsoft.com/) to download and install Visual Studio (any edition) for your operating system (**Note:** .Net Framework and .Net Core SDKs are installed automatically when installing Visual Studio).
 
 - **The SAFE Browser**
-To connect to the SAFE Network, applications are required to authenticate with the Authenticator. The Authenticator is bundled with the SAFE Browser and download links can be found from the [SAFE Browser GitHub releases page.](https://github.com/maidsafe/safe_browser/releases/latest)
+<br />
+To connect to the SAFE Network, applications are required to authenticate with the Authenticator. The Authenticator is bundled with the SAFE Browser and download links can be found from the [SAFE Browser GitHub releases page](https://github.com/maidsafe/safe_browser/releases/latest).
+
 **Note:**
   * It's recommended to use the latest available version for your platform; 
   * Packages for connecting to the live and mock networks are available. This tutorial guides you through both.
@@ -31,6 +35,8 @@ cd safe-getting-started-dotnet
 git checkout boilerplate
 ```
 Open SafeDesktopExample solution in Visual Studio and restore NuGet packages. In solution explorer right click on MockNetworkExample project and click on `Set as StartUp project` option.
+
+**Note:**
   * The CPU architecture is set to **x64** in project build configuration (SAFE APIs support only x64 architecture for desktops)
   * We use the latest version of [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
 
@@ -41,24 +47,29 @@ We provide the `mock` feature with the SAFE API for a faster app development exp
 When the `mock` feature is used, a local MockVault file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live SAFE Network.
 
 Use either of the following methods to set up and use the mock network based on your requirements:
-- Safe-browser-mock: authentication using SAFE mock browser.
-- Mock Authenticator API: authenticate using the Authenticator class shipped in MaidSafe.SafeApp package. This method is helpful while working with tests.
+- **Safe-browser-mock**: authentication using SAFE mock browser.
+- **Mock Authenticator API**: authenticate using the Authenticator class shipped in MaidSafe.SafeApp package. This method is helpful while working with tests.
 
-### Using SAFE mock browser
+#### Using SAFE mock browser
+<br />
+**1. Download the SAFE mock browser**
 
-**1. Download the SAFE mock browser** 
 Download the mock SAFE Browser as indicated by the file name `safe-browser-<version>-<platform>-dev.zip` (see prerequisites for instructions)
 
 **2. Add mock flag**
+
 Add `SAFE_APP_MOCK` flag for your project in **Properties > Build > Conditional compilation symbols**.
 
 Once this flag is set a reference to SafeApp.MockAuthBindings.dll will be added into the project automatically which has additional classes and functions used for mock authentication.
+
 **3. Log in**
+
 Create an account on SAFE mock browser and log in (use any random arbitrary string for the invite token field).
 
 Keep the browser open and logged into this account before proceeding with next steps.
 
-**4. Generate an **`AuthReq`**** 
+**4. Generate an `AuthReq`** 
+
 Let us implement an `AuthReq` instance in the `GenerateEncodedAppRequestAsync()` function in `Helpers` class:
 ```csharp
 var authReq = new AuthReq
@@ -85,6 +96,7 @@ Once the authorisation request is received, the Authenticator sends an authorisa
 Check Helpers file in example code to understand how we can register a custom URL protocol to open app using custom URI.
 
 **5. Send `AuthReq` to the Authenticator**
+
 Once the `AuthReq` instance is initialised it is then used to generate the authorisation request and send it to the Authenticator using the following code, let us implement this in the`AuthenticationWithBrowserAsync()` function present in the `Authentication` class:
 
 ```csharp
@@ -92,8 +104,9 @@ var encodedReq = await Helpers.GenerateEncodedAppRequestAsync();
 var url = Helpers.UrlFormat(encodedReq.Item2, true);
 System.Diagnostics.Process.Start(url);
 ```
-
+<br />
 **6. Grant access**
+
 The Safe Browser intercepts the authorisation request and a pop-up dialog prompts for access (Allow or Deny). The Authenticator then sends the response back to the application.
 
 **Note:** The demo application already has the code to send a response from the new instance to the already running console app instance using [IPC Pipes](https://docs.microsoft.com/en-us/dotnet/standard/io/pipe-operations).
@@ -122,17 +135,19 @@ else
 ```
 ***Note:** If you are authenticating using the SAFE Browser mock you can skip the next section and move on to [create mutable data](#Create-mutable-data).*
 
-### Using mock Authenticator API
-
+#### Using mock Authenticator API
+<br />
 You can perform authentication within the application itself for easier testing during development.
 
 **1. Add mock flag**
+
 In the solution explorer right click on the `MockNetworkExample` project and navigate to **Properties > Build > Conditional compilation symbols**, add `SAFE_APP_MOCK` flag in your project .
 
 Once this flag is set a reference to *SafeApp.MockAuthBindings.dll* will be added into the project automatically which has additional classes and functions used for mock authentication.
 
 **2. Create a mock account**
-Use create account API to create a new user account and log in. Let us implement this in the `MockAuthenticationAsync()` function in `Authentication` class: 
+
+Use create account API to create a new user account and log in. Let us implement this in the `MockAuthenticationAsync()` function in `Authentication` class:
 
 ```csharp 
 var location = Helpers.GenerateRandomString(10);
@@ -142,6 +157,7 @@ var authenticator = await Authenticator.CreateAccountAsync(location, password, i
 ``` 
 
 **3. Generate an `AuthReq`**
+
 You first need to generate an `AuthReq` instance which provides information about the application and the permissions requested by this application. Let us implement this in the `GenerateEncodedAppRequestAsync()` function in `Helpers` class:
 ```csharp
 var authReq = new AuthReq
@@ -165,6 +181,7 @@ return await Session.EncodeAuthReqAsync(authReq);
 ***Note:** Passing a list of `ContainerPermissions` allows the definition of various permissions provided to specific containers.*
 
 **4. Authentication**
+
 Use `Authenticator.EncodeAuthRespAsync` API which needs two parameters, AuthIpcReq and Response. Response is a boolean type representing whether you want to grant the permissions to an app or not. To grant the permissions use true, otherwise false. Once you get the response, decode it and register the app. Let us implement this in the `MockAuthenticationAsync()` function in `Authentication` class after creating a mock account:
 ```csharp
 var (_, reqMsg) = await Helpers.GenerateEncodedAppRequestAsync();
@@ -200,6 +217,7 @@ _mdinfo = await _session.MDataInfoActions.RandomPrivateAsync(tagType);
 Although the type tag used is a random number, there is a range of reserved numbers for type tags - any mutable data stored with any of the reserved type tags will have special treatment by the network.
 
 **2. Permission Sets**
+
 Every mutable data on the network has a list of permissions which holds information about access given to applications for the forementioned data. The application's public signing key and it's respective `PermissionSet` are inserted into the mutable data permissions list. Add the following code to `CreateMutableData()` function in `DataOperations` class after creating the mutable data:
 
 ```csharp
@@ -295,6 +313,7 @@ using (var entriesHandle = await _session.MDataEntryActions.NewAsync())
     await _session.MData.MutateEntriesAsync(_mdinfo, entriesHandle);
 }
 ```
+<br />
 
 **To remove an entry:**
 ```csharp
@@ -306,7 +325,7 @@ using (var entriesHandle = await _session.MDataEntryActions.NewAsync())
     await _session.MData.MutateEntriesAsync(_mdinfo, entriesHandle);
 }
 ```
-
+<br />
 **Versioning in mutable data:**
 
 Each entry in a mutable data has a version associated to it - a numeric value. 
@@ -343,13 +362,16 @@ The process to connect to live network is the same as mock except:
 
 **Note:** Before attempting to connect to the alpha-2 network, make sure that you have completed the steps in the [authenticate using mock browser section.](#Using-SAFE-mock-browser)
 
-**1. Download the SAFE (non-mock) Browser** 
+**1. Download the SAFE (non-mock) Browser**
+
 If you haven't already done so, download the SAFE (non-mock) Browser (see prerequisites for instructions).
 
 **2. Log in**
+
 Log in using your existing SAFE Network account or create an account from the Authenticator.
 
 Ensure to keep the browser opened and logged in with your account before proceeding with next steps.
 
-**3. Build and run** 
+**3. Build and run**
+
 Running the application will now authenticate with the Alpha 2 Network. 
