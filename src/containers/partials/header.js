@@ -21,6 +21,8 @@ class Header extends React.Component {
       PLATFORM_NODEJS: '/platform/nodejs',
       PLATFORM_RUST: '/platform/rust',
       PLATFORM_WEB: '/platform/web',
+      PLATFORM_DOTNET: '/platform/dotnet',
+      PLATFORM_XAMARIN: '/platform/xamarin',
     };
   }
 

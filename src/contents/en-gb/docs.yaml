@@ -27,9 +27,9 @@ contents:
 nodejs:
   href: '#nodejs'
   anchor: "nodejs"
-  title: "Platform development - Nodejs"
+  title: "Node.js"
   para1:
-    chunk1: "SAFE Network API libraries have been built for Node.js. Using these as a developer enables you to interact with the SAFE Authenticator. The Authenticator is the way that users securely authenticate themselves in order to connect and interact with the SAFE Network."
+    chunk1: "We’ve got tutorials that will show you how to build a desktop DApp, or a web DApp for the SAFE Network using our Node.js API libraries."
   tutorials:
     title: "Tutorials"
     nodejs:
@@ -53,10 +53,65 @@ nodejs:
      href: "https://docs.maidsafe.net/safe_app_nodejs/nfs"
    - name: "Crypto"
      href: "https://docs.maidsafe.net/safe_app_nodejs/cryptointerface"
-   - name: "RDF"
+   - name: "RDF (Experimental)"
      href: "https://docs.maidsafe.net/safe_app_nodejs/rdf"
-   - name: "WebID"
+   - name: "WebID (Experimental)"
      href: "https://docs.maidsafe.net/safe_app_nodejs/webid"
+dotnet:
+  title: "C#"
+  para1:
+    chunk1: "We’ve got C# API libraries that allow you to build DApps for the SAFE Network on multiple platforms. Following the steps in the mobile tutorial you will be able to create a cross-platform mobile DApp using Xamarin and the desktop tutorial will guide you through building a Windows desktop application."
+  tutorials:
+    title: "Tutorials"
+    desktop:
+      icon: "dotnet"
+      name: "Desktop Tutorial"
+      href: '/platform/dotnet'
+    mobile:
+      icon: "xamarin"
+      name: "Mobile Tutorial"
+      href: '/platform/xamarin'
+  api:
+    title: "API Documentation"
+  items:
+    - name: "C# API"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/'
+    - name: "SafeApp"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.html'
+    - name: "IData"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.IData.html'
+    - name: "MData"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.MData.html'
+    - name: "Misc"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.Misc.html'
+    - name: "MockAuthBindings"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.MockAuthBindings.html'
+    - name: "Utilities"
+      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.Utilities.html'
+java:
+  title: "Java / Kotlin"
+  para1:
+    chunk1: "Using our Java API libraries you can develop mobile DApps natively on Android in both Java and Kotlin, and Java desktop applications for the SAFE Network.  Learn how to build a simple ToDo Task application with our step-by-step tutorial for Android Studio."
+  tutorial:
+    title: "Tutorial"
+    icon: "java"
+    name: "Android - Getting Started"
+    href: '/platform/android'
+  api:
+    title: "API documentation"
+  items:
+    - name: "Java API"
+      href: 'https://docs.maidsafe.net/safe_app_java/'
+    - name: "Session"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/Session.html'
+    - name: "Crypto"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/crypto'
+    - name: "IData"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/idata'
+    - name: "MData"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/mdata'
+    - name: "NFS"
+      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/nfs'
 rust:
   title: "Core libraries - Rust"
   para1:
@@ -103,68 +158,23 @@ rust:
    - name: "system_uri"
      href: "https://docs.rs/system_uri"
 other:
-  title: "Other Documentation"
+  title: "Other Projects and Examples"
   items:
-   - name: "deps_downloader"
-     href: "https://github.com/maidsafe/deps_downloader/blob/master/README.md"
-   - name: "email_app"
-     href: "https://github.com/maidsafe/safe_examples/blob/master/email_app/README.md"
-   - name: "rfcs"
-     href: "https://github.com/maidsafe/rfcs/blob/master/README.md"
-   - name: "safe_bindgen"
-     href: "https://github.com/maidsafe/safe_bindgen/blob/master/README.md"
    - name: "safe_browser"
      href: "https://github.com/maidsafe/safe_browser/blob/master/README.md"
-   - name: "safe_gossip"
-     href: "https://github.com/maidsafe/safe_gossip/blob/master/README.md"
-   - name: "safe-email-app-csharp"
-     href: "https://github.com/maidsafe/safe-email-app-csharp/blob/master/README.md"
-   - name: "safe_web_api_playground"
-     href: "https://github.com/maidsafe/safe_examples/blob/master/safe_web_api_playground/README.md"
    - name: "web_hosting_manager"
      href: "https://github.com/maidsafe/safe-web-hosting-manager-electron/blob/master/README.md"
-csharp:
-  title: "Platform development - C#"
-  para1:
-    chunk1: "safe_app_csharp API documentation."
-  api:
-    title: "API Documentation"
-  items:
-    - name: "C# API"
-      href: 'https://docs.maidsafe.net/safe_app_csharp/'
-    - name: "SafeApp"
-      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.html'
-    - name: "IData"
-      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.IData.html'
-    - name: "MData"
-      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.MData.html'
-    - name: "Misc"
-      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.Misc.html'
-    - name: "MockAuthBindings"
-      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.MockAuthBindings.html'
-    - name: "Utilities"
-      href: 'https://docs.maidsafe.net/safe_app_csharp/api/SafeApp.Utilities.html'
-java:
-  title: "Platform development - Android"
-  para1:
-    chunk1: "Develop dApps (Decentralised Applications) for Android mobile platforms using Java and Kotlin."
-  tutorial:
-    title: "Tutorial"
-    icon: "java"
-    name: "Android - Getting Started"
-    href: '/platform/android'
-  api:
-    title: "Android - API documentation"
-  items:
-    - name: "Android API"
-      href: 'https://docs.maidsafe.net/safe_app_java/'
-    - name: "Session"
-      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/Session.html'
-    - name: "Crypto"
-      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/crypto'
-    - name: "IData"
-      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/idata'
-    - name: "MData"
-      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/mdata'
-    - name: "NFS"
-      href: 'https://docs.maidsafe.net/safe_app_java/net/maidsafe/api/nfs'
+   - name: "email_app"
+     href: "https://github.com/maidsafe/safe_examples/blob/master/email_app/README.md"
+   - name: "safe-email-app-csharp"
+     href: "https://github.com/maidsafe/safe-email-app-csharp/blob/master/README.md"
+   - name: "safe_gossip"
+     href: "https://github.com/maidsafe/safe_gossip/blob/master/README.md"
+   - name: "rfcs"
+     href: "https://github.com/maidsafe/rfcs/blob/master/README.md"
+   - name: "deps_downloader"
+     href: "https://github.com/maidsafe/deps_downloader/blob/master/README.md"
+   - name: "safe_bindgen"
+     href: "https://github.com/maidsafe/safe_bindgen/blob/master/README.md"
+   - name: "safe_web_api_playground"
+     href: "https://github.com/maidsafe/safe_examples/blob/master/safe_web_api_playground/README.md"
