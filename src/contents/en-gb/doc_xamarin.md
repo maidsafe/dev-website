@@ -41,7 +41,7 @@ Open SafeTodoExample solution in Visual Studio and restore nuget packages.
 
 We provide the `mock` feature with the SAFE API for faster app development experience and a safe space to perform test operations.
 
-When the `mock` feature is used, a local MockVault file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live SAFE network. To set up and use a mock network:
+When the `mock` feature is used, a local MockVault file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live SAFE Network. To set up and use a mock network:
 
 1. **Build conditional compilation symbols:**
     - Visual Studio: Add `SAFE_APP_MOCK` flag to SafeTodoExample project in **Properties** > **Build** >   **Conditional compilation symbols**.
@@ -200,7 +200,7 @@ using (var entriesHandle = await _session.MDataEntries.GetHandleAsync(_mDataInfo
     }
 }
 ```
-and make sure the function returns the list
+And make sure the function returns the list
 ```csharp
 return todoItems;
 ```
@@ -295,7 +295,7 @@ Now you can run the application and try authenticating and working with todo ite
 
 *Note: Ensure `SAFE_APP_MOCK` flag is removed from shared and platform specific projects' conditional compilation symbols.*
 
-To connect to the live alpha-2 Network, an application needs to get authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (SAFE Authenticator app in this case): 
+To connect to the live Alpha-2 Network, an application needs to get authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (SAFE Authenticator app in this case): 
 
 1. **Send `AuthReq` to the Authenticator**
 
