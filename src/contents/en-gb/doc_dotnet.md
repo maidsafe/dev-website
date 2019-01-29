@@ -66,7 +66,7 @@ Once this flag is set, a reference to SafeApp.MockAuthBindings.dll will be added
 
 Create an account on the mock SAFE browser and log in (use any random arbitrary string for the invite token field).
 
-Keep the browser open and logged into this account  before proceeding with next steps.
+Keep the browser open and logged into this account before proceeding with next steps.
 
 **4. Generate an `AuthReq`** 
 
