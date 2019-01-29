@@ -9,7 +9,7 @@ platformLinks:
     name: Android
     href: '/platform/android'
   - icon: dotnet
-    name: .Net
+    name: .NET
     href: '/platform/dotnet'
   - icon: xamarin
     name: Xamarin

@@ -4,7 +4,7 @@ This tutorial shows you how to create a [Xamarin.Forms](https://github.com/xamar
 
 In this tutorial we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE API to connect and interact with the SAFE Network.
 
-You can download the working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/MobileExample) or follow the steps provided in this tutorial to create a mobile app for SAFE Network.
+You can download the working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/MobileExample) or follow the steps provided in this tutorial to create a mobile app for the SAFE Network.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ git checkout boilerplate-mobile
 Open `MobileExample/SafeTodoExample.sln` solution in Visual Studio and restore nuget packages.
 
 **Note:**
-  * We use the latest version of MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
+  * We use the latest version of the MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
 
 ## Using a Mock Network
 
@@ -103,7 +103,7 @@ return await Session.AppRegisteredAsync(Constants.AppId, authResponse.AuthGrante
 ## Create mutable data
 Mutable data is a key-value store which can be created either at a specific address or at a random address on the network. It can be publicly available (public mutable data) or encrypted (private mutable data). Mutable data has a type tag associated with it (a number) that can be chosen while creating the mutable data.
 
-To learn more about mutable data and other data types in SAFE Network visit the [Discover Page](/discover).
+To learn more about mutable data and other data types in SAFE Network visit the [discover page](/discover).
 
 In this tutorial you will create a private mutable data at a random address to store application data. This address represents a unique 256 bit address in the network space. You can learn more about XOR addresses from [this medium post](https://medium.com/@maidsafe/structuring-network-with-xor-431e785b5ee7).
 
@@ -200,7 +200,7 @@ using (var entriesHandle = await _session.MDataEntries.GetHandleAsync(_mDataInfo
     }
 }
 ```
-And make sure the function returns the list
+And make sure the function returns the list.
 ```csharp
 return todoItems;
 ```
@@ -288,8 +288,8 @@ var encryptedEntries = await _session.MData.ListEntriesAsync(entriesHandle);
         todoItems.Add(deserializedValue as TodoItem);
     }
 ```
-
-Now you can run the application and try authenticating and working with todo items in list that we have implemented via the APIs.
+<br />
+Now you can run the application, authenticate and work with todo items in the list that we have implemented.
 
 ## Connecting to the live network
 
@@ -309,7 +309,7 @@ Device.BeginInvokeOnMainThread(() => { Device.OpenUri(new Uri(url)); });
 ```
 2. **Grant access**
 
-Once the authorisation request is received the Authenticator launches and a pop-up dialogue prompts for access (Allow or Deny). The Authenticator then sends the response back to the application using the URI scheme. The OS matches the URI scheme to the application and launches the application passing `EncodedAuthResponse` as an argument. 
+Once the authorisation request is received, the Authenticator launches and a pop-up dialogue prompts for access (Allow or Deny). The Authenticator then sends the response back to the application using the URI scheme. The OS matches the URI scheme to the application and launches the application passing `EncodedAuthResponse` as an argument. 
 
 3. **Use the response**
 
@@ -330,7 +330,7 @@ To extract and use the response from the Authenticator follow these steps for th
             Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
             DataScheme = Constants.AppId)]
 ```
-- Once this property is set, update `OnCreate()` method and override the `OnNewIntent` action in `MainActivity` to perform the next action:
+- Once this property is set, update `OnCreate()` method and override the `OnNewIntent` action in the `MainActivity` class to perform the next action:
 
 ```csharp
 protected override void OnCreate(Bundle savedInstanceState)
@@ -355,7 +355,7 @@ protected override void OnNewIntent(Intent intent)
     }
 }
 ```
-- Add a new function `HandleAppLaunch(string url)` in `MainActivity` to send response to `AppService` class where we will decode the reponse and initialise the session.
+- Add a new function `HandleAppLaunch(string url)` in the `MainActivity` class to send response to `AppService` class where we will decode the response and initialise the session.
 ```csharp
 private void HandleAppLaunch(string url)
 {
@@ -377,16 +377,16 @@ private void HandleAppLaunch(string url)
 ```
 <br />
 **iOS: Use the URL Types Registration feature**
-The URL Types Registration feature, available in `info.plist` file, can be added using the UI editor: 
+The URL Types Registration feature, available in the `Info.plist` file, can be added using the UI editor: 
 
-- Open `Info.plist` in editor and open `Advanced > URL Types > Add URL Type` and add the following properties:
+- Open the `Info.plist` file in the UI editor and open `Advanced > URL Types > Add URL Type` and add the following properties:
 
 ```csharp
 Identifier: SafeTodoExample
 URL Schemes: net.maidsafe.examples.todo
 Role: Viewer
 ```
-- Once these properties are set, override the `OpenUrl` action in `AppDelegate`:
+- Once these properties are set, override the `OpenUrl` action in the `AppDelegate` class: 
 
 ```csharp
 public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options) 
@@ -409,7 +409,7 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
 <br />
 
 **Shared Code: Process response**
-* Once you get the response, decode it to check if the request was granted or denied. If granted, use the `AppRegisteredAsync` API to establish a session with the network. Implement this in `HandleUrlActivationAsync(string url)` in `AppService` class:
+* Once you get the response, decode it to check if the request was granted or denied. If granted, use the `AppRegisteredAsync` API to establish a session with the network. Implement this in `HandleUrlActivationAsync(string url)` in the `AppService` class:
 
 ```csharp
 var encodedRequest = UrlFormat.GetRequestData(url);
@@ -429,5 +429,5 @@ if (decodeResult.GetType() == typeof(AuthIpcMsg))
     }
 }
 ```
-
-Now run the application and authenticate it using the SAFE Authenticator. Once you allow the app to access the network, you will be able to use the app to add/update/remove todo items in the list.
+<br />
+Now run the application and authenticate it using the SAFE Authenticator. Once you allow the app to access the network, all operations will be performed on the Alpha-2 network.
