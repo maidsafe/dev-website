@@ -14,7 +14,7 @@ Before you start working on your first SAFE app, make sure you have the followin
 To fetch the boilerplate code and for version control.
 - **Visual Studio**
 <br />
-[Download and install Visual Studio](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/installation) (any edition) with Xamarin.Forms for your operating system.
+[Download and install Visual Studio](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/installation) (any edition) for your operating system with `mobile development with .NET` workload.
 - **Safe Authenticator**
 <br />
 The Safe Authenticator mobile application is required to authenticate with the SAFE Network. You can download it from [GitHub](https://github.com/maidsafe/safe-authenticator-mobile/releases/latest).

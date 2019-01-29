@@ -14,7 +14,7 @@ To fetch the boilerplate code and for version control.
 
 - **Visual Studio**
 <br />
-Follow the instructions [here](https://visualstudio.microsoft.com/) to download and install Visual Studio (any edition) for your operating system (**Note:** .Net Framework and .Net Core SDKs are installed automatically when installing Visual Studio).
+Follow the instructions [here](https://visualstudio.microsoft.com/) to download and install Visual Studio (any edition) for your operating system with `.NET desktop development` workload.
 
 - **The SAFE Browser**
 <br />
