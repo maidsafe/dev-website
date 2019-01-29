@@ -50,8 +50,7 @@ Use either of the following methods to set up and use the mock network based on 
 - **Mock SAFE browser**: Authentication using the mock SAFE browser.
 - **Mock Authenticator API**: Authenticate using the Authenticator class shipped in MaidSafe.SafeApp package. This method is helpful while working with tests.
 
-#### Using the mock SAFE browser
-<br />
+## Using the mock SAFE browser
 **1. Download the mock SAFE browser**
 
 Download the mock SAFE Browser as indicated by the file name `safe-browser-<version>-<platform>-dev.zip` (see [prerequisites](#prerequisites) for instructions).
@@ -135,8 +134,7 @@ else
 ```
 ***Note:** If you are authenticating using the SAFE Browser mock you can skip the next section and move on to [create mutable data](#create-mutable-data).*
 
-#### Using mock Authenticator API
-<br />
+## Using mock Authenticator API
 You can perform authentication within the application itself for easier testing during development.
 
 **1. Add mock flag**
