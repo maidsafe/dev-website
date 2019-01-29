@@ -43,14 +43,15 @@ We provide the `mock` feature with the SAFE API for faster app development exper
 
 When the `mock` feature is used, a local MockVault file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live SAFE Network. To set up and use a mock network:
 
-1. **Build conditional compilation symbols:**
-    - Visual Studio: Add `SAFE_APP_MOCK` flag to SafeTodoExample project in **Properties** > **Build** >   **Conditional compilation symbols**.
-    - Visual Studio for Mac: Add `SAFE_APP_MOCK` flag to SafeTodoExample project in **Options** > **Compiler** >   **Define symbols**.
-    - Add the flag to the platform specific projects too.
+**1. Build conditional compilation symbols:**
+
+- Visual Studio: Add `SAFE_APP_MOCK` flag to SafeTodoExample project in **Properties** > **Build** >   **Conditional compilation symbols**.
+- Visual Studio for Mac: Add `SAFE_APP_MOCK` flag to SafeTodoExample project in **Options** > **Compiler** >   **Define symbols**.
+- Add the flag to the platform specific projects too.
 
 Once this flag is set in the build settings, a reference to `SafeApp.MockAuthBindings.dll` will be added to the project automatically which has additional classes and functions used for mock authentication.
 
-1. **Create a mock account:**
+**2. Create a mock account:**
 
 Use `CreateAccountAsync()` API to create a new user account and log in. Let us implement this in the `CreateAccountAsync()` function in `AppService` class:
 
@@ -61,7 +62,7 @@ var invitation = "Invitation";
 _authenticator = await Authenticator.CreateAccountAsync(location, password, invitation);
 ```
 <br />
-1. **Generate an `AuthRequest`**
+**3. Generate an `AuthRequest`**
 
 Let us create an AuthReq instance in the `GenerateEncodedAuthReqAsync()` function in `AppService` class:
 
