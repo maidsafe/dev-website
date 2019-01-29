@@ -13,11 +13,18 @@ class Home extends React.Component {
         <div className="home-b">
           {/* Homepage Top CTA Banner - disable when no action (current: Android Platform Development) */}
           <div className="hom-bnr-2-link">
-            <p>New: <b>Android Platform Support</b></p>
+            <p><b>New:</b> Extended platform support</p>
             <p className="lft-sec-btn">
               <button className="btn" type="button" onClick={() => {
-                location.assign('platform/android/');
-              }}>View the tutorial</button>
+                location.assign('/platform/android');
+              }}>Android</button>  &nbsp;
+              <button className="btn" type="button" onClick={() => {
+                location.assign('/platform/xamarin');
+              }}>Xamarin</button> &nbsp;
+              <button className="btn" type="button" onClick={() => {
+                location.assign('/platform/dotnet');
+              }}>.Net</button>
+
             </p>
           </div>
 

@@ -40,41 +40,47 @@ class Docs extends React.Component {
 
         {/* Platform development - NodeJS API */}
 
-        <div className="nodejs">
-          <div className="nodejs-b">
-
-            {/* NodeJS heading */}
+        <div className="nodejs platform">
+          {/* NodeJS heading */}
+          <div className="platform-b">
             <h1>{data.nodejs.title}</h1>
             <p>{data.nodejs.para1.chunk1}</p>
+          </div>
 
-            <h3>{data.nodejs.tutorials.title}</h3>
-            {/* Tutorial documentation */}
-            <div className="tutorials">
-              <div className="tutorial">
-                <a href={data.nodejs.tutorials.nodejs.href}>
-                  <div className={`icn ${data.nodejs.tutorials.nodejs.icon}`}></div>
-                  <div className="name">{data.nodejs.tutorials.nodejs.name}</div>
-                </a>
-              </div>
-              <div className="tutorial">
-                <a href={data.nodejs.tutorials.web.href}>
-                  <div className={`icn ${data.nodejs.tutorials.web.icon}`}></div>
-                  <div className="name">{data.nodejs.tutorials.web.name}</div>
-                </a>
+          <div className="platform-b layout4060">
+
+            <div className="lay-40">
+              <h3>{data.nodejs.tutorials.title}</h3>
+              {/* Tutorial documentation */}
+              <div className="tutorials">
+                <div className="tutorial">
+                  <a href={data.nodejs.tutorials.nodejs.href}>
+                    <div className={`icn ${data.nodejs.tutorials.nodejs.icon}`}></div>
+                    <div className="name">{data.nodejs.tutorials.nodejs.name}</div>
+                  </a>
+                </div>
+                <div className="tutorial">
+                  <a href={data.nodejs.tutorials.web.href}>
+                    <div className={`icn ${data.nodejs.tutorials.web.icon}`}></div>
+                    <div className="name">{data.nodejs.tutorials.web.name}</div>
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* API documentation items */}
-            <h3>{data.nodejs.api.title}</h3>
-            <div className="nodejs-cntr"> {
+            <div className="lay-60">
+              {/* API documentation items */}
+              <h4>{data.nodejs.api.title}</h4>
+              <div className="platform-api"> {
 
-              data.nodejs.items.map((key, i) => (
-                <div key={`key-items-${i}`} className="nodejs-i">
-                  <p>
-                  <a href={key.href}> {key.name}</a>
-                  </p>
-                </div>
-              )) }
+                data.nodejs.items.map((key, i) => (
+                  <div key={`key-items-${i}`} className="platform-i">
+                    <p>
+                    <a href={key.href}> {key.name}</a>
+                    </p>
+                  </div>
+                )) }
+              </div>
             </div>
 
           </div>
@@ -83,72 +89,94 @@ class Docs extends React.Component {
 
         {/* Platform development - Java API */}
 
-        <div className="java">
-          <div className="java-b">
+        <div className="java platform">
 
-
+          <div className="platform-b">
             <h1>{data.java.title}</h1>
             <p>{data.java.para1.chunk1}</p>
+          </div>
+          <div className="platform-b layout4060">
+            <div className="lay-40">
+              <h3>{data.java.tutorial.title}</h3>
 
-            <h3>{data.java.tutorial.title}</h3>
-
-            <div className="tutorials">
-              <div className="tutorial">
-                <a href={data.java.tutorial.href}>
-                  <div className={`icn ${data.java.tutorial.icon}`}></div>
-                  <div className="name">{data.java.tutorial.name}</div>
-                </a>
+              <div className="tutorials">
+                <div className="tutorial">
+                  <a href={data.java.tutorial.href}>
+                    <div className={`icn ${data.java.tutorial.icon}`}></div>
+                    <div className="name">{data.java.tutorial.name}</div>
+                  </a>
+                </div>
               </div>
             </div>
+            <div className="lay-60">
+              <h4>{data.java.api.title}</h4>
+              <div className="platform-api"> {
 
-            <h3>{data.java.api.title}</h3>
-            <div className="java-cntr"> {
-
-              data.java.items.map((key, i) => (
-                <div key={`key-items-${i}`} className="java-i">
-                  <p>
-                  <a href={key.href}> {key.name}</a>
-                  </p>
-                </div>
-              )) }
+                data.java.items.map((key, i) => (
+                  <div key={`key-items-${i}`} className="platform-i">
+                    <p>
+                    <a href={key.href}> {key.name}</a>
+                    </p>
+                  </div>
+                )) }
+              </div>
             </div>
           </div>
         </div>
 
         {/* Platform development - C# .net API */}
-        {/*
-        <div className="csharp">
-          <div className="csharp-b">
+        <div className="dotnet platform">
 
-          {/* C-sharp heading
-          <h1>{data.csharp.title}</h1>
-          <p>{data.csharp.para1.chunk1}</p>
+          <div className="platform-b">
+            <h1>{data.dotnet.title}</h1>
+            <p>{data.dotnet.para1.chunk1}</p>
+          </div>
 
-            <h3>{data.csharp.api.title}</h3>
-            <div className="csharp-cntr"> {
+          <div className="platform-b layout4060">
 
-              data.csharp.items.map((key, i) => (
-                <div key={`key-items-${i}`} className="csharp-i">
-                  <p>
-                  <a href={key.href}> {key.name}</a>
-                  </p>
+            <div className="lay-40">
+
+              <h3>{data.dotnet.tutorials.title}</h3>
+
+              <div className="tutorials">
+
+                <div className="tutorial">
+                  <a href={data.dotnet.tutorials.desktop.href}>
+                    <div className={`icn ${data.dotnet.tutorials.desktop.icon}`}></div>
+                    <div className="name">{data.dotnet.tutorials.desktop.name}</div>
+                  </a>
                 </div>
-              )) }
+
+                <div className="tutorial">
+                  <a href={data.dotnet.tutorials.mobile.href}>
+                    <div className={`icn ${data.dotnet.tutorials.mobile.icon}`}></div>
+                    <div className="name">{data.dotnet.tutorials.mobile.name}</div>
+                  </a>
+                </div>
+
+              </div>
             </div>
 
+            <div className="lay-60">
+              <h4>{data.dotnet.api.title}</h4>
+              <div className="platform-api"> {
 
+                data.dotnet.items.map((key, i) => (
+                  <div key={`key-items-${i}`} className="platform-i">
+                    <p><a href={key.href}> {key.name}</a></p>
+                  </div>
+                )) }
+              </div>
+            </div>
           </div>
         </div>
-*/}
-
-
 
 
         {/* Core libraries - Rust */}
         <div className="rust">
           <div className="rust-b">
 
-            <h3>{data.rust.title}</h3>
+            <h1>{data.rust.title}</h1>
 
             <div className="rust-cntr">
               <p>
@@ -174,7 +202,7 @@ class Docs extends React.Component {
         <div className="other">
           <div className="other-b">
 
-            <h3>{data.other.title}</h3>
+            <h1>{data.other.title}</h1>
 {/*}
             <div className="other-cntr">
               <p>
