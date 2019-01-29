@@ -59,6 +59,11 @@ export const parsePlatformData = (content) => {
     $(ele).addClass('language-basic')
   }).get().join(' ');
 
+  $('p code').map((i, ele) => {
+    $(ele).addClass('language-basic')
+  }).get().join(' ');
+
+
   const navEle = $.root().children().filter((i, el) => ['h1', 'h2', 'h3'].indexOf(el.name) !== -1);
 
   return {
