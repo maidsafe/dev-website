@@ -4,9 +4,9 @@ This tutorial shows you how to create a [Xamarin.Forms](https://github.com/xamar
 
 In this tutorial we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE API to connect and interact with the SAFE Network.
 
-You can download the working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/SafeTodoExample) or follow the steps provided in this tutorial to create a mobile app for SAFE Network.
+You can download the working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/MobileExample) or follow the steps provided in this tutorial to create a mobile app for SAFE Network.
 
-## Pre-requisites
+## Prerequisites
 
 Before you start working on your first SAFE app, make sure you have the following tools installed:
 - **Git**
@@ -20,19 +20,19 @@ To fetch the boilerplate code and for version control.
 The Safe Authenticator mobile application is required to authenticate with the SAFE Network. You can download it from [GitHub](https://github.com/maidsafe/safe-authenticator-mobile/releases/latest).
 - **Beginner level knowledge of Xamarin.Forms**
 <br />
-An introduction to Xamarin.Forms can be found [in the official documentation](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/introduction-to-xamarin-forms).
+An introduction to Xamarin.Forms can be found in the [official documentation](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/introduction-to-xamarin-forms).
 
 ## Setup the basic skeleton
 
 The basic setup of the application is available in a git repository. Let's get started by cloning this repository
 
 ```bash
-git clone https://github.com/ravinderjangra/safe-getting-started-dotnet
+git clone https://github.com/maidsafe/safe-getting-started-dotnet
 cd safe-getting-started-dotnet
 git checkout boilerplate-mobile
 ```
 <br />
-Open SafeTodoExample solution in Visual Studio and restore nuget packages.
+Open `MobileExample/SafeTodoExample.sln` solution in Visual Studio and restore nuget packages.
 
 **Note:**
   * We use the latest version of MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.

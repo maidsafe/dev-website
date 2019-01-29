@@ -2,7 +2,7 @@
 
 This tutorial shows you how to create a [.Net Framework](https://docs.microsoft.com/en-us/dotnet/framework/) Windows console application for the SAFE Network. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server and Microsoft Azure using C#, Visual Basic and F#. This tutorial can also be used for developing [.Net Core](https://github.com/dotnet/core) apps.
 
-You can download working example code [here](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/SafeDesktopExample). Follow the steps described in this tutorial to create an app for SAFE Network.
+You can download working example code [here](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/DesktopExample). Follow the steps described in this tutorial to create an app for SAFE Network.
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ Follow the instructions [here](https://visualstudio.microsoft.com/) to download 
 <br />
 To connect to the SAFE Network, applications are required to authenticate with the Authenticator. The Authenticator is bundled with the SAFE Browser and download links can be found from the [SAFE Browser GitHub releases page](https://github.com/maidsafe/safe_browser/releases/latest).
 
-**Note:**
-  * It's recommended to use the latest available version for your platform; 
-  * Packages for connecting to the live and mock networks are available. This tutorial guides you through both.
+    **Note:**
+    * It's recommended to use the latest available version for your platform; 
+    * Packages for connecting to the live and mock networks are available. This tutorial guides you through both.
 
 
 ## Setup the basic skeleton
@@ -34,7 +34,7 @@ git clone https://github.com/maidsafe/safe-getting-started-dotnet
 cd safe-getting-started-dotnet
 git checkout boilerplate
 ```
-Open SafeDesktopExample solution in Visual Studio and restore NuGet packages. In solution explorer right click on MockNetworkExample project and click on `Set as StartUp project` option.
+Open the `DesktopExample/SafeDesktopExample.sln` solution in Visual Studio and restore NuGet packages. In solution explorer right click on MockNetworkExample project and click on `Set as StartUp project` option.
 
 **Note:**
   * The CPU architecture is set to **x64** in project build configuration (SAFE APIs support only x64 architecture for desktops)
@@ -54,11 +54,11 @@ Use either of the following methods to set up and use the mock network based on 
 <br />
 **1. Download the SAFE mock browser**
 
-Download the mock SAFE Browser as indicated by the file name `safe-browser-<version>-<platform>-dev.zip` (see prerequisites for instructions)
+Download the mock SAFE Browser as indicated by the file name `safe-browser-<version>-<platform>-dev.zip` (see [prerequisites](#prerequisites) for instructions).
 
 **2. Add mock flag**
 
-Add `SAFE_APP_MOCK` flag for your project in **Properties > Build > Conditional compilation symbols**.
+In the solution explorer right click on the `MockNetworkExample` project and navigate to **Properties > Build > Conditional compilation symbols**, add `SAFE_APP_MOCK` flag in your project.
 
 Once this flag is set a reference to SafeApp.MockAuthBindings.dll will be added into the project automatically which has additional classes and functions used for mock authentication.
 
@@ -133,7 +133,7 @@ else
     throw new Exception("Auth Request not granted.");
 }
 ```
-***Note:** If you are authenticating using the SAFE Browser mock you can skip the next section and move on to [create mutable data](#Create-mutable-data).*
+***Note:** If you are authenticating using the SAFE Browser mock you can skip the next section and move on to [create mutable data](#create-mutable-data).*
 
 #### Using mock Authenticator API
 <br />
@@ -141,7 +141,7 @@ You can perform authentication within the application itself for easier testing 
 
 **1. Add mock flag**
 
-In the solution explorer right click on the `MockNetworkExample` project and navigate to **Properties > Build > Conditional compilation symbols**, add `SAFE_APP_MOCK` flag in your project .
+In the solution explorer right click on the `MockNetworkExample` project and navigate to **Properties > Build > Conditional compilation symbols**, add `SAFE_APP_MOCK` flag in your project.
 
 Once this flag is set a reference to *SafeApp.MockAuthBindings.dll* will be added into the project automatically which has additional classes and functions used for mock authentication.
 
@@ -149,13 +149,13 @@ Once this flag is set a reference to *SafeApp.MockAuthBindings.dll* will be adde
 
 Use create account API to create a new user account and log in. Let us implement this in the `MockAuthenticationAsync()` function in `Authentication` class:
 
-```csharp 
+```csharp
 var location = Helpers.GenerateRandomString(10);
 var password = Helpers.GenerateRandomString(10);
 var invitation = Helpers.GenerateRandomString(15);
 var authenticator = await Authenticator.CreateAccountAsync(location, password, invitation);
 ``` 
-
+<br />
 **3. Generate an `AuthReq`**
 
 You first need to generate an `AuthReq` instance which provides information about the application and the permissions requested by this application. Let us implement this in the `GenerateEncodedAppRequestAsync()` function in `Helpers` class:
@@ -357,10 +357,10 @@ Now you can run the application and see the mutable data operations working that
 In the solution explorer right click on the `LiveNetworkExample` project and select **Set as StartUp Project**
 
 The process to connect to live network is the same as mock except:
-- The non-mock SAFE browser is used as indicated by its title `safe-browser-<version>-<platform>.zip` (see prerequisites for download instructions).
+- The non-mock SAFE browser is used as indicated by its title `safe-browser-<version>-<platform>.zip` (see [prerequisites](#prerequisites) for instructions).
 - The authentication process is against the live network and not the MockVault file.
 
-**Note:** Before attempting to connect to the alpha-2 network, make sure that you have completed the steps in the [authenticate using mock browser section.](#Using-SAFE-mock-browser)
+**Note:** Before attempting to connect to the alpha-2 network, make sure that you have completed the steps in the [authenticate using mock browser section.](#connecting-to-the-mock-network)
 
 **1. Download the SAFE (non-mock) Browser**
 
