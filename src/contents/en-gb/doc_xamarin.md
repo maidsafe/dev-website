@@ -35,7 +35,7 @@ git checkout boilerplate-mobile
 Open `MobileExample/SafeTodoExample.sln` solution in Visual Studio and restore nuget packages.
 
 **Note:**
-  * We use the latest version of the MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
+  We use the latest version of the MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
 
 ## Using a Mock Network
 
@@ -43,7 +43,7 @@ We provide the `mock` feature with the SAFE API for faster app development exper
 
 When the `mock` feature is used, a local MockVault file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live SAFE Network. To set up and use a mock network:
 
-**1. Build conditional compilation symbols:**
+**1. Build conditional compilation symbols**
 
 - Visual Studio: Add `SAFE_APP_MOCK` flag to SafeTodoExample project in **Properties** > **Build** >   **Conditional compilation symbols**.
 - Visual Studio for Mac: Add `SAFE_APP_MOCK` flag to SafeTodoExample project in **Options** > **Compiler** >   **Define symbols**.
@@ -51,7 +51,7 @@ When the `mock` feature is used, a local MockVault file is generated which simul
 
 Once this flag is set in the build settings, a reference to `SafeApp.MockAuthBindings.dll` will be added to the project automatically which has additional classes and functions used for mock authentication.
 
-**2. Create a mock account:**
+**2. Create a mock account**
 
 Use `CreateAccountAsync()` API to create a new user account and log in. Let us implement this in the `CreateAccountAsync()` function in `AppService` class:
 
@@ -298,7 +298,7 @@ Now you can run the application, authenticate and work with todo items in the li
 
 To connect to the live Alpha-2 Network, an application needs to get authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (SAFE Authenticator app in this case): 
 
-1. **Send `AuthReq` to the Authenticator**
+**1. Send `AuthReq` to the Authenticator**
 
 *Note: Make sure you have Authenticator App installed and logged in before running the application ([see prerequisites](#prerequisites)).*
 
@@ -308,11 +308,11 @@ var encodedAuthReq = await GenerateEncodedAuthReqAsync();
 var url = UrlFormat.Format(Constants.AppId, encodedAuthReq.Item2, true);
 Device.BeginInvokeOnMainThread(() => { Device.OpenUri(new Uri(url)); });
 ```
-2. **Grant access**
+**2. Grant access**
 
 Once the authorisation request is received, the Authenticator launches and a pop-up dialogue prompts for access (Allow or Deny). The Authenticator then sends the response back to the application using the URI scheme. The OS matches the URI scheme to the application and launches the application passing `EncodedAuthResponse` as an argument. 
 
-3. **Use the response**
+**3. Use the response**
 
 To extract and use the response from the Authenticator follow these steps for the respective mobile OS:
 
