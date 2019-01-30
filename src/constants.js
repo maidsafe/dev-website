@@ -1,6 +1,7 @@
 export default {
   externalLinks: {
     general: {
+      safenetwork: 'https://safenetwork.tech',
       maidsafe: 'https://maidsafe.net/',
       github: 'https://github.com/maidsafe/'
     },

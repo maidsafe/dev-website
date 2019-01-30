@@ -11,11 +11,13 @@ class Header extends React.Component {
     this.state = {
       showMenu: false,
       appDevNav: false,
+      docsNav: false,
       coreTechNav: false,
       discoverNav: false,
     };
     this.routes = {
       APP_DEV: '/start_developing',
+      DOCS: '/docs',
       CORE_TECH: '/core_technology',
       DISCOVER: '/discover',
       PLATFORM_NODEJS: '/platform/nodejs',
@@ -60,6 +62,7 @@ class Header extends React.Component {
   setNavActive() {
     this.setState({
       appDevNav: this.isNavMatch([this.routes.APP_DEV, this.routes.PLATFORM_NODEJS, this.routes.PLATFORM_WEB]),
+      docsNav: this.isNavMatch(this.routes.DOCS),
       coreTechNav: this.isNavMatch(this.routes.CORE_TECH),
       discoverNav: this.isNavMatch(this.routes.DISCOVER),
     });
@@ -87,6 +90,9 @@ class Header extends React.Component {
           <Link className={classNames({
             selected: this.state.appDevNav
           })} to="/start_developing" onClick={() => { this.hideMenu() }}>Start Developing</Link>
+          <Link className={classNames({
+            selected: this.state.docsNav
+          })} to="/docs" onClick={() => { this.hideMenu() }}>Documents</Link>
           <Link className={classNames({
             selected: this.state.coreTechNav
           })} to="/core_technology" onClick={() => { this.hideMenu() }}>Core Technology</Link>

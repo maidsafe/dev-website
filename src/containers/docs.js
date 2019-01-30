@@ -11,32 +11,33 @@ class Docs extends React.Component {
       <section className="docs">
 
         {/* Page header - Introduction */}
-        <div className="content-intro">
-          <h1>{data.intro.title}</h1>
-          <div className="comp-i-cntr">
-            <p>
-              {data.intro.para1.chunk1}
-              <a href={data.intro.para1.link.href} target="_blank"> {data.intro.para1.link.name}</a>
-              {data.intro.para1.chunk2}
-            </p>
+        <div className="docs-intro">
 
-            <p>
-              {data.intro.para2.chunk1}
-              <a href={data.intro.para2.link1.href} target="_blank"> {data.intro.para2.link1.name}</a>
-              {data.intro.para2.chunk2}
-              <a href={data.intro.para2.link2.href} target="_blank"> {data.intro.para2.link2.name}</a>
-              {data.intro.para2.chunk3}
-            </p>
+          <h1>{data.title}</h1>
 
-            <p>
-              {data.intro.para3.chunk1}
-              <a href={data.intro.para3.link.href} target="_blank"> {data.intro.para3.link.name}</a>
-              {data.intro.para3.chunk2}
-            </p>
+          <div className="docs-intro-b">
 
+              <p>
+                {data.intro.para1.chunk1}
+                <a href={data.intro.para1.link.href} target="_blank"> {data.intro.para1.link.name}</a>
+                {data.intro.para1.chunk2}
+              </p>
+
+              <p>
+                {data.intro.para2.chunk1}
+                <a href={data.intro.para2.link1.href} target="_blank"> {data.intro.para2.link1.name}</a>
+                {data.intro.para2.chunk2}
+                <a href={data.intro.para2.link2.href} target="_blank"> {data.intro.para2.link2.name}</a>
+                {data.intro.para2.chunk3}
+              </p>
+
+              <p>
+                {data.intro.para3.chunk1}
+                <a href={data.intro.para3.link.href} target="_blank"> {data.intro.para3.link.name}</a>
+                {data.intro.para3.chunk2}
+              </p>
           </div>
         </div>
-
 
         {/* Platform development - NodeJS API */}
 
