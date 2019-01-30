@@ -308,6 +308,7 @@ var encodedAuthReq = await GenerateEncodedAuthReqAsync();
 var url = UrlFormat.Format(Constants.AppId, encodedAuthReq.Item2, true);
 Device.BeginInvokeOnMainThread(() => { Device.OpenUri(new Uri(url)); });
 ```
+<br />
 **2. Grant access**
 
 Once the authorisation request is received, the Authenticator launches and a pop-up dialogue prompts for access (Allow or Deny). The Authenticator then sends the response back to the application using the URI scheme. The OS matches the URI scheme to the application and launches the application passing `EncodedAuthResponse` as an argument. 
