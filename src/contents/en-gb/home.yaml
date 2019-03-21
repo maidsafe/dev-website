@@ -1,3 +1,19 @@
+platformLinks:
+  - icon: nodejs
+    name: NodeJs
+    href: '/platform/nodejs'
+  - icon: web
+    name: Web
+    href: '/platform/web'
+  - icon: android
+    name: Android
+    href: '/platform/android'
+  - icon: dotnet
+    name: .NET
+    href: '/platform/dotnet'
+  - icon: xamarin
+    name: Xamarin
+    href: '/platform/xamarin'
 homeBanner:
   link:
     name: View Live Stream

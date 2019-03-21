@@ -1,9 +1,9 @@
 .platform
-  background-color: $colr-theme-dark
+  background-color: $bg-home-banner
   position: relative
   +clearfix()
   .platform-links
-    background-color: $colr-theme-light
+    background-color: $bg-home-banner
     .platform-links-b
       padding: 16px 0
       text-align: center
@@ -22,7 +22,7 @@
     .content-b
       width: $platform-content-base-width-lg
       margin: 0 auto
-      padding: 24px
+      padding: 0 24px
   .mob-nav-menu-icon
     width: 50px
     height: 50px
@@ -46,20 +46,20 @@
     height: 100%
     overflow: hidden
     padding: 0
-    position: fixed
+    position: relative
     top: 0
     right: 0
     z-index: 9
     .nav-b
       height: 100%
-      padding: 140px 24px 0
+      padding: 24px 24px 0
       overflow-y: auto
     .nav-i
-      font-size: 20px
+      font-size: 18px
       margin-bottom: 8px
       font-weight: normal
       line-height: 24px
-      padding: 8px 0
+      padding: 4px 0
       &:last-child
         padding-bottom: 90px
       a
@@ -73,7 +73,7 @@
         margin-left: 16px
       &.nav-i-h2
         margin-left: 32px
-        font-size: 18px
+        font-size: 16px
     .ref-link
       position: relative
       height: 100%
