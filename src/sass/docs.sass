@@ -1,90 +1,85 @@
-.platform
+.layoutHalfHalf
+  width: 100%
+  display: table
+  .lay-half
+    display: table-cell
+    width: 50%
+    height: 100%
+    vertical-align: text-top
+.main
   margin-top: 0px
-  padding: 20px 0
-  .platform-b
+  padding: 8px 0
+  .main-section
     @extend .base
     text-align: left
     h1
       +header-1()
-      text-align: center
-      padding: 40px 20px
+      text-align: left
+      padding: 12px 0px
     h3
       +header-2()
-      margin-top: 32px
-      text-align: center
+      margin-top: 12px
+      text-align: left
       text-decoration: underline
     h4
       +header-2()
-      margin-top: 32px
+      margin-top: 12px
       text-align: left
-      text-decoration: underline
+      text-decoration: none
     p
       +para()
       margin-bottom: 12px
       text-align: left
-    .platform-api
-      padding: 30px 10px
+    .list
+      padding: 6px 10px
       text-align: left
-      .platform-i
-        width: 50%
+      .item
+        width: 100%
         display: inline-block
-        padding: 10px 10px 00px 10px
+        padding: 0
         text-align: left
         a
           +link()
-          font-size: 18px
+          font-size: 16px
           color: $colr-text
-          display: inline-block
-          padding-left: 46px
+          display: block
+          padding-left: 4px
           position: relative
           &:hover
             color: $colr-link-text
           &:before
             content: ''
-            width: 30px
-            height: 30px
-            position: absolute
-            top: 0
-            left: 0
+        .name
+          margin-top: 6px
+          margin-left: 40px
+          margin-right: 20px
+          font-size: 16px
+          text-align: left
+        .icn
+          width: 32px
+          height: 32px
+          background-color: transparent
+          border: 0px solid $colr-blue
+          border-radius: 50%
+          margin: 0 auto
+          position: absolute
+          background-size: 30px
+          background-repeat: no-repeat
+          background-position: center
+          &.dotnet
             background-image: url($platform-dotnet-url)
-            background-size: 24px
-            background-repeat: no-repeat
-            background-position: center
-
-  .tutorials
-    text-align: center
-    .tutorial
-      margin-top: 25px
-      display: block
-      padding: 0 0px
-      min-width: 60px
-      a
-        +link()
-        color: $colr-text
-        &:hover
-          text-decoration: none
-      .icn
-        width: 60px
-        height: 60px
-        background-color: transparent
-        border: 2px solid $colr-blue
-        border-radius: 50%
-        margin: 0px auto
-        background-size: 30px
-        background-repeat: no-repeat
-        background-position: center
-        &.dotnet
-          background-image: url($platform-dotnet-url)
-        &.xamarin
-          background-image: url($platform-xamarin-url)
-        &.java
-          background-image: url($platform-android-url)
-        &.nodejs
-          background-image: url($platform-nodejs-url)
-        &.web
-          background-image: url($platform-web-url)
-        &.rust
-          background-image: url($platform-rust-url)
+          &.xamarin
+            background-image: url($platform-xamarin-url)
+          &.java
+            background-image: url($platform-android-url)
+          &.android
+            background-image: url($platform-android-url)
+          &.nodejs
+            background-image: url($platform-nodejs-url)
+          &.web
+            background-image: url($platform-web-url)
+          &.rust
+            background-image: url($platform-rust-url)
         &.active
           background-color: $colr-blue-dark
           border-color: $colr-blue-dark
@@ -94,176 +89,17 @@
             background-image: url($platform-xamarin-url-hover)
           &.java
             background-image: url($platform-android-url-hover)
-          &.nodejs
-            background-image: url($platform-nodejs-url-hover)
-          &.web
-            background-image: url($platform-web-url-hover)
-          &.rust
-            background-image: url($platform-rust-url-hover)
-      .name
-        margin-top: 12px
-        margin-left: 80px
-        margin-right: 80px
-        font-size: 18px
-      &:hover
-        .icn
-          background-color: $colr-blue
-          border-color: $colr-blue
-          &.nodejs
-            background-image: url($platform-nodejs-url-hover)
-          &.web
-            background-image: url($platform-web-url-hover)
-          &.rust
-            background-image: url($platform-rust-url-hover)
-          &.java
+          &.android
             background-image: url($platform-android-url-hover)
-          &.dotnet
-            background-image: url($platform-dotnet-url-hover)
-          &.xamarin
-            background-image: url($platform-xamarin-url-hover)
-.docs
-  padding-top: 80px
-  .docs-intro
-    @extend .base
-    text-align: center
-    margin-bottom: 80px
-    h1
-      +header-1()
-      margin-bottom: 40px
-    p
-      +para()
-      text-align: justify
-      margin-bottom: 12px
-    .med
-      margin-top: 80px
-      margin-bottom: 40px
-      img
-        width: 80%
-        max-width: 80%
-        height: auto
-        width: auto\9; /* ie8 */
-        padding: 0 15px
-        float: center
-    .docs-intro-b
-
-  .nodejs
-    background-color: $colr-theme-dark
-    .platform-api
-      .platform-i
-        a
-          &:before
-            background-image: url($platform-nodejs-url)
-  .java
-    background-color: $colr-theme-light
-    .platform-api
-      .platform-i
-        a
-          &:before
-            background-image: url($platform-android-url)
-  .dotnet
-    background-color: $colr-theme-dark
-    .platform-api
-      .platform-i
-        a
-          &:before
-            background-image: url($platform-dotnet-url)
-  .rust
-    background-color: $bg-header-light
-    margin-top: 00px
-    padding: 20px 0
-    .rust-b
-      @extend .base
-      display: block
-      text-align: left
-      h1
-        +header-1()
-        text-align: center
-        padding: 40px 20px
-      h3
-        +header-2()
-        text-align: center
-      .rust-cntr
-        padding-top: 30px
-        p
-          +para()
-          margin-bottom: 12px
-          a
-            +link()
-            font-size: 18px
-            display: inline-block
-            position: relative
-            &:hover
-              color: $colr-link-text
-              text-decoration: underline
-              border: 3px
-        .rust-i
-          width: 33.33%
-          display: inline-block
-          padding: 10px 30px 0 0
-          border-radius: 3px
-          a
-            +link()
-            font-size: 18px
-            color: $colr-text
-            display: inline-block
-            padding-left: 46px
-            position: relative
-            &:hover
-              color: $colr-link-text
-              text-decoration: underline
-              border: 3px
-            &:before
-              content: ''
-              width: 30px
-              height: 30px
-              position: absolute
-              top: 0
-              left: 0
-              background-image: url($platform-rust-url)
-              background-size: 24px
-              background-repeat: no-repeat
-              background-position: center
-        .rust-url
-  .other
-    background-color: $colr-vault-bg
-    margin-top: 0px
-    padding: 20px 0
-    .other-b
-      @extend .base
-      display: block
-      text-align: left
-      h1
-        +header-1()
-        color: $colr-white
-        text-align: center
-        padding: 40px 20px
-      h3
-        +header-2()
-        text-align: center
-        color: $colr-white
-      .other-cntr
-        padding-top: 30px
-        .other-i
-          width: 33.33%
-          display: inline-block
-          padding: 30px 30px 0 0
-          a
-            +link()
-            font-size: 18px
-            color: $colr-white
-            display: inline-block
-            padding-left: 46px
-            position: relative
-            &:hover
-              color: $colr-theme-light
-            &:before
-              content: ''
-              width: 30px
-              height: 30px
-              position: absolute
-              top: 0
-              left: 0
-              background-image: url($right-url)
-              background-size: 24px
-              background-repeat: no-repeat
-              background-position: center
+          &.nodejs
+            background-image: url($platform-nodejs-url-hover)
+          &.web
+            background-image: url($platform-web-url-hover)
+          &.rust
+            background-image: url($platform-rust-url-hover)
+      .item2
+        @extend .item
+        width: 50%
+      .item3
+        @extend .item
+        width: 33%
