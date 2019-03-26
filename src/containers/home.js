@@ -101,6 +101,11 @@ class Home extends React.Component {
                   <p>{data.contribute.coreDev.desc}</p>
                   <a href={data.contribute.coreDev.link.href}>{data.contribute.coreDev.link.name}</a>
                 </div>
+                <div className="contribute-i app">
+                  <h3>{data.contribute.dapps.title}</h3>
+                  <p>{data.contribute.dapps.desc}</p>
+                  <a href={data.contribute.dapps.link.href}>{data.contribute.dapps.link.name}</a>
+                </div>
               </div>
             </div>
           </div>

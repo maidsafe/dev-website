@@ -1,0 +1,89 @@
+.layoutDApps
+  @extend .base
+  width: 100%
+  display: table
+  .lay-left
+    display: table-cell
+    width: 25%
+    vertical-align: top
+    border-style:  none
+  .lay-right
+    display: table-cell
+    width: 75%
+    vertical-align: text-top
+    padding: 0 20px
+    border-style:  none
+.col2
+  display: inline-block
+  width: 50%
+  padding: 0
+.dapps-main
+  @extend .base
+  text-align: left
+  .header
+    text-align: center
+    h1
+      +header-1()
+      margin-bottom: 40px
+      padding-top: 40px
+  .para
+    +para()
+    text-align: center
+  .dapps-feat
+    .title
+      +header-2()
+      text-align: center
+      margin-bottom: 20px
+      padding-top: 80px
+    .intro-text
+      text-align: center
+    .apps-items
+      text-align: left
+      .app-i
+        padding-top: 20px
+        .sec-1
+          +clearfix()
+          background-color: $colr-white
+          .logo
+            width: 180px
+            height: 180px
+            margin: 40px
+            float: left
+            img
+              width: 100%
+              float: right
+        .sec-2
+          +clearfix()
+          background-color: $colr-white
+          hr
+            display: block
+            height: 1px
+            border: 0
+            border-top: 1px solid #ccc
+            margin: 1em 0
+            padding: 0
+          .name
+            +header-2()
+            font-size: 20px
+            width: 100%
+            margin: 12px
+          .desc
+            +para()
+            font-size: 16px
+            width: 100%
+            margin: 12px
+            text-align: left
+          .status
+            +para()
+            text-align: right
+            color: $colr-utube-red
+            font-style: italic
+            width: 100%
+            margin: 4px 12px 4px 0
+            font-size: 12px
+          .detail
+            +para()
+            width: 100%
+            font-size: 14px
+            margin: 0px 12px 0 0
+            padding: 0 12px

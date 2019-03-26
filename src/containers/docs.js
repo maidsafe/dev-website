@@ -11,9 +11,12 @@ class Docs extends React.Component {
       <section className="docs">
 
         <div className="platform main">
+
           {/* Platform development documentation */}
           <div className="main-section">
-            <h1>{data.platform.title}</h1>
+
+           <h1>{data.docs.title}</h1>
+            <h2>{data.platform.title}</h2>
             <p>{data.platform.summary}</p>
           </div>
 
@@ -21,7 +24,7 @@ class Docs extends React.Component {
 
             {/* Tutorials section - left 50% */}
             <div className="lay-half">
-              <h4>{data.tutorials.title}</h4>
+              <h3>{data.tutorials.title}</h3>
               {/* Tutorial documentation */}
 
               <div className="list"> {
@@ -41,7 +44,7 @@ class Docs extends React.Component {
 
             {/* API section - right 50% */}
             <div className="lay-half">
-              <h4>{data.api.title}</h4>
+              <h3>{data.api.title}</h3>
               {/* API documentation items */}
               <div className="list"> {
                 data.api.items.map((key, i) => (
@@ -63,7 +66,7 @@ class Docs extends React.Component {
           <div className="core main">
             <div className="main-section">
 
-              <h1>{data.rust.title}</h1>
+              <h2>{data.rust.title}</h2>
 
               <p>
                 {data.rust.para1.chunk1}

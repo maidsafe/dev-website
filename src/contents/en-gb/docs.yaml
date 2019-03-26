@@ -1,3 +1,5 @@
+docs:
+  title: "Documents"
 platform:
   title: "Platform development"
   summary: "Tutorials and API documentation that will help you build websites and DApps for desktop or mobile for the SAFE Network."
@@ -69,8 +71,6 @@ rust:
      href: "https://docs.rs/rust_sodium"
    - name: "safe_app"
      href: "https://docs.rs/safe_app"
-   - name: "safe_authenticator"
-     href: "https://docs.rs/safe_authenticator"
    - name: "safe_core"
      href: "https://docs.rs/safe_core"
    - name: "safe_vault"
