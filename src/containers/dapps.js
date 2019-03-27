@@ -56,6 +56,11 @@ class Dapps extends React.Component {
             <div className="para">
               {data.header.description}
             </div>
+
+            {/* DG adding in a button here! */}
+            <div className="forum-link app">
+              <a href={data.getinvolved.href}>{data.getinvolved.name}</a>
+            </div>
           </div>
         </div>
 

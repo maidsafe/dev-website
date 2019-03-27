@@ -82,25 +82,14 @@ utilities:
     para1: Libsodium bindings, forked from the sodiumoxide project, provides extra features and improves the security.
 
 rfcs:
-  title: RFCs
-  rfc1:
-    name: Disjoint Sections
-    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0037-disjoint-groups/0037-disjoint-groups.md'
-  rfc2:
-    name: Async safe_core
-    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0043-async-safe-core/0043-async-safe-core.md'
-  rfc3:
-    name: Auth Flow
-    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0046-new-auth-flow/0046-new-auth-flow.md'
-  rfc4:
-    name: Mutable Data
-    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0047-mutable-data/0047-mutable-data.md'
-  rfc5:
-    name: Authorise Apps
-    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0048-authorise-apps/0048-authorise-apps.md'
-  rfc6:
-    name: PARSEC
-    href: 'https://github.com/maidsafe/rfcs/blob/master/text/0049-parsec/0049-parsec.md'
+  title: "RFCs - Request For Comments"
+  summary: "The RFC (Request For Comments) process is intended to provide a consistent and controlled path for new features to enter the network and core libraries, so that all stakeholders can be confident about the direction in which the network is evolving."
+  learn:
+    name: "Learn More"
+    href: 'https://github.com/maidsafe/rfcs/blob/master/README.md'
+  active:
+    name: "RFC Status Page"
+    href: 'https://github.com/maidsafe/rfcs/blob/master/RFCs-by-status.md#active-rfcs'
 patents:
   title: Relevant Patents
   patent1:

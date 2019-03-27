@@ -138,35 +138,18 @@ class CoreDeveloper extends React.Component {
           <div className="rfcs">
               <div className="rfcs-b">
                 <h3>{data.rfcs.title}</h3>
+                <p>
+                  {data.rfcs.summary}
+                </p>
                 <div className="rfcs-cntr">
                   <div className="rfc-i">
-                    <a href={data.rfcs.rfc1.href} target="_blank">
-                      <span>{data.rfcs.rfc1.name}</span>
+                    <a href={data.rfcs.learn.href} target="_blank">
+                      <span>{data.rfcs.learn.name}</span>
                     </a>
                   </div>
                   <div className="rfc-i">
-                    <a href={data.rfcs.rfc2.href} target="_blank">
-                      <span>{data.rfcs.rfc2.name}</span>
-                    </a>
-                  </div>
-                  <div className="rfc-i">
-                    <a href={data.rfcs.rfc3.href} target="_blank">
-                      <span>{data.rfcs.rfc3.name}</span>
-                    </a>
-                  </div>
-                  <div className="rfc-i">
-                    <a href={data.rfcs.rfc4.href} target="_blank">
-                      <span>{data.rfcs.rfc4.name}</span>
-                    </a>
-                  </div>
-                  <div className="rfc-i">
-                    <a href={data.rfcs.rfc5.href} target="_blank">
-                      <span>{data.rfcs.rfc5.name}</span>
-                    </a>
-                  </div>
-                  <div className="rfc-i">
-                    <a href={data.rfcs.rfc6.href} target="_blank">
-                      <span>{data.rfcs.rfc6.name}</span>
+                    <a href={data.rfcs.active.href} target="_blank">
+                      <span>{data.rfcs.active.name}</span>
                     </a>
                   </div>
                 </div>

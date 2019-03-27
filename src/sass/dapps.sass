@@ -20,15 +20,46 @@
 .dapps-main
   @extend .base
   text-align: left
+  margin-bottom: 80px
   .header
     text-align: center
     h1
       +header-1()
       margin-bottom: 40px
       padding-top: 40px
+  .forum-link
+    a
+      +link()
+      color: $colr-text
+      background-color: $colr-grey
+      font-size: 18px
+      padding: 8px 60px 8px 16px
+      position: relative
+      border-radius: 5px
+      &:after
+        content: ''
+        width: 24px
+        height: 100%
+        position: absolute
+        top: 0
+        right: 8px
+        background-size: 18px
+        background-position: center
+        background-repeat: no-repeat
+        transition: right .2s linear
+      &:hover
+        text-decoration: none
+        &:after
+          right: 1%
+    &.app
+      a
+        color: $colr-blue
+        &:after
+          background-image: url($arrow-blue-url)
   .para
     +para()
     text-align: center
+    margin-bottom: 40px
   .dapps-feat
     .title
       +header-2()
