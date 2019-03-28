@@ -14,15 +14,15 @@ items:
     detail:
       - type: "Author"
         name: "Glen Simister"
-        href: 'https://safenetforum.org/u/glen'
+        href: 'https://safenetforum.org/u/glen_simister/summary'
       - type: "Source"
         name: "GitHub"
         href: 'https://github.com/glensimister/givemecredit'
   - name: "JAMS"
     desc: "Decentralized music player for storing, playing, downloading your music library on The SAFE Network."
-    platform: "Web DApp"
+    platform: "Web"
     logo: JAMS
-    status: "In Development"
+    status: "Demo"
     detail:
       - type: "Author"
         name: "@Nigel"
@@ -55,7 +55,7 @@ items:
     desc: "The mobile authenticator for Android and iOS."
     platform: "Android, iOS"
     logo: SAFE_AUTHENTICATOR
-    status: Stable
+    status: Released
     detail:
       - type: "Author"
         name: "MaidSafe"
@@ -73,7 +73,7 @@ items:
     desc: "The SAFE Network's default browser."
     platform: "Windows, MacOS, Linux"
     logo: SAFE_BROWSER
-    status: Stable
+    status: Released
     detail:
       - type: "Author"
         name: "MaidSafe"
@@ -139,7 +139,7 @@ items:
     desc: "Create and host your own website on the SAFE Network."
     platform: "Windows, MacOS, Linux"
     logo: WEB_HOSTING_MANAGER
-    status: "Stable"
+    status: "Released"
     detail:
       - type: "Author"
         name: "MaidSafe"
