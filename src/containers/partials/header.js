@@ -12,12 +12,14 @@ class Header extends React.Component {
       showMenu: false,
       appDevNav: false,
       docsNav: false,
+      dappsNav: false,
       coreTechNav: false,
       discoverNav: false,
     };
     this.routes = {
       APP_DEV: '/start_developing',
       DOCS: '/docs',
+      DAPPS: '/dapps',
       CORE_TECH: '/core_technology',
       DISCOVER: '/discover',
       PLATFORM_NODEJS: '/platform/nodejs',
@@ -63,6 +65,7 @@ class Header extends React.Component {
     this.setState({
       appDevNav: this.isNavMatch([this.routes.APP_DEV, this.routes.PLATFORM_NODEJS, this.routes.PLATFORM_WEB]),
       docsNav: this.isNavMatch(this.routes.DOCS),
+      dappsNav: this.isNavMatch(this.routes.DAPPS),
       coreTechNav: this.isNavMatch(this.routes.CORE_TECH),
       discoverNav: this.isNavMatch(this.routes.DISCOVER),
     });
@@ -92,14 +95,17 @@ class Header extends React.Component {
           })} to="/start_developing" onClick={() => { this.hideMenu() }}>Start Developing</Link>
           <Link className={classNames({
             selected: this.state.docsNav
-          })} to="/docs" onClick={() => { this.hideMenu() }}>Documents</Link>
+          })} to="/docs" onClick={() => { this.hideMenu() }}>Docs</Link>
+          <Link className={classNames({
+            selected: this.state.dappsNav
+          })} to="/dapps" onClick={() => { this.hideMenu() }}>DApps</Link>
           <Link className={classNames({
             selected: this.state.coreTechNav
           })} to="/core_technology" onClick={() => { this.hideMenu() }}>Core Technology</Link>
           <Link className={classNames({
             selected: this.state.discoverNav
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
-          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Comm<span className="extend">unity</span></Link>
+          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Dev<span className="extend">Forum</span></Link>
         </nav>
       </header>
     );

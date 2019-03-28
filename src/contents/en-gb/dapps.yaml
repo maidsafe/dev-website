@@ -1,0 +1,170 @@
+header:
+  title: "Decentralised Apps (DApps)"
+  description: "Desktop, Web and Mobile applications can all easily be built on the SAFE Network. You can work with several languages to bring your ideas to the new, decentralised internet."
+  existing: "Example DApps"
+getinvolved:
+  name: "Got a DAPP to list?"
+  href: 'https://forum.safedev.org/t/devhub-dapps-page-get-your-application-listed/2455'
+items:
+  - name: "DEVOLUTION"
+    desc: "DEVOLUTION is a social media platform designed to give communities political independence."
+    platform: "Web"
+    logo: DEVOLUTION
+    status: "In Development"
+    detail:
+      - type: "Author"
+        name: "Glen Simister"
+        href: 'https://safenetforum.org/u/glen_simister/summary'
+      - type: "Source"
+        name: "GitHub"
+        href: 'https://github.com/glensimister/givemecredit'
+  - name: "JAMS"
+    desc: "Decentralized music player for storing, playing, downloading your music library on The SAFE Network."
+    platform: "Web"
+    logo: JAMS
+    status: "Demo"
+    detail:
+      - type: "Author"
+        name: "@Nigel"
+        href: 'https://safenetforum.org/u/Nigel'
+      - type: "Documentation"
+        name: "Forum thread"
+        href: 'https://safenetforum.org/t/introducing-jams-demo-alpha-2/21373'
+      - type: "Topic"
+        name: "Tech. thread"
+        href: 'https://forum.safedev.org/t/jams-technical-discussion/1414'
+      - type: "SAFE Web"
+        name: "link"
+        href: 'safe://jams.demo'
+  - name: "Patter"
+    desc: "Proof of concepts social networking DApp - social networking the SAFE way."
+    platform: "Web"
+    logo: PATTER
+    status: "POC"
+    detail:
+      - type: "Author"
+        name: "MaidSafe"
+        href: 'https://maidsafe.net'
+      - type: "SAFE Web"
+        name: "link"
+        href: 'safe://patter.dapp'
+      - type: "Code"
+        name: "GitHub"
+        href: 'https://github.com/maidsafe/safe-patter-js'
+  - name: "SAFE Authenticator (Mobile)"
+    desc: "The mobile authenticator for Android and iOS."
+    platform: "Android, iOS"
+    logo: SAFE_AUTHENTICATOR
+    status: Released
+    detail:
+      - type: "Author"
+        name: "MaidSafe"
+        href: 'https://maidsafe.net'
+      - type: "App"
+        name: "Download"
+        href: 'https://github.com/maidsafe/safe-authenticator-mobile/releases/latest'
+      - type: "Documentation"
+        name: "ReadMe"
+        href: 'https://github.com/maidsafe/safe-authenticator-mobile/blob/master/README.md'
+      - type: "Source"
+        name: "GitHub"
+        href: 'https://github.com/maidsafe/safe-authenticator-mobile/'
+  - name: "SAFE Browser"
+    desc: "The SAFE Network's default browser."
+    platform: "Windows, MacOS, Linux"
+    logo: SAFE_BROWSER
+    status: Released
+    detail:
+      - type: "Author"
+        name: "MaidSafe"
+        href: 'https://maidsafe.net'
+      - type: "App"
+        name: "Download"
+        href: 'https://github.com/maidsafe/safe_browser/releases'
+      - type: "Documentation"
+        name: "ReadMe"
+        href: 'https://github.com/maidsafe/safe_browser/blob/master/README.md'
+      - type: "Source"
+        name: "GitHub"
+        href: 'https://github.com/maidsafe/safe_browser'
+  - name: "SAFE Drive"
+    desc: "Access SAFE data as if it is on your local drive (e.g. as ~/SAFE on Linux or Mac and as c://SAFE on Windows."
+    platform: "Windows, MacOS, Linux"
+    logo: SAFE_DRIVE
+    status: "In Development"
+    detail:
+      - type: "Author"
+        name: "@happybeing"
+        href: 'https://safenetforum.org/u/happybeing'
+      - type: "Documentation"
+        name: "Forum thread"
+        href: 'https://safenetforum.org/t/safe-drive-access-safe-storage-on-your-local-drive/25330'
+      - type: "Source"
+        name: "GitHub"
+        href: 'https://github.com/theWebalyst/safenetwork-fuse'
+  - name: "SAFE Messages (Mobile)"
+    desc: "Proof of concepts mobile messaging DApp for Android and iOS."
+    platform: "Android, iOS"
+    logo: SAFE_MESSAGES
+    status: "POC"
+    detail:
+      - type: "Author"
+        name: "MaidSafe"
+        href: 'https://maidsafe.net'
+      - type: "App"
+        name: "Download"
+        href: 'https://github.com/maidsafe/safe-email-app-csharp/releases/latest'
+      - type: "Documentation"
+        name: "ReadMe"
+        href: 'https://github.com/maidsafe/safe-email-app-csharp/blob/master/README.md'
+      - type: "Source"
+        name: "GitHub"
+        href: 'https://github.com/maidsafe/safe-email-app-csharp/'
+  - name: "SAFE.NetworkDrive"
+    desc: "Event sourced virtual drive, writing encrypted WAL to SQLite, synchronizing to MockNetwork and local materialization to in-memory virtual filesystem."
+    platform: "Windows"
+    status: "Alpha"
+    logo: SAFE_NETDRIVE
+    detail:
+      - type: "Author"
+        name: "@oetyng"
+        href: 'https://safenetforum.org/u/oetyng'
+      - type: "Documentation"
+        name: "Forum thread"
+        href: 'https://safenetforum.org/t/release-safe-networkdrive-on-windows-v-0-1-0-alpha-1/27879'
+      - type: "Source"
+        name: "GitHub"
+        href: 'https://github.com/oetyng/SAFE.NetworkDrive/releases/latest'
+  - name: "Web Hosting Manager"
+    desc: "Create and host your own website on the SAFE Network."
+    platform: "Windows, MacOS, Linux"
+    logo: WEB_HOSTING_MANAGER
+    status: "Released"
+    detail:
+      - type: "Author"
+        name: "MaidSafe"
+        href: 'https://maidsafe.net'
+      - type: "App"
+        name: "Download"
+        href: 'https://github.com/maidsafe/safe-web-hosting-manager-electron/releases'
+      - type: "Documentation"
+        name: "ReadMe"
+        href: 'https://github.com/maidsafe/safe-web-hosting-manager-electron/blob/master/README.md'
+      - type: "Source"
+        name: "GitHub repo"
+        href: 'https://github.com/maidsafe/safe-web-hosting-manager-electron'
+  - name: "Web ID Manager"
+    desc: "Proof of concepts SAFE Web DApp for managing your identities and social networking on the SAFE Network."
+    platform: "Web"
+    logo: WEBID
+    status: "POC"
+    detail:
+      - type: "Author"
+        name: "MaidSafe"
+        href: 'https://maidsafe.net'
+      - type: "SAFE Web"
+        name: "link"
+        href: 'ssafe://webidmgr.dapp'
+      - type: "Code"
+        name: "GitHub"
+        href: 'https://github.com/maidsafe/safe-web-id-manager-js'

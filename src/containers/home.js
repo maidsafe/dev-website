@@ -11,7 +11,7 @@ class Home extends React.Component {
     return (
       <section className="home">
         <div className="home-b">
-          {/* Homepage Top CTA Banner - disable when no action (current: Android Platform Development) */}
+          {/* Homepage Top CTA Banner - disable when no action (current: Android Platform Development)
           <div className="hom-bnr-2-link">
             <p><b>New:</b> Extended platform support</p>
             <p className="lft-sec-btn">
@@ -27,6 +27,23 @@ class Home extends React.Component {
 
             </p>
           </div>
+          */}
+          <section className="platform">
+            <div className="platform-links">
+              <div className="platform-links-b">
+                {
+                  data.platformLinks.map((platform, i) => (
+                    <div key={`platform-link-${i}`} className="platform-link-i">
+                      <a href={platform.href}>
+                        <div className={`icn ${platform.icon}`}></div>
+                        <div className="name">{platform.name}</div>
+                      </a>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </section>
 
           <div className="hom-bnr-2">
             <div className="hom-bnr-2-cntx">
@@ -83,6 +100,11 @@ class Home extends React.Component {
                   <h3>{data.contribute.coreDev.title}</h3>
                   <p>{data.contribute.coreDev.desc}</p>
                   <a href={data.contribute.coreDev.link.href}>{data.contribute.coreDev.link.name}</a>
+                </div>
+                <div className="contribute-i app">
+                  <h3>{data.contribute.dapps.title}</h3>
+                  <p>{data.contribute.dapps.desc}</p>
+                  <a href={data.contribute.dapps.link.href}>{data.contribute.dapps.link.name}</a>
                 </div>
               </div>
             </div>

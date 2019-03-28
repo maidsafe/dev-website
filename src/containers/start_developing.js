@@ -50,6 +50,10 @@ class AppDev extends React.Component {
                 <div className="sub-title">{data.intro.subTitle}</div>
                 <p>{data.intro.para1}</p>
                 <p>{data.intro.para2}</p>
+                {/* DG adding in a button here! */}
+                <div className="dual-tone-text app">
+                  <a href="./dapps">{data.dapps.sampleApps.title}</a>
+                </div>
               </div>
             </div>
             <div className="intro-sec-2 lay-50">
@@ -57,7 +61,7 @@ class AppDev extends React.Component {
             </div>
           </div>
         </div>
-
+{/*
         <div className="dapps">
           <div className="dapps-b layout4060">
             <div className="lay-40">
@@ -91,6 +95,7 @@ class AppDev extends React.Component {
             </div>
           </div>
         </div>
+*/}
 
         <div className="start-develop">
           <div className="start-develop-b">

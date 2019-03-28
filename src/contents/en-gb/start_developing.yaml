@@ -28,7 +28,7 @@ dapps:
     light: the future
   para: Desktop, Web and Mobile applications can all easily be built on the SAFE Network. You can work with several languages to bring your ideas to the new, decentralised internet.
   sampleApps:
-    title: Check out existing apps
+    title: See example DApps
     apps:
       - name: Web Hosting Manager
         logo: WEB_HOSTING_MANAGER

@@ -21,7 +21,8 @@ const CONTENT_FILE = {
   PARSEC: 'parsec.yaml',
   CRUST: 'crust.yaml',
   GLOSSARY: 'glossary.yaml',
-  DOCS: 'docs.yaml'
+  DOCS: 'docs.yaml',
+  DAPPS: 'dapps.yaml'
 };
 
 const getLocalContent = (local, fileName) => {
@@ -129,6 +130,13 @@ export default [
     component: 'src/containers/docs',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DOCS))
+    })
+  },
+  {
+    path: '/dapps',
+    component: 'src/containers/dapps',
+    getData: () => ({
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DAPPS))
     })
   },
   {
