@@ -52,7 +52,7 @@ class AppDev extends React.Component {
                 <p>{data.intro.para2}</p>
                 {/* DG adding in a button here! */}
                 <div className="dual-tone-text app">
-                  <a href="./dapps">{data.dapps.sampleApps.title}</a>
+                  <a href="/dapps">{data.dapps.sampleApps.title}</a>
                 </div>
               </div>
             </div>
