@@ -11,6 +11,7 @@ intro:
     - Safe_vault
     - Safe_core
     - Safe_authenticator
+    - Safe_authenticator_cli
     - Self_encryption
   para2: By doing this, we are ensuring that the fundamental aspects of the SAFE Network will be locked open and accessible to all. In practice, this means that developers building on (forking) MaidSafe’s core libraries must use the GPLv3 and publish all their source code.
   para3:
