@@ -29,7 +29,7 @@ The basic setup of the application is available in a git repository. Let's get s
 ```bash
 git clone https://github.com/maidsafe/safe-getting-started-dotnet
 cd safe-getting-started-dotnet
-git checkout boilerplate-mobile
+git checkout boilerplate
 ```
 <br />
 Open `MobileExample/SafeTodoExample.sln` solution in Visual Studio and restore nuget packages.
