@@ -1,3 +1,184 @@
+.clickable
+  display: table-cell
+  width: 100%
+  font-size: 12px
+  font-weight: bold
+  text-align: center
+  align-items: center
+  align-content: center
+  border-style: solid
+  vertical-align: middle
+  padding: 0px
+  background-color: $colr-blue
+  border-color: $colr-white
+  color: $colr-white
+  height: 48px
+  &.dapp
+    width: 240px
+    background-color: $colr-graf-dapp-b
+    color: $colr-graf-dapp-f
+    &:after
+      background-color: $colr-graf-dapp-f
+      content: ""
+      width: 234px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-194px, 24px)
+  &.wapp
+    width: 240px
+    background-color: $colr-graf-wapp-b
+    color: $colr-graf-wapp-f
+    &:after
+      background-color: $colr-graf-wapp-f
+      content: ""
+      width: 234px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-146px, 24px)
+  &.bindings
+    width: 240px
+    background-color: $colr-graf-bindings-b
+    color: $colr-graf-bindings-f
+    &:after
+      background-color: $colr-graf-bindings-f
+      content: ""
+      width: 234px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-126px,21px)
+
+  &.browser
+    width: 240px
+    background-color: $colr-graf-browser-b
+    color: $colr-graf-browser-f
+    &:after
+      background-color: $colr-graf-browser-f
+      content: ""
+      width: 234px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-227px,30px)
+  &.safe_app
+    width: 320px
+    background-color: $colr-graf-app-b
+    a
+      +link()
+      color: $colr-graf-app-f
+    background-color: $colr-graf-app-b
+    font-size: 28px
+    &:after
+      background-color: $colr-graf-app-f
+      content: ""
+      width: 314px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-222px,38px)
+  &.safe_auth
+    width: 160px
+    background-color: $colr-graf-auth-b
+    a
+      +link()
+      color: $colr-graf-auth-f
+      background-color: $colr-graf-auth-b
+    &:after
+      background-color: $colr-graf-auth-f
+      content: ""
+      width: 154px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-134px,28px)
+  &.safe_core
+    width: 480px
+    background-color: $colr-graf-core-b
+    a
+      +link()
+      color: $colr-graf-core-f
+      background-color: $colr-graf-core-b
+      font-size: 28px
+    &:after
+      background-color: $colr-graf-core-f
+      content: ""
+      width: 473px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-307px, 38px)
+  &.vault
+    width: 240px
+    background-color: $colr-graf-vault-b
+    a
+      +link()
+      color: $colr-graf-vault-f
+      background-color: $colr-graf-vault-b
+      font-size: 28px
+    &:after
+      background-color: $colr-graf-vault-f
+      content: ""
+      width: 234px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-159px, 38px)
+  &.routing
+    width: 720px
+    color: $colr-graf-routing-f
+    background-color: $colr-graf-routing-b
+    font-size: 28px
+    a
+      +link()
+      color: $colr-graf-routing-f
+      background-color: $colr-graf-routing-b
+      font-size: 28px
+    &:after
+      background-color: $colr-graf-routing-f
+      content: ""
+      width: 713px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-408px, 36px)
+  &.crusty
+    width: 720px
+    color: $colr-graf-crust-f
+    background-color: $colr-graf-crust-b
+    font-size: 28px
+    a
+      +link()
+      color: $colr-graf-crust-f
+      background-color: $colr-graf-crust-b
+      font-size: 28px
+    &:after
+      background-color: $colr-graf-crust-f
+      content: ""
+      width: 713px
+      height: 8px
+      position: absolute
+      top: inherit
+      transform: translate(-392px, 38px)
+.menugraphic
+  @extend .base
+  text-align: center
+  h3
+    +header-2-1()
+    margin-top: 20px
+    margin-bottom: 30px
+    position: relative
+  p
+    +para()
+    text-align: justify
+    margin-bottom: 12px
+  .section
+    width: 100%
+    align-self: center
+    display: table
+    .row
+      display: table-cell
 .core-dev
   padding-top: 40px
   .content-intro
@@ -26,36 +207,70 @@
       text-align: justify
       margin-top: 40px
     .comp-i
-      padding-top: 60px
+      padding-top: 40px
       .comp-i-head
         width: 100%
         text-align: center
-        margin-bottom: 24px
+        margin-bottom: 12px
         padding-bottom: 16px
-        position: relative
-        &:after
-          content: ""
-          width: 100px
-          height: 5px
-          background-color: $colr-theme-dark
-          position: absolute
-          border-radius: 3px
-          bottom: 0
-          left: 50%
-          transform: translate(-50%, 0)
         h3
           +header-2-1()
+          margin-top: 20px
+          position: relative
+          &:after
+            content: ""
+            width: 100px
+            height: 5px
+            background-color: $colr-theme-dark
+            position: absolute
+            border-radius: 3px
+            bottom: -12px
+            left: 50%
+            transform: translate(-50%, 0)
         .git-link
           +para()
           font-size: 16px
           a
             font-weight: normal !important
       .comp-i-cntr
+        +para()
+        padding-top: 12px
         width: 100%
         text-align: justify
         p
           +para()
-          margin-bottom: 12px
+          margin-bottom: 4px
+      .comp-links
+        margin-left: 0px
+        width: 100%
+        text-align: left
+        a
+          +link()
+          text-align: left
+          display: inline-block
+          position: relative
+          width: auto
+          img
+            margin-top: 2px
+            margin-right: 6px
+        .git-btn
+          margin-top: 0px
+          margin-bottom: 6px
+          margin-right: 6px
+          width: 24px
+          height: 24px
+          float: left
+          border-style: none
+          border-width: thin
+          border-color: $colr-grey
+          a
+            display: block
+            width: 100%
+            height: 100%
+            background-size: 24px
+            background-position: center
+            background-repeat: no-repeat
+            background-image: url($github-logo-link)
   .rfcs
     background-color: $colr-theme-light
     margin-top: 80px
@@ -64,6 +279,12 @@
       @extend .base
       display: block
       text-align: center
+      h1
+        +header-1-1()
+      & > p
+        +para()
+        text-align: justify
+        margin-top: 40px
       h3
         +header-2-1()
         text-align: center
