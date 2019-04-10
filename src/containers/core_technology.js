@@ -3,7 +3,8 @@ import { withRouteData } from 'react-static'
 //
 import Wrapper from './partials/wrapper';
 import NetworkLayers from '../../public/images/network_layer.svg';
-
+import CratesLogo from '../../public/images/crates_logo.png'
+import DocsLogo from '../../public/images/docs_logo.png'
 
 class CoreDeveloper extends React.Component {
   render() {
@@ -133,13 +134,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.crust.github} target="_blank"></a></div>
-                <a href={data.components.crust.doc.href} target="_blank">
-                  <img src={data.components.crust.doc.img}></img>
-                </a>
-
-                <a href={data.components.crust.crate.href} target="_blank">
-                  <img src={data.components.crust.crate.img}></img>
-                </a>
+                <a href={data.components.crust.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.crust.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -164,13 +160,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.routing.github} target="_blank"></a></div>
-                <a href={data.components.routing.doc.href} target="_blank">
-                  <img src={data.components.routing.doc.img}></img>
-                </a>
-
-                <a href={data.components.routing.crate.href} target="_blank">
-                  <img src={data.components.routing.crate.img}></img>
-                </a>
+                <a href={data.components.routing.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.routing.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -186,13 +177,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.routing.parsec.github} target="_blank"></a></div>
-                <a href={data.components.routing.parsec.doc.href} target="_blank">
-                  <img src={data.components.routing.parsec.doc.img}></img>
-                </a>
-
-                <a href={data.components.routing.parsec.crate.href} target="_blank">
-                  <img src={data.components.routing.parsec.crate.img}></img>
-                </a>
+                <a href={data.components.routing.parsec.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.routing.parsec.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -210,13 +196,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.vault.github} target="_blank"></a></div>
-                <a href={data.components.vault.doc.href} target="_blank">
-                  <img src={data.components.vault.doc.img}></img>
-                </a>
-
-                <a href={data.components.vault.crate.href} target="_blank">
-                  <img src={data.components.vault.crate.img}></img>
-                </a>
+                <a href={data.components.vault.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.vault.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -250,15 +231,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.comp.safe_core.github} target="_blank"></a></div>
-
-                <a href={data.components.c_libs.comp.safe_core.doc.href} target="_blank">
-                  <img src={data.components.c_libs.comp.safe_core.doc.img}></img>
-                </a>
-
-                <a href={data.components.c_libs.comp.safe_core.crate.href} target="_blank">
-                  <img src={data.components.c_libs.comp.safe_core.crate.img}></img>
-                </a>
-
+                <a href={data.components.c_libs.comp.safe_core.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.c_libs.comp.safe_core.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
 
               {/* === SAFE_Authenticator === */}
@@ -267,12 +241,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.comp.safe_auth.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.comp.safe_auth.doc.href} target="_blank">
-                  <img src={data.components.c_libs.comp.safe_auth.doc.img}></img>
-                </a>
-                <a id={data.components.c_libs.comp.safe_auth.anchor} href={data.components.c_libs.comp.safe_auth.crate.href} target="_blank">
-                  <img src={data.components.c_libs.comp.safe_auth.crate.img}></img>
-                </a>
+                <a href={data.components.c_libs.comp.safe_auth.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a id={data.components.c_libs.comp.safe_auth.anchor} href={data.components.c_libs.comp.safe_auth.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
 
               {/* === SAFE_App === */}
@@ -283,12 +253,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.comp.safe_app.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.comp.safe_app.doc.href} target="_blank">
-                  <img src={data.components.c_libs.comp.safe_app.doc.img}></img>
-                </a>
-                <a href={data.components.c_libs.comp.safe_app.crate.href} target="_blank">
-                  <img src={data.components.c_libs.comp.safe_app.crate.img}></img>
-                </a>
+                <a href={data.components.c_libs.comp.safe_app.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.c_libs.comp.safe_app.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
 
               {/* =========================== */}
@@ -305,12 +271,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.auxs.ffi.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.auxs.ffi.doc.href} target="_blank">
-                  <img src={data.components.c_libs.auxs.ffi.doc.img}></img>
-                </a>
-                <a href={data.components.c_libs.auxs.ffi.crate.href} target="_blank">
-                  <img src={data.components.c_libs.auxs.ffi.crate.img}></img>
-                </a>
+                <a href={data.components.c_libs.auxs.ffi.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.c_libs.auxs.ffi.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
 
               {/* === SAFE_Bindgen === */}
@@ -320,10 +282,10 @@ class CoreDeveloper extends React.Component {
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.auxs.bindgen.github} target="_blank"></a></div>
                 <a href={data.components.c_libs.auxs.bindgen.doc.href} target="_blank">
-                  <img src={data.components.c_libs.auxs.bindgen.doc.img}></img>
+                  <img src={DocsLogo}></img>
                 </a>
                 <a href={data.components.c_libs.auxs.bindgen.crate.href} target="_blank">
-                  <img src={data.components.c_libs.auxs.bindgen.crate.img}></img>
+                  <img src={CratesLogo}></img>
                 </a>
               </div>
 
@@ -333,14 +295,9 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.auxs.uri.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.auxs.uri.doc.href} target="_blank">
-                  <img src={data.components.c_libs.auxs.uri.doc.img}></img>
-                </a>
-                <a href={data.components.c_libs.auxs.uri.crate.href} target="_blank">
-                  <img src={data.components.c_libs.auxs.uri.crate.img}></img>
-                </a>
+                <a href={data.components.c_libs.auxs.uri.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.c_libs.auxs.uri.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
-
             </div>
           </div>
 
@@ -366,13 +323,8 @@ class CoreDeveloper extends React.Component {
               <div className="comp-links">
                 <p>
                   <div className="git-btn"><a href={data.util.comp1.github} target="_blank"></a></div>
-                  <a href={data.util.comp1.doc.href} target="_blank">
-                    <img src={data.util.comp1.doc.img}></img>
-                  </a>
-
-                  <a href={data.util.comp1.crate.href} target="_blank">
-                    <img src={data.util.comp1.crate.img}></img>
-                  </a>
+                  <a href={data.util.comp1.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                  <a href={data.util.comp1.crate.href} target="_blank"><img src={CratesLogo}></img></a>
                 </p>
               </div>
             </div>
@@ -389,13 +341,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.util.comp2.github} target="_blank"></a></div>
-                <a href={data.util.comp2.doc.href} target="_blank">
-                  <img src={data.util.comp2.doc.img}></img>
-                </a>
-
-                <a href={data.util.comp2.crate.href} target="_blank">
-                  <img src={data.util.comp2.crate.img}></img>
-                </a>
+                <a href={data.util.comp2.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.util.comp2.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
           </div>
