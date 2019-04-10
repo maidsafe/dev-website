@@ -10,6 +10,7 @@ pageIntro:
 components:
   title: Project Hierarchy
   crust:
+    anchor: "#crust"
     name: Crust
     github: 'https://github.com/maidsafe/crust'
     doc:
@@ -27,16 +28,21 @@ components:
       link2:
         name: "TCP"
         href: 'https://en.wikipedia.org/wiki/Transmission_Control_Protocol'
-      chunk3: ") and it is crypto secure - all communications, starting with handshake messages, are encrypted. It also provides other security features like randomised ports that are used to prevent targeting a particular known port to conduct DoS attacks. Crust implements several "
+      chunk3: ") and it is crypto secure - all communications, starting with handshake messages, are encrypted. It also provides other security features such as randomised ports which is used to prevent the targeting of a particular known port in order to conduct "
       link3:
+        name: "DoS"
+        href: 'https://en.wikipedia.org/wiki/Denial-of-service_attack'
+      chunk4: " attacks. Crust implements several "
+      link4:
         name: "NAT traversal"
         href: 'https://en.wikipedia.org/wiki/NAT_traversal'
-      chunk4: " techniques such as hole punching and use of "
-      link4:
+      chunk5: " techniques such as hole punching and use of "
+      link5:
         name: "IGD"
         href: 'https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol'
-      chunk5: "."
+      chunk6: "."
   routing:
+    anchor: "#routing"
     name: Routing
     github: 'https://github.com/maidsafe/routing'
     doc:
@@ -45,7 +51,7 @@ components:
     crate:
       href: 'https://crates.io/crates/routing'
       img: 'http://meritbadge.herokuapp.com/routing'
-    para1: Routing sits on top of Crust. It is our overlay networking and routing layer and forms the brain of the SAFE Network. Its purpose is forming a decentralised Internet and routing information within it.
+    para1: Routing sits on top of Crust. It is our overlay networking and routing layer and forms the brain of the SAFE Network. Its purpose is forming a decentralised Internet and the routing information within it.
     para2:
       chunk1: Routing is based on an algorithm that extends the
       link1:
@@ -57,6 +63,7 @@ components:
         href: https://en.wikipedia.org/wiki/Eventual_consistency
       chunk3: ". In order to come to this eventual consistency the routing layer uses the consensus mechanism PARSEC."
     parsec:
+      anchor: "#parsec"
       name: PARSEC
       para1: PARSEC is a Protocol for Asynchronous, Reliable, Secure and Efficient Consensus and is the world's first open source ABFT (Asynchronous Byzantine Fault Tolerance) protocol that can be used in a truly permissionless setting.
       github: 'https://github.com/maidsafe/parsec'
@@ -67,6 +74,7 @@ components:
         href: 'https://crates.io/crates/parsec'
         img: 'http://meritbadge.herokuapp.com/parsec'
   vault:
+    anchor: "#vaults"
     name: Vaults
     github: 'https://github.com/maidsafe/safe_vault'
     doc:
@@ -76,9 +84,10 @@ components:
       href: 'https://crates.io/crates/safe_vault'
       img: 'http://meritbadge.herokuapp.com/safe_vault'
     para1: This is one of the executable consumers of Routing and will primarily hold SAFE Network Data.
-    para2: "Vaults support multiple data types, the ones that are currently available to developers are Mutable Data and Immutable Data. The major difference between these two types is the ability to change the data. Both have their own set of properties."
+    para2: "Vaults support multiple data types: Mutable Data and Immutable Data are currently available to developers. The major difference between these two types is the ability to change the data. Both have their own set of properties."
     para5: "Personas in Vaults handle the different aspects of the network. Data Managers store the data, Client Managers store the users accounts balance, which is currently measured in allowed mutations, and eventually will be changed to Safecoin. Client Managers also store lists of users’ apps and implement the access control rules. There is no requirement to have a registered account to retrieve data and users are always free to send direct read requests to Data Managers."
   c_libs:
+    anchor: "#c_libs"
     name: SAFE Client Libs
     github: 'https://github.com/maidsafe/safe_client_libs'
     para1:
@@ -86,7 +95,8 @@ components:
     comp:
       name: Components
       safe_core:
-        name: SAFE_Core
+        anchor: "#safecore"
+        name: SAFE Core
         para1:
           chunk1: "SAFE Core is the foundation that provides various helpful abstractions like NFS on top of the basic network building blocks. It is also the common backend for the Authenticator and SAFE App, forming the client engine."
         github: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_core'
@@ -97,7 +107,8 @@ components:
           href: 'https://crates.io/crates/safe_core'
           img: 'http://meritbadge.herokuapp.com/safe_core'
       safe_auth:
-        name: SAFE_Authenticator
+        anchor: "#safeauthenticator"
+        name: SAFE Authenticator
         para1:
           chunk1: "The Authenticator is the component that provides Self Authenticated login and account creation and handles the register of all users' apps. It is integrated with the SAFE Browser and apps can request the access to the network through it. If users don't want to use a certain app anymore, they can revoke the access."
         github: 'https://github.com/maidsafe/safe_client_libs/tree/master/safe_authenticator'
@@ -108,7 +119,8 @@ components:
           href: 'https://crates.io/crates/safe_authenticator'
           img: 'http://meritbadge.herokuapp.com/safe_authenticator'
       safe_app:
-        name: SAFE_App
+        anchor: "#safeapp"
+        name: SAFE App
         para1:
           chunk1: "SAFE App is the component that provides access to SAFE Network for front-end Apps in a user friendly way via "
           link1:
@@ -123,7 +135,8 @@ components:
           href: 'https://crates.io/crates/safe_app'
           img: 'http://meritbadge.herokuapp.com/safe_app'
     auxs:
-      name: Auxiliary_libraries
+      anchor: "#auxlib"
+      name: Auxiliary libraries
       ffi:
         name: FFI_Utils
         para1:
@@ -136,7 +149,8 @@ components:
           href: 'https://crates.io/crates/ffi_utils'
           img: 'http://meritbadge.herokuapp.com/ffi_utils'
       bindgen:
-        name: SAFE_Bindgen
+        anchor: "#bindgen"
+        name: SAFE Bindgen
         para1:
           chunk1: Automatically generates language bindings for C, Java, and C# based on the user API.
         github: 'https://github.com/maidsafe/safe_bindgen'
@@ -147,7 +161,8 @@ components:
           href: 'https://crates.io/crates/safe_bindgen'
           img: 'http://meritbadge.herokuapp.com/safe_bindgen'
       uri:
-        name: System_URI
+        anchor: "#uri"
+        name: System URI
         para1:
           chunk1: Helps to setup custom URI handlers on different operating systems (Windows, Mac, Linux). Required for a proper functioning of the IPC mechanism.
         github: 'https://github.com/maidsafe/system_uri'
@@ -158,10 +173,12 @@ components:
           href: 'https://crates.io/crates/system_uri'
           img: 'http://meritbadge.herokuapp.com/system_uri'
 util:
+  anchor: "#utils"
   title: Utilities and Helper Libraries
   comp1:
+    anchor: "#selfencrypt"
     name: Self-Encryption
-    github: 'https://github.com/maidsafe/safe_client_libs'
+    github: 'https://github.com/maidsafe/self_encryption'
     doc:
       href: 'https://docs.rs/self_encryption/'
       img: 'https://docs.rs/self_encryption/badge.svg'
@@ -176,6 +193,7 @@ util:
         href: https://en.wikipedia.org/wiki/Convergent_encryption
       chunk2: "algorithm. It produces the same encrypted output for the same plaintext input. This property allows us to deduplicate files at the network level. Files are split up into multiple chunks, stored on the network at the same predictable location, based on the encrypted chunks’ hashes. The result of the encryption process is a data map that holds keys to the encrypted data chunks and is stored securely on the network. This crate is usable even outside of the SAFE Network context as the I/O implementation is abstract."
   comp2:
+    anchor: "#rustsodium"
     name: Rust-Sodium
     github: 'https://github.com/maidsafe/rust_sodium'
     doc:
@@ -187,6 +205,7 @@ util:
     para1: Libsodium bindings, forked from the sodiumoxide project, provides extra features and improves the security.
 
 rfcs:
+  anchor: "#rfcs"
   title: "RFCs - Request For Comments"
   summary: "The RFC (Request For Comments) process is intended to provide a consistent and controlled path for new features to enter the network and core libraries, so that all stakeholders can be confident about the direction in which the network is evolving."
   learn:
@@ -196,13 +215,17 @@ rfcs:
     name: "RFC Status Page"
     href: 'https://github.com/maidsafe/rfcs/blob/master/RFCs-by-status.md#active-rfcs'
 patents:
+  anchor: "#patents"
   title: Relevant Patents
   patent1:
+    anchor: "#patent1"
     name: Method for storing data on a peer-to-peer network
     href: '/patent1'
   patent2:
+    anchor: "#patent2"
     name: Method for storing data on a peer-to-peer network
     href: '/patent2'
   patent3:
+    anchor: "#patent3"
     name: Method for storing data on a peer-to-peer network
     href: '/patent3'

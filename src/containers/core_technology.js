@@ -114,7 +114,7 @@ class CoreDeveloper extends React.Component {
             {/* =========================== */}
             <div className="comp-i">
               <div className="comp-i-head">
-                <h1 id={data.components.crust.name.toLowerCase()}>{data.components.crust.name}</h1>
+                <h1 id={data.components.crust.anchor}>{data.components.crust.name}</h1>
               </div>
               <div className="comp-i-cntr">
                 <p>
@@ -127,6 +127,8 @@ class CoreDeveloper extends React.Component {
                   {data.components.crust.para1.chunk4}
                   <a href={data.components.crust.para1.link4.href} target="_blank">{data.components.crust.para1.link4.name}</a>
                   {data.components.crust.para1.chunk5}
+                  <a href={data.components.crust.para1.link5.href} target="_blank">{data.components.crust.para1.link5.name}</a>
+                  {data.components.crust.para1.chunk6}
                 </p>
               </div>
               <div className="comp-links">
@@ -146,7 +148,7 @@ class CoreDeveloper extends React.Component {
             {/* =========================== */}
             <div className="comp-i">
               <div className="comp-i-head">
-                <h1 id={data.components.routing.name.toLowerCase()}>{data.components.routing.name}</h1>
+                <h1 id={data.components.routing.anchor}>{data.components.routing.name}</h1>
               </div>
               <div className="comp-i-cntr">
                 <p>
@@ -175,7 +177,7 @@ class CoreDeveloper extends React.Component {
             {/* === PARSEC === */}
             <div className="comp-i">
               <div className="comp-i-head">
-                <h3 id={data.components.routing.parsec.name.toLowerCase()}>{data.components.routing.parsec.name}</h3>
+                <h1 id={data.components.routing.parsec.anchor}>{data.components.routing.parsec.name}</h1>
               </div>
               <div className="comp-i-cntr">
                 <p>
@@ -199,7 +201,7 @@ class CoreDeveloper extends React.Component {
             {/* ------------------------------------------------------------ */}
             <div className="comp-i">
               <div className="comp-i-head">
-                <h1 id={data.components.vault.name.toLowerCase()}>{data.components.vault.name}</h1>
+                <h1 id={data.components.vault.anchor}>{data.components.vault.name}</h1>
               </div>
               <div className="comp-i-cntr">
                 <p>{data.components.vault.para1}</p>
@@ -230,18 +232,21 @@ class CoreDeveloper extends React.Component {
                   {data.components.c_libs.para1.chunk1}
                 </p>
               </div>
+              <div className="comp-links">
+                <div className="git-btn"><a href={data.components.c_libs.github} target="_blank"></a></div>
+              </div>
 
               {/* =========================== */}
               {/* ===     Components      === */}
               {/* =========================== */}
 
               <div className="comp-i-head">
-                <h3 id={data.components.c_libs.comp.name.toLowerCase()}>{data.components.c_libs.comp.name}</h3>
+                <h3 id={data.components.c_libs.comp.anchor}>{data.components.c_libs.comp.name}</h3>
               </div>
 
               {/* === SAFE_Core === */}
               <div className="comp-i-cntr">
-                <b id={data.components.c_libs.comp.safe_core.name.toLowerCase()}>{data.components.c_libs.comp.safe_core.name}</b>: {data.components.c_libs.comp.safe_core.para1.chunk1}
+                <b id={data.components.c_libs.comp.safe_core.anchor}>{data.components.c_libs.comp.safe_core.name}</b>: {data.components.c_libs.comp.safe_core.para1.chunk1}
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.comp.safe_core.github} target="_blank"></a></div>
@@ -258,21 +263,21 @@ class CoreDeveloper extends React.Component {
 
               {/* === SAFE_Authenticator === */}
               <div className="comp-i-cntr">
-                <b id={data.components.c_libs.comp.safe_auth.name.toLowerCase()}>{data.components.c_libs.comp.safe_auth.name}</b>: {data.components.c_libs.comp.safe_auth.para1.chunk1}
+                <b id={data.components.c_libs.comp.safe_auth.anchor}>{data.components.c_libs.comp.safe_auth.name}</b>: {data.components.c_libs.comp.safe_auth.para1.chunk1}
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.comp.safe_auth.github} target="_blank"></a></div>
                 <a href={data.components.c_libs.comp.safe_auth.doc.href} target="_blank">
                   <img src={data.components.c_libs.comp.safe_auth.doc.img}></img>
                 </a>
-                <a id={data.components.c_libs.comp.safe_auth.name.toLowerCase()} href={data.components.c_libs.comp.safe_auth.crate.href} target="_blank">
+                <a id={data.components.c_libs.comp.safe_auth.anchor} href={data.components.c_libs.comp.safe_auth.crate.href} target="_blank">
                   <img src={data.components.c_libs.comp.safe_auth.crate.img}></img>
                 </a>
               </div>
 
               {/* === SAFE_App === */}
               <div className="comp-i-cntr">
-                <b id={data.components.c_libs.comp.safe_app.name.toLowerCase()}>{data.components.c_libs.comp.safe_app.name}</b>: {data.components.c_libs.comp.safe_app.para1.chunk1}
+                <b id={data.components.c_libs.comp.safe_app.anchor}>{data.components.c_libs.comp.safe_app.name}</b>: {data.components.c_libs.comp.safe_app.para1.chunk1}
                 <a href={data.components.c_libs.comp.safe_app.para1.link1.href} target="_self">{data.components.c_libs.comp.safe_app.para1.link1.name}</a>
                 {data.components.c_libs.comp.safe_app.para1.chunk2}&nbsp;
               </div>
@@ -291,12 +296,12 @@ class CoreDeveloper extends React.Component {
               {/* =========================== */}
 
               <div className="comp-i-head">
-                <h3 id={data.components.c_libs.auxs.name.toLowerCase()}>{data.components.c_libs.auxs.name}</h3>
+                <h3 id={data.components.c_libs.auxs.anchor}>{data.components.c_libs.auxs.name}</h3>
               </div>
 
               {/* === FFI_Utils === */}
               <div className="comp-i-cntr">
-                <b id={data.components.c_libs.auxs.ffi.name.toLowerCase()}>{data.components.c_libs.auxs.ffi.name}</b>: {data.components.c_libs.auxs.ffi.para1.chunk1}
+                <b id={data.components.c_libs.auxs.ffi.anchor}>{data.components.c_libs.auxs.ffi.name}</b>: {data.components.c_libs.auxs.ffi.para1.chunk1}
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.auxs.ffi.github} target="_blank"></a></div>
@@ -310,7 +315,7 @@ class CoreDeveloper extends React.Component {
 
               {/* === SAFE_Bindgen === */}
               <div className="comp-i-cntr">
-                <b id={data.components.c_libs.auxs.bindgen.name.toLowerCase()}>{data.components.c_libs.auxs.bindgen.name}</b>: {data.components.c_libs.auxs.bindgen.para1.chunk1}
+                <b id={data.components.c_libs.auxs.bindgen.anchor}>{data.components.c_libs.auxs.bindgen.name}</b>: {data.components.c_libs.auxs.bindgen.para1.chunk1}
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.auxs.bindgen.github} target="_blank"></a></div>
@@ -324,7 +329,7 @@ class CoreDeveloper extends React.Component {
 
               {/* === System_URI === */}
               <div className="comp-i-cntr">
-                <b id={data.components.c_libs.auxs.uri.name.toLowerCase()}>{data.components.c_libs.auxs.uri.name}</b>: {data.components.c_libs.auxs.uri.para1.chunk1}
+                <b id={data.components.c_libs.auxs.uri.anchor}>{data.components.c_libs.auxs.uri.name}</b>: {data.components.c_libs.auxs.uri.para1.chunk1}
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.auxs.uri.github} target="_blank"></a></div>
@@ -353,14 +358,14 @@ class CoreDeveloper extends React.Component {
               </div>*/}
 
               <div className="comp-i-cntr">
-                  <b id={data.util.comp1.name.toLowerCase()}>{data.util.comp1.name}</b>:{data.util.comp1.para1.chunk1}&nbsp;
+                  <b id={data.util.comp1.anchor}>{data.util.comp1.name}</b>:{data.util.comp1.para1.chunk1}&nbsp;
                   {data.util.comp1.para2.chunk1}&nbsp;
                   <a href={data.util.comp1.para2.link1.href} target="_blank">{data.util.comp1.para2.link1.name}</a>
                   &nbsp;{data.util.comp1.para2.chunk2}
               </div>
               <div className="comp-links">
                 <p>
-                  <div className="git-btn"><a href={data.util.comp1.git} target="_blank"></a></div>
+                  <div className="git-btn"><a href={data.util.comp1.github} target="_blank"></a></div>
                   <a href={data.util.comp1.doc.href} target="_blank">
                     <img src={data.util.comp1.doc.img}></img>
                   </a>
@@ -380,7 +385,7 @@ class CoreDeveloper extends React.Component {
               </div>
               */}
               <div className="comp-i-cntr">
-                <b id={data.util.comp2.name.toLowerCase()}>{data.util.comp2.name}</b>: {data.util.comp2.para1}
+                <b id={data.util.comp2.anchor}>{data.util.comp2.name}</b>: {data.util.comp2.para1}
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.util.comp2.github} target="_blank"></a></div>
@@ -400,7 +405,7 @@ class CoreDeveloper extends React.Component {
           {/* -------------------------------------------------------------- */}
           <div className="rfcs">
               <div className="rfcs-b">
-                <h1 id={data.rfcs.title.toLowerCase()}>{data.rfcs.title}</h1>
+                <h1 id={data.rfcs.anchor}>{data.rfcs.title}</h1>
                 <p>
                   {data.rfcs.summary}
                 </p>
