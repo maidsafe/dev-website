@@ -1,6 +1,15 @@
 # SAFE .NET Desktop App Tutorial
 
-This tutorial shows you how to create a [.NET Framework](https://docs.microsoft.com/en-us/dotnet/framework/) Windows console application for the SAFE Network. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server and Microsoft Azure using C#, Visual Basic and F#. This tutorial can also be used for developing [.NET Core](https://github.com/dotnet/core) apps.
+This tutorial shows you how to create a [.NET Framework](https://docs.microsoft.com/en-us/dotnet/framework/) Windows console application for the SAFE Network.
+
+Let MaidSafe's Ashwin step you through the tutorial in this video (<a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.mp4">mp4</a>, <a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.ogv">ogv</a>):
+
+<a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.mp4">
+<img src="https://i.postimg.cc/mZMBmycS/Tutorial-Dot-Net-768.png" alt=".Net Tutorial - Microsoft Visual Studio" style="width: 100%;"/>
+</a>
+
+
+The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server and Microsoft Azure using C#, Visual Basic and F#. This tutorial can also be used for developing [.NET Core](https://github.com/dotnet/core) apps.
 
 You can download working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/DesktopExample). Follow the steps described in this tutorial to create an app for SAFE Network.
 
@@ -67,7 +76,7 @@ Create an account on the mock SAFE browser and log in (use any random arbitrary 
 
 Keep the browser open and logged into this account before proceeding with next steps.
 
-**4. Generate an `AuthReq`** 
+**4. Generate an `AuthReq`**
 
 Let us implement an `AuthReq` instance in the `GenerateEncodedAppRequestAsync()` function in the `Helpers` class:
 ```csharp
@@ -152,7 +161,7 @@ var location = Helpers.GenerateRandomString(10);
 var password = Helpers.GenerateRandomString(10);
 var invitation = Helpers.GenerateRandomString(15);
 var authenticator = await Authenticator.CreateAccountAsync(location, password, invitation);
-``` 
+```
 <br />
 **3. Generate an `AuthReq`**
 
@@ -225,7 +234,7 @@ using (var permissionsH = await _session.MDataPermissions.NewAsync())
     using (var appSignKeyH = await _session.Crypto.AppPubSignKeyAsync())
     {
         await _session.MDataPermissions.InsertAsync(permissionsH, appSignKeyH, mDataPermissionSet);
-        
+
         // Put the data on the network
     }
 }
@@ -241,7 +250,7 @@ await _session.MData.PutAsync(_mdinfo, permissionsH, NativeHandle.EmptyMDataEntr
 
 Now that the mutable data is stored on the network, entries can be added.
 
-An entry is a key-value pair. To insert an entry in mutable data the `InsertAsync()` API is used. This new entry transaction is done in locally and not on the network. 
+An entry is a key-value pair. To insert an entry in mutable data the `InsertAsync()` API is used. This new entry transaction is done in locally and not on the network.
 
 The `EntryActionHandle` points to in-memory transactions on mutable data.
 
@@ -326,7 +335,7 @@ using (var entriesHandle = await _session.MDataEntryActions.NewAsync())
 <br />
 **Versioning in mutable data:**
 
-Each entry in a mutable data has a version associated to it - a numeric value. 
+Each entry in a mutable data has a version associated to it - a numeric value.
 
 When a new entry is inserted, it is inserted with version 0. Every time a mutation is performed this version increases by 1, as specified in the above code. This is used by the network to ensure only one mutation is applied when simultaneous mutation requests are received for the same version of an entry. This ensures the state change of such an entry is what the originator of the request is intending to do.
 
@@ -372,4 +381,4 @@ Ensure to keep the browser opened and logged in with your account before proceed
 
 **3. Build and run**
 
-Running the application will now authenticate and perform all operations with the Alpha 2 Network. 
+Running the application will now authenticate and perform all operations with the Alpha 2 Network.

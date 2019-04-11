@@ -2,6 +2,15 @@
 
 In this tutorial we will be building an Android application using Java for the SAFE network.
 
+Let MaidSafe's Lionel step you through the tutorial in this video (<a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialJavaAndriod.mp4">mp4</a>,
+<a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialJavaAndroid_1.webm">webm</a>):
+
+<a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialJavaAndriod.mp4">
+<img src="https://i.postimg.cc/KvWrrWz0/Tutorial-Android.png" alt="Java Tutorial - Android Studio" style="width: 100%;"/>
+</a>
+
+
+
 To create this application we will be using the `safe-app-android` package.
 
 ## Prerequisites
