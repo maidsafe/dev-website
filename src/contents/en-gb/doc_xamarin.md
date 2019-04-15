@@ -3,7 +3,7 @@
 This tutorial shows you how to create a [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms/) application for the SAFE Network. Xamarin.Forms is an open source, cross-platform tool which provides a way to quickly build apps for iOS, Android, Windows and macOS using C# and F#.
 
 <a href="/video#xamarin">
-<img src="https://i.postimg.cc/fLDQd5P8/Tutorial-Blank.png" alt="Xamarin Tutorial - Microsoft Visual Studio" style="width: 100%;"/>
+<img src="https://i.postimg.cc/Mp6VpjqV/Tutorial-Coming-Soon.png" alt="Xamarin Tutorial - Microsoft Visual Studio" style="width: 100%;"/>
 </a>
 
 In this tutorial we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE API to connect and interact with the SAFE Network.

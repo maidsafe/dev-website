@@ -3,7 +3,7 @@
 In this tutorial we will be building an Android application using Java for the SAFE network.
 
 <a href="/video#android">
-<img src="https://i.postimg.cc/KvWrrWz0/Tutorial-Android.png" alt="Java Tutorial - Android Studio" style="width: 100%;"/>
+<img src="https://i.postimg.cc/xCrwKQsG/Tutorial-Java.png" alt="Java Tutorial - Android Studio" style="width: 100%"/>
 </a>
 
 

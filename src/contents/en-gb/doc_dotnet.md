@@ -3,7 +3,7 @@
 This tutorial shows you how to create a [.NET Framework](https://docs.microsoft.com/en-us/dotnet/framework/) Windows console application for the SAFE Network.
 
 <a href="/video#dotnet">
-<img src="https://i.postimg.cc/mZMBmycS/Tutorial-Dot-Net-768.png" alt=".Net Tutorial - Microsoft Visual Studio" style="width: 100%;"/>
+<img src="https://i.postimg.cc/C1HQkqnY/Tutorial-Dotnet.png" alt=".Net Tutorial - Microsoft Visual Studio" style="width: 100%;"/>
 </a>
 
 

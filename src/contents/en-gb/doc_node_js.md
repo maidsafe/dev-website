@@ -3,7 +3,7 @@
 In this tutorial, we will create an [Electron](https://electronjs.org) application. Electron allows you to create and build cross-platforms desktop applications using JavaScript.
 
 <a href="/video#nodejs">
-<img src="https://i.postimg.cc/fLDQd5P8/Tutorial-Blank.png" alt="Node.js Desktop Tutorial" style="width: 100%;"/>
+<img src="https://i.postimg.cc/Mp6VpjqV/Tutorial-Coming-Soon.png" alt="Node.js Desktop Tutorial" style="width: 100%;"/>
 </a>
 
 To create this app, we will use the [@maidsafe/safe-node-app](https://www.npmjs.com/package/@maidsafe/safe-node-app) npm package which exposes the `safe-app-nodejs` API that we need not only to interact with the SAFE Authenticator, but also to connect and interact with the SAFE Network.

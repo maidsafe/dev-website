@@ -9,7 +9,7 @@ export default class CustomVideo extends React.Component {
 
     return (
       <div className="custom-video">
-        <video controls>
+        <video controls autoPlay>
           {links.mp4 ? <source src={links.mp4} type="video/mp4" /> : null}
           {links.ogv ? <source src={links.ogv} type="video/ogg" /> : null}
           {links.webm ? <source src={links.webm} type="video/webm" /> : null}

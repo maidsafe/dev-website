@@ -74,22 +74,15 @@ class Video extends React.Component {
 
       <div className="content">
 
-
-        <div className="tutorial-a layout4060">
-          <div className="lay-40">
-            <div className="dual-tone-text">
-              <span className="dark">{intro}</span>
-              <span className="light">{detail}</span>
-            </div>
-          </div>
-          <div className="lay-60">
-            <div className="vid-container">
-              <div className="tut-vid">
-                <CustomVideo links={myVideo}/>
-              </div>
-            </div>
+      <div className="tutorial-a">
+        <div className="vid-container">
+          <div className="tut-vid">
+            <CustomVideo links={myVideo}/>
           </div>
         </div>
+      </div>
+
+
       </div>
 
       <div className="ending">
