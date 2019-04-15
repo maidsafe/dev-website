@@ -2,6 +2,10 @@
 
 This tutorial shows you how to create a [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms/) application for the SAFE Network. Xamarin.Forms is an open source, cross-platform tool which provides a way to quickly build apps for iOS, Android, Windows and macOS using C# and F#.
 
+<a href="/video#xamarin">
+<img src="https://i.postimg.cc/fLDQd5P8/Tutorial-Blank.png" alt="Xamarin Tutorial - Microsoft Visual Studio" style="width: 100%;"/>
+</a>
+
 In this tutorial we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE API to connect and interact with the SAFE Network.
 
 You can download the working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/MobileExample) or follow the steps provided in this tutorial to create a mobile app for the SAFE Network.
@@ -79,7 +83,7 @@ var authReq = new AuthReq
     },
     Containers = new List<ContainerPermissions>()
 };
-            
+
 ```
 
 Return the encoded auth request.
@@ -152,7 +156,7 @@ await _session.MData.PutAsync(_mDataInfo, permissionsH, NativeHandle.EmptyMDataE
 
 Now that the mutable data is stored on the network, entries can be added.
 
-An entry is a key-value pair. To insert an entry in mutable data the  `InsertAsync()` method is used. This new entry transaction is completed locally and not on the network. 
+An entry is a key-value pair. To insert an entry in mutable data the  `InsertAsync()` method is used. This new entry transaction is completed locally and not on the network.
 
 The `EntryActionHandle` points to in-memory transactions on mutable data.
 
@@ -235,9 +239,9 @@ using (var entriesHandle = await _session.MDataEntryActions.NewAsync())
 
 ## Making use of the app's container
 
-Since the mutable data is randomly generated, a new mutable data is generated every time the app starts and consequently the entries made in the previous mutable data will be lost. Thus, we need to store this mutable data info in a location that is accessible by the application. For this, we can use the app's container. The app's container is mutable data that is exclusive per app per user. 
+Since the mutable data is randomly generated, a new mutable data is generated every time the app starts and consequently the entries made in the previous mutable data will be lost. Thus, we need to store this mutable data info in a location that is accessible by the application. For this, we can use the app's container. The app's container is mutable data that is exclusive per app per user.
 
-We can serialise and store the `_mDataInfo` in the app container so that we can re-use the mutable data that was randomly generated the first time the app is launched. 
+We can serialise and store the `_mDataInfo` in the app container so that we can re-use the mutable data that was randomly generated the first time the app is launched.
 
 When the application starts we should first check for existent `_mDataInfo` in the app's container, fetch it and deserialise it. If the data does not exist, then we create a new mutable data and store it in the app's container.
 
@@ -268,7 +272,7 @@ if (encryptedValue.Item1 != null)
 
 ## Versioning in mutable data
 
-Each entry in a mutable data has a version associated to it - a numeric value. 
+Each entry in a mutable data has a version associated to it - a numeric value.
 
 When a new entry is inserted, it is inserted with version 0. Every time a mutation is performed this version increases by 1, as specified in the above code. This is used by the network to ensure only one mutation is applied when simultaneous mutation requests are received for the same version of an entry. This ensures the state change of such an entry is what the originator of the request is intending to do.
 
@@ -296,7 +300,7 @@ Now you can run the application, authenticate and work with todo items in the li
 
 *Note: Ensure `SAFE_APP_MOCK` flag is removed from shared and platform specific projects' conditional compilation symbols.*
 
-To connect to the live Alpha-2 Network, an application needs to get authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (SAFE Authenticator app in this case): 
+To connect to the live Alpha-2 Network, an application needs to get authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (SAFE Authenticator app in this case):
 
 **1. Send `AuthReq` to the Authenticator**
 
@@ -311,13 +315,13 @@ Device.BeginInvokeOnMainThread(() => { Device.OpenUri(new Uri(url)); });
 <br />
 **2. Grant access**
 
-Once the authorisation request is received, the Authenticator launches and a pop-up dialogue prompts for access (Allow or Deny). The Authenticator then sends the response back to the application using the URI scheme. The OS matches the URI scheme to the application and launches the application passing `EncodedAuthResponse` as an argument. 
+Once the authorisation request is received, the Authenticator launches and a pop-up dialogue prompts for access (Allow or Deny). The Authenticator then sends the response back to the application using the URI scheme. The OS matches the URI scheme to the application and launches the application passing `EncodedAuthResponse` as an argument.
 
 **3. Use the response**
 
 To extract and use the response from the Authenticator follow these steps for the respective mobile OS:
 
-**Android: Use `IntentFilter` so the app can respond to the URL** 
+**Android: Use `IntentFilter` so the app can respond to the URL**
 - Add an `IntentFilter` parameter in the `MainActivity` attribute. After making this change the `MainActivity` should match the following code:
 ```csharp
     [Activity(
@@ -340,7 +344,7 @@ protected override void OnCreate(Bundle savedInstanceState)
     ...
     ...
     LoadApplication(new App());
-    
+
     // Check for intent data after LoadApplication(new App());
     if (Intent?.Data != null)
     {
@@ -367,7 +371,7 @@ private void HandleAppLaunch(string url)
             try
             {
                 await AppService.HandleUrlActivationAsync(url);
-                
+
                 System.Diagnostics.Debug.WriteLine("IPC Msg Handling Completed");
             }
             catch (Exception ex)
@@ -379,7 +383,7 @@ private void HandleAppLaunch(string url)
 ```
 <br />
 **iOS: Use the URL Types Registration feature**
-The URL Types Registration feature, available in the `Info.plist` file, can be added using the UI editor: 
+The URL Types Registration feature, available in the `Info.plist` file, can be added using the UI editor:
 
 - Open the `Info.plist` file in the UI editor and open `Advanced > URL Types > Add URL Type` and add the following properties:
 
@@ -388,19 +392,19 @@ Identifier: SafeTodoExample
 URL Schemes: net.maidsafe.examples.todo
 Role: Viewer
 ```
-- Once these properties are set, override the `OpenUrl` action in the `AppDelegate` class: 
+- Once these properties are set, override the `OpenUrl` action in the `AppDelegate` class:
 
 ```csharp
-public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options) 
+public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
 {
     Device.BeginInvokeOnMainThread(
-    async () => 
+    async () =>
     {
-        try 
+        try
         {
             await AppService.HandleUrlActivationAsync(url.ToString());
             Debug.WriteLine("IPC Msg Handling Completed");
-        } 
+        }
         catch (Exception ex) {
             Debug.WriteLine($"Error: {ex.Message}");
         }

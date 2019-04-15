@@ -23,6 +23,33 @@ export default {
       }
     }
   },
+  tutorialVideos: {
+    java: {
+      mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialJavaAndriod.mp4',
+      ogv: '',
+      webm: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialJavaAndroid_1.webm'
+    },
+    dotnet: {
+      mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.mp4',
+      ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.ogv',
+      webm: '',
+    },
+    xamarin: {
+      mp4: '',
+      ogv: '',
+      webm: '',
+    },
+    nodejs: {
+      ogv: '',
+      mp4: '',
+      webm: ''
+    },
+    web: {
+      ogv: '',
+      mp4: '',
+      webm: ''
+    }
+  },
   locals: {
     EN_GB: 'en-gb'
   },

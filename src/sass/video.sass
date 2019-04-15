@@ -1,0 +1,49 @@
+.page
+  margin-top: 0px
+  padding: 8px 0
+  margin-bottom: 80px
+  .header
+    @extend .base
+    margin-bottom: 80px
+    text-align: center
+    h1
+      +header-1()
+      margin-bottom: 40px
+      padding-top: 40px
+    p
+      +para()
+      text-align: center
+
+  .content
+    h3
+      +header-2-1()
+      text-align: center
+      margin-bottom: 24px
+
+      padding-bottom: 16px
+      position: relative
+    +para()
+    text-align: center
+    margin-bottom: 80px
+    position: relative
+    .tutorial-a
+      background-color: $colr-theme-light
+      margin-left: 10%
+      width: 80%
+      .lay-40
+        background-color: $colr-theme-dark
+        padding-left: 80px
+        padding-top: 140px
+      .vid-container
+        margin: 40px
+        background-color: $colr-white
+        .tut-vid
+          width: 100%
+          height: auto
+          iframe
+            width: 100%
+            height: 382px
+            background-color: $colr-blue
+  .ending
+    margin-top: 40px
+    margin-bottom: 80px

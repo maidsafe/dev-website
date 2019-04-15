@@ -2,9 +2,7 @@
 
 This tutorial shows you how to create a [.NET Framework](https://docs.microsoft.com/en-us/dotnet/framework/) Windows console application for the SAFE Network.
 
-Let MaidSafe's Ashwin step you through the tutorial in this video (<a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.mp4">mp4</a>, <a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.ogv">ogv</a>):
-
-<a href="https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.mp4">
+<a href="/video#dotnet">
 <img src="https://i.postimg.cc/mZMBmycS/Tutorial-Dot-Net-768.png" alt=".Net Tutorial - Microsoft Visual Studio" style="width: 100%;"/>
 </a>
 

@@ -22,7 +22,8 @@ const CONTENT_FILE = {
   CRUST: 'crust.yaml',
   GLOSSARY: 'glossary.yaml',
   DOCS: 'docs.yaml',
-  DAPPS: 'dapps.yaml'
+  DAPPS: 'dapps.yaml',
+  VIDEO: 'video.yaml'
 };
 
 const getLocalContent = (local, fileName) => {
@@ -109,6 +110,13 @@ export default [
     component: 'src/containers/parsec',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PARSEC))
+    })
+  },
+  {
+    path: '/video',
+    component: 'src/containers/video',
+    getData: () => ({
+      data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.VIDEO))
     })
   },
   {

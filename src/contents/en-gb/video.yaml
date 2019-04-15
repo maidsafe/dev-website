@@ -1,0 +1,33 @@
+video:
+  title: "Tutorial Videos"
+  summary: "Tutorial videos guiding you through SAFE Network platform development."
+  android:
+    title: "Java Tutorial"
+    summary: "In this tutorial we will be building an Android application using Java for the SAFE network."
+    caption:
+      intro: "How to build..."
+      detail: "a native Android SAFE DApp"
+  dotnet:
+    title: "SAFE .NET Desktop App Tutorial"
+    summary: "This tutorial shows you how to create a .NET Framework Windows console application for the SAFE Network."
+    caption:
+      intro: "How to build..."
+      detail: "a Windows console SAFE DApp"
+  xamarin:
+    title: "SAFE Mobile App Tutorial"
+    summary: "This tutorial shows you how to create a Xamarin.Forms application for the SAFE Network."
+    caption:
+      intro: "How to build..."
+      detail: "a cross-platform mobile SAFE DApp"
+  nodejs:
+    title: "SAFE Desktop App Tutorial"
+    summary: "In this tutorial, we will create an Electron application. Electron allows you to create and build cross-platforms desktop applications using JavaScript."
+    caption:
+      intro: "How to build..."
+      detail: "a desktop SAFE DApp"
+  web:
+    title: "SAFE Web Tutorial"
+    summary: "In this tutorial we will create a SAFE Web application which uses the Web API to interact with the SAFE Authenticator, and to connect with the SAFE Network."
+    caption:
+      intro: "How to build..."
+      detail: "a Web SAFE DApp"

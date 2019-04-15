@@ -2,6 +2,10 @@
 
 In this tutorial we will create a SAFE Web application which uses the Web API to interact with the SAFE Authenticator, and to connect with the SAFE Network.
 
+<a href="/video#web">
+<img src="https://i.postimg.cc/fLDQd5P8/Tutorial-Blank.png" alt="Node.js Web Tutorial" style="width: 100%;"/>
+</a>
+
 In this tutorial we use the [SAFE Web App quick start](https://github.com/maidsafe/safe_examples/tree/master/safe_web_app_quick_start) boilerplate, which is single page webapp compiled via [Node.js](https://nodejs.org).
 
 The boilerplate implements a simple single page application using [Vue.js](https://vuejs.org) for rendering the UI components and the data. The application implements a trip planner, showing the list of trips planned by the user, allowing him/her to add or remove trips from the list. In this tutorial we will be adding the implementation to store (and retrieve) the list of planned trips in the SAFE Network.
@@ -24,7 +28,7 @@ Note that there are packages for each of the supported platforms, i.e. Linux, Wi
 - `Peruse-<version>-<platform>-<arch>.zip`: SAFE Browser package built to use the live SAFE Network
 - `Peruse-<version>-<platform>-<arch>-dev.zip`: SAFE Browser package built to use the mock routing. This will create a local temporary file and you won't need to connect to the live network.
 
-In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC. 
+In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC.
 
 You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
 
