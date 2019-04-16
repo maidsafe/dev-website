@@ -26,7 +26,7 @@ export default {
   tutorialVideos: {
     java: {
       mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialJavaAndriod.mp4',
-      ogv: '',
+      ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialAndroid.ogv',
       webm: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialJavaAndroid_1.webm'
     },
     dotnet: {
@@ -35,8 +35,8 @@ export default {
       webm: '',
     },
     xamarin: {
-      mp4: '',
-      ogv: '',
+      mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialXamarin.mp4',
+      ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/XamarinTutorial.ogv',
       webm: '',
     },
     nodejs: {

@@ -2,10 +2,6 @@
 
 In this tutorial we will create a SAFE Web application which uses the Web API to interact with the SAFE Authenticator, and to connect with the SAFE Network.
 
-<a href="/video#web">
-<img src="https://i.postimg.cc/Mp6VpjqV/Tutorial-Coming-Soon.png" alt="Node.js Web Tutorial" style="width: 100%;"/>
-</a>
-
 In this tutorial we use the [SAFE Web App quick start](https://github.com/maidsafe/safe_examples/tree/master/safe_web_app_quick_start) boilerplate, which is single page webapp compiled via [Node.js](https://nodejs.org).
 
 The boilerplate implements a simple single page application using [Vue.js](https://vuejs.org) for rendering the UI components and the data. The application implements a trip planner, showing the list of trips planned by the user, allowing him/her to add or remove trips from the list. In this tutorial we will be adding the implementation to store (and retrieve) the list of planned trips in the SAFE Network.
