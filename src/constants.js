@@ -32,7 +32,7 @@ export default {
     dotnet: {
       mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.mp4',
       ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.ogv',
-      webm: '',
+      webm: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.webm',
     },
     xamarin: {
       mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialXamarin.mp4',
