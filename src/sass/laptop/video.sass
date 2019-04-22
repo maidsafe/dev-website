@@ -1,14 +1,31 @@
-.page
-  .header
-  .content
-    .tutorial-a
-      margin-left: 15%
-      width: 70%
+@media screen and (min-width: 769px) and (max-width: 1440px) and (orientation: portrait)
+  .page
+    .header
+    .content
       .vid-container
-        margin: 20px
+        padding: 5px
+        width: 94%
+        margin: 3%
         .tut-vid
-          iframe
-            height: 320px
-  .ending
-    margin-top: 30px
-    margin-bottom: 40px
+          height: 100%
+          width: auto
+@media screen and (min-width: 769px) and (max-width: 1440px) and (orientation: landscape)
+  .page
+    .header
+      margin-top: 0px
+      h1
+        font-size: 24px
+        margin-bottom: 4px
+        padding-top: 20px
+      p
+        font-size: 18px
+    .content
+      width: 100%
+      padding: 4px 20%
+      .vid-container
+        padding: 5px
+        width: 94%
+        margin: 3%
+        .tut-vid
+          height: 100%
+          width: auto

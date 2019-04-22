@@ -71,11 +71,9 @@ class Video extends React.Component {
         <p>{summary}</p>
       </div>
       <div className="content">
-        <div className="tutorial-a">
-          <div className="vid-container">
-            <div className="tut-vid">
-              <CustomVideo links={myVideo}/>
-            </div>
+        <div className="vid-container">
+          <div className="tut-vid">
+            <CustomVideo links={myVideo}/>
           </div>
         </div>
       </div>
