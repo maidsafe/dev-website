@@ -1,6 +1,6 @@
 # SAFE Web App Tutorial
 
-In this tutorial we will create a SAFE Web application which uses the Web API to interact with the SAFE Authenticator, and to connect with the SAFE Network.
+In this tutorial we will create a SAFE Web application which uses the [Web API](https://docs.maidsafe.net/safe_app_nodejs/safeapp) to interact with the SAFE Authenticator, and to connect with the SAFE Network.
 
 In this tutorial we use the [SAFE Web App quick start](https://github.com/maidsafe/safe_examples/tree/master/safe_web_app_quick_start) boilerplate, which is single page webapp compiled via [Node.js](https://nodejs.org).
 

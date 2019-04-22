@@ -70,6 +70,8 @@ Any interaction with the SAFE Network is made thru the API imported from the `sa
 const safeNodeApp = require('@maidsafe/safe-node-app');
 ```
 
+[See the SAFEApp API documentation](https://docs.maidsafe.net/safe_app_nodejs/safeapp).
+
 ## Send authorisation request to the Authenticator
 A SAFE application needs to get an authorisation from the user before being able to connect to the network, this is achieved by sending an authorisation request to the Authenticator.
 

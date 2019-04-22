@@ -47,6 +47,7 @@ Open the `DesktopExample/SafeDesktopExample.sln` solution in Visual Studio and r
 **Note:**
   * The CPU architecture is set to **x64** in project build configuration (SAFE APIs support only x64 architecture for desktops)
   * We use the latest version of [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
+  * See the [API documentation](https://docs.maidsafe.net/safe_app_csharp/api/safeapp) for the C# SAFEApp library.
 
 ## Connecting to the mock network
 

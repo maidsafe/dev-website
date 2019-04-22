@@ -40,7 +40,8 @@ git checkout boilerplate
 Open `MobileExample/SafeTodoExample.sln` solution in Visual Studio and restore nuget packages.
 
 **Note:**
-  We use the latest version of the MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
+* We use the latest version of the MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
+* See the [API documentation](https://docs.maidsafe.net/safe_app_csharp/api/safeapp) for the C# SAFEApp library.
 
 ## Using a Mock Network
 

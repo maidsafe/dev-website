@@ -56,7 +56,7 @@ dependencies {
 }
 ```
 
-The API documentation for the safe-app-android library is available at [docs.maidsafe.net/safe_app_java](https://docs.maidsafe.net/safe_app_java)
+The API documentation for the safe-app-android library is available at [docs.maidsafe.net/safe_app_java](https://docs.maidsafe.net/safe_app_java).
 
 ## Authenticating the app
 
