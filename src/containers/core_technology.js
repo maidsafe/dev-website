@@ -6,6 +6,11 @@ import NetworkLayers from '../../public/images/network_layer.svg';
 import CratesLogo from '../../public/images/crates_logo.png'
 import DocsLogo from '../../public/images/docs_logo.png'
 
+// Technology Stack (Network Layer) images
+import StackLyrNet from '../../public/images/tech_stack/layer_net.png';
+import StackLyrApp from '../../public/images/tech_stack/layer_app.png';
+import StackClientLibs from '../../public/images/tech_stack/client_libs.png';
+
 class CoreDeveloper extends React.Component {
   render() {
     const { data } = this.props;
@@ -20,88 +25,129 @@ class CoreDeveloper extends React.Component {
           <div className="content-intro">
             <h1>{data.pageIntro.title}</h1>
             <p>{data.pageIntro.para1.chunk1}&nbsp;<a href={data.pageIntro.para1.link.href}>{data.pageIntro.para1.link.name}</a>&nbsp;{data.pageIntro.para1.chunk2}</p>
-            <div className="med"><img src={NetworkLayers} alt="Network layer" /></div>
 
             {/* ------------------------------------------------------------ */}
             {/* CLICKABLE NETWORK GRAPHUC MENU - NOT LIVE YET                */}
             {/* ------------------------------------------------------------ */}
-{/*
             <div className="menugraphic">
 
-              <div className="section layout2080">
-                <div className="row lay-20">
+              <div className="section hlayout_2080">
 
-                </div>
-                <div className="lay-80">
-                  <div className="clickable dapp">
-                    Desktop, mobile, CLI apps
+                {/* LEFT SIDE - Image */}
+                <div className="hlay-20">
+                  <div className="application-layer-img">
+                    <img src={StackLyrApp} alt="Network layer" height="100%"/>
                   </div>
-                  <div className="clickable wapp">
-                    Web Apps
+                </div>
+
+                {/* RIGHT SIDE - boxes */}
+                <div className="hlay-80">
+                  <div className="section hlayout-65-10-25">
+                    <div className="hlay-65">
+
+                      <div className="section hlayout_5050">
+                        <div className="hlay-50">
+                          <div className="clickable dapp">
+                            <a href={data.components.app_layer.dapp.href}>
+                              {data.components.app_layer.dapp.name}
+                            </a>
+                          </div>
+                          <div className="underline dapp"/>
+                        </div>
+                        <div className="hlay-50">
+                          <div className="clickable wapp">
+                            <a href={data.components.app_layer.wapp.href}>
+                              {data.components.app_layer.wapp.name}
+                            </a>
+                          </div>
+                          <div className="underline wapp"/>
+                        </div>
+                      </div>
+
+                      <div className="section hlayout_5050">
+                        <div className="hlay-50">
+                          <div className="clickable bindings">
+                            <a href={data.components.app_layer.bindings.github}>
+                              {data.components.app_layer.bindings.name}
+                            </a>
+                          </div>
+                          <div className="underline bindings"/>
+                        </div>
+                        <div className="hlay-50">
+                          <div className="clickable browser">
+                            <a href={data.components.app_layer.browser.github}>
+                              {data.components.app_layer.browser.name}
+                            </a>
+                          </div>
+                          <div className="underline browser"/>
+                        </div>
+                      </div>
+
+                      <div className="section hlayout_4060">
+                        <div className="hlay-60">
+                          <div className="clickable safe_app">
+                            <a href={data.anchor.concat(data.components.c_libs.comp.safe_app.anchor)}>{data.components.c_libs.comp.safe_app.name}</a>
+                          </div>
+                          <div className="underline safe_app"/>
+                        </div>
+                        <div className="hlay-40">
+                          <div className="clickable safe_auth">
+                            <a href={data.anchor.concat(data.components.c_libs.comp.safe_auth.anchor)}>{data.components.c_libs.comp.safe_auth.name}</a>
+                          </div>
+                          <div className="underline safe_auth"/>
+                        </div>
+                      </div>
+
+                      <div className="section">
+                        <div className="clickable safe_core">
+                          <a href={data.anchor.concat(data.components.c_libs.comp.safe_core.anchor)}>{data.components.c_libs.comp.safe_core.name}</a>
+                        </div>
+                        <div className="underline safe_core"/>
+                      </div>
+                    </div>
+                    <div className="hlay-10">
+                      <div className="client-libs-img">
+                        <a href={data.anchor.concat(data.components.c_libs.anchor)}>
+                          <img src={StackClientLibs} alt="Client Libs" height="100%"/>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="hlay-25">
+                      <div className="clickable vault">
+                        <a href={data.anchor.concat(data.components.vault.anchor)}>{data.components.vault.name}</a>
+                      </div>
+                      <div className="underline vault"/>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="section hlayout_2080">
+                <div className="hlay-20">
+                  <div className="network-layer-img">
+                    <img src={StackLyrNet} alt="Network layer" height="100%"/>
+                  </div>
+                </div>
+                <div className="hlay-80">
+                  <div className="section">
+                    <div className="clickable routing">
+                      <a href={data.anchor.concat(data.components.routing.anchor)}>{data.components.routing.name}</a>
+                    </div>
+                    <div className="underline routing"/>
+                  </div>
+                  <div className="section">
+                    <div className="clickable crusty">
+                      <a href={data.anchor.concat(data.components.crust.anchor)}>{data.components.crust.name}</a>
+                    </div>
+                    <div className="underline crusty"/>
                   </div>
                 </div>
               </div>
-              <div className="section layout2080">
-                <div className="row lay-20">
-                </div>
-                <div className="row lay-80">
-                  <div className="clickable bindings">
-                      Language bindings (Javascript, Java, C#)
-                  </div>
-                  <div className="clickable browser">
-                      SAFE Browser & Authenticator plugin
-                  </div>
-                </div>
-              </div>
-
-              <div className="section layout2080">
-                <div className="row lay-20">
-
-                </div>
-                <div className="lay-80">
-                  <div className="clickable safe_app">
-                    <a href={data.anchor.concat(data.components.c_libs.comp.safe_app.name.toLowerCase())}>{data.components.c_libs.comp.safe_app.name}</a>
-                  </div>
-                  <div className="clickable safe_auth">
-                    <a href={data.anchor.concat(data.components.c_libs.comp.safe_auth.name.toLowerCase())}>{data.components.c_libs.comp.safe_auth.name}</a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section layout2080">
-                <div className="row lay-20">
-                  <h3>Application Layer</h3>
-                </div>
-                <div className="lay-80">
-                  <div className="clickable safe_core">
-                    <a href={data.anchor.concat(data.components.c_libs.comp.safe_core.name.toLowerCase())}>{data.components.c_libs.comp.safe_core.name}</a>
-                  </div>
-                  <div className="clickable vault">
-                    <a href={data.anchor.concat(data.components.vault.name.toLowerCase())}>{data.components.vault.name}</a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section layout2080">
-                <div className="row lay-20"><h3>Application Layer</h3></div>
-                <div className="lay-80">
-                  <div className="clickable routing">
-                    <a href={data.anchor.concat(data.components.routing.name.toLowerCase())}>{data.components.routing.name}</a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section layout2080">
-                <div className="row lay-20"/>
-                <div className="lay-80">
-                  <div className="clickable crusty">
-                    <a href={data.anchor.concat(data.components.crust.name.toLowerCase())}>{data.components.crust.name}</a>
-                  </div>
-                </div>
-              </div>
-
             </div>
-*/}
+            {/* Remove static image
+            <div className="med"><img src={NetworkLayers} alt="Network layer" /></div>
+            */}
           </div>
 
           {/* -------------------------------------------------------------- */}
@@ -206,7 +252,7 @@ class CoreDeveloper extends React.Component {
             {/* ------------------------------------------------------------ */}
             <div className="comp-i">
               <div className="comp-i-head">
-                <h1>{data.components.c_libs.name}</h1>
+                <h1 id={data.components.c_libs.anchor}>{data.components.c_libs.name}</h1>
               </div>
               <div className="comp-i-cntr">
                 <p>
