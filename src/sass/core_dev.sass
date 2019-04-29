@@ -1,132 +1,145 @@
-.clickable
-  display: table-cell
+
+.client-libs-img
+  height: $graf-height * 2
+  transform: translate(0, -$graf-border-width*2)
+.network-layer-img
+  height: $graf-height * 2.1
+.application-layer-img
+  height: $graf-height * 4.3
+
+.hlayout_4060
   width: 100%
-  font-size: 12px
+  display: table
+  .hlay-40
+    display: table-cell
+    width: 40%
+    height: 100%
+    vertical-align: top
+  .hlay-60
+    display: table-cell
+    width: 60%
+    height: 100%
+    vertical-align: middle
+.hlayout_5050
+  width: 100%
+  display: table
+  .hlay-50
+    display: table-cell
+    width: 50%
+    height: 100%
+    vertical-align: middle
+    &.top-align
+      vertical-align: top
+.hlayout_2080
+  width: 100%
+  display: table
+  .hlay-20
+    display: table-cell
+    width: 10%
+    height: 100%
+    vertical-align: top
+  .hlay-80
+    display: table-cell
+    width: 90%
+    height: 100%
+    vertical-align: middle
+.hlayout-65-10-25
+  width: 100%
+  display: table
+  .hlay-65
+    display: table-cell
+    width: 65%
+    height: 100%
+    vertical-align: top
+  .hlay-10
+    display: table-cell
+    width: 10%
+    height: 100%
+    vertical-align: bottom
+  .hlay-25
+    display: table-cell
+    width: 25%
+    height: 100%
+    vertical-align: bottom
+
+.clickable
+  +clearfix
+  display: block
+  width: 100%
+  font-size: 16px
   font-weight: bold
   text-align: center
   align-items: center
   align-content: center
-  border-style: solid
   vertical-align: middle
-  padding: 0px
+  padding: 2px
   background-color: $colr-blue
+  border-style: solid
   border-color: $colr-white
+  border-width: $graf-border-width
   color: $colr-white
-  height: 48px
+  height: $graf-height
+  word-break: keep-all
+  &:after
+    background-color: $colr-graf-dapp-f
+    content: "sdfsdf"
+    width: 234px
+    height: 8px
+    position: absolute
+    display: block
   &.dapp
-    width: 240px
     background-color: $colr-graf-dapp-b
     color: $colr-graf-dapp-f
-    &:after
-      background-color: $colr-graf-dapp-f
-      content: ""
-      width: 234px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-194px, 24px)
+    a
+      +link()
+      color: $colr-graf-dapp-f
   &.wapp
-    width: 240px
+    font-size: 28px
     background-color: $colr-graf-wapp-b
     color: $colr-graf-wapp-f
-    &:after
-      background-color: $colr-graf-wapp-f
-      content: ""
-      width: 234px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-146px, 24px)
+    a
+      +link()
+      color: $colr-graf-wapp-f
   &.bindings
-    width: 240px
     background-color: $colr-graf-bindings-b
     color: $colr-graf-bindings-f
-    &:after
-      background-color: $colr-graf-bindings-f
-      content: ""
-      width: 234px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-126px,21px)
-
+    a
+      +link()
+      color: $colr-graf-bindings-f
   &.browser
-    width: 240px
     background-color: $colr-graf-browser-b
     color: $colr-graf-browser-f
-    &:after
-      background-color: $colr-graf-browser-f
-      content: ""
-      width: 234px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-227px,30px)
+    a
+      +link()
+      color: $colr-graf-browser-f
   &.safe_app
-    width: 320px
     background-color: $colr-graf-app-b
     a
       +link()
       color: $colr-graf-app-f
     background-color: $colr-graf-app-b
     font-size: 28px
-    &:after
-      background-color: $colr-graf-app-f
-      content: ""
-      width: 314px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-222px,38px)
   &.safe_auth
-    width: 160px
     background-color: $colr-graf-auth-b
     a
       +link()
       color: $colr-graf-auth-f
       background-color: $colr-graf-auth-b
-    &:after
-      background-color: $colr-graf-auth-f
-      content: ""
-      width: 154px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-134px,28px)
   &.safe_core
-    width: 480px
     background-color: $colr-graf-core-b
     a
       +link()
       color: $colr-graf-core-f
       background-color: $colr-graf-core-b
       font-size: 28px
-    &:after
-      background-color: $colr-graf-core-f
-      content: ""
-      width: 473px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-307px, 38px)
   &.vault
-    width: 240px
     background-color: $colr-graf-vault-b
     a
       +link()
       color: $colr-graf-vault-f
       background-color: $colr-graf-vault-b
       font-size: 28px
-    &:after
-      background-color: $colr-graf-vault-f
-      content: ""
-      width: 234px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-159px, 38px)
   &.routing
-    width: 720px
     color: $colr-graf-routing-f
     background-color: $colr-graf-routing-b
     font-size: 28px
@@ -135,16 +148,7 @@
       color: $colr-graf-routing-f
       background-color: $colr-graf-routing-b
       font-size: 28px
-    &:after
-      background-color: $colr-graf-routing-f
-      content: ""
-      width: 713px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-408px, 36px)
   &.crusty
-    width: 720px
     color: $colr-graf-crust-f
     background-color: $colr-graf-crust-b
     font-size: 28px
@@ -153,28 +157,51 @@
       color: $colr-graf-crust-f
       background-color: $colr-graf-crust-b
       font-size: 28px
-    &:after
-      background-color: $colr-graf-crust-f
-      content: ""
-      width: 713px
-      height: 8px
-      position: absolute
-      top: inherit
-      transform: translate(-392px, 38px)
+.underline
+  @extend .clickable
+  height: $graf-underline_height
+  border: none
+  transform: translate($graf-border-width, -$graf-border-width*2)
+  width: calc(100% - 8px);
+  &.dapp
+    background-color: $colr-graf-dapp-f
+  &.wapp
+    background-color: $colr-graf-wapp-f
+  &.bindings
+    background-color: $colr-graf-bindings-f
+  &.browser
+    background-color: $colr-graf-browser-f
+  &.safe_app
+    background-color: $colr-graf-app-f
+  &.safe_auth
+    background-color: $colr-graf-auth-f
+  &.safe_core
+    background-color: $colr-graf-core-f
+  &.vault
+    background-color: $colr-graf-vault-f
+  &.routing
+    background-color: $colr-graf-routing-f
+  &.crusty
+    background-color: $colr-graf-crust-f
 .menugraphic
   @extend .base
   text-align: center
+  margin-top: 80px
+  margin-bottom: 40px
+  width: 80%
   h3
     +header-2-1()
-    margin-top: 20px
-    margin-bottom: 30px
+    margin-top: 0px
+    margin-bottom: 0px
     position: relative
   p
     +para()
     text-align: justify
     margin-bottom: 12px
   .section
+    margin: auto
     width: 100%
+    padding: 0
     align-self: center
     display: table
     .row

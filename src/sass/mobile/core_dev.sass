@@ -1,4 +1,61 @@
 @media screen and (max-width: 576px)
+  .client-libs-img
+    height: $graf-height * 1.5
+    transform: translate(0, -$graf-border-width)
+  .network-layer-img
+    height: $graf-height * 1.5
+    transform: translate(0, 2px)
+  .application-layer-img
+    height: $graf-height * 3.0
+  .clickable
+    height: $graf-height * 0.75
+    font-size: 8px
+    word-break: break-all
+    a
+      font-size: 8px
+    &.dapp
+    &.wapp
+      word-break: keep-all
+      font-size: 14px
+      a
+        font-size: 14px
+    &.bindings
+      font-size: 8px
+      a
+        font-size: 8px
+    &.browser
+      font-size: 8px
+      a
+        font-size: 8px
+    &.safe_app
+      font-size: 14px
+      a
+        font-size: 14px
+    &.safe_auth
+    &.safe_core
+      font-size: 22px
+      a
+        font-size: 22px
+    &.vault
+      word-break: keep-all
+      font-size: 14px
+      a
+        font-size: 14px
+    &.routing
+      font-size: 22px
+      a
+        font-size: 22px
+    &.crusty
+      font-size: 22px
+      a
+        font-size: 22px
+
+  .underline
+    height: $graf-underline_height/2
+    border: none
+    transform: translate($graf-border-width, -$graf-border-width)
+    width: calc(100% - 8px);
+
   .core-dev
     padding-top: 60px
     .content-intro
