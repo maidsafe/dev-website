@@ -11,7 +11,30 @@ import StackLyrNet from '../../public/images/tech_stack/layer_net.png';
 import StackLyrApp from '../../public/images/tech_stack/layer_app.png';
 import StackClientLibs from '../../public/images/tech_stack/client_libs.png';
 
+import { animateScroll as scroll } from 'react-scroll';
+
 class CoreDeveloper extends React.Component {
+
+  constructor() {
+    super();
+    window.addEventListener("hashchange", this.hashChange);
+    window.addEventListener("load", this.hashChange);
+  }
+
+  // Try to correct the scroll issue by rolling back a bit
+  hashChange() {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const targetHash = window.location.hash.split('#').pop();
+        if (!targetHash) {
+          return;
+        }
+        const targetEle = document.getElementById(targetHash);
+        scroll.scrollTo(targetEle.offsetTop - 100)
+      }, 100);
+    }
+  }
+
   render() {
     const { data } = this.props;
 
