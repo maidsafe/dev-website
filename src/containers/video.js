@@ -66,13 +66,15 @@ class Video extends React.Component {
     return (
 
     <section className="page">
+      {/*
       <div className="header">
         <h1>{title}</h1>
         <p>{summary}</p>
       </div>
+      */}
       <div className="content">
         <div className="vid-container">
-          <div className="tut-vid">
+          <div className="custom-video">
             <CustomVideo links={myVideo}/>
           </div>
         </div>

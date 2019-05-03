@@ -35,19 +35,19 @@ export default {
       webm: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialDotNet.webm',
     },
     xamarin: {
-      mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/TutorialXamarin.mp4',
-      ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/XamarinTutorial.ogv',
-      webm: '',
+      mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_Xamarin_RJ.mp4',
+      ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_Xamarin_RJ.ogv',
+      webm: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_Xamarin_RJ.webm',
     },
     nodejs: {
-      ogv: '',
-      mp4: '',
-      webm: ''
+      mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_NodeJS_HL.mp4',
+      ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_NodeJS_HL.ogv',
+      webm: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_NodeJS_HL.webm'
     },
     web: {
-      ogv: '',
-      mp4: '',
-      webm: ''
+      mp4: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_NodeJS_HL.mp4',
+      ogv: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_NodeJS_HL.ogv',
+      webm: 'https://s3.eu-west-2.amazonaws.com/ms-marketing/website-videos/Tutorial_NodeJS_HL.webm'
     }
   },
   locals: {

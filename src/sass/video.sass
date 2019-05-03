@@ -1,7 +1,7 @@
 .page
   margin-top: 0px
-  padding: 8px 0
-  margin-bottom: 40px
+  margin-bottom: 80px
+  width: 100%
   .header
     @extend .base
     margin-bottom: 20px
@@ -14,14 +14,13 @@
       +para()
       text-align: center
   .content
-    width: 100%
-    padding: 4px 20%
-    .vid-container
-      padding: 5px
-      width: 94%
-      margin: 3%
-      .tut-vid
-        height: 100%
-        width: auto
+    @extend .base
+    width: $video-large-w
+    align-items: center
+    align-self: center
+    align-content: center
+    .video-container
+      width: 100%
 footer
-  display: none
+  .footer-b
+    padding: 6px
