@@ -2,14 +2,11 @@ intro:
   title: Discover
   para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
   para2: "The following components and features represent key aspects of the Network:"
-  para3:
 authenticator:
-  title: The Authenticator
-  desc: Before browsing on the SAFE Network, users need to create an account via the Authenticator application. The Authenticator enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
+  title: Authentication
+  desc: Before writing data to the SAFE Network, users will need to create an account via the Safe Auth Daemon. The Auth Daemon enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
   para1:
-    chunk1: "The Authenticator is bundled with the SAFE Browser and registers a custom URL scheme "
-    highlight: "safe-auth://"
-    chunk2: ". Similarly every app registers their own safe-prefixed url-scheme. The process for authentication is as follows:"
+    chunk1: "The authenticator daemon is still a work in progress. It will enable IPC communication via QUIC."
   steps:
     - title: Application requests access
       icon: AUTH_1

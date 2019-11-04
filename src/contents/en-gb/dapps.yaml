@@ -1,7 +1,7 @@
 header:
   title: "Decentralised Apps (DApps)"
   description: "Desktop, Web and Mobile applications can all easily be built on the SAFE Network. You can work with several languages to bring your ideas to the new, decentralised internet."
-  existing: "Example DApps"
+  existing: "Example DApps that were created on the Alpha 2 Network. (No longer live as we transition to the Shared Vault Network)"
 getinvolved:
   name: "Got a DAPP to list?"
   href: 'https://forum.safedev.org/t/devhub-dapps-page-get-your-application-listed/2455'
@@ -135,24 +135,7 @@ items:
       - type: "Source"
         name: "GitHub"
         href: 'https://github.com/oetyng/SAFE.NetworkDrive/releases/latest'
-  - name: "Web Hosting Manager"
-    desc: "Create and host your own website on the SAFE Network."
-    platform: "Windows, MacOS, Linux"
-    logo: WEB_HOSTING_MANAGER
-    status: "Released"
-    detail:
-      - type: "Author"
-        name: "MaidSafe"
-        href: 'https://maidsafe.net'
-      - type: "App"
-        name: "Download"
-        href: 'https://github.com/maidsafe/safe-web-hosting-manager-electron/releases'
-      - type: "Documentation"
-        name: "ReadMe"
-        href: 'https://github.com/maidsafe/safe-web-hosting-manager-electron/blob/master/README.md'
-      - type: "Source"
-        name: "GitHub repo"
-        href: 'https://github.com/maidsafe/safe-web-hosting-manager-electron'
+
   - name: "Web ID Manager"
     desc: "Proof of concepts SAFE Web DApp for managing your identities and social networking on the SAFE Network."
     platform: "Web"

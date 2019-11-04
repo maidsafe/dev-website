@@ -68,10 +68,10 @@ class Discover extends React.Component {
             <p className="desc">{data.authenticator.desc}</p>
             <p className="desc">
               {`${data.authenticator.para1.chunk1}`}
-              <span className="highlight">
-                {data.authenticator.para1.highlight}
-              </span>
-              {`${data.authenticator.para1.chunk2}`}
+              // <span className="highlight">
+              //   {data.authenticator.para1.highlight}
+              // </span>
+              // {`${data.authenticator.para1.chunk2}`}
             </p>
             <div className="steps">
               {
@@ -176,39 +176,42 @@ class Discover extends React.Component {
             {/* <div className="def-cntr-quote">{data.containers.quote}</div> */}
           </div>
         </div>
-        <div className="data-types">
-          <div className="data-types-b base">
-            <h3 className="data-types-title">{data.dataTypes.title}</h3>
-            <p className="data-types-desc">{data.dataTypes.desc}</p>
-            {/* <Tabs data={data.dataTypes.types} type={CONST.tabTypes.WIZARD} tabNavWidth={this.tabNavWidth} /> */}
-            <div className="data-types-split">
-              <div className="data-types-split-b">
-                <div className="data-types-split-i">
-                  <h3 className="data-types-split-i-h">{data.dataTypes.types[0].name}</h3>
-                  <div className="data-types-split-i-feat">
-                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[0].features[0].title}</h4>
-                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[0].features[0].para}</p>
-                  </div>
-                  <div className="data-types-split-i-feat">
-                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[0].features[1].title}</h4>
-                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[0].features[1].para}</p>
-                  </div>
-                </div>
-                <div className="data-types-split-i">
-                  <h3 className="data-types-split-i-h">{data.dataTypes.types[1].name}</h3>
-                  <div className="data-types-split-i-feat">
-                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[1].features[0].title}</h4>
-                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[1].features[0].para}</p>
-                  </div>
-                  <div className="data-types-split-i-feat">
-                    <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[1].features[1].title}</h4>
-                    <p className="data-types-split-i-feat-p">{data.dataTypes.types[1].features[1].para}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {
+
+			// <div className="data-types">
+			// <div className="data-types-b base">
+			// <h3 className="data-types-title">{data.dataTypes.title}</h3>
+			// <p className="data-types-desc">{data.dataTypes.desc}</p>
+			// {/* <Tabs data={data.dataTypes.types} type={CONST.tabTypes.WIZARD} tabNavWidth={this.tabNavWidth} /> */}
+			// <div className="data-types-split">
+			// <div className="data-types-split-b">
+			// <div className="data-types-split-i">
+			// <h3 className="data-types-split-i-h">{data.dataTypes.types[0].name}</h3>
+			// <div className="data-types-split-i-feat">
+			// <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[0].features[0].title}</h4>
+			// <p className="data-types-split-i-feat-p">{data.dataTypes.types[0].features[0].para}</p>
+			// </div>
+			// <div className="data-types-split-i-feat">
+			// <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[0].features[1].title}</h4>
+			// <p className="data-types-split-i-feat-p">{data.dataTypes.types[0].features[1].para}</p>
+			// </div>
+			// </div>
+			// <div className="data-types-split-i">
+			// <h3 className="data-types-split-i-h">{data.dataTypes.types[1].name}</h3>
+			// <div className="data-types-split-i-feat">
+			// <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[1].features[0].title}</h4>
+			// <p className="data-types-split-i-feat-p">{data.dataTypes.types[1].features[0].para}</p>
+			// </div>
+			// <div className="data-types-split-i-feat">
+			// <h4 className="data-types-split-i-feat-h">{data.dataTypes.types[1].features[1].title}</h4>
+			// <p className="data-types-split-i-feat-p">{data.dataTypes.types[1].features[1].para}</p>
+			// </div>
+			// </div>
+			// </div>
+			// </div>
+			// </div>
+			// </div>
+		}
       </section>
     );
   }
