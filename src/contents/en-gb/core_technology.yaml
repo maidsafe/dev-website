@@ -26,38 +26,6 @@ components:
       anchor: "browser"
       name: "SAFE Browser & Authenticator plugin"
       github: 'https://github.com/maidsafe/safe_browser/'
-  crust:
-    anchor: "crust"
-    name: Crust
-    github: 'https://github.com/maidsafe/crust'
-    doc:
-      href: 'https://docs.rs/crust/'
-      img: 'https://docs.rs/crust/badge.svg'
-    crate:
-      href: 'https://crates.io/crates/crust'
-      img: 'http://meritbadge.herokuapp.com/crust'
-    para1:
-      chunk1: "Crust is a low level networking library that is optimised for peer-to-peer connections and data transportation.  Crust implements primitives to connect two peers together and start exchanging messages in a secure, reliable way. It supports multiple protocols ("
-      link1:
-        name: "UDP"
-        href: 'https://en.wikipedia.org/wiki/User_Datagram_Protocol'
-      chunk2: " and "
-      link2:
-        name: "TCP"
-        href: 'https://en.wikipedia.org/wiki/Transmission_Control_Protocol'
-      chunk3: ") and it is crypto secure - all communications, starting with handshake messages, are encrypted. It also provides other security features such as randomised ports which is used to prevent the targeting of a particular known port in order to conduct "
-      link3:
-        name: "DoS"
-        href: 'https://en.wikipedia.org/wiki/Denial-of-service_attack'
-      chunk4: " attacks. Crust implements several "
-      link4:
-        name: "NAT traversal"
-        href: 'https://en.wikipedia.org/wiki/NAT_traversal'
-      chunk5: " techniques such as hole punching and use of "
-      link5:
-        name: "IGD"
-        href: 'https://en.wikipedia.org/wiki/Internet_Gateway_Device_Protocol'
-      chunk6: "."
   routing:
     anchor: "routing"
     name: Routing

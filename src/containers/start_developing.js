@@ -27,20 +27,22 @@ class AppDev extends React.Component {
 
     return (
       <section className="app-dev">
-        <div className="platform-links">
-          <div className="platform-links-b">
-            {
-              data.platformLinks.map((platform, i) => (
-                <div key={`platform-link-${i}`} className="platform-link-i">
-                  <a href={platform.href}>
-                    <div className={`icn ${platform.icon}`}></div>
-                    <div className="name">{platform.name}</div>
-                  </a>
-                </div>
-              ))
-            }
-          </div>
-        </div>
+        {
+		// <div className="platform-links">
+        //   <div className="platform-links-b">
+        //     {
+        //       data.platformLinks.map((platform, i) => (
+        //         <div key={`platform-link-${i}`} className="platform-link-i">
+        //           <a href={platform.href}>
+        //             <div className={`icn ${platform.icon}`}></div>
+        //             <div className="name">{platform.name}</div>
+        //           </a>
+        //         </div>
+        //       ))
+        //     }
+        //   </div>
+        // </div>
+		}
         <div className="intro">
           <div className="intro-b layout5050">
             <div className="intro-sec-1 lay-50">
@@ -131,48 +133,25 @@ class AppDev extends React.Component {
             </div>
           </div>
         </div>
+		{
+			// <div className="access-net">
+			//   <div className="access-net-b layout4060">
+			//     <div className="lay-40">
+			//       <div className="dual-tone-text">
+			//         <span className="dark">{data.accessingNetwork.title.dark}</span>
+			//         <span className="light">{data.accessingNetwork.title.light}</span>
+			//         <p>{data.accessingNetwork.para1.chunk1}<a href={data.accessingNetwork.para1.link.href}>{data.accessingNetwork.para1.link.name}</a>{data.accessingNetwork.para1.chunk2}</p>
+			//         <p>{data.accessingNetwork.para2}</p>
+			//         <p>{`${data.accessingNetwork.para3.chunk} `}<a href={data.accessingNetwork.para3.link.href}>{data.accessingNetwork.para3.link.name}</a></p>
+			//       </div>
+			//     </div>
+			//     <div className="lay-60">
+			//       <img src={AccessNetwork} />
+			//     </div>
+			//   </div>
+			// </div>
 
-        <div className="access-net">
-          <div className="access-net-b layout4060">
-            <div className="lay-40">
-              <div className="dual-tone-text">
-                <span className="dark">{data.accessingNetwork.title.dark}</span>
-                <span className="light">{data.accessingNetwork.title.light}</span>
-                <p>{data.accessingNetwork.para1.chunk1}<a href={data.accessingNetwork.para1.link.href}>{data.accessingNetwork.para1.link.name}</a>{data.accessingNetwork.para1.chunk2}</p>
-                <p>{data.accessingNetwork.para2}</p>
-                <p>{`${data.accessingNetwork.para3.chunk} `}<a href={data.accessingNetwork.para3.link.href}>{data.accessingNetwork.para3.link.name}</a></p>
-              </div>
-            </div>
-            <div className="lay-60">
-              <img src={AccessNetwork} />
-            </div>
-          </div>
-        </div>
-
-        <div className="platforms">
-          <div className="platforms-b layout5050">
-            <div className="platform-sec-1 lay-50">
-              <div className="dual-tone-text">
-                <span className="light">{data.platforms.title}</span>
-                <p>{data.platforms.desc.chunk1}<a target="_blank" href={data.platforms.desc.link.href}>{data.platforms.desc.link.name}</a>{data.platforms.desc.chunk2}</p>
-              </div>
-            </div>
-            <div className="platform-sec-2 lay-50">
-              <div className="platform-cntr">
-                {
-                  data.platformLinks.map((platform, i) => (
-                    <div key={`platform-${i}`} className="platform-i">
-                      <a href={platform.href}>
-                        <div className={`icn ${platform.icon}`}></div>
-                        <div className="name">{platform.name}</div>
-                      </a>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-        </div>
+		}
       </section>
     );
   }

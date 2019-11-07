@@ -18,49 +18,10 @@ class Docs extends React.Component {
            <h1>{data.docs.title}</h1>
             <h2>{data.platform.title}</h2>
             <p>{data.platform.summary}</p>
+            <p>Right now development of simpler, dev-facing APIs is underway. As such documentation is still to be finalised, but <a href="https://github.com/maidsafe/safe-api/blob/master/README.md" target="_blank">you can access the latest Safe-Api documentation at the repo.</a></p>
           </div>
 
-          <div className="main-section layoutHalfHalf">
 
-            {/* Tutorials section - left 50% */}
-            <div className="lay-half">
-              <h3>{data.tutorials.title}</h3>
-              {/* Tutorial documentation */}
-
-              <div className="list"> {
-
-                data.tutorials.items.map((key, i) => (
-                  <div key={`key-items-${i}`} className="item">
-                    <p>
-                    <a href={key.href}>
-                      <div className={`icn ${key.icon}`}></div>
-                      <div className="name">{key.name}</div>
-                    </a>
-                    </p>
-                  </div>
-                )) }
-              </div>
-            </div>
-
-            {/* API section - right 50% */}
-            <div className="lay-half">
-              <h3>{data.api.title}</h3>
-              {/* API documentation items */}
-              <div className="list"> {
-                data.api.items.map((key, i) => (
-                  <div key={`key-items-${i}`} className="item">
-                    <p>
-                    <a href={key.href}>
-                      <div className={`icn ${key.icon}`}></div>
-                      <div className="name">{key.name}</div>
-                    </a>
-                    </p>
-                  </div>
-                )) }
-              </div>
-            </div>
-
-          </div>
 
           {/* Core libraries - Rust */}
           <div className="core main">

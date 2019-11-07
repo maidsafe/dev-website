@@ -68,6 +68,7 @@ class Dapps extends React.Component {
           {/* Section title */}
           <div className="title">
             <h2>{data.header.existing}</h2>
+			<p>{data.header.note}</p>
           </div>
 
           {/* Repeating section for each entry */}

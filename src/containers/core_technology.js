@@ -159,12 +159,6 @@ class CoreDeveloper extends React.Component {
                     </div>
                     <div className="underline routing"/>
                   </div>
-                  <div className="section">
-                    <div className="clickable crusty">
-                      <a href={data.anchor.concat(data.components.crust.anchor)}>{data.components.crust.name}</a>
-                    </div>
-                    <div className="underline crusty"/>
-                  </div>
                 </div>
               </div>
             </div>
@@ -178,35 +172,6 @@ class CoreDeveloper extends React.Component {
           {/* -------------------------------------------------------------- */}
           <div className="content-comp">
             {/*<h1>{data.components.title}</h1>*/}
-
-            {/* =========================== */}
-            {/* ======    CRUST     ======= */}
-            {/* =========================== */}
-            <div className="comp-i">
-              <div className="comp-i-head">
-                <h1 id={data.components.crust.anchor}>{data.components.crust.name}</h1>
-              </div>
-              <div className="comp-i-cntr">
-                <p>
-                  {data.components.crust.para1.chunk1}
-                  <a href={data.components.crust.para1.link1.href} target="_blank">{data.components.crust.para1.link1.name}</a>
-                  {data.components.crust.para1.chunk2}
-                  <a href={data.components.crust.para1.link2.href} target="_blank">{data.components.crust.para1.link2.name}</a>
-                  {data.components.crust.para1.chunk3}
-                  <a href={data.components.crust.para1.link3.href} target="_blank">{data.components.crust.para1.link3.name}</a>
-                  {data.components.crust.para1.chunk4}
-                  <a href={data.components.crust.para1.link4.href} target="_blank">{data.components.crust.para1.link4.name}</a>
-                  {data.components.crust.para1.chunk5}
-                  <a href={data.components.crust.para1.link5.href} target="_blank">{data.components.crust.para1.link5.name}</a>
-                  {data.components.crust.para1.chunk6}
-                </p>
-              </div>
-              <div className="comp-links">
-                <div className="git-btn"><a href={data.components.crust.github} target="_blank"></a></div>
-                <a href={data.components.crust.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.crust.crate.href} target="_blank"><img src={CratesLogo}></img></a>
-              </div>
-            </div>
 
             {/* =========================== */}
             {/* ======    ROUTING    ====== */}
