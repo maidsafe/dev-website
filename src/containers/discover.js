@@ -68,10 +68,12 @@ class Discover extends React.Component {
             <p className="desc">{data.authenticator.desc}</p>
             <p className="desc">
               {`${data.authenticator.para1.chunk1}`}
-              // <span className="highlight">
-              //   {data.authenticator.para1.highlight}
-              // </span>
-              // {`${data.authenticator.para1.chunk2}`}
+			  {
+				  // <span className="highlight">
+				  //   {data.authenticator.para1.highlight}
+				  // </span>
+				  // {`${data.authenticator.para1.chunk2}`}
+			  }
             </p>
             <div className="steps">
               {

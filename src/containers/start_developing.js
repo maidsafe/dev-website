@@ -133,23 +133,25 @@ class AppDev extends React.Component {
             </div>
           </div>
         </div>
+		{
+			// <div className="access-net">
+			//   <div className="access-net-b layout4060">
+			//     <div className="lay-40">
+			//       <div className="dual-tone-text">
+			//         <span className="dark">{data.accessingNetwork.title.dark}</span>
+			//         <span className="light">{data.accessingNetwork.title.light}</span>
+			//         <p>{data.accessingNetwork.para1.chunk1}<a href={data.accessingNetwork.para1.link.href}>{data.accessingNetwork.para1.link.name}</a>{data.accessingNetwork.para1.chunk2}</p>
+			//         <p>{data.accessingNetwork.para2}</p>
+			//         <p>{`${data.accessingNetwork.para3.chunk} `}<a href={data.accessingNetwork.para3.link.href}>{data.accessingNetwork.para3.link.name}</a></p>
+			//       </div>
+			//     </div>
+			//     <div className="lay-60">
+			//       <img src={AccessNetwork} />
+			//     </div>
+			//   </div>
+			// </div>
 
-        <div className="access-net">
-          <div className="access-net-b layout4060">
-            <div className="lay-40">
-              <div className="dual-tone-text">
-                <span className="dark">{data.accessingNetwork.title.dark}</span>
-                <span className="light">{data.accessingNetwork.title.light}</span>
-                <p>{data.accessingNetwork.para1.chunk1}<a href={data.accessingNetwork.para1.link.href}>{data.accessingNetwork.para1.link.name}</a>{data.accessingNetwork.para1.chunk2}</p>
-                <p>{data.accessingNetwork.para2}</p>
-                <p>{`${data.accessingNetwork.para3.chunk} `}<a href={data.accessingNetwork.para3.link.href}>{data.accessingNetwork.para3.link.name}</a></p>
-              </div>
-            </div>
-            <div className="lay-60">
-              <img src={AccessNetwork} />
-            </div>
-          </div>
-        </div>
+		}
       </section>
     );
   }
