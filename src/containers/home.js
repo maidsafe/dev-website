@@ -27,23 +27,23 @@ class Home extends React.Component {
 
             </p>
           </div>
+		  // <section className="platform">
+		  //   <div className="platform-links">
+		  //     <div className="platform-links-b">
+		  //       {
+		  //         data.platformLinks.map((platform, i) => (
+		  //           <div key={`platform-link-${i}`} className="platform-link-i">
+		  //             <a href={platform.href}>
+		  //               <div className={`icn ${platform.icon}`}></div>
+		  //               <div className="name">{platform.name}</div>
+		  //             </a>
+		  //           </div>
+		  //         ))
+		  //       }
+		  //     </div>
+		  //   </div>
+		  // </section>
           */}
-          <section className="platform">
-            <div className="platform-links">
-              <div className="platform-links-b">
-                {
-                  data.platformLinks.map((platform, i) => (
-                    <div key={`platform-link-${i}`} className="platform-link-i">
-                      <a href={platform.href}>
-                        <div className={`icn ${platform.icon}`}></div>
-                        <div className="name">{platform.name}</div>
-                      </a>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          </section>
 
           <div className="hom-bnr-2">
             <div className="hom-bnr-2-cntx">
