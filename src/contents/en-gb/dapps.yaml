@@ -7,9 +7,9 @@ getinvolved:
   name: "Got a DAPP to list?"
   href: 'https://forum.safedev.org/t/devhub-dapps-page-get-your-application-listed/2455'
 items:
-  - name: "Safe Network App"
+  - name: "SAFE Network App"
     desc: "The SAFE Network's staring point. Download other SAFE Apps, manage accounts and more (soon)."
-    platform: "Windows, MacOS, Linux"
+    platform: "Windows, macOS, Linux"
     # logo: SAFE_BROWSER
     status: Released
     detail:
@@ -18,7 +18,7 @@ items:
         href: 'https://maidsafe.net'
       - type: "App"
         name: "Download"
-        href: 'https://github.com/maidsafe/safe-network-app/releases'
+        href: 'https://github.com/maidsafe/safe-network-app/releases/latest'
      # - type: "Documentation"
      #   name: "ReadMe"
      #   href: 'https://github.com/maidsafe/safe-network-app/blob/master/README.md'
@@ -27,7 +27,7 @@ items:
         href: 'https://github.com/maidsafe/safe-network-app'
   - name: "SAFE Browser"
     desc: "The SAFE Network's default browser."
-    platform: "Windows, MacOS, Linux"
+    platform: "Windows, macOS, Linux"
     logo: SAFE_BROWSER
     status: Released
     detail:
@@ -36,7 +36,7 @@ items:
         href: 'https://maidsafe.net'
       - type: "App"
         name: "Download"
-        href: 'https://github.com/maidsafe/safe_browser/releases'
+        href: 'https://github.com/maidsafe/safe_browser/releases/latest'
       - type: "Documentation"
         name: "ReadMe"
         href: 'https://github.com/maidsafe/safe_browser/blob/master/README.md'
@@ -109,7 +109,7 @@ items:
 
   - name: "SAFE Drive"
     desc: "Alpha 2 App: Access SAFE data as if it is on your local drive (e.g. as ~/SAFE on Linux or Mac and as c://SAFE on Windows."
-    platform: "Windows, MacOS, Linux"
+    platform: "Windows, macOS, Linux"
     logo: SAFE_DRIVE
     status: "In Development"
     detail:

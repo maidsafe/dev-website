@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    // window.addEventListener('scroll', this.handleScroll); // Disable fixed header because it's buggy
   }
 
   handleScroll(e) {
