@@ -49,8 +49,8 @@ class Platform extends React.Component {
         this.hideNav();
       }, false)
     }
-    window.addEventListener("hashchange", this.hashChange);
-    window.addEventListener("load", this.hashChange);
+    // window.addEventListener("hashchange", this.hashChange);
+    // window.addEventListener("load", this.hashChange);
   }
 
   hashChange() {

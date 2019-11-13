@@ -105,7 +105,7 @@ class Header extends React.Component {
           <Link className={classNames({
             selected: this.state.discoverNav
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
-          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Dev<span className="extend">Forum</span></Link>
+          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Dev Forum</Link>
         </nav>
       </header>
     );

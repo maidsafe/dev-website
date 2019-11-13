@@ -17,8 +17,8 @@ class CoreDeveloper extends React.Component {
 
   constructor() {
     super();
-    window.addEventListener("hashchange", this.hashChange);
-    window.addEventListener("load", this.hashChange);
+    // window.addEventListener("hashchange", this.hashChange);
+    // window.addEventListener("load", this.hashChange);
   }
 
   // Try to correct the scroll issue by rolling back a bit
@@ -159,6 +159,12 @@ class CoreDeveloper extends React.Component {
                     </div>
                     <div className="underline routing"/>
                   </div>
+                  <div className="section">
+                    <div className="clickable quic-p2p">
+                      <a href={data.anchor.concat(data.components.quic_p2p.anchor)}>{data.components.quic_p2p.name}</a>
+                    </div>
+                    <div className="underline quic-p2p"/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -168,10 +174,29 @@ class CoreDeveloper extends React.Component {
           </div>
 
           {/* -------------------------------------------------------------- */}
-          {/*   NETWORK LAYER - CRUST & ROUTING                              */}
+          {/*   NETWORK LAYER - quic-p2p & ROUTING                           */}
           {/* -------------------------------------------------------------- */}
           <div className="content-comp">
             {/*<h1>{data.components.title}</h1>*/}
+
+            {/* =========================== */}
+            {/* ======   quic-p2p   ======= */}
+            {/* =========================== */}
+            <div className="comp-i">
+              <div className="comp-i-head">
+                <h1 id={data.components.quic_p2p.anchor}>{data.components.quic_p2p.name}</h1>
+              </div>
+              <div className="comp-i-cntr">
+                <p>
+                  {data.components.quic_p2p.para1}
+                </p>
+              </div>
+              <div className="comp-links">
+                <div className="git-btn"><a href={data.components.quic_p2p.github} target="_blank"></a></div>
+                <a href={data.components.quic_p2p.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.quic_p2p.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+              </div>
+            </div>
 
             {/* =========================== */}
             {/* ======    ROUTING    ====== */}

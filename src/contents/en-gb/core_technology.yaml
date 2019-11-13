@@ -17,7 +17,7 @@ components:
     wapp:
       anchor: "wapp"
       name: "Web Apps"
-      href: '/platform/web'
+      href: '/start_developing'
     bindings:
       anchor: "bindings"
       name: "Language bindings (Javascript, Java, C#)"
@@ -26,6 +26,17 @@ components:
       anchor: "browser"
       name: "SAFE Browser & Authenticator plugin"
       github: 'https://github.com/maidsafe/safe_browser/'
+  quic_p2p:
+    anchor: "quic-p2p"
+    name: quic-p2p
+    github: 'https://github.com/maidsafe/quic-p2p'
+    doc:
+      href: 'https://docs.rs/quic-p2p/'
+      img: 'https://docs.rs/quic-p2p/badge.svg'
+    crate:
+      href: 'https://crates.io/crates/quic-p2p'
+      img: 'http://meritbadge.herokuapp.com/quic-p2p'
+    para1: "This library provides a mechanism for peers on P2P networks to communicate securely."
   routing:
     anchor: "routing"
     name: Routing
@@ -36,7 +47,7 @@ components:
     crate:
       href: 'https://crates.io/crates/routing'
       img: 'http://meritbadge.herokuapp.com/routing'
-    para1: Routing sits on top of Crust. It is our overlay networking and routing layer and forms the brain of the SAFE Network. Its purpose is forming a decentralised Internet and the routing information within it.
+    para1: Routing sits on top of quic-p2p. It is our overlay networking and routing layer and forms the brain of the SAFE Network. Its purpose is forming a decentralised Internet and the routing information within it.
     para2:
       chunk1: Routing is based on an algorithm that extends the
       link1:
@@ -76,7 +87,7 @@ components:
     name: SAFE Client Libs
     github: 'https://github.com/maidsafe/safe_client_libs'
     para1:
-      chunk1: "The SAFE Client Libraries are a set of libraries providing a way for developers to consume and use the SAFE Network facilities. The libraries communicate with Vaults and build upon the foundation of fundamental network components, such as Crust and Routing, to provide higher-level network abstractions like files and directories. The main Client Libs components are:"
+      chunk1: "The SAFE Client Libraries are a set of libraries providing a way for developers to consume and use the SAFE Network facilities. The libraries communicate with Vaults and build upon the foundation of fundamental network components, such as quic-p2p and Routing, to provide higher-level network abstractions like files and directories. The main Client Libs components are:"
     comp:
       name: Components
       safe_core:

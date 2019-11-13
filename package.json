@@ -15,7 +15,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
-    "react-scroll": "^1.7.9",
+    "react-scroll": "^1.7.14",
     "react-static": "lionel1704/react-static",
     "react-syntax-highlighter": "^7.0.2"
   },
