@@ -75,5 +75,3 @@ rust:
      href: "https://docs.rs/safe_vault"
    - name: "self_encryption"
      href: "https://docs.rs/self_encryption"
-   - name: "system_uri"
-     href: "https://docs.rs/system_uri"

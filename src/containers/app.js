@@ -1,9 +1,8 @@
-import React from 'react';
-import { Router, Link } from 'react-static';
+import React, { useEffect } from 'react'
+import { Root, Routes } from 'react-static';
+import { useHistory } from 'react-router-dom'
 import { hot } from 'react-hot-loader';
-
 //
-import Routes from 'react-static-routes';
 import Header from './partials/header';
 import Footer from './partials/footer';
 import CONST from '../constants';
@@ -29,16 +28,28 @@ class App extends React.Component {
   }
   render() {
     const isScrolling = !(this.state.yPos <= 10);
+
+    const ScrollRestoration = () => {
+      const history = useHistory()
+      useEffect(() => {
+        if (history.action !== 'POP') {
+          window.scrollTo(0, 0)
+        }
+      }, [history.location.pathname])
+      return null
+    }
+
     return (
-      <Router>
-        <div className="root-b">
+      <Root>
+        <React.Suspense fallback={<span>Loading...</span>}>
+          <ScrollRestoration />
           <Header isScrolling={isScrolling} />
           <main className="content">
             <Routes />
           </main>
           <Footer />
-        </div>
-      </Router>
+        </React.Suspense>
+      </Root>
     )
   }
 }

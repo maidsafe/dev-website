@@ -28,11 +28,11 @@ networks:
       para2: This saves a great deal of time and provides a safe space for you to initially test operations.
     - name: Local Network
       id: localNetwork
-      para1: A local SAFE Network can be created by running several vaults on a LAN, or even on the same computer, which any application can then be configured to connect to.
+      para1: A local SAFE Network can be created by running a vault on your computer, which any application can then be configured to connect to.
       para2: This is also a good way to save time when testing and debugging applications before they are ready to connect to the actual network.
       btnLink:
-        name: Know more
-        link: https://forum.safedev.org/t/how-to-run-a-local-test-network/842
+        name: Learn more
+        link: https://safenetforum.org/t/new-release-vault-phase-1-real-vault/29712
     - name: Actual Routing
       id: actualRouting
       para1: The SAFE Browser or any other application can also use the public testnets.
@@ -43,7 +43,7 @@ vault:
   para: The Vault software is a small executable file that connects the user’s machine to the SAFE Network. It manages the storage of data chunks on the user’s computer and in that way, it provides storage capacity to the network. It also routes and caches encrypted data chunks over the network making use of fully encrypted connections to other Vaults.
   btnLink:
     name: Develop
-    link: 'https://forum.safedev.org/t/how-to-run-a-local-test-network'
+    link: 'https://safenetforum.org/t/new-release-vault-phase-1-real-vault/29712'
 containers:
   title: Default Containers
   desc:

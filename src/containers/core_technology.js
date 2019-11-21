@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
+import { HashLink as Link } from 'react-router-hash-link'
 //
 import Wrapper from './partials/wrapper';
 import NetworkLayers from '../../public/images/network_layer.svg';
@@ -11,7 +12,7 @@ import StackLyrNet from '../../public/images/tech_stack/layer_net.png';
 import StackLyrApp from '../../public/images/tech_stack/layer_app.png';
 import StackClientLibs from '../../public/images/tech_stack/client_libs.png';
 
-import { animateScroll as scroll } from 'react-scroll';
+// import { animateScroll as scroll } from 'react-scroll';
 
 class CoreDeveloper extends React.Component {
 
@@ -22,18 +23,18 @@ class CoreDeveloper extends React.Component {
   }
 
   // Try to correct the scroll issue by rolling back a bit
-  hashChange() {
-    if (typeof window !== 'undefined') {
-      setTimeout(() => {
-        const targetHash = window.location.hash.split('#').pop();
-        if (!targetHash) {
-          return;
-        }
-        const targetEle = document.getElementById(targetHash);
-        scroll.scrollTo(targetEle.offsetTop - 100)
-      }, 100);
-    }
-  }
+  // hashChange() {
+  //   if (typeof window !== 'undefined') {
+  //     setTimeout(() => {
+  //       const targetHash = window.location.hash.split('#').pop();
+  //       if (!targetHash) {
+  //         return;
+  //       }
+  //       const targetEle = document.getElementById(targetHash);
+  //       scroll.scrollTo(targetEle.offsetTop - 100)
+  //     }, 100);
+  //   }
+  // }
 
   render() {
     const { data } = this.props;
@@ -47,7 +48,7 @@ class CoreDeveloper extends React.Component {
           {/* -------------------------------------------------------------- */}
           <div className="content-intro">
             <h1>{data.pageIntro.title}</h1>
-            <p>{data.pageIntro.para1.chunk1}&nbsp;<a href={data.pageIntro.para1.link.href}>{data.pageIntro.para1.link.name}</a>&nbsp;{data.pageIntro.para1.chunk2}</p>
+            <p>{data.pageIntro.para1.chunk1}&nbsp;<Link to={data.pageIntro.para1.link.href}>{data.pageIntro.para1.link.name}</Link>&nbsp;{data.pageIntro.para1.chunk2}</p>
 
             {/* ------------------------------------------------------------ */}
             {/* CLICKABLE NETWORK GRAPHUC MENU - NOT LIVE YET                */}
@@ -71,17 +72,17 @@ class CoreDeveloper extends React.Component {
                       <div className="section hlayout_5050">
                         <div className="hlay-50">
                           <div className="clickable dapp">
-                            <a href={data.components.app_layer.dapp.href}>
+                            <Link to={data.components.app_layer.dapp.href}>
                               {data.components.app_layer.dapp.name}
-                            </a>
+                            </Link>
                           </div>
                           <div className="underline dapp"/>
                         </div>
                         <div className="hlay-50">
                           <div className="clickable wapp">
-                            <a href={data.components.app_layer.wapp.href}>
+                            <Link to={data.components.app_layer.wapp.href}>
                               {data.components.app_layer.wapp.name}
-                            </a>
+                            </Link>
                           </div>
                           <div className="underline wapp"/>
                         </div>
@@ -109,13 +110,13 @@ class CoreDeveloper extends React.Component {
                       <div className="section hlayout_4060">
                         <div className="hlay-60">
                           <div className="clickable safe_app">
-                            <a href={data.anchor.concat(data.components.c_libs.comp.safe_app.anchor)}>{data.components.c_libs.comp.safe_app.name}</a>
+                            <Link smooth to={data.anchor.concat(data.components.c_libs.comp.safe_app.anchor)}>{data.components.c_libs.comp.safe_app.name}</Link>
                           </div>
                           <div className="underline safe_app"/>
                         </div>
                         <div className="hlay-40">
                           <div className="clickable safe_auth">
-                            <a href={data.anchor.concat(data.components.c_libs.comp.safe_auth.anchor)}>{data.components.c_libs.comp.safe_auth.name}</a>
+                            <Link smooth to={data.anchor.concat(data.components.c_libs.comp.safe_auth.anchor)}>{data.components.c_libs.comp.safe_auth.name}</Link>
                           </div>
                           <div className="underline safe_auth"/>
                         </div>
@@ -123,21 +124,21 @@ class CoreDeveloper extends React.Component {
 
                       <div className="section">
                         <div className="clickable safe_core">
-                          <a href={data.anchor.concat(data.components.c_libs.comp.safe_core.anchor)}>{data.components.c_libs.comp.safe_core.name}</a>
+                          <Link smooth to={data.anchor.concat(data.components.c_libs.comp.safe_core.anchor)}>{data.components.c_libs.comp.safe_core.name}</Link>
                         </div>
                         <div className="underline safe_core"/>
                       </div>
                     </div>
                     <div className="hlay-10">
                       <div className="client-libs-img">
-                        <a href={data.anchor.concat(data.components.c_libs.anchor)}>
+                        <Link smooth to={data.anchor.concat(data.components.c_libs.anchor)}>
                           <img src={StackClientLibs} alt="Client Libs" height="100%"/>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="hlay-25">
                       <div className="clickable vault">
-                        <a href={data.anchor.concat(data.components.vault.anchor)}>{data.components.vault.name}</a>
+                        <Link smooth to={data.anchor.concat(data.components.vault.anchor)}>{data.components.vault.name}</Link>
                       </div>
                       <div className="underline vault"/>
                     </div>
@@ -155,13 +156,13 @@ class CoreDeveloper extends React.Component {
                 <div className="hlay-80">
                   <div className="section">
                     <div className="clickable routing">
-                      <a href={data.anchor.concat(data.components.routing.anchor)}>{data.components.routing.name}</a>
+                      <Link smooth to={data.anchor.concat(data.components.routing.anchor)}>{data.components.routing.name}</Link>
                     </div>
                     <div className="underline routing"/>
                   </div>
                   <div className="section">
                     <div className="clickable quic-p2p">
-                      <a href={data.anchor.concat(data.components.quic_p2p.anchor)}>{data.components.quic_p2p.name}</a>
+                      <Link smooth to={data.anchor.concat(data.components.quic_p2p.anchor)}>{data.components.quic_p2p.name}</Link>
                     </div>
                     <div className="underline quic-p2p"/>
                   </div>
@@ -346,16 +347,6 @@ class CoreDeveloper extends React.Component {
                 <a href={data.components.c_libs.auxs.bindgen.crate.href} target="_blank">
                   <img src={CratesLogo}></img>
                 </a>
-              </div>
-
-              {/* === System_URI === */}
-              <div className="comp-i-cntr">
-                <b id={data.components.c_libs.auxs.uri.anchor}>{data.components.c_libs.auxs.uri.name}</b>: {data.components.c_libs.auxs.uri.para1.chunk1}
-              </div>
-              <div className="comp-links">
-                <div className="git-btn"><a href={data.components.c_libs.auxs.uri.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.auxs.uri.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.c_libs.auxs.uri.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
           </div>

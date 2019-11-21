@@ -156,18 +156,6 @@ components:
         crate:
           href: 'https://crates.io/crates/safe_bindgen'
           img: 'http://meritbadge.herokuapp.com/safe_bindgen'
-      uri:
-        anchor: "uri"
-        name: System URI
-        para1:
-          chunk1: Helps to setup custom URI handlers on different operating systems (Windows, Mac, Linux). Required for a proper functioning of the IPC mechanism.
-        github: 'https://github.com/maidsafe/system_uri'
-        doc:
-          href: 'https://docs.rs/system_uri'
-          img: 'https://docs.rs/system_uri/badge.svg'
-        crate:
-          href: 'https://crates.io/crates/system_uri'
-          img: 'http://meritbadge.herokuapp.com/system_uri'
 util:
   anchor: "utils"
   title: Utilities and Helper Libraries

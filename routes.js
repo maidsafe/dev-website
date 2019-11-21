@@ -39,35 +39,35 @@ const getLocalContent = (local, fileName) => {
 export default [
   {
     path: '/',
-    component: 'src/containers/home',
+    template: 'src/containers/home',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.HOME))
     })
   },
   {
     path: '/start_developing',
-    component: 'src/containers/start_developing',
+    template: 'src/containers/start_developing',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV))
     })
   },
   {
     path: '/core_technology',
-    component: 'src/containers/core_technology',
+    template: 'src/containers/core_technology',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.CORE_TECH))
     })
   },
   {
     path: '/discover',
-    component: 'src/containers/discover',
+    template: 'src/containers/discover',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DISCOVER))
     })
   },
   {
     path: '/platform/nodejs',
-    component: 'src/containers/platform',
+    template: 'src/containers/platform',
     getData: () => {
       const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
       const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_NODEJS));
@@ -83,7 +83,7 @@ export default [
   },
   {
     path: '/platform/web',
-    component: 'src/containers/platform',
+    template: 'src/containers/platform',
     getData: () => {
       const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
       const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_WEB));
@@ -99,49 +99,49 @@ export default [
   },
   {
     path: '/licensing',
-    component: 'src/containers/licensing',
+    template: 'src/containers/licensing',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.LICENSING)),
     }),
   },
   {
     path: '/parsec',
-    component: 'src/containers/parsec',
+    template: 'src/containers/parsec',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PARSEC))
     })
   },
   {
     path: '/crust',
-    component: 'src/containers/crust',
+    template: 'src/containers/crust',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.CRUST))
     })
   },
   {
     path: '/glossary',
-    component: 'src/containers/glossary',
+    template: 'src/containers/glossary',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.GLOSSARY))
     })
   },
   {
     path: '/docs',
-    component: 'src/containers/docs',
+    template: 'src/containers/docs',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DOCS))
     })
   },
   {
     path: '/dapps',
-    component: 'src/containers/dapps',
+    template: 'src/containers/dapps',
     getData: () => ({
       data: parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.DAPPS))
     })
   },
   {
     path: '/platform/android',
-    component: 'src/containers/platform',
+    template: 'src/containers/platform',
     getData: () => {
       const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
       const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_ANDROID));
@@ -157,7 +157,7 @@ export default [
   },
   {
     path: '/platform/dotnet',
-    component: 'src/containers/platform',
+    template: 'src/containers/platform',
     getData: () => {
       const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
       const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_DOTNET));
@@ -173,7 +173,7 @@ export default [
   },
   {
     path: '/platform/xamarin',
-    component: 'src/containers/platform',
+    template: 'src/containers/platform',
     getData: () => {
       const otherPlatforms = parser.yamlToJson(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.START_DEV)).platformLinks;
       const content = parser.md(getLocalContent(CONST.locals.EN_GB, CONTENT_FILE.PLATFORM_XAMARIN));
@@ -188,7 +188,7 @@ export default [
     },
   },
   {
-    is404: true,
-    component: 'src/containers/404',
+    path: '404',
+    template: 'src/containers/404',
   }
 ];

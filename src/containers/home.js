@@ -1,5 +1,6 @@
 import React from 'react'
-import { withRouteData, Link } from 'react-static'
+import { withRouteData } from 'react-static'
+import { Link } from 'react-router-dom'
 //
 import Wrapper from './partials/wrapper';
 import Contribute from '../../public/images/contribute.svg';
@@ -94,17 +95,17 @@ class Home extends React.Component {
                 <div className="contribute-i app">
                   <h3>{data.contribute.appDev.title}</h3>
                   <p>{data.contribute.appDev.desc}</p>
-                  <a href={data.contribute.appDev.link.href}>{data.contribute.appDev.link.name}</a>
+                  <Link to={data.contribute.appDev.link.href}>{data.contribute.appDev.link.name}</Link>
                 </div>
                 <div className="contribute-i core">
                   <h3>{data.contribute.coreDev.title}</h3>
                   <p>{data.contribute.coreDev.desc}</p>
-                  <a href={data.contribute.coreDev.link.href}>{data.contribute.coreDev.link.name}</a>
+                  <Link to={data.contribute.coreDev.link.href}>{data.contribute.coreDev.link.name}</Link>
                 </div>
                 <div className="contribute-i app">
                   <h3>{data.contribute.dapps.title}</h3>
                   <p>{data.contribute.dapps.desc}</p>
-                  <a href={data.contribute.dapps.link.href}>{data.contribute.dapps.link.name}</a>
+                  <Link to={data.contribute.dapps.link.href}>{data.contribute.dapps.link.name}</Link>
                 </div>
               </div>
             </div>
@@ -123,7 +124,7 @@ class Home extends React.Component {
                 <div className="standalone-i core">
                   <h3>{data.sharing.parsec.title}</h3>
                   <p>{data.sharing.parsec.desc}</p>
-                  <a href={data.sharing.parsec.link.href}>{data.sharing.parsec.link.name}</a>
+                  <Link to={data.sharing.parsec.link.href}>{data.sharing.parsec.link.name}</Link>
                 </div>
               </div>
             </div>

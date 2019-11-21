@@ -65,6 +65,7 @@ typings/
 
 # production
 /dist
+/artifacts
 
 # misc
 .DS_Store
