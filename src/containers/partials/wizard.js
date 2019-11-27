@@ -1,5 +1,6 @@
 import React from 'react'
-import { withSiteData, Link } from 'react-static'
+import { withSiteData } from 'react-static'
+import { Link } from 'react-router-dom'
 import classNames from 'classnames';
 
 //

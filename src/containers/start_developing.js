@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
+import { Link } from 'react-router-dom'
 
 import CONST from '../constants';
 import Wrapper from './partials/wrapper';
@@ -54,7 +55,7 @@ class AppDev extends React.Component {
                 <p>{data.intro.para2}</p>
                 {/* DG adding in a button here! */}
                 <div className="dual-tone-text app">
-                  <a href="/dapps">{data.dapps.sampleApps.title}</a>
+                  <Link to="/dapps">{data.dapps.sampleApps.title}</Link>
                 </div>
               </div>
             </div>

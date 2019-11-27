@@ -1,6 +1,6 @@
 import React from 'react'
-import { withSiteData, Link } from 'react-static'
-import { withRouter } from 'react-static'
+import { withSiteData } from 'react-static'
+import { Link, withRouter } from 'react-router-dom'
 //
 import classNames from 'classnames';
 import CONST from '../../constants';
@@ -105,7 +105,7 @@ class Header extends React.Component {
           <Link className={classNames({
             selected: this.state.discoverNav
           })} to="/discover" onClick={() => { this.hideMenu() }}>Discover</Link>
-          <Link className="external community" to={CONST.externalLinks.header.devForum} onClick={() => { this.hideMenu() }} target="_blank">Dev Forum</Link>
+          <a className="external community" href={CONST.externalLinks.general.devForum} target="_blank">Dev Forum</a>
         </nav>
       </header>
     );

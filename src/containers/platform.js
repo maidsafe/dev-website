@@ -1,11 +1,10 @@
 import React from 'react'
-import { withRouteData, Link } from 'react-static'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism';
-import { duotoneLight } from 'react-syntax-highlighter/styles/prism';
+import { withRouteData } from 'react-static'
+import { HashLink as Link } from 'react-router-hash-link'
 import classNames from 'classnames';
 import Wrapper from './partials/wrapper';
 import { parsePlatformData } from '../../parser';
-import { animateScroll as scroll } from 'react-scroll';
+// import { animateScroll as scroll } from 'react-scroll';
 
 class Platform extends React.Component {
   constructor() {
@@ -26,7 +25,7 @@ class Platform extends React.Component {
           'nav-i-h1': nav.name === 'h1',
           'nav-i-h2': nav.name === 'h2',
         })}>
-          <Link to={`#${nav.attribs.id}`}>
+          <Link smooth to={`#${nav.attribs.id}`}>
             {nav.children[0].data}
           </Link>
         </div>
@@ -53,18 +52,18 @@ class Platform extends React.Component {
     // window.addEventListener("load", this.hashChange);
   }
 
-  hashChange() {
-    if (typeof window !== 'undefined') {
-      setTimeout(() => {
-        const targetHash = window.location.hash.split('#').pop();
-        if (!targetHash) {
-          return;
-        }
-        const targetEle = document.getElementById(targetHash);
-        scroll.scrollTo(targetEle.offsetTop - 100)
-      }, 100);
-    }
-  }
+  // hashChange() {
+  //   if (typeof window !== 'undefined') {
+  //     setTimeout(() => {
+  //       const targetHash = window.location.hash.split('#').pop();
+  //       if (!targetHash) {
+  //         return;
+  //       }
+  //       const targetEle = document.getElementById(targetHash);
+  //       scroll.scrollTo(targetEle.offsetTop - 100)
+  //     }, 100);
+  //   }
+  // }
 
   hideNav() {
     if (!this.state.showNav) {

@@ -1,18 +1,11 @@
 export default {
   externalLinks: {
     general: {
-      safenetwork: 'https://safenetwork.tech',
+      blog: 'https://medium.com/safenetwork',
+      devForum: 'https://forum.safedev.org/',
+      github: 'https://github.com/maidsafe',
       maidsafe: 'https://maidsafe.net/',
-      github: 'https://github.com/maidsafe/'
-    },
-    header: {
-      devForum: 'https://forum.safedev.org/'
-    },
-    footer: {
-      licensing: '/licensing',
-      community: 'https://safenetforum.org/',
-      docs: '/docs',
-      blog: 'https://blog.maidsafe.net/',
+      safenetwork: 'https://safenetwork.tech/'
     },
     appDevs: {
       sampleApps: {
