@@ -24,14 +24,14 @@ components:
       github: 'https://github.com/maidsafe/safe_bindgen'
     browser:
       anchor: "browser"
-      name: "SAFE Browser & Authenticator plugin"
+      name: "SAFE Browser & Authenticator daemon"
       github: 'https://github.com/maidsafe/safe_browser/'
   quic_p2p:
     anchor: "quic-p2p"
     name: quic-p2p
     github: 'https://github.com/maidsafe/quic-p2p'
     doc:
-      href: 'https://docs.rs/quic-p2p/'
+      href: 'https://docs.rs/quic-p2p'
       img: 'https://docs.rs/quic-p2p/badge.svg'
     crate:
       href: 'https://crates.io/crates/quic-p2p'
@@ -42,7 +42,7 @@ components:
     name: Routing
     github: 'https://github.com/maidsafe/routing'
     doc:
-      href: 'https://docs.rs/routing/'
+      href: 'https://docs.rs/routing'
       img: 'https://docs.rs/routing/badge.svg'
     crate:
       href: 'https://crates.io/crates/routing'
@@ -74,7 +74,7 @@ components:
     name: Vaults
     github: 'https://github.com/maidsafe/safe_vault'
     doc:
-      href: 'https://docs.rs/safe_vault/'
+      href: 'https://docs.rs/safe_vault'
       img: 'https://docs.rs/safe_vault/badge.svg'
     crate:
       href: 'https://crates.io/crates/safe_vault'
@@ -134,7 +134,7 @@ components:
       anchor: "auxlib"
       name: Auxiliary libraries
       ffi:
-        name: FFI_Utils
+        name: FFI Utils
         para1:
           chunk1: Provides helpers to work with foreign function interfaces more easily. Also contains many helpful testing tools that depend on our FFI calling conventions.
         github: 'https://github.com/maidsafe/ffi_utils'
@@ -164,7 +164,7 @@ util:
     name: Self-Encryption
     github: 'https://github.com/maidsafe/self_encryption'
     doc:
-      href: 'https://docs.rs/self_encryption/'
+      href: 'https://docs.rs/self_encryption'
       img: 'https://docs.rs/self_encryption/badge.svg'
     crate:
       href: 'https://crates.io/crates/self_encryption'
@@ -177,16 +177,16 @@ util:
         href: https://en.wikipedia.org/wiki/Convergent_encryption
       chunk2: "algorithm. It produces the same encrypted output for the same plaintext input. This property allows us to deduplicate files at the network level. Files are split up into multiple chunks, stored on the network at the same predictable location, based on the encrypted chunks’ hashes. The result of the encryption process is a data map that holds keys to the encrypted data chunks and is stored securely on the network. This crate is usable even outside of the SAFE Network context as the I/O implementation is abstract."
   comp2:
-    anchor: "rustsodium"
-    name: Rust-Sodium
-    github: 'https://github.com/maidsafe/rust_sodium'
+    anchor: "safend"
+    name: safe-nd
+    github: 'https://github.com/maidsafe/safe-nd'
     doc:
-      href: 'https://docs.rs/rust_sodium/'
-      img: 'https://docs.rs/rust_sodium/badge.svg'
+      href: 'https://docs.rs/safe-nd'
+      img: 'https://docs.rs/safe-nd/badge.svg'
     crate:
-      href: 'https://crates.io/crates/rust_sodium'
-      img: 'http://meritbadge.herokuapp.com/rust_sodium'
-    para1: Libsodium bindings, forked from the sodiumoxide project, provides extra features and improves the security.
+      href: 'https://crates.io/crates/safe-nd'
+      img: 'http://meritbadge.herokuapp.com/safe-nd'
+    para1: Defines the data types and identity structures that are common to both SAFE Client Libs and Vaults.
 
 rfcs:
   anchor: "rfcs"
