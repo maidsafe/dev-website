@@ -74,7 +74,7 @@ class Dapps extends React.Component {
           {/* Repeating section for each entry */}
           <div className="apps-items"> {
             data.items.map((app, i) => (
-              <div key={`key-items-${i}`} className="app-i layoutDApps">
+              <div key={`app-${i}`} className="app-i layoutDApps">
 
                 <div className="sec-1 lay-left">
                   <div className="logo"><img src={this.appsLogos[app.logo]} /></div>
@@ -88,7 +88,7 @@ class Dapps extends React.Component {
                     <div className="lay-50">
                     {
                       app.detail.map((detail, j) => (
-                      <div className="detail"><b>• {detail.type}:</b> <a href={detail.href} target="_blank">{detail.name}</a></div>
+                      <div key={`detail-${j}`} className="detail"><b>• {detail.type}:</b> <a href={detail.href} target="_blank">{detail.name}</a></div>
                     ))
                     }
                     </div>

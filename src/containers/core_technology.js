@@ -371,15 +371,13 @@ class CoreDeveloper extends React.Component {
                   &nbsp;{data.util.comp1.para2.chunk2}
               </div>
               <div className="comp-links">
-                <p>
-                  <div className="git-btn"><a href={data.util.comp1.github} target="_blank"></a></div>
-                  <a href={data.util.comp1.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                  <a href={data.util.comp1.crate.href} target="_blank"><img src={CratesLogo}></img></a>
-                </p>
+                <div className="git-btn"><a href={data.util.comp1.github} target="_blank"></a></div>
+                <a href={data.util.comp1.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.util.comp1.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
-            {/* === Rust-Sodium === */}
+            {/* === safe-nd === */}
             <div className="comp-i">
             {/*
               <div className="comp-i-head">

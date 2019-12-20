@@ -42,8 +42,8 @@ class Docs extends React.Component {
                   <div key={`key-items-${i}`} className="item3">
                     <p>
                     <a href={key.href}>
-                      <div className={`icn ${"rust"}`}></div>
-                      <div className="name">{key.name}</div>
+                      <span className={`icn ${"rust"}`}></span>
+                      <span className="name">{key.name}</span>
                     </a>
                     </p>
                   </div>
