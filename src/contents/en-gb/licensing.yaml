@@ -7,18 +7,17 @@ intro:
       href: https://www.gnu.org/licenses/gpl-3.0.en.html
     chunk2: (GPLv3).
   list:
-    - Routing
-    - Safe_vault
-    - Safe_core
-    - Safe_authenticator
-    - Safe_authenticator_cli
-    - Self_encryption
+    - routing
+    - safe_vault
+    - safe_core
+    - safe_authenticator
+    - self_encryption
   para2: By doing this, we are ensuring that the fundamental aspects of the SAFE Network will be locked open and accessible to all. In practice, this means that developers building on (forking) MaidSafe’s core libraries must use the GPLv3 and publish all their source code.
   para3:
     chunk1: "There is one exception to this approach for the core libraries:"
     link1:
-      name: Crust
-      href: https://github.com/maidsafe/crust
+      name: quic-p2p
+      href: https://github.com/maidsafe/quic-p2p
     chunk2: ", a P2P network connections library, is licensed using either"
     link2:
       name: MIT
@@ -27,7 +26,7 @@ intro:
       name: BSD
       href: https://opensource.org/licenses/BSD-3-Clause
     chunk3: or
-    chunk4: "(Modified). This library is potentially very useful to any project that needs a network connections library for a server-less, decentralised project. Therefore, in order to ensure that this library is used as widely as possible, we’ve chosen these permissive licences as they ensure that developers building on Crust receive the maximum flexibility in the sense that they can then select whatever licence they choose."
+    chunk4: "(Modified). This library is potentially very useful to any project that needs a network connections library for a server-less, decentralised project. Therefore, in order to ensure that this library is used as widely as possible, we’ve chosen these permissive licences as they ensure that developers building on quic-p2p receive the maximum flexibility in the sense that they can then select whatever licence they choose."
 useOfApi:
   title: Use of APIs
   para: All other SAFE libraries, including the APIs and bindings, are licensed using both the MIT and BSD (Modified) licence.  In addition, any app that uses the bindings is allowed to choose any licence for their app/product. The reason for this is that the app is only making API calls on the network as opposed to integrating directly with the libraries.

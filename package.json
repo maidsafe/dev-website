@@ -11,10 +11,10 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "classnames": "^2.2.6",
-    "core-js": "^3.6.0",
+    "core-js": "^3.6.2",
     "html-react-parser": "^0.10.0",
     "js-yaml": "^3.13.1",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.18.0",
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
     "react-static": "7.1.0",
