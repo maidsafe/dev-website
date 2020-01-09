@@ -1,7 +1,7 @@
 {
   "name": "dev_website",
   "private": true,
-  "license": "GPL-3.0-only",
+  "license": "(MIT OR BSD-3-Clause)",
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",

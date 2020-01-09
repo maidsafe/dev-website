@@ -8,6 +8,7 @@ intro:
     chunk2: (GPLv3).
   list:
     - routing
+    - parsec
     - safe_vault
     - safe_core
     - safe_authenticator
