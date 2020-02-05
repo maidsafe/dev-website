@@ -10,11 +10,11 @@
 export default {
   externalLinks: {
     general: {
-      blog: 'https://medium.com/safenetwork',
-      devForum: 'https://forum.safedev.org/',
-      github: 'https://github.com/maidsafe',
       maidsafe: 'https://maidsafe.net/',
-      safenetwork: 'https://safenetwork.tech/'
+      safenetwork: 'https://safenetwork.tech/',
+      devForum: 'https://forum.safedev.org/',
+      chatRooms: 'https://safenetforum.org/t/safe-network-chat-rooms/26070',
+      github: 'https://github.com/maidsafe'
     },
     appDevs: {
       sampleApps: {
