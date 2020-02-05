@@ -13,7 +13,7 @@ export default withSiteData(() => (
       <div className="footer-cntr">
         <div className="footer-cntr-i"><a href={CONST.externalLinks.general.safenetwork} target="_blank">safenetwork.tech</a></div>
         <div className="footer-cntr-i"><a href={CONST.externalLinks.general.devForum} target="_blank">Dev Forum</a></div>
-        <div className="footer-cntr-i"><a href={CONST.externalLinks.general.blog} target="_blank">Blog</a></div>
+        <div className="footer-cntr-i"><a href={CONST.externalLinks.general.chatRooms} target="_blank">Chat Rooms</a></div>
         <div className="footer-cntr-i"><Link to="/licensing">Licensing</Link></div>
       </div>
     </div>
