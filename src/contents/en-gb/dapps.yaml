@@ -167,7 +167,7 @@ items:
         href: 'https://maidsafe.net'
       - type: "SAFE Web"
         name: "link"
-        href: 'ssafe://webidmgr.dapp'
+        href: 'safe://webidmgr.dapp'
       - type: "Code"
         name: "GitHub"
         href: 'https://github.com/maidsafe/safe-web-id-manager-js'
