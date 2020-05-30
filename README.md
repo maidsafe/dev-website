@@ -1,4 +1,4 @@
-# dev_website
+# dev-website
 
 SAFE Network DevHub website, built with [React Static](https://github.com/react-static/react-static).
 
@@ -15,7 +15,7 @@ SAFE Network DevHub website, built with [React Static](https://github.com/react-
 1. Clone the repository using Git:
 
 ```
-$ git clone https://github.com/maidsafe/dev_website.git && cd dev_website
+$ git clone https://github.com/maidsafe/dev-website.git && cd dev-website
 ```
 
 2. Install the Node.js dependencies using Yarn:
