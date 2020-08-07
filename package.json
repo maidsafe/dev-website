@@ -16,7 +16,7 @@
     "core-js": "^3.6.4",
     "html-react-parser": "^0.10.5",
     "js-yaml": "^3.14.0",
-    "prismjs": "^1.19.0",
+    "prismjs": "^1.21.0",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^1.2.2",
     "react-static": "7.4.0",
