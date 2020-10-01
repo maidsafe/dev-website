@@ -17,16 +17,16 @@ platformLinks:
 intro:
   title:
     dark: The
-    light: SAFE Network
+    light: Safe Network
   subTitle: Make Decentralised Apps the easy way
-  para1: The SAFE Network is a scalable, distributed application platform, with baked-in security. It doesn’t rely on third party cloud services, and abstracts away security, encryption and user management to make building truly Decentralised Apps (D-Apps) less complex.
+  para1: The Safe Network is a scalable, distributed application platform, with baked-in security. It doesn’t rely on third party cloud services, and abstracts away security, encryption and user management to make building truly Decentralised Apps (D-Apps) less complex.
   para2: You are free to code and build your apps faster with zero infrastructure costs.
 dapps:
   title:
     dark1: Decentralised
     dark2: Apps are
     light: the future
-  para: Desktop, Web and Mobile applications can all easily be built on the SAFE Network. You can work with several languages to bring your ideas to the new, decentralised internet.
+  para: Desktop, Web and Mobile applications can all easily be built on the Safe Network. You can work with several languages to bring your ideas to the new, decentralised internet.
   sampleApps:
     title: See example DApps
     apps:
@@ -48,28 +48,28 @@ startDevelop:
       icon: contact-app
       para:
         chunk1: When using traditional NoSQL platforms like MongoDB, or Redis we'd need to implement both the database in our application as well set up a server to handle requests, or go direct to a cloud provider like Firebase. But these are centralised solutions that you as an app developer will be paying for.
-        chunk2: With SAFE, you have no infrastructure to set up, and as the users own their own data, they commit it directly to the network. All you need worry about is your data structures and authorising your application against the network.
+        chunk2: With Safe, you have no infrastructure to set up, and as the users own their own data, they commit it directly to the network. All you need worry about is your data structures and authorising your application against the network.
     - title: File storage
       icon: file-storage
       para:
         chunk1: Beyond using the network as a decentralised key-value storage, we can store much more than purely serialised data structures. Using the Network File System (NFS), you and your users can store any file, regardless of size or type, easily on the network.
         chunk2: What's more, securing your users' data is built right into the network.
-        chunk3: You no longer need to worry about servers, CDNs, backup or data duplication. The SAFE Network handles all this for you. So you're free to create something useful for everyone.
+        chunk3: You no longer need to worry about servers, CDNs, backup or data duplication. The Safe Network handles all this for you. So you're free to create something useful for everyone.
     - title: Sharing data across applications
       icon: share-data
       para:
         chunk1: Traditionally accessing data from another application would involve a maze of APIs and authentication systems. More third parties, more problems. And in the end you'd still be responsible for storing and securing that data too!
-        chunk2: This is no longer an issue on SAFE. With users owning their data, all you need to do is request access to specific containers or MutableData's and you're off.
+        chunk2: This is no longer an issue on Safe. With users owning their data, all you need to do is request access to specific containers or MutableData's and you're off.
         chunk3: Complex inter-application data sharing has never been easier or more secure.
 accessingNetwork:
   title:
     dark: Accessing
     light: the Network
   para1:
-    chunk1: "To access the SAFE Network, you simply need to "
+    chunk1: "To access the Safe Network, you simply need to "
     link:
       name: download the browser
-      href: 'https://github.com/maidsafe/safe_browser/releases/latest'
+      href: 'https://github.com/maidsafe/sn_browser/releases/latest'
     chunk2: " which includes the Authenticator component."
   para2: The Authenticator is used by applications to request a user’s consent via a simple API, much like traditional single sign-on options. The Authenticator also handles user log on, and enables the user to grant/revoke permissions for each app, putting users in control of their own data.
   para3:
@@ -80,7 +80,7 @@ accessingNetwork:
 platforms:
   title: Platforms
   desc:
-    chunk1: "Currently we have SAFE Network API libraries built for NodeJs, Web, C#, Java and Rust. We are working on expanding this to support other platforms. If you want to join others in our community and contribute to development, head over to our "
+    chunk1: "Currently we have Safe Network API libraries built for NodeJs, Web, C#, Java and Rust. We are working on expanding this to support other platforms. If you want to join others in our community and contribute to development, head over to our "
     link:
       name: Dev Forum
       href: 'https://forum.safedev.org'

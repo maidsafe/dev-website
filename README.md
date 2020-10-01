@@ -1,6 +1,6 @@
 # dev-website
 
-SAFE Network DevHub website, built with [React Static](https://github.com/react-static/react-static).
+Safe Network DevHub website, built with [React Static](https://github.com/react-static/react-static).
 
 ## Installation
 
@@ -44,7 +44,7 @@ $ yarn serve
 
 ## License
 
-This SAFE Network repository is dual-licensed under the Modified BSD ([LICENSE-BSD](LICENSE-BSD) https://opensource.org/licenses/BSD-3-Clause) or the MIT license ([LICENSE-MIT](LICENSE-MIT) https://opensource.org/licenses/MIT) at your option.
+This Safe Network repository is dual-licensed under the Modified BSD ([LICENSE-BSD](LICENSE-BSD) https://opensource.org/licenses/BSD-3-Clause) or the MIT license ([LICENSE-MIT](LICENSE-MIT) https://opensource.org/licenses/MIT) at your option.
 
 ## Contributing
 

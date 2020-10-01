@@ -1,6 +1,6 @@
-# SAFE Android App Tutorial
+# Safe Android App Tutorial
 
-In this tutorial we will be building an Android application using Java for the SAFE network.
+In this tutorial we will be building an Android application using Java for the Safe network.
 
 To create this application we will be using the `safe-app-android` package.
 
@@ -26,7 +26,7 @@ Now import this project into your Android Studio IDE. The required dependencies 
 
 ## Adding the safe-app-android library
 
-There are two packages available to develop applications for the SAFE Network. `safe-app-android` for the alpha-2 / local network and `safe-app-android-dev` for mock routing. For easier switching between mock and non-mock versions, we have made use of the [build variants](https://developer.android.com/studio/build/build-variants) feature of Android Studio. We have defined mock and nonMock variants and have added the required dependency as follows in the [`app/build.gradle`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/build.gradle#L32) file.
+There are two packages available to develop applications for the Safe Network. `safe-app-android` for the alpha-2 / local network and `safe-app-android-dev` for mock routing. For easier switching between mock and non-mock versions, we have made use of the [build variants](https://developer.android.com/studio/build/build-variants) feature of Android Studio. We have defined mock and nonMock variants and have added the required dependency as follows in the [`app/build.gradle`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/build.gradle#L32) file.
 
 ```
 android {
@@ -54,7 +54,7 @@ The API documentation for the safe-app-android library is available at [docs.mai
 
 ## Authenticating the app
 
-A SAFE application needs to get an authorisation from the user before being able to connect to the network, this is achieved by sending an authorisation request to the Authenticator.
+A Safe application needs to get an authorisation from the user before being able to connect to the network, this is achieved by sending an authorisation request to the Authenticator.
 
 To create an `AuthReq` the following is created:
 
@@ -97,7 +97,7 @@ For mock authentication there is a helper function available in the boilerplate 
 
 ## Creating a Client session
 
-The auth response from the authenticator comes in the format `<app_id>://<app_id>/<encoded_auth_response>`. We strip `<app_id>://<app_id>/` from the URI and pass the encoded auth response to the `connect()` function in the `SafeApi` class. Let us implement this `connect()` function to establish a connection to the SAFE Network. We can start by decoding the encoded auth response and checking if the response is of `AuthResponse` type. We can now create a session object by calling the `connect()` API.
+The auth response from the authenticator comes in the format `<app_id>://<app_id>/<encoded_auth_response>`. We strip `<app_id>://<app_id>/` from the URI and pass the encoded auth response to the `connect()` function in the `SafeApi` class. Let us implement this `connect()` function to establish a connection to the Safe Network. We can start by decoding the encoded auth response and checking if the response is of `AuthResponse` type. We can now create a session object by calling the `connect()` API.
 
 ```
 this.appId = applicationId;
@@ -106,15 +106,15 @@ if (decodeResult.getClass().equals(AuthResponse.class)) {
     final AuthResponse authResponse = (AuthResponse) decodeResult;
     session = Client.connect(applicationId, authResponse.getAuthGranted()).get();
     session.setOnDisconnectListener(onDisconnected);
-    Log.i("STAGE:", "Connected to the SAFE Network");
+    Log.i("STAGE:", "Connected to the Safe Network");
 } else {
-    throw new java.lang.Exception("Could not connect to the SAFE Network");
+    throw new java.lang.Exception("Could not connect to the Safe Network");
 }
 ```
 
 ## Handling network disconnections
 
-There are situations when the application may lose its connectivity to the SAFE network. For example, when the mobile device loses its internet connection. In such cases a disconnected event is fired from native code. The `OnDisconnected` interface contains a method that will be executed when the disconnection event occurs. This action for the disconnected event is defined in the [`TodoActivity` class](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/java/net/maidsafe/sample/view/TodoActivity.java#L61). The `OnDisconnected` interface is implemented in the `SafeTodoService` class and the instance is passed to the `SafeApi.connect()` function. You can observe that the onDisconnectedListener is set after calling the `connect` API.
+There are situations when the application may lose its connectivity to the Safe network. For example, when the mobile device loses its internet connection. In such cases a disconnected event is fired from native code. The `OnDisconnected` interface contains a method that will be executed when the disconnection event occurs. This action for the disconnected event is defined in the [`TodoActivity` class](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/java/net/maidsafe/sample/view/TodoActivity.java#L61). The `OnDisconnected` interface is implemented in the `SafeTodoService` class and the instance is passed to the `SafeApi.connect()` function. You can observe that the onDisconnectedListener is set after calling the `connect` API.
 
 ```
 session.setOnDisconnectListener(onDisconnected);
@@ -124,9 +124,9 @@ session.setOnDisconnectListener(onDisconnected);
 
 #### Creation <br><br>
 
-One of the native data types of the SAFE Network is `MutableData`. MutableData is a key-value store which can be created at either a specific address on the network, or just at a random address, and it can be publicly available (a public MutableData) or otherwise have all its content encrypted (private MutableData). It also has a type associated to it (type tag) which is a number that can be chosen at the moment of creating the MutableData.
+One of the native data types of the Safe Network is `MutableData`. MutableData is a key-value store which can be created at either a specific address on the network, or just at a random address, and it can be publicly available (a public MutableData) or otherwise have all its content encrypted (private MutableData). It also has a type associated to it (type tag) which is a number that can be chosen at the moment of creating the MutableData.
 
-We are not going to go into the other aspects of MutableData here, we will just create MutableData in the network to store the data of our application. Please refer to the [discover page](/discover) to learn more about the MutableData type as well as the other types of data available in the SAFE Network.
+We are not going to go into the other aspects of MutableData here, we will just create MutableData in the network to store the data of our application. Please refer to the [discover page](/discover) to learn more about the MutableData type as well as the other types of data available in the Safe Network.
 
 In this tutorial we are going to create private MutableData at random addresses. Each piece of data stored on the network has its own unique 256 bit address in the network, we will request the API to generate a random address for our new private MutableData:
 
@@ -232,17 +232,17 @@ info  = session.mData.deserialise(serializedMdInfo).get();
 
 We can serialise, encrypt and store the `appData` in the App Container so that we can re-use the mutable data that was randomly generated the first time the app is launched.
 
-So, when the application starts, we should first check for existent `appData` in the App's Container, fetch, decrypt and deserialise it. If the data does not exist, then we create a new mutable data, that is encrypted and stored in the app's container. This logic is implemented in the [`getSectionsFromAppContainer()`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/java/net/maidsafe/sample/services/SafeApi.java#L58) function in the `SafeApi` class. This function is called after establishing a connection to the SAFE network.
+So, when the application starts, we should first check for existent `appData` in the App's Container, fetch, decrypt and deserialise it. If the data does not exist, then we create a new mutable data, that is encrypted and stored in the app's container. This logic is implemented in the [`getSectionsFromAppContainer()`](https://github.com/maidsafe/safe-getting-started-android/blob/master/app/src/main/java/net/maidsafe/sample/services/SafeApi.java#L58) function in the `SafeApi` class. This function is called after establishing a connection to the Safe network.
 
 If you now run the application it will perform the mutable data operations that we have implemented via the APIs.
 
 ## Migrating to the Alpha-2 network
 
-So far, all the network operations are being performed on the mock network. You can find more information about the different types of networks in the [discover page.](/discover) For the test network, the application will be authorising with the SAFE Authenticator to get the credentials needed to then connect to the SAFE Network.
+So far, all the network operations are being performed on the mock network. You can find more information about the different types of networks in the [discover page.](/discover) For the test network, the application will be authorising with the Safe Authenticator to get the credentials needed to then connect to the Safe Network.
 
-#### Installing the SAFE Authenticator <br><br>
+#### Installing the Safe Authenticator <br><br>
 
-You can find the links to download the SAFE Authenticator package from the [GitHub releases](https://github.com/maidsafe/safe-authenticator-mobile/releases). Download the app and install it on your Android Device / Emulator. Open the application and login using your SAFE Network credentials.
+You can find the links to download the Safe Authenticator package from the [GitHub releases](https://github.com/maidsafe/sn_authenticator_mobile/releases). Download the app and install it on your Android Device / Emulator. Open the application and login using your Safe Network credentials.
 
 #### Registering a custom URI for the application <br><br>
 

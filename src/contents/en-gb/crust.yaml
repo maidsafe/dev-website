@@ -10,7 +10,7 @@ intro:
     summary: "all communications are securely encrypted."
   bullet3:
     name: "Bootstrap cache"
-    summary: "up-to-date list of start-up vaults."
+    summary: "up-to-date list of start-up nodes."
 overview:
   title: "An overview of Crust"
   para:
@@ -49,7 +49,7 @@ features:
     href: "#bootstrap"
     anchor: "bootstrap"
     name: "Bootstrap cache"
-    summary: "Bootstrap caching enhances the concept of using genesis nodes (hard-coded addresses) for initial vault detection by dynamically creating a list of nodes which are directly reachable without the need to hole-punch. This list is appended and pruned as nodes connect/disconnect to the network so is always kept up-to-date."
+    summary: "Bootstrap caching enhances the concept of using genesis nodes (hard-coded addresses) for initial node detection by dynamically creating a list of nodes which are directly reachable without the need to hole-punch. This list is appended and pruned as nodes connect/disconnect to the network so is always kept up-to-date."
 license:
   href: '#license'
   anchor: "license"
@@ -68,7 +68,7 @@ contrib:
   anchor: "contrib"
   title: "Contribute"
   para:
-    chunk1: Copyrights in the SAFE Network are retained by their contributors. No copyright assignment is required to contribute to this project.
+    chunk1: Copyrights in the Safe Network are retained by their contributors. No copyright assignment is required to contribute to this project.
 action:
   href: "#action"
   anchor: "action"

@@ -25,22 +25,22 @@ buildOnSafeNet:
   title:
     dark1: Why build
     dark2: on the
-    light: SAFE Network
+    light: Safe Network
   sixKeys:
     - title: The privacy-first network
-      desc: Privacy and anonymity for your users. The Secure Access for Everyone (SAFE) Network is built to negate the prying eyes of internet interlopers with built-in encrypted communications.
+      desc: Privacy and anonymity for your users. The Secure Access for Everyone (Safe) Network is built to negate the prying eyes of internet interlopers with built-in encrypted communications.
       icon: privacy
     - title: Infrastructure-free
       desc: Easy to use APIs in many languages, means you can focus on coding. No need to worry about your infrastructure or scaling costs here!
       icon: infrastructure
     - title: Open source
-      desc: All SAFE Network libraries are open source, transparent and free to use.
+      desc: All Safe Network libraries are open source, transparent and free to use.
       icon: anonymity
     - title: Your application is the product, not your users' data
       desc: Users are always in control of their data, and with monetisation being built into the network, you can focus on making the best app, without selling your users short.
       icon: application
     - title: Network-wide sign-on
-      desc: You don’t need to roll-your-own account management solutions, users log in once at the network level. With SAFE you have no passwords left to lose!
+      desc: You don’t need to roll-your-own account management solutions, users log in once at the network level. With Safe you have no passwords left to lose!
       icon: sign-on
     - title: Truly collaborative applications
       desc: With data owned by users, you can share data across applications to create and reuse data sets in new ways!
@@ -49,22 +49,22 @@ contribute:
   title:
     dark1: Contribute
     dark2: to the
-    light: SAFE Network
+    light: Safe Network
   appDev:
     title: Build your idea
-    desc: Bring your creativity to life on the SAFE Network.
+    desc: Bring your creativity to life on the Safe Network.
     link:
       name: Start Developing
       href: /start_developing
   coreDev:
     title: Learn about the tech behind the Network
-    desc: The components involved in the SAFE Network range from clients, vaults, routing and low level networking.
+    desc: The components involved in the Safe Network range from clients, nodes, routing and low level networking.
     link:
       name: Core Technology
       href: /core_technology
   dapps:
     title: "Example projects"
-    desc: "Desktop, Web and Mobile DApps can all easily be built on the SAFE Network. You can work with several languages to bring your ideas to the new, decentralised internet."
+    desc: "Desktop, Web and Mobile DApps can all easily be built on the Safe Network. You can work with several languages to bring your ideas to the new, decentralised internet."
     link:
       name: "Example DApps"
       href: '/dapps'
@@ -72,8 +72,8 @@ sharing:
   title:
     shared: Stand alone
     tech: technology
-    safe: SAFE Network
-    desc: Use standalone components from the SAFE Network in your own projects.
+    safe: Safe Network
+    desc: Use standalone components from the Safe Network in your own projects.
   parsec:
     title: PARSEC
     desc: PARSEC (Protocol for Asynchronous, Reliable, Secure and Efficient Consensus) is an algorithm which allows nodes to reach ordered consensus in a decentralised network.

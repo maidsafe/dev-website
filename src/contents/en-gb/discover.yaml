@@ -1,12 +1,12 @@
 intro:
   title: Discover
-  para1: The SAFE Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
+  para1: The Safe Network is a secure, autonomous, data-centric, peer-to-peer network. Files stored on the network are split up into pieces, encrypted and spread throughout the network, rather than residing on a central server or data centre.
   para2: "The following components and features represent key aspects of the Network:"
 authenticator:
   title: Authentication
-  desc: Before writing data to the SAFE Network, users need to create an account via the SAFE Authenticator daemon. The Authenticator daemon enables users to securely authenticate themselves onto the SAFE Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the SAFE Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
+  desc: Before writing data to the Safe Network, users need to create an account via the Safe Authenticator daemon. The Authenticator daemon enables users to securely authenticate themselves onto the Safe Network, and protects network login credentials from apps. It also manages application authorisations - applications must be authorised by the user - to be able to connect to the Safe Network, on behalf of the user. The user can revoke the granted access at any time from the Authenticator.
   para1:
-    chunk1: "On desktop, the Authenticator daemon is bundled with the SAFE Network App. It enables IPC communication via the QUIC protocol. The process for authentication used to be as follows (needs to be updated):"
+    chunk1: "On desktop, the Authenticator daemon is bundled with the Safe Network App. It enables IPC communication via the QUIC protocol. The process for authentication used to be as follows (needs to be updated):"
   steps:
     - title: Application requests access
       icon: AUTH_1
@@ -16,7 +16,7 @@ authenticator:
       desc: When the user approves the request, application specific encryption keys are generated. The application will be identified in the network using its keys. When the user grants or denies authorisation, the application will receive a URI.
     - title: Application connects to the Network
       icon: AUTH_3
-      desc: Applications can connect to the SAFE Network on behalf of the user by using the URI received.
+      desc: Applications can connect to the Safe Network on behalf of the user by using the URI received.
       smallIcon: true
 networks:
   title: Network Types
@@ -28,26 +28,26 @@ networks:
       para2: This saves a great deal of time and provides a safe space for you to initially test operations.
     - name: Local Network
       id: localNetwork
-      para1: A local SAFE Network can be created by running a vault on your computer, which any application can then be configured to connect to.
+      para1: A local Safe Network can be created by running a node on your computer, which any application can then be configured to connect to.
       para2: This is also a good way to save time when testing and debugging applications before they are ready to connect to the actual network.
       btnLink:
         name: Learn more
         link: https://safenetforum.org/t/new-release-vault-phase-1-real-vault/29712
     - name: Actual Routing
       id: actualRouting
-      para1: The SAFE Browser or any other application can also use the public testnets.
-      para2: This may not be the best option for initial tests or debugging when developing a SAFE app, as you would be limited in the number of mutations allowed per test account.
-vault:
-  title: Vault
-  desc: When a user uploads (or saves) a ﬁle to the Network, via one of the SAFE Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the vaults of other SAFE Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
-  para: The Vault software is a small executable file that connects the user’s machine to the SAFE Network. It manages the storage of data chunks on the user’s computer and in that way, it provides storage capacity to the network. It also routes and caches encrypted data chunks over the network making use of fully encrypted connections to other Vaults.
+      para1: The Safe Browser or any other application can also use the public testnets.
+      para2: This may not be the best option for initial tests or debugging when developing a Safe app, as you would be limited in the number of mutations allowed per test account.
+node:
+  title: Node
+  desc: When a user uploads (or saves) a ﬁle to the Network, via one of the Safe Network apps, the file is automatically broken up into chunks. These chunks are then encrypted (encoded so that only authorised parties can read it), randomised and stored on the nodes of other Safe Network users. These encrypted chunks are completely unreadable and inaccessible to anyone other than the owner.
+  para: The Node software is a small executable file that connects the user’s machine to the Safe Network. It manages the storage of data chunks on the user’s computer and in that way, it provides storage capacity to the network. It also routes and caches encrypted data chunks over the network making use of fully encrypted connections to other Nodes.
   btnLink:
     name: Develop
     link: 'https://safenetforum.org/t/new-release-vault-phase-1-real-vault/29712'
 containers:
   title: Default Containers
   desc:
-    chunk1: The SAFE Network follows a common pattern of providing default containers for storing different types of users' data. For example
+    chunk1: The Safe Network follows a common pattern of providing default containers for storing different types of users' data. For example
     highlight1: _documents
     chunk2: is used to store document related data;
     highlight2: _downloads
@@ -84,7 +84,7 @@ containers:
       icon: pubNames
 dataTypes:
   title: Data Types
-  desc: "The SAFE Network provides two data types to store and retrieve data Mutable Data and Immutable Data:"
+  desc: "The Safe Network provides two data types to store and retrieve data Mutable Data and Immutable Data:"
   types:
     - name: Immutable Data
       features:

@@ -2,7 +2,7 @@ docs:
   title: "Documents"
 platform:
   title: "Platform development"
-  summary: "Tutorials and API documentation that will help you build websites and DApps for desktop or mobile for the SAFE Network."
+  summary: "Tutorials and API documentation that will help you build websites and DApps for desktop or mobile for the Safe Network."
 
 tutorials:
   title: "Tutorials"
@@ -26,18 +26,18 @@ api:
   title: "API"
   items:
    - name: "Nodejs"
-     href: 'https://docs.maidsafe.net/safe_app_nodejs/safeapp'
+     href: 'https://docs.maidsafe.net/sn_nodejs/safeapp'
      icon: "nodejs"
    - name: "Java"
-     href: 'https://docs.maidsafe.net/safe_app_java/'
+     href: 'https://docs.maidsafe.net/sn_java/'
      icon: "java"
    - name: "C#"
-     href: 'https://docs.maidsafe.net/safe_app_csharp/'
+     href: 'https://docs.maidsafe.net/sn_csharp/'
      icon: "dotnet"
 rust:
   title: "Core libraries - Rust"
   para1:
-    chunk1: "All the core libraries of the SAFE Network are open source and written in "
+    chunk1: "All the core libraries of the Safe Network are open source and written in "
     link1:
       href: 'https://www.rust-lang.org/'
       name: "Rust"
@@ -50,30 +50,30 @@ rust:
    - name: "config_file_handler"
      href: "https://docs.rs/config_file_handler"
    - name: "ffi_utils"
-     href: "https://docs.rs/ffi_utils"
+     href: "https://docs.rs/sn_ffi_utils"
    - name: "lru_time_cache"
      href: "https://docs.rs/lru_time_cache"
    - name: "maidsafe_utilities"
      href: "https://docs.rs/maidsafe_utilities"
    - name: "parsec"
      href: "https://docs.rs/parsec"
-   - name: "quic-p2p"
-     href: "https://docs.rs/quic-p2p"
+   - name: "qp2p"
+     href: "https://docs.rs/qp2p"
    - name: "resource_proof"
      href: "https://docs.rs/resource_proof"
    - name: "routing"
-     href: "https://docs.rs/routing"
+     href: "https://docs.rs/sn_routing"
    - name: "safe_app"
      href: "https://docs.rs/safe_app"
    - name: "safe_authenticator"
      href: "https://docs.rs/safe_authenticator"
-   - name: "safe_bindgen"
-     href: "https://docs.rs/safe_bindgen"
-   - name: "safe_core"
-     href: "https://docs.rs/safe_core"
-   - name: "safe-nd"
-     href: "https://docs.rs/safe-nd"
-   - name: "safe_vault"
-     href: "https://docs.rs/safe_vault"
+   - name: "sn_bindgen"
+     href: "https://docs.rs/sn_bindgen"
+   - name: "sn_client"
+     href: "https://docs.rs/sn_client"
+   - name: "sn_data_types"
+     href: "https://docs.rs/sn_data_types"
+   - name: "sn_node"
+     href: "https://docs.rs/sn_node"
    - name: "self_encryption"
      href: "https://docs.rs/self_encryption"
