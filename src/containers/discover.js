@@ -122,7 +122,7 @@ class Discover extends React.Component {
                   <h3 className="network-type-i-h">{data.networks.types[1].name}</h3>
                   <p className="network-type-i-desc">{data.networks.types[1].para1}</p>
                   <p className="network-type-i-desc">{data.networks.types[1].para2}</p>
-                  <a className="network-type-i-link" href={data.networks.types[1].btnLink.link} target="_blank">{data.networks.types[1].btnLink.name}</a>
+                  <a className="network-type-i-link" href={data.networks.types[1].btnLink.link} target="_blank" rel="noreferrer">{data.networks.types[1].btnLink.name}</a>
                 </div>
               </div>
             </div>

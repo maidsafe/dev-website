@@ -22,7 +22,7 @@ class Licensing extends React.Component {
         <div className="licensing-b base">
           <div className="lic-content">
             <h3 className="page-title">{data.intro.title}</h3>
-            <p>{data.intro.para1.chunk1}&nbsp;<a href={data.intro.para1.link.href} target="_blank">{data.intro.para1.link.name}</a>&nbsp;{data.intro.para1.chunk2}</p>
+            <p>{data.intro.para1.chunk1}&nbsp;<a href={data.intro.para1.link.href} target="_blank" rel="noreferrer">{data.intro.para1.link.name}</a>&nbsp;{data.intro.para1.chunk2}</p>
             <ul className="list">
               {data.intro.list.map((li, i) => (
                 <li key={`intro-list=${i}`} className="ls-i">{li}</li>
@@ -30,9 +30,9 @@ class Licensing extends React.Component {
             </ul>
             <p>{data.intro.para2}</p>
             <p>
-              {data.intro.para3.chunk1}&nbsp;<a target="_blank" href={data.intro.para3.link1.href}>{data.intro.para3.link1.name}</a>{data.intro.para3.chunk2}
+              {data.intro.para3.chunk1}&nbsp;<a target="_blank" rel="noreferrer" href={data.intro.para3.link1.href}>{data.intro.para3.link1.name}</a>{data.intro.para3.chunk2}
               &nbsp;<a target="_blank" href={data.intro.para3.link2.href}>{data.intro.para3.link2.name}</a>&nbsp;{data.intro.para3.chunk3}
-              &nbsp;<a target="_blank" href={data.intro.para3.link3.href}>{data.intro.para3.link3.name}</a>&nbsp;{data.intro.para3.chunk4}
+              &nbsp;<a target="_blank" rel="noreferrer" href={data.intro.para3.link3.href}>{data.intro.para3.link3.name}</a>&nbsp;{data.intro.para3.chunk4}
             </p>
           </div>
           <div className="lic-content">

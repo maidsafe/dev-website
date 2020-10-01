@@ -97,7 +97,7 @@ class Dapps extends React.Component {
                     <div className="lay-50">
                     {
                       app.detail.map((detail, j) => (
-                      <div key={`detail-${j}`} className="detail"><b>• {detail.type}:</b> <a href={detail.href} target="_blank">{detail.name}</a></div>
+                      <div key={`detail-${j}`} className="detail"><b>• {detail.type}:</b> <a href={detail.href} target="_blank" rel="noreferrer">{detail.name}</a></div>
                     ))
                     }
                     </div>

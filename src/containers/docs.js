@@ -40,9 +40,9 @@ class Docs extends React.Component {
 
               <p>
                 {data.rust.para1.chunk1}
-                <a href={data.rust.para1.link1.href} target="_blank"> {data.rust.para1.link1.name}</a>
+                <a href={data.rust.para1.link1.href} target="_blank" rel="noreferrer"> {data.rust.para1.link1.name}</a>
                 {data.rust.para1.chunk2}
-                <a href={data.rust.para1.link2.href} target="_blank"> {data.rust.para1.link2.name}</a>
+                <a href={data.rust.para1.link2.href} target="_blank" rel="noreferrer"> {data.rust.para1.link2.name}</a>
                 {data.rust.para1.chunk3}
               </p>
 

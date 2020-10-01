@@ -66,13 +66,13 @@ class Crust extends React.Component {
           <div className="comp-i-cntr">
             <p>
               {data.overview.para.chunk1}
-              <a href={data.overview.para.link1.href} target="_blank">{data.overview.para.link1.name}</a>
+              <a href={data.overview.para.link1.href} target="_blank" rel="noreferrer">{data.overview.para.link1.name}</a>
               {data.overview.para.chunk2}
-              <a href={data.overview.para.link2.href} target="_blank">{data.overview.para.link2.name}</a>
+              <a href={data.overview.para.link2.href} target="_blank" rel="noreferrer">{data.overview.para.link2.name}</a>
               {data.overview.para.chunk3}
-              <a href={data.overview.para.link3.href} target="_blank">{data.overview.para.link3.name}</a>
+              <a href={data.overview.para.link3.href} target="_blank" rel="noreferrer">{data.overview.para.link3.name}</a>
               {data.overview.para.chunk4}
-              <a href={data.overview.para.link4.href} target="_blank">{data.overview.para.link4.name}</a>
+              <a href={data.overview.para.link4.href} target="_blank" rel="noreferrer">{data.overview.para.link4.name}</a>
               {data.overview.para.chunk5}
             </p>
           </div>
@@ -135,9 +135,9 @@ class Crust extends React.Component {
             <div className="comp-i-cntr">
               <p>
                 {data.license.chunk1}
-                <a href={data.license.link1.href} target="_blank"> {data.license.link1.name}</a>
+                <a href={data.license.link1.href} target="_blank" rel="noreferrer"> {data.license.link1.name}</a>
                 {data.license.chunk2}
-                <a href={data.license.link2.href} target="_blank"> {data.license.link2.name}</a>
+                <a href={data.license.link2.href} target="_blank" rel="noreferrer"> {data.license.link2.name}</a>
                 {data.license.chunk3}
               </p>
             </div>
@@ -185,7 +185,7 @@ class Crust extends React.Component {
           <div className="getinv">
             {/* GitHub Repository */}
             <p>
-              <a href={data.action.a1.link.href} target="_blank"> {data.action.a1.link.name}</a>
+              <a href={data.action.a1.link.href} target="_blank" rel="noreferrer"> {data.action.a1.link.name}</a>
             </p>
 
             {/* Crust Test Programme */}
