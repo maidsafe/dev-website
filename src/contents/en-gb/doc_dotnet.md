@@ -1,12 +1,12 @@
-# SAFE .NET Desktop App Tutorial
+# Safe .NET Desktop App Tutorial
 
-This tutorial shows you how to create a [.NET Framework](https://docs.microsoft.com/en-us/dotnet/framework/) Windows console application for the SAFE Network. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server and Microsoft Azure using C#, Visual Basic and F#. This tutorial can also be used for developing [.NET Core](https://github.com/dotnet/core) apps.
+This tutorial shows you how to create a [.NET Framework](https://docs.microsoft.com/en-us/dotnet/framework/) Windows console application for the Safe Network. The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server and Microsoft Azure using C#, Visual Basic and F#. This tutorial can also be used for developing [.NET Core](https://github.com/dotnet/core) apps.
 
-You can download working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/DesktopExample). Follow the steps described in this tutorial to create an app for SAFE Network.
+You can download working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/DesktopExample). Follow the steps described in this tutorial to create an app for Safe Network.
 
 ## Prerequisites
 
-Before you start developing your first SAFE app, make sure you have the following installed:
+Before you start developing your first Safe app, make sure you have the following installed:
 
 - **Git**
 <br />
@@ -16,9 +16,9 @@ To fetch the boilerplate code and for version control.
 <br />
 [Download and install Visual Studio](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/installation) (any edition) for your operating system with `.NET desktop development` workload.
 
-- **The SAFE Browser**
+- **The Safe Browser**
 <br />
-To connect to the SAFE Network, applications are required to authenticate with the Authenticator. The Authenticator is bundled with the SAFE Browser and download links can be found from the [SAFE Browser GitHub releases page](https://github.com/maidsafe/safe_browser/releases/latest).
+To connect to the Safe Network, applications are required to authenticate with the Authenticator. The Authenticator is bundled with the Safe Browser and download links can be found from the [Safe Browser GitHub releases page](https://github.com/maidsafe/sn_browser/releases/latest).
 
     **Note:**
     * It's recommended to use the latest available version for your platform.
@@ -37,23 +37,23 @@ git checkout boilerplate
 Open the `DesktopExample/SafeDesktopExample.sln` solution in Visual Studio and restore NuGet packages. In solution explorer right click on MockNetworkExample project and click on `Set as StartUp project` option.
 
 **Note:**
-  * The CPU architecture is set to **x64** in project build configuration (SAFE APIs support only x64 architecture for desktops)
-  * We use the latest version of [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
+  * The CPU architecture is set to **x64** in project build configuration (Safe APIs support only x64 architecture for desktops)
+  * We use the latest version of [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) package using NuGet package manager to use the Safe API which connect and interact with the Safe Network.
 
 ## Connecting to the mock network
 
-We provide the `mock` feature with the SAFE API for a faster app development experience and a safe space to perform test operations.
+We provide the `mock` feature with the Safe API for a faster app development experience and a safe space to perform test operations.
 
-When the `mock` feature is used, a local MockVault file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live SAFE Network.
+When the `mock` feature is used, a local MockNode file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live Safe Network.
 
 Use either of the following methods to set up and use the mock network based on your requirements:
-- **Mock SAFE browser**: Authentication using the mock SAFE browser.
+- **Mock Safe browser**: Authentication using the mock Safe browser.
 - **Mock Authenticator API**: Authenticate using the Authenticator class shipped in MaidSafe.SafeApp package. This method is helpful while working with tests.
 
-## Using the mock SAFE browser
-**1. Download the mock SAFE browser**
+## Using the mock Safe browser
+**1. Download the mock Safe browser**
 
-Download the mock SAFE Browser as indicated by the file name `safe-browser-<version>-<platform>-dev.zip` (see [prerequisites](#prerequisites) for instructions).
+Download the mock Safe Browser as indicated by the file name `safe-browser-<version>-<platform>-dev.zip` (see [prerequisites](#prerequisites) for instructions).
 
 **2. Add mock flag**
 
@@ -63,7 +63,7 @@ Once this flag is set, a reference to SafeApp.MockAuthBindings.dll will be added
 
 **3. Log in**
 
-Create an account on the mock SAFE browser and log in (use any random arbitrary string for the invite token field).
+Create an account on the mock Safe browser and log in (use any random arbitrary string for the invite token field).
 
 Keep the browser open and logged into this account before proceeding with next steps.
 
@@ -110,7 +110,7 @@ The Safe Browser intercepts the authorisation request and a pop-up dialog prompt
 
 **Note:** The demo application already has the code to send a response from the new instance to the already running console app instance using [IPC Pipes](https://docs.microsoft.com/en-us/dotnet/standard/io/pipe-operations).
 
-Once a response is received, it is decoded and checked whether the request was granted or denied. If the request was granted a new session is initialised to communicate with the SAFE Network, let us implement this in the `ProcessAuthenticationResponse(string authResponse)` function present in the `Authentication` class:
+Once a response is received, it is decoded and checked whether the request was granted or denied. If the request was granted a new session is initialised to communicate with the Safe Network, let us implement this in the `ProcessAuthenticationResponse(string authResponse)` function present in the `Authentication` class:
 ```csharp
 var encodedRequest = Helpers.GetRequestData(authResponse);
 var decodeResult = await Session.DecodeIpcMessageAsync(encodedRequest);
@@ -132,7 +132,7 @@ else
     throw new Exception("Auth Request not granted.");
 }
 ```
-***Note:** If you are authenticating using the SAFE Browser mock you can skip the next section and move on to [create mutable data](#create-mutable-data).*
+***Note:** If you are authenticating using the Safe Browser mock you can skip the next section and move on to [create mutable data](#create-mutable-data).*
 
 ## Using mock Authenticator API
 You can perform authentication within the application itself for easier testing during development.
@@ -198,7 +198,7 @@ return session;
 ## Create mutable data
 Mutable data is a key-value store which can be created either at a specific address or at a random address on the network. It can be publicly available (public mutable data) or encrypted (private mutable data). Mutable data has a type tag associated with it (a number) that can be chosen while creating the mutable data.
 
-To learn more about the mutable data and other data types in SAFE Network visit the [discover page](/discover).
+To learn more about the mutable data and other data types in Safe Network visit the [discover page](/discover).
 
 Now you will create a private mutable data in the network to store the application data at a random address. This address represents a unique 256 bit address in the network space. Learn more about XOR addresses from this [medium post](https://medium.com/@maidsafe/structuring-network-with-xor-431e785b5ee7).
 
@@ -355,18 +355,18 @@ Now you can run the application and see the working mutable data operations that
 In the solution explorer right click on the `LiveNetworkExample` project and select **Set as StartUp Project**
 
 The process to connect to live network is the same as mock except:
-- The non-mock SAFE browser is used as indicated by its title `safe-browser-<version>-<platform>.zip` (see [prerequisites](#prerequisites) for instructions).
-- The authentication process is against the live network and not the MockVault file.
+- The non-mock Safe browser is used as indicated by its title `safe-browser-<version>-<platform>.zip` (see [prerequisites](#prerequisites) for instructions).
+- The authentication process is against the live network and not the MockNode file.
 
 **Note:** Before attempting to connect to the alpha-2 network, make sure that you have completed the steps in the [authenticate using mock browser section.](#connecting-to-the-mock-network)
 
-**1. Download the SAFE (non-mock) Browser**
+**1. Download the Safe (non-mock) Browser**
 
-If you haven't already done so, download the SAFE (non-mock) Browser (see [prerequisites](#prerequisites) for instructions).
+If you haven't already done so, download the Safe (non-mock) Browser (see [prerequisites](#prerequisites) for instructions).
 
 **2. Log in**
 
-Log in using your existing SAFE Network account or create an account from the Authenticator.
+Log in using your existing Safe Network account or create an account from the Authenticator.
 
 Ensure to keep the browser opened and logged in with your account before proceeding with next steps.
 

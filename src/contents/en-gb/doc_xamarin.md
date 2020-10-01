@@ -1,14 +1,14 @@
-# SAFE Mobile App Tutorial
+# Safe Mobile App Tutorial
 
-This tutorial shows you how to create a [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms/) application for the SAFE Network. Xamarin.Forms is an open source, cross-platform tool which provides a way to quickly build apps for iOS, Android, Windows and macOS using C# and F#.
+This tutorial shows you how to create a [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms/) application for the Safe Network. Xamarin.Forms is an open source, cross-platform tool which provides a way to quickly build apps for iOS, Android, Windows and macOS using C# and F#.
 
-In this tutorial we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the SAFE API to connect and interact with the SAFE Network.
+In this tutorial we will use the [MaidSafe.SafeApp](https://www.nuget.org/packages/MaidSafe.SafeApp/) NuGet package which exposes the Safe API to connect and interact with the Safe Network.
 
-You can download the working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/MobileExample) or follow the steps provided in this tutorial to create a mobile app for the SAFE Network.
+You can download the working example code from [GitHub](https://github.com/maidsafe/safe-getting-started-dotnet/tree/master/MobileExample) or follow the steps provided in this tutorial to create a mobile app for the Safe Network.
 
 ## Prerequisites
 
-Before you start working on your first SAFE app, make sure you have the following tools installed:
+Before you start working on your first Safe app, make sure you have the following tools installed:
 - **Git**
 <br />
 To fetch the boilerplate code and for version control.
@@ -17,7 +17,7 @@ To fetch the boilerplate code and for version control.
 [Download and install Visual Studio](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/installation) (any edition) for your operating system with `mobile development with .NET` workload.
 - **Safe Authenticator**
 <br />
-The Safe Authenticator mobile application is required to authenticate with the SAFE Network. You can download it from [GitHub](https://github.com/maidsafe/safe-authenticator-mobile/releases/latest).
+The Safe Authenticator mobile application is required to authenticate with the Safe Network. You can download it from [GitHub](https://github.com/maidsafe/sn_authenticator_mobile/releases/latest).
 - **Beginner level knowledge of Xamarin.Forms**
 <br />
 An introduction to Xamarin.Forms can be found in the [official documentation](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/introduction-to-xamarin-forms).
@@ -35,13 +35,13 @@ git checkout boilerplate
 Open `MobileExample/SafeTodoExample.sln` solution in Visual Studio and restore nuget packages.
 
 **Note:**
-  We use the latest version of the MaidSafe.SafeApp package using NuGet package manager to use the SAFE API which connect and interact with the SAFE Network.
+  We use the latest version of the MaidSafe.SafeApp package using NuGet package manager to use the Safe API which connect and interact with the Safe Network.
 
 ## Using a Mock Network
 
-We provide the `mock` feature with the SAFE API for faster app development experience and a safe space to perform test operations.
+We provide the `mock` feature with the Safe API for faster app development experience and a safe space to perform test operations.
 
-When the `mock` feature is used, a local MockVault file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live SAFE Network. To set up and use a mock network:
+When the `mock` feature is used, a local MockNode file is generated which simulates the network operations used to store and retrieve data. The app will then interface with this file rather than the live Safe Network. To set up and use a mock network:
 
 **1. Build conditional compilation symbols**
 
@@ -104,7 +104,7 @@ return await Session.AppRegisteredAsync(Constants.AppId, authResponse.AuthGrante
 ## Create mutable data
 Mutable data is a key-value store which can be created either at a specific address or at a random address on the network. It can be publicly available (public mutable data) or encrypted (private mutable data). Mutable data has a type tag associated with it (a number) that can be chosen while creating the mutable data.
 
-To learn more about mutable data and other data types in SAFE Network visit the [discover page](/discover).
+To learn more about mutable data and other data types in Safe Network visit the [discover page](/discover).
 
 In this tutorial you will create a private mutable data at a random address to store application data. This address represents a unique 256 bit address in the network space. You can learn more about XOR addresses from [this medium post](https://medium.com/@maidsafe/structuring-network-with-xor-431e785b5ee7).
 
@@ -296,7 +296,7 @@ Now you can run the application, authenticate and work with todo items in the li
 
 *Note: Ensure `SAFE_APP_MOCK` flag is removed from shared and platform specific projects' conditional compilation symbols.*
 
-To connect to the live Alpha-2 Network, an application needs to get authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (SAFE Authenticator app in this case): 
+To connect to the live Alpha-2 Network, an application needs to get authorisation from the user. This is achieved by sending an authorisation request to the Authenticator (Safe Authenticator app in this case): 
 
 **1. Send `AuthReq` to the Authenticator**
 
@@ -432,4 +432,4 @@ if (decodeResult.GetType() == typeof(AuthIpcMsg))
 }
 ```
 <br />
-Now run the application and authenticate it using the SAFE Authenticator. Once you allow the app to access the network, all operations will be performed on the Alpha-2 network.
+Now run the application and authenticate it using the Safe Authenticator. Once you allow the app to access the network, all operations will be performed on the Alpha-2 network.

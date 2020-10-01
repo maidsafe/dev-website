@@ -37,7 +37,7 @@ class Dapps extends React.Component {
       JAMS: JAMSLogo,
       SAFE_CMS: SAFECmsLogo,
       SAFE_DRIVE: SAFEDriveLogo,
-      SAFE_BROWSER: SAFEBrowserLogo,
+      SN_BROWSER: SAFEBrowserLogo,
       SAFE_AUTHENTICATOR: SAFEAuthenticatorLogo,
       SAFE_MESSAGES: SAFEMessagesLogo,
       SAFE_NETDRIVE: SAFENetDriveLogo,

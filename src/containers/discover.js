@@ -139,12 +139,12 @@ class Discover extends React.Component {
             </div>
           </div>
         </div>
-        <div className="vault">
-          <div className="vault-b base">
-            <h3 className="title">{data.vault.title}</h3>
-            <p className="para">{data.vault.desc}</p>
-            <p className="para">{data.vault.para}</p>
-            <div className="vault-opt"><button className="btn ghost-btn" onClick={() => { window.open(`${data.vault.btnLink.link}`) }}>{data.vault.btnLink.name}</button></div>
+        <div className="node">
+          <div className="node-b base">
+            <h3 className="title">{data.node.title}</h3>
+            <p className="para">{data.node.desc}</p>
+            <p className="para">{data.node.para}</p>
+            <div className="node-opt"><button className="btn ghost-btn" onClick={() => { window.open(`${data.node.btnLink.link}`) }}>{data.node.btnLink.name}</button></div>
           </div>
         </div>
         <div className="def-cntrs">

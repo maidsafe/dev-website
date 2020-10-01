@@ -1,16 +1,16 @@
 header:
   title: "Decentralised Apps (DApps)"
-  description: "Desktop, Web and Mobile applications can all easily be built on the SAFE Network. You can work with several languages to bring your ideas to the new, decentralised internet."
+  description: "Desktop, Web and Mobile applications can all easily be built on the Safe Network. You can work with several languages to bring your ideas to the new, decentralised internet."
   existing: "Example DApps"
-  note : "Example DApps that were created on the Alpha 2 Network. (No longer live as we transition to the Shared Vault Network)"
+  note : "Example DApps that were created on the Alpha 2 Network. (No longer live as we transition to the Shared Node Network)"
 getinvolved:
   name: "Got a DAPP to list?"
   href: 'https://forum.safedev.org/t/devhub-dapps-page-get-your-application-listed/2455'
 items:
-  - name: "SAFE Network App"
-    desc: "The SAFE Network's staring point. Download other SAFE Apps, manage accounts and more (soon)."
+  - name: "Safe Network App"
+    desc: "The Safe Network's staring point. Download other Safe Apps, manage accounts and more (soon)."
     platform: "Windows, macOS, Linux"
-    # logo: SAFE_BROWSER
+    # logo: SN_BROWSER
     status: Released
     detail:
       - type: "Author"
@@ -18,17 +18,17 @@ items:
         href: 'https://maidsafe.net'
       - type: "App"
         name: "Download"
-        href: 'https://github.com/maidsafe/safe-network-app/releases/latest'
+        href: 'https://github.com/maidsafe/sn_app/releases/latest'
      # - type: "Documentation"
      #   name: "ReadMe"
-     #   href: 'https://github.com/maidsafe/safe-network-app/blob/master/README.md'
+     #   href: 'https://github.com/maidsafe/sn_app/blob/master/README.md'
       - type: "Source"
         name: "GitHub"
-        href: 'https://github.com/maidsafe/safe-network-app'
-  - name: "SAFE Browser"
-    desc: "The SAFE Network's default browser."
+        href: 'https://github.com/maidsafe/sn_app'
+  - name: "Safe Browser"
+    desc: "The Safe Network's default browser."
     platform: "Windows, macOS, Linux"
-    logo: SAFE_BROWSER
+    logo: SN_BROWSER
     status: Released
     detail:
       - type: "Author"
@@ -36,13 +36,13 @@ items:
         href: 'https://maidsafe.net'
       - type: "App"
         name: "Download"
-        href: 'https://github.com/maidsafe/safe_browser/releases/latest'
+        href: 'https://github.com/maidsafe/sn_browser/releases/latest'
       - type: "Documentation"
         name: "ReadMe"
-        href: 'https://github.com/maidsafe/safe_browser/blob/master/README.md'
+        href: 'https://github.com/maidsafe/sn_browser/blob/master/README.md'
       - type: "Source"
         name: "GitHub"
-        href: 'https://github.com/maidsafe/safe_browser'
+        href: 'https://github.com/maidsafe/sn_browser'
   - name: "DEVOLUTION"
     desc: "Alpha 2 App: DEVOLUTION is a social media platform designed to give communities political independence."
     platform: "Web"
@@ -56,7 +56,7 @@ items:
         name: "GitHub"
         href: 'https://github.com/glensimister/givemecredit'
   - name: "JAMS"
-    desc: "Alpha 2 App: Decentralized music player for storing, playing, downloading your music library on The SAFE Network."
+    desc: "Alpha 2 App: Decentralized music player for storing, playing, downloading your music library on The Safe Network."
     platform: "Web"
     logo: JAMS
     status: "Demo"
@@ -70,11 +70,11 @@ items:
       - type: "Topic"
         name: "Tech. thread"
         href: 'https://forum.safedev.org/t/jams-technical-discussion/1414'
-      - type: "SAFE Web"
+      - type: "Safe Web"
         name: "link"
         href: 'safe://jams.demo'
   - name: "Patter"
-    desc: "Alpha 2 App: Proof of concepts social networking DApp - social networking the SAFE way."
+    desc: "Alpha 2 App: Proof of concepts social networking DApp - social networking the Safe way."
     platform: "Web"
     logo: PATTER
     status: "POC"
@@ -82,13 +82,13 @@ items:
       - type: "Author"
         name: "MaidSafe"
         href: 'https://maidsafe.net'
-      - type: "SAFE Web"
+      - type: "Safe Web"
         name: "link"
         href: 'safe://patter.dapp'
       - type: "Code"
         name: "GitHub"
         href: 'https://github.com/maidsafe/safe-patter-js'
-  - name: "SAFE Authenticator (Mobile)"
+  - name: "Safe Authenticator (Mobile)"
     desc: "Alpha 2 App: The mobile authenticator for Android and iOS."
     platform: "Android, iOS"
     logo: SAFE_AUTHENTICATOR
@@ -99,16 +99,16 @@ items:
         href: 'https://maidsafe.net'
       - type: "App"
         name: "Download"
-        href: 'https://github.com/maidsafe/safe-authenticator-mobile/releases/latest'
+        href: 'https://github.com/maidsafe/sn_authenticator_mobile/releases/latest'
       - type: "Documentation"
         name: "ReadMe"
-        href: 'https://github.com/maidsafe/safe-authenticator-mobile/blob/master/README.md'
+        href: 'https://github.com/maidsafe/sn_authenticator_mobile/blob/master/README.md'
       - type: "Source"
         name: "GitHub"
-        href: 'https://github.com/maidsafe/safe-authenticator-mobile/'
+        href: 'https://github.com/maidsafe/sn_authenticator_mobile/'
 
-  - name: "SAFE Drive"
-    desc: "Alpha 2 App: Access SAFE data as if it is on your local drive (e.g. as ~/SAFE on Linux or Mac and as c://SAFE on Windows."
+  - name: "Safe Drive"
+    desc: "Alpha 2 App: Access Safe data as if it is on your local drive (e.g. as ~/Safe on Linux or Mac and as c://Safe on Windows."
     platform: "Windows, macOS, Linux"
     logo: SAFE_DRIVE
     status: "In Development"
@@ -122,7 +122,7 @@ items:
       - type: "Source"
         name: "GitHub"
         href: 'https://github.com/theWebalyst/safenetwork-fuse'
-  - name: "SAFE Messages (Mobile)"
+  - name: "Safe Messages (Mobile)"
     desc: "Alpha 2 App: Proof of concepts mobile messaging DApp for Android and iOS."
     platform: "Android, iOS"
     logo: SAFE_MESSAGES
@@ -140,7 +140,7 @@ items:
       - type: "Source"
         name: "GitHub"
         href: 'https://github.com/maidsafe/safe-email-app-csharp/'
-  - name: "SAFE.NetworkDrive"
+  - name: "Safe.NetworkDrive"
     desc: "Alpha 2 App: Event sourced virtual drive, writing encrypted WAL to SQLite, synchronizing to MockNetwork and local materialization to in-memory virtual filesystem."
     platform: "Windows"
     status: "Alpha"
@@ -157,7 +157,7 @@ items:
         href: 'https://github.com/oetyng/SAFE.NetworkDrive/releases/latest'
 
   - name: "Web ID Manager"
-    desc: "Alpha 2 App: Proof of concepts SAFE Web DApp for managing your identities and social networking on the SAFE Network."
+    desc: "Alpha 2 App: Proof of concepts Safe Web DApp for managing your identities and social networking on the Safe Network."
     platform: "Web"
     logo: WEBID
     status: "POC"
@@ -165,7 +165,7 @@ items:
       - type: "Author"
         name: "MaidSafe"
         href: 'https://maidsafe.net'
-      - type: "SAFE Web"
+      - type: "Safe Web"
         name: "link"
         href: 'safe://webidmgr.dapp'
       - type: "Code"

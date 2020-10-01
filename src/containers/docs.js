@@ -27,7 +27,7 @@ class Docs extends React.Component {
            <h1>{data.docs.title}</h1>
             <h2>{data.platform.title}</h2>
             <p>{data.platform.summary}</p>
-            <p>Right now development of simpler, dev-facing APIs is underway. As such documentation is still to be finalised, but <a href="https://github.com/maidsafe/safe-api/blob/master/README.md" target="_blank">you can access the latest SAFE API documentation in this repo.</a></p>
+            <p>Right now development of simpler, dev-facing APIs is underway. As such documentation is still to be finalised, but <a href="https://github.com/maidsafe/sn_api/blob/master/README.md" target="_blank">you can access the latest Safe API documentation in this repo.</a></p>
           </div>
 
 

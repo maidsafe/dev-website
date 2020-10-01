@@ -1,12 +1,12 @@
-# SAFE Desktop App Tutorial
+# Safe Desktop App Tutorial
 
 In this tutorial, we will create an [Electron](https://electronjs.org) application. Electron allows you to create and build cross-platforms desktop applications using JavaScript.
 
-To create this app, we will use the [@maidsafe/safe-node-app](https://www.npmjs.com/package/@maidsafe/safe-node-app) npm package which exposes the `safe-app-nodejs` API that we need not only to interact with the SAFE Authenticator, but also to connect and interact with the SAFE Network.
+To create this app, we will use the [@maidsafe/safe-node-app](https://www.npmjs.com/package/@maidsafe/safe-node-app) npm package which exposes the `safe-app-nodejs` API that we need not only to interact with the Safe Authenticator, but also to connect and interact with the Safe Network.
 
-We are going to use the [SAFE App Electron quick start](https://github.com/maidsafe/safe_examples/tree/master/safe_app_electron_quick_start) boilerplate, which is based on the [Electron quick start](https://github.com/electron/electron-quick-start) boilerplate. If you would like additional information on creating Electron applications, visit the [Electron tutorial](https://electronjs.org/docs/tutorial) site.
+We are going to use the [Safe App Electron quick start](https://github.com/maidsafe/safe_examples/tree/master/safe_app_electron_quick_start) boilerplate, which is based on the [Electron quick start](https://github.com/electron/electron-quick-start) boilerplate. If you would like additional information on creating Electron applications, visit the [Electron tutorial](https://electronjs.org/docs/tutorial) site.
 
-The boilerplate implements a simple single page application using [Angular.js](https://angularjs.org) for rendering the UI components and the data. The application implements a trip planner, showing the list of trips planned by the user, allowing him/her to add or remove trips from the list. In this tutorial, we will be adding the implementation to store (and retrieve) the list of planned trips in the SAFE Network.
+The boilerplate implements a simple single page application using [Angular.js](https://angularjs.org) for rendering the UI components and the data. The application implements a trip planner, showing the list of trips planned by the user, allowing him/her to add or remove trips from the list. In this tutorial, we will be adding the implementation to store (and retrieve) the list of planned trips in the Safe Network.
 
 <a name="pre-requisites"></a>
 ## Pre-requisites
@@ -18,17 +18,17 @@ First you need to make sure you have the following tools installed to be able to
 - If you are using Windows, run `npm install --global --production windows-build-tools`.
 - If you decide to use yarn and are using Windows, run `yarn config set child-concurrency 1` because yarn attempts to build modules concurrently with multiple child processes, which causes intermittent timing issues on Windows.
 
-## Install a SAFE Browser
+## Install a Safe Browser
 
-Since the application will be authorising with the Authenticator to get the credentials needed to then connect to the SAFE Network, we first need to have an instance of the SAFE Browser installed.
+Since the application will be authorising with the Authenticator to get the credentials needed to then connect to the Safe Network, we first need to have an instance of the Safe Browser installed.
 
-You can find the links to download the SAFE Browser package from the [SAFE Network website](https://safenetwork.tech), or directly from the [SAFE Browser GitHub releases repository](https://github.com/maidsafe/safe_browser/releases/latest). It's recommended to always use the latest available version.
+You can find the links to download the Safe Browser package from the [Safe Network website](https://safenetwork.tech), or directly from the [Safe Browser GitHub releases repository](https://github.com/maidsafe/sn_browser/releases/latest). It's recommended to always use the latest available version.
 
 Note that there are packages for each of the supported platforms, i.e. Linux, Windows and macOS. Also note there are two type of packages for each of the supported platforms:
-- `Peruse-<version>-<platform>-<arch>.zip`: SAFE Browser package built to use the live SAFE Network
-- `Peruse-<version>-<platform>-<arch>-dev.zip`: SAFE Browser package built to use the mock routing. This will create a local temporary file and you won't need to connect to the live network.
+- `Peruse-<version>-<platform>-<arch>.zip`: Safe Browser package built to use the live Safe Network
+- `Peruse-<version>-<platform>-<arch>-dev.zip`: Safe Browser package built to use the mock routing. This will create a local temporary file and you won't need to connect to the live network.
 
-In this tutorial we will be using the SAFE Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC.
+In this tutorial we will be using the Safe Browser package that is built to work with the mock network. So please go ahead and download the one corresponding for your platform, and unzip the package in your PC.
 
 You can now launch the browser, please create an account from the Authenticator. You can enter any string when you are requested for the “Invitation token”.
 
@@ -52,12 +52,12 @@ At this point we have an Electron application ready to be launched, let's run it
 $ npm start
 ```
 
-You should see a "Hello SAFE Network!" message in our app's window and an empty list of trips. We are now ready to start creating the code to be able to store the planned trips into the SAFE Network.
+You should see a "Hello Safe Network!" message in our app's window and an empty list of trips. We are now ready to start creating the code to be able to store the planned trips into the Safe Network.
 
-## Import the SAFE API
-The application will interact with the SAFE Network using the `safe-node-app` package, we therefore need to add it as a dependency in our package.
+## Import the Safe API
+The application will interact with the Safe Network using the `safe-node-app` package, we therefore need to add it as a dependency in our package.
 
-As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to make sure to install the SAFE libraries required to connect to mock routing as well. We do this by setting the `NODE_ENV` environment variable specifically during installation of the `safe-node-app` package:
+As mentioned above in the [pre-requisites](#pre-requisites) section, it's recommended to use the browser built for mock routing for this tutorial, therefore we need to make sure to install the Safe libraries required to connect to mock routing as well. We do this by setting the `NODE_ENV` environment variable specifically during installation of the `safe-node-app` package:
 ```bash
 $ NODE_ENV=dev npm install @maidsafe/safe-node-app --save
 ```
@@ -65,18 +65,18 @@ Windows users in Command Prompt, will first need to run `set NODE_ENV=dev`, then
 If using Windows PowerShell, run `$env:NODE_ENV = "dev"`.  
 Note that this environment variable will only persist in your current terminal until it is closed.
 
-Any interaction with the SAFE Network is made thru the API imported from the `safe-node-app` package, we do this by adding a `require` statement at the top of the `safenetwork.js` file:
+Any interaction with the Safe Network is made thru the API imported from the `safe-node-app` package, we do this by adding a `require` statement at the top of the `safenetwork.js` file:
 ```js
 const safeNodeApp = require('@maidsafe/safe-node-app');
 ```
 
 ## Send authorisation request to the Authenticator
-A SAFE application needs to get an authorisation from the user before being able to connect to the network, this is achieved by sending an authorisation request to the Authenticator.
+A Safe application needs to get an authorisation from the user before being able to connect to the network, this is achieved by sending an authorisation request to the Authenticator.
 
 We first need to generate a `SAFEApp` instance by calling the `initialiseApp` function of the API, providing information about the application (this information is displayed to the user when requesting the authorisation):
 ```js
 const appInfo = {
-  name: 'Hello SAFE Network',
+  name: 'Hello Safe Network',
   id: 'net.maidsafe.tutorials.nodejs',
   version: '0.1.0',
   vendor: 'MaidSafe.net Ltd.',
@@ -120,11 +120,11 @@ const customExecPath = [process.execPath, app.getAppPath()];
 let safeApp;
 
 async function sendAuthRequest() {
-  console.log('Authorising SAFE application...');
+  console.log('Authorising Safe application...');
   const appInfo = {
     // User-facing name of our app. It will be shown
     // in the Authenticator user's interface.
-    name: 'Hello SAFE Network',
+    name: 'Hello Safe Network',
     // This is a unique ID of our app
     id: 'net.maidsafe.tutorials.desktop-app',
     version: '0.1.0',
@@ -148,7 +148,7 @@ As you can see, we declare the `safeApp` variable outside the function since we 
 
 The `sendAuthReq` function is invoked when the application's window is loaded, this is part of the code we inherited with the boilerplate. You can look at the code in `controller.js` if you are interested in it.
 
-We can now launch our application again to verify that now it's able to generate the authorisation request and send it to the Authenticator. Make sure you launch the SAFE Browser and log in using the Authenticator ([see the pre-requisites section](#pre-requisites)) before running the application:
+We can now launch our application again to verify that now it's able to generate the authorisation request and send it to the Authenticator. Make sure you launch the Safe Browser and log in using the Authenticator ([see the pre-requisites section](#pre-requisites)) before running the application:
 ```bash
 $ npm start
 ```
@@ -161,20 +161,20 @@ async function uponAuthResponse(resAuthUri) {
 }
 ```
 
-## Connecting to the SAFE Network
-We can now use the authorisation URI we received from the Authenticator to connect to the SAFE Network. In order to do this we simply call the `loginFromUri` API function:
+## Connecting to the Safe Network
+We can now use the authorisation URI we received from the Authenticator to connect to the Safe Network. In order to do this we simply call the `loginFromUri` API function:
 ```js
 await safeApp.auth.loginFromUri(resAuthUri);
 ```
 
-This function will decode the authorisation URI and create a connection with the SAFE Network using the credentials obtained from it.
+This function will decode the authorisation URI and create a connection with the Safe Network using the credentials obtained from it.
 
 ## Create a public MutableData
-One of the native data types of the SAFE Network is the `MutableData`. A MutableData is a key-value store which can be created at either a specific address on the network, or just at a random address, and it can be publicly available (a public MutableData) or otherwise have all its content encrypted (private MutableData). It also has a type associated to it (type tag) which is a number that can be chosen at the moment of creating the MutableData.
+One of the native data types of the Safe Network is the `MutableData`. A MutableData is a key-value store which can be created at either a specific address on the network, or just at a random address, and it can be publicly available (a public MutableData) or otherwise have all its content encrypted (private MutableData). It also has a type associated to it (type tag) which is a number that can be chosen at the moment of creating the MutableData.
 
-We are not going to go into the other aspects of the MutableData here, we will just create MutableData in the network to store the data of our application. Please refer to the [Discover page](/discover) to learn more about the MutableData type as well as the other types of data available in the SAFE Network.
+We are not going to go into the other aspects of the MutableData here, we will just create MutableData in the network to store the data of our application. Please refer to the [Discover page](/discover) to learn more about the MutableData type as well as the other types of data available in the Safe Network.
 
-In this tutorial we are going to create a public MutableData at a random address. Each piece of data stored on the network has its own unique 256 bits address in the network (you can read more about XOR addresses of the SAFE Network in the [MaidSafe's blog](https://blog.maidsafe.net/2016/05/27/structuring-networks-with-xor)), we will request the API to generate a random address for our new public MutableData:
+In this tutorial we are going to create a public MutableData at a random address. Each piece of data stored on the network has its own unique 256 bits address in the network (you can read more about XOR addresses of the Safe Network in the [MaidSafe's blog](https://blog.maidsafe.net/2016/05/27/structuring-networks-with-xor)), we will request the API to generate a random address for our new public MutableData:
 ```js
 const typeTag = 15000;
 const md = await safeApp.mutableData.newRandomPublic(typeTag);
@@ -182,7 +182,7 @@ const md = await safeApp.mutableData.newRandomPublic(typeTag);
 
 The type tag we are choosing is just a random number here, although you must know there is a range of reserved numbers for the type tags, any MutableData stored with any of this reserved type tags will have a special treatment by the network.
 
-At this point we have a MutableData object which was not committed to the network yet, so we can now request the API to send the corresponding request to the SAFE Network to store it:
+At this point we have a MutableData object which was not committed to the network yet, so we can now request the API to send the corresponding request to the Safe Network to store it:
 ```js
 const initialData = {
   "random_key_1": JSON.stringify({
@@ -249,7 +249,7 @@ async function getItems() {
 
 Note we are expecting the value of the entry to be a serialised JSON object, since that's how we stored them when we called the `quickSetup` function before, so we need to de-serialise it with `JSON.parse` before returning it.
 
-We can now run it again and we should be able to see the list of trips we initially stored on the SAFE Network.
+We can now run it again and we should be able to see the list of trips we initially stored on the Safe Network.
 
 ## Add more entries to our MutableData
 It's time now to allow the user to add new trips to the list by entering them in the form on the UI.

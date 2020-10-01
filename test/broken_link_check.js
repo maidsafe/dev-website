@@ -7,7 +7,8 @@ const scanForBrokenLinks = (serveUrl) => {
   const scanResult = [];
   const options = {
     excludedKeywords: [
-      'https://crates.io/'
+      'https://crates.io/',
+      'https://docs.rs/'
     ],
   };
   return new Promise((resolve, rejects) => {

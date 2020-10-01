@@ -146,10 +146,10 @@ class CoreDeveloper extends React.Component {
                       </div>
                     </div>
                     <div className="hlay-25">
-                      <div className="clickable vault">
-                        <Link smooth to={data.anchor.concat(data.components.vault.anchor)}>{data.components.vault.name}</Link>
+                      <div className="clickable node">
+                        <Link smooth to={data.anchor.concat(data.components.node.anchor)}>{data.components.node.name}</Link>
                       </div>
-                      <div className="underline vault"/>
+                      <div className="underline node"/>
                     </div>
                   </div>
                 </div>
@@ -170,10 +170,10 @@ class CoreDeveloper extends React.Component {
                     <div className="underline routing"/>
                   </div>
                   <div className="section">
-                    <div className="clickable quic-p2p">
-                      <Link smooth to={data.anchor.concat(data.components.quic_p2p.anchor)}>{data.components.quic_p2p.name}</Link>
+                    <div className="clickable qp2p">
+                      <Link smooth to={data.anchor.concat(data.components.qp2p.anchor)}>{data.components.qp2p.name}</Link>
                     </div>
-                    <div className="underline quic-p2p"/>
+                    <div className="underline qp2p"/>
                   </div>
                 </div>
               </div>
@@ -184,27 +184,27 @@ class CoreDeveloper extends React.Component {
           </div>
 
           {/* -------------------------------------------------------------- */}
-          {/*   NETWORK LAYER - quic-p2p & ROUTING                           */}
+          {/*   NETWORK LAYER - qp2p & ROUTING                           */}
           {/* -------------------------------------------------------------- */}
           <div className="content-comp">
             {/*<h1>{data.components.title}</h1>*/}
 
             {/* =========================== */}
-            {/* ======   quic-p2p   ======= */}
+            {/* ======   qp2p   ======= */}
             {/* =========================== */}
             <div className="comp-i">
               <div className="comp-i-head">
-                <h1 id={data.components.quic_p2p.anchor}>{data.components.quic_p2p.name}</h1>
+                <h1 id={data.components.qp2p.anchor}>{data.components.qp2p.name}</h1>
               </div>
               <div className="comp-i-cntr">
                 <p>
-                  {data.components.quic_p2p.para1}
+                  {data.components.qp2p.para1}
                 </p>
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.quic_p2p.github} target="_blank"></a></div>
-                <a href={data.components.quic_p2p.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.quic_p2p.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.qp2p.github} target="_blank"></a></div>
+                <a href={data.components.qp2p.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.qp2p.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -252,26 +252,26 @@ class CoreDeveloper extends React.Component {
             </div>
 
             {/* ------------------------------------------------------------ */}
-            {/*   APPLICATION LAYER - VAULTS                                 */}
+            {/*   APPLICATION LAYER - NODES                                 */}
             {/* ------------------------------------------------------------ */}
             <div className="comp-i">
               <div className="comp-i-head">
-                <h1 id={data.components.vault.anchor}>{data.components.vault.name}</h1>
+                <h1 id={data.components.node.anchor}>{data.components.node.name}</h1>
               </div>
               <div className="comp-i-cntr">
-                <p>{data.components.vault.para1}</p>
-                <p>{data.components.vault.para2}</p>
-                <p>{data.components.vault.para5}</p>
+                <p>{data.components.node.para1}</p>
+                <p>{data.components.node.para2}</p>
+                <p>{data.components.node.para5}</p>
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.vault.github} target="_blank"></a></div>
-                <a href={data.components.vault.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.vault.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.node.github} target="_blank"></a></div>
+                <a href={data.components.node.doc.href} target="_blank"><img src={DocsLogo}></img></a>
+                <a href={data.components.node.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
             {/* ------------------------------------------------------------ */}
-            {/*   SAFE CLIENT_LIBS SECTION                                   */}
+            {/*   SAFE NETWORK CLIENT SECTION                                */}
             {/* ------------------------------------------------------------ */}
             <div className="comp-i">
               <div className="comp-i-head">
@@ -294,7 +294,7 @@ class CoreDeveloper extends React.Component {
                 <h3 id={data.components.c_libs.comp.anchor}>{data.components.c_libs.comp.name}</h3>
               </div>
 
-              {/* === SAFE_Core === */}
+              {/* === sn_client === */}
               <div className="comp-i-cntr">
                 <b id={data.components.c_libs.comp.safe_core.anchor}>{data.components.c_libs.comp.safe_core.name}</b>: {data.components.c_libs.comp.safe_core.para1.chunk1}
               </div>
@@ -304,7 +304,7 @@ class CoreDeveloper extends React.Component {
                 <a href={data.components.c_libs.comp.safe_core.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
 
-              {/* === SAFE_Authenticator === */}
+              {/* === Safe_Authenticator === */}
               <div className="comp-i-cntr">
                 <b id={data.components.c_libs.comp.safe_auth.anchor}>{data.components.c_libs.comp.safe_auth.name}</b>: {data.components.c_libs.comp.safe_auth.para1.chunk1}
               </div>
@@ -314,7 +314,7 @@ class CoreDeveloper extends React.Component {
                 <a id={data.components.c_libs.comp.safe_auth.anchor} href={data.components.c_libs.comp.safe_auth.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
 
-              {/* === SAFE_App === */}
+              {/* === Safe_App === */}
               <div className="comp-i-cntr">
                 <b id={data.components.c_libs.comp.safe_app.anchor}>{data.components.c_libs.comp.safe_app.name}</b>: {data.components.c_libs.comp.safe_app.para1.chunk1}
                 <a href={data.components.c_libs.comp.safe_app.para1.link1.href} target="_self">{data.components.c_libs.comp.safe_app.para1.link1.name}</a>
@@ -344,7 +344,7 @@ class CoreDeveloper extends React.Component {
                 <a href={data.components.c_libs.auxs.ffi.crate.href} target="_blank"><img src={CratesLogo}></img></a>
               </div>
 
-              {/* === SAFE_Bindgen === */}
+              {/* === Safe_Bindgen === */}
               <div className="comp-i-cntr">
                 <b id={data.components.c_libs.auxs.bindgen.anchor}>{data.components.c_libs.auxs.bindgen.name}</b>: {data.components.c_libs.auxs.bindgen.para1.chunk1}
               </div>
