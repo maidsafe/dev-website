@@ -46,7 +46,7 @@ class Parsec extends React.Component {
           <div className="parsec-i-cntr">
             <p>
               {data.pageIntro.desc}&nbsp;
-              <a href={data.pageIntro.link1.href} target="_blank">{data.pageIntro.link1.name}</a>
+              <a href={data.pageIntro.link1.href} target="_blank" rel="noreferrer">{data.pageIntro.link1.name}</a>
               {data.pageIntro.end}
             </p>
           </div>
@@ -83,9 +83,9 @@ class Parsec extends React.Component {
           <div className="parsec-i-cntr">
             <p>
               {data.moreInfo.para1.chunk1}
-              <a href={data.moreInfo.link1.href} target="_blank">{data.moreInfo.link1.name}</a>
+              <a href={data.moreInfo.link1.href} target="_blank" rel="noreferrer">{data.moreInfo.link1.name}</a>
               {data.moreInfo.para1.chunk2}
-              <a href={data.moreInfo.link2.href} target="_blank">{data.moreInfo.link2.name}</a>
+              <a href={data.moreInfo.link2.href} target="_blank" rel="noreferrer">{data.moreInfo.link2.name}</a>
               {data.moreInfo.para1.chunk3}
             </p>
           </div>
@@ -94,18 +94,18 @@ class Parsec extends React.Component {
         <div className="parsec-i">
           <div className="parsec-i-head"> <h3>{data.resources.title}</h3> </div>
           <div className="parsec-i-res">
-            <p><a href={data.resources.res1.href} target="_blank">{data.resources.res1.name}</a></p>
-            <p><a href={data.resources.res2.href} target="_blank">{data.resources.res2.name}</a></p>
-            <p><a href={data.resources.res3.href} target="_blank">{data.resources.res3.name}</a></p>
-            <p><a href={data.resources.res4.href} target="_blank">{data.resources.res4.name}</a></p>
+            <p><a href={data.resources.res1.href} target="_blank" rel="noreferrer">{data.resources.res1.name}</a></p>
+            <p><a href={data.resources.res2.href} target="_blank" rel="noreferrer">{data.resources.res2.name}</a></p>
+            <p><a href={data.resources.res3.href} target="_blank" rel="noreferrer">{data.resources.res3.name}</a></p>
+            <p><a href={data.resources.res4.href} target="_blank" rel="noreferrer">{data.resources.res4.name}</a></p>
           </div>
         </div>
 
         <div className="parsec-i">
           <div className="parsec-i-head"> <h3>{data.articles.title}</h3> </div>
           <div className="parsec-i-res">
-            <p><a href={data.articles.link1.href} target="_blank">{data.articles.link1.name}</a></p>
-            <p><a href={data.articles.link2.href} target="_blank">{data.articles.link2.name}</a></p>
+            <p><a href={data.articles.link1.href} target="_blank" rel="noreferrer">{data.articles.link1.name}</a></p>
+            <p><a href={data.articles.link2.href} target="_blank" rel="noreferrer">{data.articles.link2.name}</a></p>
           </div>
         </div>
 
@@ -115,10 +115,10 @@ class Parsec extends React.Component {
           <p>{data.videos.intro}</p>
           </div>
           <div className="parsec-i-res">
-            <p><a href={data.videos.video1.href} target="_blank">{data.videos.video1.name}</a></p>
-            <p><a href={data.videos.video2.href} target="_blank">{data.videos.video2.name}</a></p>
-            <p><a href={data.videos.video3.href} target="_blank">{data.videos.video3.name}</a></p>
-            <p><a href={data.videos.video4.href} target="_blank">{data.videos.video4.name}</a></p>
+            <p><a href={data.videos.video1.href} target="_blank" rel="noreferrer">{data.videos.video1.name}</a></p>
+            <p><a href={data.videos.video2.href} target="_blank" rel="noreferrer">{data.videos.video2.name}</a></p>
+            <p><a href={data.videos.video3.href} target="_blank" rel="noreferrer">{data.videos.video3.name}</a></p>
+            <p><a href={data.videos.video4.href} target="_blank" rel="noreferrer">{data.videos.video4.name}</a></p>
           </div>
         </div>
 

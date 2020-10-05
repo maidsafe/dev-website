@@ -202,9 +202,9 @@ class CoreDeveloper extends React.Component {
                 </p>
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.qp2p.github} target="_blank"></a></div>
-                <a href={data.components.qp2p.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.qp2p.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.qp2p.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.qp2p.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.components.qp2p.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -221,16 +221,16 @@ class CoreDeveloper extends React.Component {
                 </p>
                 <p>
                   {data.components.routing.para2.chunk1}&nbsp;
-                  <a href={data.components.routing.para2.link1.href} target="_blank">{data.components.routing.para2.link1.name}</a>
+                  <a href={data.components.routing.para2.link1.href} target="_blank" rel="noreferrer">{data.components.routing.para2.link1.name}</a>
                   &nbsp;{data.components.routing.para2.chunk2}&nbsp;
-                  <a href={data.components.routing.para2.link2.href} target="_blank">{data.components.routing.para2.link2.name}</a>
+                  <a href={data.components.routing.para2.link2.href} target="_blank" rel="noreferrer">{data.components.routing.para2.link2.name}</a>
                   {data.components.routing.para2.chunk3}
                 </p>
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.routing.github} target="_blank"></a></div>
-                <a href={data.components.routing.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.routing.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.routing.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.routing.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.components.routing.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -245,9 +245,9 @@ class CoreDeveloper extends React.Component {
                 </p>
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.routing.parsec.github} target="_blank"></a></div>
-                <a href={data.components.routing.parsec.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.routing.parsec.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.routing.parsec.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.routing.parsec.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.components.routing.parsec.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -264,9 +264,9 @@ class CoreDeveloper extends React.Component {
                 <p>{data.components.node.para5}</p>
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.node.github} target="_blank"></a></div>
-                <a href={data.components.node.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.node.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.node.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.node.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.components.node.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -283,7 +283,7 @@ class CoreDeveloper extends React.Component {
                 </p>
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.c_libs.github} target="_blank"></a></div>
+                <div className="git-btn"><a href={data.components.c_libs.github} target="_blank" rel="noreferrer"></a></div>
               </div>
 
               {/* =========================== */}
@@ -300,8 +300,8 @@ class CoreDeveloper extends React.Component {
               </div>
               <div className="comp-links">
                 <div className="git-btn"><a href={data.components.c_libs.comp.safe_core.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.comp.safe_core.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.c_libs.comp.safe_core.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <a href={data.components.c_libs.comp.safe_core.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.components.c_libs.comp.safe_core.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
 
               {/* === Safe_Authenticator === */}
@@ -309,9 +309,9 @@ class CoreDeveloper extends React.Component {
                 <b id={data.components.c_libs.comp.safe_auth.anchor}>{data.components.c_libs.comp.safe_auth.name}</b>: {data.components.c_libs.comp.safe_auth.para1.chunk1}
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.c_libs.comp.safe_auth.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.comp.safe_auth.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a id={data.components.c_libs.comp.safe_auth.anchor} href={data.components.c_libs.comp.safe_auth.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.c_libs.comp.safe_auth.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.c_libs.comp.safe_auth.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a id={data.components.c_libs.comp.safe_auth.anchor} href={data.components.c_libs.comp.safe_auth.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
 
               {/* === Safe_App === */}
@@ -321,9 +321,9 @@ class CoreDeveloper extends React.Component {
                 {data.components.c_libs.comp.safe_app.para1.chunk2}&nbsp;
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.c_libs.comp.safe_app.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.comp.safe_app.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.c_libs.comp.safe_app.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.c_libs.comp.safe_app.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.c_libs.comp.safe_app.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.components.c_libs.comp.safe_app.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
 
               {/* =========================== */}
@@ -339,9 +339,9 @@ class CoreDeveloper extends React.Component {
                 <b id={data.components.c_libs.auxs.ffi.anchor}>{data.components.c_libs.auxs.ffi.name}</b>: {data.components.c_libs.auxs.ffi.para1.chunk1}
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.c_libs.auxs.ffi.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.auxs.ffi.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.components.c_libs.auxs.ffi.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.components.c_libs.auxs.ffi.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.c_libs.auxs.ffi.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.components.c_libs.auxs.ffi.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
 
               {/* === Safe_Bindgen === */}
@@ -349,11 +349,11 @@ class CoreDeveloper extends React.Component {
                 <b id={data.components.c_libs.auxs.bindgen.anchor}>{data.components.c_libs.auxs.bindgen.name}</b>: {data.components.c_libs.auxs.bindgen.para1.chunk1}
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.c_libs.auxs.bindgen.github} target="_blank"></a></div>
-                <a href={data.components.c_libs.auxs.bindgen.doc.href} target="_blank">
+                <div className="git-btn"><a href={data.components.c_libs.auxs.bindgen.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.components.c_libs.auxs.bindgen.doc.href} target="_blank" rel="noreferrer">
                   <img src={DocsLogo}></img>
                 </a>
-                <a href={data.components.c_libs.auxs.bindgen.crate.href} target="_blank">
+                <a href={data.components.c_libs.auxs.bindgen.crate.href} target="_blank" rel="noreferrer">
                   <img src={CratesLogo}></img>
                 </a>
               </div>
@@ -376,13 +376,13 @@ class CoreDeveloper extends React.Component {
               <div className="comp-i-cntr">
                   <b id={data.util.comp1.anchor}>{data.util.comp1.name}</b>:{data.util.comp1.para1.chunk1}&nbsp;
                   {data.util.comp1.para2.chunk1}&nbsp;
-                  <a href={data.util.comp1.para2.link1.href} target="_blank">{data.util.comp1.para2.link1.name}</a>
+                  <a href={data.util.comp1.para2.link1.href} target="_blank" rel="noreferrer">{data.util.comp1.para2.link1.name}</a>
                   &nbsp;{data.util.comp1.para2.chunk2}
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.util.comp1.github} target="_blank"></a></div>
-                <a href={data.util.comp1.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.util.comp1.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.util.comp1.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.util.comp1.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.util.comp1.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
             </div>
 
@@ -397,9 +397,9 @@ class CoreDeveloper extends React.Component {
                 <b id={data.util.comp2.anchor}>{data.util.comp2.name}</b>: {data.util.comp2.para1}
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.util.comp2.github} target="_blank"></a></div>
-                <a href={data.util.comp2.doc.href} target="_blank"><img src={DocsLogo}></img></a>
-                <a href={data.util.comp2.crate.href} target="_blank"><img src={CratesLogo}></img></a>
+                <div className="git-btn"><a href={data.util.comp2.github} target="_blank" rel="noreferrer"></a></div>
+                <a href={data.util.comp2.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
+                <a href={data.util.comp2.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
             </div>
           </div>
@@ -415,12 +415,12 @@ class CoreDeveloper extends React.Component {
                 </p>
                 <div className="rfcs-cntr">
                   <div className="rfc-i">
-                    <a href={data.rfcs.learn.href} target="_blank">
+                    <a href={data.rfcs.learn.href} target="_blank" rel="noreferrer">
                       <span>{data.rfcs.learn.name}</span>
                     </a>
                   </div>
                   <div className="rfc-i">
-                    <a href={data.rfcs.active.href} target="_blank">
+                    <a href={data.rfcs.active.href} target="_blank" rel="noreferrer">
                       <span>{data.rfcs.active.name}</span>
                     </a>
                   </div>
