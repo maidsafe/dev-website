@@ -299,7 +299,7 @@ class CoreDeveloper extends React.Component {
                 <b id={data.components.c_libs.comp.safe_core.anchor}>{data.components.c_libs.comp.safe_core.name}</b>: {data.components.c_libs.comp.safe_core.para1.chunk1}
               </div>
               <div className="comp-links">
-                <div className="git-btn"><a href={data.components.c_libs.comp.safe_core.github} target="_blank"></a></div>
+                <div className="git-btn"><a href={data.components.c_libs.comp.safe_core.github} target="_blank" rel="noreferrer"></a></div>
                 <a href={data.components.c_libs.comp.safe_core.doc.href} target="_blank" rel="noreferrer"><img src={DocsLogo}></img></a>
                 <a href={data.components.c_libs.comp.safe_core.crate.href} target="_blank" rel="noreferrer"><img src={CratesLogo}></img></a>
               </div>
