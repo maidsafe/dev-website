@@ -31,7 +31,7 @@ class Licensing extends React.Component {
             <p>{data.intro.para2}</p>
             <p>
               {data.intro.para3.chunk1}&nbsp;<a target="_blank" rel="noreferrer" href={data.intro.para3.link1.href}>{data.intro.para3.link1.name}</a>{data.intro.para3.chunk2}
-              &nbsp;<a target="_blank" href={data.intro.para3.link2.href}>{data.intro.para3.link2.name}</a>&nbsp;{data.intro.para3.chunk3}
+              &nbsp;<a target="_blank" rel="noreferrer" href={data.intro.para3.link2.href}>{data.intro.para3.link2.name}</a>&nbsp;{data.intro.para3.chunk3}
               &nbsp;<a target="_blank" rel="noreferrer" href={data.intro.para3.link3.href}>{data.intro.para3.link3.name}</a>&nbsp;{data.intro.para3.chunk4}
             </p>
           </div>
